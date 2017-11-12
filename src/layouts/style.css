@@ -1,0 +1,27 @@
+.templateWrapper {
+  display: flex;
+  width: 100%;
+}
+
+.innerContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding-bottom: 7%;
+}
+
+.sideBar {
+  position: relative;
+  height: 350px;
+  min-width: 50px;
+  left: 0;
+  top: 0;
+  color: $white;
+  background-color: $side-Menu-background-color;
+  -webkit-transition: width .3s;
+  transition: width .3s;
+}
+
+.children {
+  flex: 1;
+}

@@ -1,0 +1,6 @@
+title: Alerts
+reactCode: >
+  <div><Button className='testing' type="primary">Primary button</Button></div>
+introductionText: >
+  Alerts are used to call the user's attention to some piece of information, such as a successful completion of a task or an internal system error. The type of alert used (success, info, warning or danger) will depend on the information in the alert.
+   Tips: keep the message short, use plain and simple language. Avoid tech-speak and above all never scare the users. Don’t state the obvious ( like “an error has occured”) and never assume the users know what you are talking about. Keep it in-brand and use language consistently. The best alerts messages are short, positive and plain.

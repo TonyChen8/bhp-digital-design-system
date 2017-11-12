@@ -1,0 +1,64 @@
+.linkInner {
+  display: flex;
+  height: 52px;
+  padding-left: 19px;
+  color: #fff;
+  align-items: center;
+  font-size: 14px;
+}
+
+.sideBar {
+  position: relative;
+  height: 100vh;
+  width: 52px;
+  left: 0;
+  top: 0;
+  color: $white;
+  background-color: #252525;
+  -webkit-transition: width .3s;
+  transition: width .3s;
+}
+
+.materialDesignIcon {
+  margin-right: 13px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.linkClass {
+  text-decoration: none;
+}
+
+.closeIcon {
+  margin-right: 12px;
+  margin-bottom: 60px;
+  text-align: right;
+}
+
+.naviconIcon {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.sideMenuLogoContainer{
+  display: flex;
+  height: 60px;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #fff;
+  background-color: #e65400;
+}
+
+.fullSideBar {
+  min-width: 200px !important;
+}
+
+.disable {
+  display: none;
+  -webkit-transition: display .3s;
+  transition: display .3s;
+}

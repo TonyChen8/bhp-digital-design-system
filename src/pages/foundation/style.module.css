@@ -1,0 +1,71 @@
+.buttonContainer {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.colourCombinationsBlockContainer {
+  display: flex;
+  flex-flow: column wrap;
+  height: 285px;
+}
+
+.coloursMixBlockContainer {
+  display: flex;
+  align-items: baseline;
+}
+
+.coloursMixBlockContainerText {
+  margin-left: 10px;
+}
+
+.pageRightSideMenuAnchor {
+  display: block;
+  line-height: 1.38;
+  font-size: 13px;
+  color: #2da3d7;
+  margin-left: 5px;
+}
+
+.pageAnchors {
+  color: #2da3d7;
+}
+
+.borderBottomDiv {
+  border: 1px solid #d8d8d8;
+}
+
+.foundationsTypography {
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  span {
+    margin-bottom: 23px;
+  }
+}
+
+.foundationsTypography > div {
+  flex-grow: 1;
+}
+
+.darkThemeContainer {
+  
+}
+
+.lightThemeText {
+  margin-bottom: 23px;
+}
+
+.darkThemeText {
+  padding-left: 35px;
+}
+
+.typographyTable {
+  width: auto;
+  tr td {
+    border: none;
+  }
+}
+
+.paddingClass {
+  padding-left: 8px !important;
+}
