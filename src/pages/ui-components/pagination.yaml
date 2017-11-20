@@ -1,0 +1,14 @@
+title: Pagination
+componentName: Button
+introductionText:
+  - The pagination component is used to traverse pages of data. It can be used with lists, tables or else.
+codeContainer:
+  - title: Usage
+    type: Example
+    text: Pagination shows how many items are displayed on the page and how mant items in total. It also show the links to all the pages with next and previous chevron links. The current page number is show using the Primary colour.
+    componentName: alert
+    props:
+    REACT: REACT
+    HTML: HTML
+    CSS: CSS1
+    ANGULAR: ANGULAR1

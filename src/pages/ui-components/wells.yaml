@@ -1,0 +1,15 @@
+title: Time Picker
+componentName: Button
+introductionText:
+  - A dialog picker is used to select a time in an application.
+  - We use the 24 hours time format for accessibility. If the minutes are not specified, the default displayed value is zero.
+codeContainer:
+  - title: Usage
+    type: Example
+    text: Below is an example of the month picker, click in the input to see the month picker dropdown.
+    componentName: alert
+    props:
+    REACT: REACT
+    HTML: HTML
+    CSS: CSS1
+    ANGULAR: ANGULAR1

@@ -1,0 +1,23 @@
+title: Tabs
+componentName: Button
+introductionText:
+  - This is a controlled component and therefore relies on the parent component to determine the selected tab and respond to changes in selection.
+codeContainer:
+  - title: Usage
+    type: Example
+    text: Below is an example of the primary usage of the tabs.
+    componentName: alert
+    props:
+    REACT: REACT
+    HTML: HTML
+    CSS: CSS1
+    ANGULAR: ANGULAR1
+  - title: Variation - grey background
+    type: Example
+    text: To be used when a white background will not work with the design
+    componentName: alert
+    props:
+    REACT: REACT
+    HTML: HTML
+    CSS: CSS1
+    ANGULAR: ANGULAR1

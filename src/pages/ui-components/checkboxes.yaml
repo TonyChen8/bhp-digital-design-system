@@ -1,0 +1,67 @@
+title: Checkboxes
+componentName: Button
+introductionText:
+  - Provides a simple, standardized checkbox component. The checkbox will allow the ability to show a tooltip next to the label and more importantly display any validation errors.
+codeContainer:
+  - title: Usage
+    type: Example
+    text:
+    componentName: alert
+    props:
+    REACT: |
+      //ES6
+        import { Alert } from '@myob/myob-widgets';
+
+        ...
+
+        render: function() {
+          return (
+            <Alert type="success">
+              <strong>Success!</strong> A copy of your selected statements has been sent to your customers.
+            </Alert>
+          );
+        }
+    HTML: |
+      <div role="alert" class="alert-flex alert alert-success">
+        <svg class="svg-icon svg-icon-success" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" viewBox="0 0 18 18"><g fill-rule="evenodd"><path d="M17 9A8 8 0 1 0 1 9a8 8 0 1 0 16 0zM3 9c0-3.309 2.691-6 6-6s6 2.691 6 6-2.691 6-6 6-6-2.691-6-6z"></path><path d="M8.147 12.477c.255 0 .51-.098.704-.293l4.247-4.247a1.003 1.003 0 0 0-.002-1.412.996.996 0 0 0-1.412-.002l-3.538 3.538-1.414-1.415a.997.997 0 0 0-1.414 0 .997.997 0 0 0 0 1.415l2.121 2.121a.996.996 0 0 0 .707.294z"></path></g></svg>
+        <div class="alert-msg">
+            <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
+        </div>
+        <button type="button" class="close">
+            <svg class="svg-icon svg-icon-close" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 18 18"><path d="M9 7.39L5.025 3.35a1.181 1.181 0 0 0-1.675 0 1.175 1.175 0 0 0 0 1.675l4.055 3.988-4.065 4.135a1.2 1.2 0 0 0 .006 1.681l-.175-.175a1.2 1.2 0 0 0 1.681.006L9 10.58l4.148 4.08a1.2 1.2 0 0 0 1.681-.007l-.175.175a1.2 1.2 0 0 0 .006-1.681l-4.065-4.135 4.055-3.988a1.175 1.175 0 0 0 0-1.675 1.181 1.181 0 0 0-1.675 0L9 7.39z"></path></svg>
+            <span class="sr-only">Close</span>
+        </button>
+      </div>
+    CSS: CSS1
+    ANGULAR: ANGULAR1
+  - title: Variations
+    type: Example
+    text:
+    componentName: alert
+    props:
+    REACT: |
+      //ES6
+        import { Alert } from '@myob/myob-widgets';
+
+        ...
+
+        render: function() {
+          return (
+            <Alert type="success">
+              <strong>Success!</strong> A copy of your selected statements has been sent to your customers.
+            </Alert>
+          );
+        }
+    HTML: |
+      <div role="alert" class="alert-flex alert alert-success">
+        <svg class="svg-icon svg-icon-success" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" viewBox="0 0 18 18"><g fill-rule="evenodd"><path d="M17 9A8 8 0 1 0 1 9a8 8 0 1 0 16 0zM3 9c0-3.309 2.691-6 6-6s6 2.691 6 6-2.691 6-6 6-6-2.691-6-6z"></path><path d="M8.147 12.477c.255 0 .51-.098.704-.293l4.247-4.247a1.003 1.003 0 0 0-.002-1.412.996.996 0 0 0-1.412-.002l-3.538 3.538-1.414-1.415a.997.997 0 0 0-1.414 0 .997.997 0 0 0 0 1.415l2.121 2.121a.996.996 0 0 0 .707.294z"></path></g></svg>
+        <div class="alert-msg">
+            <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
+        </div>
+        <button type="button" class="close">
+            <svg class="svg-icon svg-icon-close" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 18 18"><path d="M9 7.39L5.025 3.35a1.181 1.181 0 0 0-1.675 0 1.175 1.175 0 0 0 0 1.675l4.055 3.988-4.065 4.135a1.2 1.2 0 0 0 .006 1.681l-.175-.175a1.2 1.2 0 0 0 1.681.006L9 10.58l4.148 4.08a1.2 1.2 0 0 0 1.681-.007l-.175.175a1.2 1.2 0 0 0 .006-1.681l-4.065-4.135 4.055-3.988a1.175 1.175 0 0 0 0-1.675 1.181 1.181 0 0 0-1.675 0L9 7.39z"></path></svg>
+            <span class="sr-only">Close</span>
+        </button>
+      </div>
+    CSS: CSS1
+    ANGULAR: ANGULAR1

@@ -1,11 +1,15 @@
 import React from 'react';
+import s from './style.module.css'
 
 class ComponentDisplay extends React.Component {
 
   render() {
-    console.log('ComponentDisplay',this.props.reactCode);
-    console.log('typeof',typeof this.props.reactCode);
-    return this.props.reactCode;
+    return (
+      <div>
+        <div className={s.elementContainer} dangerouslySetInnerHTML={{__html: this.props.reactCode}}></div> ;
+      </div>
+    );
+   
   }
 
 }

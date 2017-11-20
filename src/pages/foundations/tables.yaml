@@ -1,0 +1,32 @@
+title: Table
+componentName: Button
+introductionText:
+  - Tables provide structure and hierarchy for large sets of tabular data.<br />Due to the widespread use of tables across third-party widgets like calendars and date pickers, we’ve designed our tables to be opt-in. Just add the base class .table to any &lt;table&gt;, then extend with custom styles or our various included modifier classes.
+codeContainer:
+  - title: Light theme
+    type: Example
+    text:
+    componentName: alert
+    props:
+    REACT: REACT
+    HTML: HTML
+    CSS: CSS1
+    ANGULAR: ANGULAR1
+  - title: Dark theme
+    type: Example
+    text:
+    componentName: alert
+    props:
+    REACT: REACT
+    HTML: HTML
+    CSS: CSS1
+    ANGULAR: ANGULAR1
+  - title: Contextual classes
+    type: Example
+    text: Use contextual classes (danger, info... ) to color table rows or individual cells.
+    componentName: alert
+    props:
+    REACT: REACT
+    HTML: HTML
+    CSS: CSS1
+    ANGULAR: ANGULAR1

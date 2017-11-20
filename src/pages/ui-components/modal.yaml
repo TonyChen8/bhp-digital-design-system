@@ -1,0 +1,24 @@
+title: Modal
+componentName: Button
+introductionText:
+  - Modal dialogues are used when you need a response from a user or to show information without losing the context of the page. No other interactions within the application can be accessed whilst a modal dialog is active. It should be used with consideration and sparingly.
+  - <strong>Tip:</strong> blank out the background with an opacity overlay of 75% to make modal the most prominent element on the page. 
+codeContainer:
+  - title: Modal - Information
+    type: Example
+    text: The following example shows how to create an information modal.
+    componentName: alert
+    props:
+    REACT: REACT
+    HTML: HTML
+    CSS: CSS1
+    ANGULAR: ANGULAR1
+  - title: Modal - Yes/No
+    type: Example
+    text: The following example shows how to create a modal that needs the users response.
+    componentName: alert
+    props:
+    REACT: REACT
+    HTML: HTML
+    CSS: CSS1
+    ANGULAR: ANGULAR1

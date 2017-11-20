@@ -1,0 +1,14 @@
+title: Search
+componentName: Button
+introductionText:
+  - This component is a simple search input box that can be used to filter data on a page.
+codeContainer:
+  - title: Usage
+    type: Example
+    text: The cross appears once the text is entered so that it can be easily deleted and new searches started.
+    componentName: alert
+    props:
+    REACT: REACT
+    HTML: HTML
+    CSS: CSS1
+    ANGULAR: ANGULAR1

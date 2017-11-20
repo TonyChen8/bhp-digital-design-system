@@ -1,18 +1,19 @@
 .linkInner {
   display: flex;
+  justify-content: space-around;
   height: 52px;
   padding-left: 19px;
+  padding-right: 10px;
   color: #fff;
   align-items: center;
   font-size: 14px;
+  opacity: 0.4;
 }
 
 .sideBar {
   position: relative;
-  height: 100vh;
   width: 52px;
-  left: 0;
-  top: 0;
+  min-height: 100%;
   color: $white;
   background-color: #252525;
   -webkit-transition: width .3s;
@@ -29,12 +30,26 @@ a {
 
 .linkClass {
   text-decoration: none;
+  display: inline-block;
+}
+
+.linkText {
+  flex-grow: 2;
 }
 
 .closeIcon {
   margin-right: 12px;
   margin-bottom: 60px;
   text-align: right;
+  opacity: 0.4;
+}
+
+.sidebarArrow {
+  display: inline-block;
+  margin-top: 17px;
+  float: right;
+  opacity: 0.4;
+  cursor: pointer;
 }
 
 .naviconIcon {
@@ -61,4 +76,17 @@ a {
   display: none;
   -webkit-transition: display .3s;
   transition: display .3s;
+}
+
+.subMenu {
+  padding-left: 20px;
+}
+
+.activeLink {
+  color: #fff;
+}
+
+.linkContainer {
+  margin-right: 10px;
+  align-items: baseline;
 }

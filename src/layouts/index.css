@@ -127,10 +127,6 @@ select {
 }
 [type=reset],
 [type=submit],
-button,
-html [type=button] {
-  -webkit-appearance: button;
-}
 [type=button]::-moz-focus-inner,
 [type=reset]::-moz-focus-inner,
 [type=submit]::-moz-focus-inner,
@@ -141,9 +137,7 @@ button::-moz-focus-inner {
 [type=button]:-moz-focusring,
 [type=reset]:-moz-focusring,
 [type=submit]:-moz-focusring,
-button:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
+
 fieldset {
   border: 1px solid silver;
   margin: 0 2px;
@@ -611,11 +605,12 @@ pre tt:after {
 
 .pageContainerGlobalClass {
   display: flex;
-  padding: 25px 85px 25px 120px
+  padding: 25px 85px 25px 120px;
   
 }
 .pageMainContentGlobalClass {
-  padding-right: 120px;
+  width: 694px;
+  margin-right: 120px;
 }
 
 .pageTitleGlobalClass {
@@ -636,7 +631,6 @@ pre tt:after {
 }
 
 .pageRightSideMenuGlobalClass {
-  
   height: 200px;
   min-width: 203px;
   margin-top: 87px;
@@ -678,4 +672,45 @@ td {
 
 .display-linebreak {
   white-space: pre-line;
+}
+
+.normalTextGlobalClass {
+  font-family: Arial;
+  font-size: 13px;
+  line-height: 1.54;
+  text-align: left;
+  color: #333333;
+}
+
+.componentAndCodeContainerGlobalClass {
+  border: solid 1px #b8babb;
+}
+
+.componentAndCodeContainerGlobalClass > p {
+  padding: 10px;
+  color: #979797 !important;
+}
+
+.componentContainerGlobalClass {
+  height: 100px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-bottom: solid 1px #c1c1c1;
+}
+
+.darkThemeComponentsGlobalClass {
+  background-color: #393b42;
+}
+
+.codeContainerGlobalClass {
+  margin-bottom: 0;
+  background-color: hsla(0, 0%, 0%, 0.04);
+  border-radius: 3px;
+  padding: 30px;
+  font-size: 13px;
+}
+
+.componentsClassGlobalClass {
+  padding: 10px;
+  border-bottom: solid 1px #b8babb;
 }

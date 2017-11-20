@@ -1,0 +1,93 @@
+title: Badge
+componentName: Button
+introductionText:
+  - This component generates a small badge to the top-right of its child(ren).
+codeContainer:
+  - title: Usage
+    type: Example
+    text: Primary button is the strongest call-to-action on the page. Orange 1 is used to emphasize that focus. There should only ever be one primary button on screen at any one time. Secondary button is used for every action on the page that is not primary. There can be multiple secondary buttons on screen at any one time. The secondary button has a transparent background by default state.
+    componentName: badge
+    props:
+    REACT: |
+      //ES6
+        import { Alert } from '@myob/myob-widgets';
+
+        ...
+
+        render: function() {
+          return (
+            <Alert type="success">
+              <strong>Success!</strong> A copy of your selected statements has been sent to your customers.
+            </Alert>
+          );
+        }
+    HTML: |
+      <div role="alert" class="alert-flex alert alert-success">
+        <svg class="svg-icon svg-icon-success" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" viewBox="0 0 18 18"><g fill-rule="evenodd"><path d="M17 9A8 8 0 1 0 1 9a8 8 0 1 0 16 0zM3 9c0-3.309 2.691-6 6-6s6 2.691 6 6-2.691 6-6 6-6-2.691-6-6z"></path><path d="M8.147 12.477c.255 0 .51-.098.704-.293l4.247-4.247a1.003 1.003 0 0 0-.002-1.412.996.996 0 0 0-1.412-.002l-3.538 3.538-1.414-1.415a.997.997 0 0 0-1.414 0 .997.997 0 0 0 0 1.415l2.121 2.121a.996.996 0 0 0 .707.294z"></path></g></svg>
+        <div class="alert-msg">
+            <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
+        </div>
+        <button type="button" class="close">
+            <svg class="svg-icon svg-icon-close" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 18 18"><path d="M9 7.39L5.025 3.35a1.181 1.181 0 0 0-1.675 0 1.175 1.175 0 0 0 0 1.675l4.055 3.988-4.065 4.135a1.2 1.2 0 0 0 .006 1.681l-.175-.175a1.2 1.2 0 0 0 1.681.006L9 10.58l4.148 4.08a1.2 1.2 0 0 0 1.681-.007l-.175.175a1.2 1.2 0 0 0 .006-1.681l-4.065-4.135 4.055-3.988a1.175 1.175 0 0 0 0-1.675 1.181 1.181 0 0 0-1.675 0L9 7.39z"></path></svg>
+            <span class="sr-only">Close</span>
+        </button>
+      </div>
+    CSS: CSS1
+    ANGULAR: ANGULAR1
+  - title: Variations
+    type: Example
+    text: test1
+    componentName: badge
+    props:
+    REACT: |
+      //ES6
+        import { Alert } from '@myob/myob-widgets';
+
+        ...
+
+        render: function() {
+          return (
+            <Alert type="success">
+              <strong>Success!</strong> A copy of your selected statements has been sent to your customers.
+            </Alert>
+          );
+        }
+    HTML: |
+      <div role="alert" class="alert-flex alert alert-success">
+        <svg class="svg-icon svg-icon-success" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" viewBox="0 0 18 18"><g fill-rule="evenodd"><path d="M17 9A8 8 0 1 0 1 9a8 8 0 1 0 16 0zM3 9c0-3.309 2.691-6 6-6s6 2.691 6 6-2.691 6-6 6-6-2.691-6-6z"></path><path d="M8.147 12.477c.255 0 .51-.098.704-.293l4.247-4.247a1.003 1.003 0 0 0-.002-1.412.996.996 0 0 0-1.412-.002l-3.538 3.538-1.414-1.415a.997.997 0 0 0-1.414 0 .997.997 0 0 0 0 1.415l2.121 2.121a.996.996 0 0 0 .707.294z"></path></g></svg>
+        <div class="alert-msg">
+            <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
+        </div>
+        <button type="button" class="close">
+            <svg class="svg-icon svg-icon-close" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 18 18"><path d="M9 7.39L5.025 3.35a1.181 1.181 0 0 0-1.675 0 1.175 1.175 0 0 0 0 1.675l4.055 3.988-4.065 4.135a1.2 1.2 0 0 0 .006 1.681l-.175-.175a1.2 1.2 0 0 0 1.681.006L9 10.58l4.148 4.08a1.2 1.2 0 0 0 1.681-.007l-.175.175a1.2 1.2 0 0 0 .006-1.681l-4.065-4.135 4.055-3.988a1.175 1.175 0 0 0 0-1.675 1.181 1.181 0 0 0-1.675 0L9 7.39z"></path></svg>
+            <span class="sr-only">Close</span>
+        </button>
+      </div>
+    CSS: CSS1
+    ANGULAR: ANGULAR1
+reactCode: |
+  import React, { Component } from 'react';
+  import s from './style.module.css';
+
+  import classnames from 'classnames';
+
+  class Buttons extends React.Component {
+    render() {
+      return (
+        <div className="animated fadeIn">
+          <div>
+            <strong>Example</strong>
+          </div>
+          <div className="card-block">
+            <button type="button" className={classnames(s.btn, s.btnPrimary)}> Primary </button>&nbsp;
+            <button type="button" className={classnames(s.btn, s.btnDefault)}>Default</button>&nbsp;
+            <button type="button" className={classnames(s.btn, s.btnHover)}>Hover</button>&nbsp;
+            <button type="button" className={classnames(s.btn, s.btnDisabled)}>Disabled</button>&nbsp;
+            <button type="button" className={classnames(s.btn, s.btnDelete)}>Delete</button>&nbsp;
+          </div>
+        </div>
+      )
+    }
+  }
+
+  export default Buttons;

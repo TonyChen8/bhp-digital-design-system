@@ -1,0 +1,13 @@
+.developerNoteContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 672px;
+  height: 60px;
+  padding: 20px;
+  font-size: 13px;
+  line-height: 1.54;
+  text-align: left;
+  color: #ffffff;
+  background-color: #2da3d7;
+  font-weight: lighter;
+}

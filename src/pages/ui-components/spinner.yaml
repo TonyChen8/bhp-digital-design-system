@@ -1,0 +1,14 @@
+title: Spinner
+componentName: Button
+introductionText:
+  - A custom BHP spinner has been designed using BHP brand colours.
+codeContainer:
+  - title: Usage
+    type: Example
+    text: Below is an example of the default spinner.
+    componentName: alert
+    props:
+    REACT: REACT
+    HTML: HTML
+    CSS: CSS1
+    ANGULAR: ANGULAR1

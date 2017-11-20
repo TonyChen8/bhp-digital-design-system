@@ -1,57 +1,42 @@
 import React from "react"
-import ComponentDisplay from '../components/componentDisplay'
+
+import Template from './template.js'
 
 
 export default ({ data }) => {
-  const pageData = data.uiComponentsYaml
-  console.log('data',pageData);
-  let navigationItems = [
-    {
-      name: 'REACT'
-    },
-    {
-      name: 'HTML'
-    },
-    {
-      name: 'CSS'
-    },
-    {
-      name: 'ANGULAR'
-    },
-  ];
-  
-  function handleClick(e) {
-    console.log('value',e);
-  };
-
-  function renderLink() {
-    return (
-            <span className='test' onClick={handleClick()} value={name}>
-              {name}
-            </span>
-    );
-  }
 
   
   return (
-    <div className='pageContainerGlobalClass'>
-      <div className='pageMainContentGlobalClass'>
-        <p className='pageTitleGlobalClass'>{pageData.title}</p>
-        <p>{pageData.introductionText}</p>
-        <ComponentDisplay
-        reactCode={pageData.reactCode}
-        />
-      </div>
-    </div>
+      <Template data={data} />
   )
 }
 
 export const query = graphql`
-  query BlogPostQuery($slug: String!) {
-    uiComponentsYaml(fields: { slug: { eq: $slug } }) {
-      title
-      introductionText
-      reactCode
+query BlogPostQuery($slug: String!) {
+uiComponentsYaml(fields: {slug: {eq: $slug}}) {
+  title
+  componentName
+  introductionText
+  codeContainer {
+    title
+    type
+    text
+    componentName
+    REACT
+    HTML
+    CSS
+    ANGULAR
+    props {
+      type
+      text
     }
   }
+  api {
+    name
+    type
+    defaultText
+    description
+  }
+}
+}
 `

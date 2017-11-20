@@ -1,0 +1,23 @@
+title: Labels
+componentName: Button
+introductionText:
+  - Labels are used to provide additional information about something. Use the .label class,  followed by one of the six contextual classes .label-default, .label-primary, .label-success, .label-info, .label-warning or .label-danger, within a <span> element to create a label.
+codeContainer:
+  - title: Variations boxed and size
+    text: The following example shows all contextual label classes
+    type: Example
+    componentName: alert
+    props:
+    REACT:
+    HTML:
+    CSS: CSS1
+    ANGULAR: ANGULAR1
+  - title: Variations colour and size
+    text:
+    type: Example
+    componentName: alert
+    props:
+    REACT:
+    HTML:
+    CSS: CSS1
+    ANGULAR: ANGULAR1

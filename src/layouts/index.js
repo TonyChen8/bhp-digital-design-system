@@ -4,43 +4,84 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import SideBar from '../components/sidebar'
 import './style.css'
+import MaterialDesignIcon from '../library/MaterialDesignIcon';
 
 import './index.css'
 
 const Header = () => (
   <div
     style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
+      display: 'flex',
+      height: '60px',
+      backgroundColor: '#ffffff',
+      padding: '20px 22px',
+      color: '#333333',
+      justifyContent: 'space-between',
+      border: '1px solid #d8d8d8'
     }}
   >
     <div
       style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
+        fontSize: '24px',
       }}
     >
-      <h1 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
-            color: 'white',
             textDecoration: 'none',
+            color: '#333333',
           }}
         >
-          Gatsby
+          Design Patterns Library
         </Link>
-      </h1>
+    </div>
+    <div>
+        <Link
+          to="/"
+          style={{
+            textDecoration: 'none',
+            color: '#979797',
+          }}
+        >
+          Help
+        </Link>
     </div>
   </div>
 )
+
+
+function route(route, index) {
+  if (_.isEmpty(route)) {
+    return(
+      <Link key ={index} className='navItem' to='/'>
+        <span> Home&nbsp;</span>
+      </Link>
+    )
+  }
+  
+  return (
+    <Link key ={index} className='navItem' to={route}>
+      <span>  /  {route}&nbsp;</span>
+    </Link>
+  )
+}
+
+function renderRouteContainer (pathname) {
+  var routes = _.split(pathname, '/',3);
+  console.log('routes', pathname);
+  return (
+    <div className='routeContainer'>
+      <div className='routesLinks'>{_.map(routes, route)}</div>
+    </div>
+  )
+}
 
 const TemplateWrapper = ({ children }) => (
   <div className='templateWrapper'>
     <SideBar />
     <div className='innerContainer'>
       <Header />
+      {renderRouteContainer(location.pathname)}
       <div className='children'>
         {children()}
       </div>

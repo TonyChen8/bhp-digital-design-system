@@ -1,0 +1,43 @@
+title: Navigation
+componentName: Button
+introductionText:
+  - The navbar is a wrapper that positions branding, navigation, and other elements in a concise header. It’s easily extensible and, thanks to our Collapse plugin, can easily integrate responsive behaviors.
+codeContainer:
+  - title: How it works
+    type: Example
+    text: |
+      <p>Here’s what you need to know before getting started with the navbar
+      <ul>
+        <li>Navbars require a wrapping .navbar with .navbar-toggleable-* for responsive collapsing and color scheme classes.</li>
+        <li>Navbars and their contents are fluid by default. Use optional containers to limit their horizontal width.</li>
+        <li>Navbars and their contents are built with flexbox, providing easy alignment options via utility classes.</li>
+        <li>Navbars are responsive by default, but you can easily modify them to change that. Responsive behavior depends on our Collapse JavaScript plugin.</li>
+        <li>Ensure accessibility by using a &lt;nav&gt; element or, if using a more generic element such as a &lt;div&gt;, add a role="navigation" to every navbar to explicitly identify it as a landmark region for users of assistive technologies.</li>
+      </ul>
+      <p>Read on for an example and list of supported sub-components. </p>
+      <p class='subTitleGlobalClass'>Supported content</p>
+      <p>Navbars come with built-in support for a handful of sub-components. Choose from the following as needed:</p>
+      <ul>
+        <li>.navbar-brand for your company, product, or project name.</li>
+        <li>.navbar-nav for a full-height and lightweight navigation (including support for dropdowns).</li>
+        <li>.navbar-toggler for use with our collapse plugin and other navigation toggling behaviors.</li>
+        <li>.form-inline for any form controls and actions.</li>
+        <li>.navbar-text for adding vertically centered strings of text.</li>
+        <li>.collapse.navbar-collapse for grouping and hiding navbar contents by a parent breakpoint.</li>
+      </ul>
+      
+    componentName: alert
+    props:
+    REACT: REACT
+    HTML: HTML
+    CSS: CSS1
+    ANGULAR: ANGULAR1
+  - title: Modal - Yes/No
+    type: Example
+    text: The following example shows how to create a modal that needs the users response.
+    componentName: alert
+    props:
+    REACT: REACT
+    HTML: HTML
+    CSS: CSS1
+    ANGULAR: ANGULAR1

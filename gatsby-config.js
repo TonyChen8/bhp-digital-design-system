@@ -1,10 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `BHP Design Pattern Library`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-remark`,
     'gatsby-transformer-yaml',
     {
       resolve: `gatsby-source-filesystem`,
@@ -31,6 +30,27 @@ module.exports = {
       options: {
         name: `ui-components`,
         path: `${__dirname}/src/pages/ui-components`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `foundations`,
+        path: `${__dirname}/src/pages/foundations`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `patterns`,
+        path: `${__dirname}/src/pages/patterns`,
       },
     },
   

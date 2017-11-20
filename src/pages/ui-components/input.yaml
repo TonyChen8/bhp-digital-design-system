@@ -1,0 +1,23 @@
+title: Input
+componentName: Button
+introductionText:
+  - Provides a simple, standardized input component which enforces the BHP styling. The input will allow the ability to show a tooltip next to the label and more importantly display any validation errors with the BHP styling. Text fields typically reside in forms but can appear in other places, like dialog boxes and search. Text fields validate input, help users fix errors, autocomplete words, and provide suggestions.They are generaly signle-line inputs.
+codeContainer:
+  - title: Input box
+    type: Example
+    text: Bootstrap supports all the HTML5 input types text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, and color. Note Inputs will NOT be fully styled if their type is not properly declared! 
+    componentName: alert
+    props:
+    REACT: REACT
+    HTML: HTML
+    CSS: CSS1
+    ANGULAR: ANGULAR1
+  - title: Variations
+    type: Example
+    text:
+    componentName: alert
+    props:
+    REACT: REACT
+    HTML: HTML
+    CSS: CSS1
+    ANGULAR: ANGULAR1

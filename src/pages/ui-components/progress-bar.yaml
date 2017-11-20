@@ -1,0 +1,14 @@
+title: Progress bar
+componentName: Button
+introductionText:
+  - Panels are used to outline certain sections of your content, which can be styled differently. Typically, panels are arranged in grid columns from the Grid component.
+codeContainer:
+  - title: Usage
+    type: Example
+    text: Below is an example of the default accordions.
+    componentName: alert
+    props:
+    REACT: REACT
+    HTML: HTML
+    CSS: CSS1
+    ANGULAR: ANGULAR1

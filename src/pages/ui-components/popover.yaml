@@ -1,0 +1,35 @@
+title: Popover
+componentName: Button
+introductionText:
+  - Popovers are designed to give secondary content about a particular element to a page or contain further options/actions for the user in a container. The popover interaction is more efficient for small interactions because it keeps the user in the context of the action.
+  - |
+      <h4>When and how to use this component</h4>
+        <ul>
+          <li>When you have more information you need to present to the user as a secondary.</li>
+          <li>When you have too much information to fit in a Tooltip*.</li>
+          <li>Only one popover can be open at any one time.</li>
+          <li>Popovers can be fired from any clickable object within an interface including buttons, clickable icons, and links.</li>
+          <li>Clicking anywhere on the screen should dismiss the popover.</li>
+          <li> If a screen is resized, the popover should open witn the viewport at all times.</li>
+        </ul>
+        <p>(*) If you require more detailed secondary information, consider using a modal dialog instead.</p>
+
+codeContainer:
+  - title: Usage
+    type: Example
+    text: Below is an example of the default panel.
+    componentName: alert
+    props:
+    REACT: REACT
+    HTML: HTML
+    CSS: CSS1
+    ANGULAR: ANGULAR1
+  - title: Variations
+    type: Example
+    text:
+    componentName: alert
+    props:
+    REACT: REACT
+    HTML: HTML
+    CSS: CSS1
+    ANGULAR: ANGULAR1

@@ -1,0 +1,23 @@
+title: Tooltips
+componentName: Button
+introductionText:
+  - Tooltips provide a small pop-up box that appears when the user moves the mouse pointer over an element.
+codeContainer:
+  - title: Usage
+    type: Example
+    text: Where space allows use the bottom tooltip
+    componentName: alert
+    props:
+    REACT: REACT
+    HTML: HTML
+    CSS: CSS1
+    ANGULAR: ANGULAR1
+  - title: Variations
+    type: Example
+    text: Secondary button is used for every action on the page that is not primary. There can be multiple secondary buttons on screen at any one time. The secondary button has a transparent background by default state.
+    componentName: alert
+    props:
+    REACT: REACT
+    HTML: HTML
+    CSS: CSS1
+    ANGULAR: ANGULAR1
