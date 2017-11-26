@@ -6,19 +6,8 @@ introductionText:
 codeContainer:
   - title: Usage
     type: Light theme
-    text: test1
     componentName: alert
     props:
-      - type: primary
-        text: Primary! This is a primary message. We really want your attention.
-      - type: success
-        text: Success!  This is a success message. Congratulations!.
-      - type: info
-        text: Info!  This is an info message. We have stuff for you.
-      - type: attention
-        text: Attention! This is a warning message. Run for the shelter!
-      - type: danger
-        text: Oops! This is a danger message. You are in the thick of it but sunshine is coming.
     REACT: |
       //ES6
         import { Alert } from '@myob/myob-widgets';
@@ -33,18 +22,89 @@ codeContainer:
           );
         }
     HTML: |
-      <div role="alert" class="alert-flex alert alert-success">
-        <svg class="svg-icon svg-icon-success" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" viewBox="0 0 18 18"><g fill-rule="evenodd"><path d="M17 9A8 8 0 1 0 1 9a8 8 0 1 0 16 0zM3 9c0-3.309 2.691-6 6-6s6 2.691 6 6-2.691 6-6 6-6-2.691-6-6z"></path><path d="M8.147 12.477c.255 0 .51-.098.704-.293l4.247-4.247a1.003 1.003 0 0 0-.002-1.412.996.996 0 0 0-1.412-.002l-3.538 3.538-1.414-1.415a.997.997 0 0 0-1.414 0 .997.997 0 0 0 0 1.415l2.121 2.121a.996.996 0 0 0 .707.294z"></path></g></svg>
-        <div class="alert-msg">
-            <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
-        </div>
-        <button type="button" class="close">
-            <svg class="svg-icon svg-icon-close" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 18 18"><path d="M9 7.39L5.025 3.35a1.181 1.181 0 0 0-1.675 0 1.175 1.175 0 0 0 0 1.675l4.055 3.988-4.065 4.135a1.2 1.2 0 0 0 .006 1.681l-.175-.175a1.2 1.2 0 0 0 1.681.006L9 10.58l4.148 4.08a1.2 1.2 0 0 0 1.681-.007l-.175.175a1.2 1.2 0 0 0 .006-1.681l-4.065-4.135 4.055-3.988a1.175 1.175 0 0 0 0-1.675 1.181 1.181 0 0 0-1.675 0L9 7.39z"></path></svg>
-            <span class="sr-only">Close</span>
-        </button>
+      # to use material icons, please insert this in your HTML
+      # <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+      <div class='alertContainer primary'>
+        <span>
+          <i class="material-icons">star</i>
+          <strong>Primary!</strong> This is a primary message. We really want your attention. This is a link.
+        </span>
+        <i class="material-icons">close</i>
       </div>
-    CSS: CSS1
-    ANGULAR: ANGULAR1
+      
+      <div class='alertContainer success'>
+        <span>
+          <i class="material-icons">done</i>
+          <strong>Success!</strong> A copy of your selected purchase orders has been sent to your customers.
+        </span>
+        <i class="material-icons">close</i>
+      </div>
+      
+      <div class='alertContainer info'>
+        <span>
+          <i class="material-icons">info</i>
+          <strong>Info!</strong> This is an info message. We have stuff for you. This is a link.
+        </span>
+        <i class="material-icons">close</i>
+      </div>
+      
+      <div class='alertContainer attention'>
+        <span>
+          <i class="material-icons">notifications</i>
+          <strong>Attention!</strong> This is a warning message. We need your attention.
+        </span>
+        <i class="material-icons">close</i>
+      </div>
+      
+      <div class='alertContainer warning'>
+        <span>
+          <i class="material-icons">warning</i>
+          <strong>Oops!</strong> This is a danger message. This is a link.
+        </span>
+        <i class="material-icons">close</i>
+      </div>
+    CSS: |
+      .alertContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 672px;
+        height: 60px;
+        box-sizing: border-box;
+        padding: 0 20px;
+        border-radius: 4px;
+        font-family: arial;
+        font-size: 13px;
+      }
+
+      .material-icons {
+        margin-right: 2px;
+        vertical-align: text-top;
+        font-size: 13px;
+      }
+
+      .primary {
+        background-color: #F7C6AA;
+      }
+
+      .success {
+        background-color: #ABE2D8;
+      }
+
+      .info {
+        background-color: #B9E0F2;
+      }
+
+      .attention {
+        background-color: #FFF4C9;
+      }
+
+      .warning {
+        background-color: #FABDBC;
+      }
+    ANGULAR: ''
 api:
   - name: test
     type: testtype

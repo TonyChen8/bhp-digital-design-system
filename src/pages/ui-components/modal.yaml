@@ -10,8 +10,42 @@ codeContainer:
     componentName: alert
     props:
     REACT: REACT
-    HTML: HTML
-    CSS: CSS1
+    HTML: |
+      <div class="modal">
+        <i class="material-icons">close</i>
+        <strong>CHANGES SAVED</strong>
+        <br />
+        <p>All changes you just made have been<br /> saved to the database.</p>
+      </div>
+    CSS: |
+      .modal {
+        display: flex;
+        flex-direction: column;
+        width: 340px;
+        height: auto;
+        padding: 10px 10px 40px 25px;
+        font-size: 16PX;
+        background-color: #ffffff;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        border: solid 1px #dcdcdc;
+        font-family: Arial;
+        color: #333333;
+      }
+
+      .modal p {
+        padding: 0;
+        color: rgba(0, 0, 0, 0.54);
+        line-height: 1.6;
+        font-family: Arial;
+        font-size: 15px;
+        line-height: 1.6;
+        text-align: left;
+      }
+
+      .material-icons {
+        margin-left: auto;
+        font-size: 18px;
+      }
     ANGULAR: ANGULAR1
   - title: Modal - Yes/No
     type: Example
@@ -19,6 +53,67 @@ codeContainer:
     componentName: alert
     props:
     REACT: REACT
-    HTML: HTML
-    CSS: CSS1
+    HTML: |
+      <div class="modal">
+        <i class="material-icons">close</i>
+        <strong>WARNING</strong>
+        <br />
+        <p>This Crew Member does not have the<br /> required Competencies to be assigned to<br/> this Task.</p>
+        <br /><br /><br /><br />
+        <span>
+          <button class="btn btnDefault" type="button">CANCEL</button>
+          <button class="btn btnPrimary" type="button">OK</button>
+        </span>
+      </div>
+    CSS: |
+      .modal {
+        display: flex;
+        flex-direction: column;
+        width: 340px;
+        height: auto;
+        padding: 10px 10px 40px 25px;
+        font-size: 16PX;
+        background-color: #ffffff;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        border: solid 1px #dcdcdc;
+        font-family: Arial;
+      }
+
+      .btn {
+        box-sizing: border-box;
+        height: 36px;
+        width: 83px;
+        border-radius: 2px;
+        font-family: arial;
+        font-size: 11px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        color: #333333;
+        border: none;
+        background-color: #fff;
+      }
+
+      .btnDefault {
+        border: solid 1px rgba(51, 51, 51, 0.15);
+      }
+
+      .material-icons {
+        margin-left: auto;
+        font-size: 18px;
+      }
+
+      .btnPrimary {
+        background-color: #e65400;
+        color: #fff;
+      }
+
+      p {
+       color: rgba(0, 0, 0, 0.54);
+       line-height: 1.6;
+      }
+
+      span {
+        margin-left: auto;
+      }
     ANGULAR: ANGULAR1

@@ -1,0 +1,54 @@
+title: Grids
+componentName: Button
+introductionText:
+  - Our grid uses the Bootstrap grid system but we have doubled it to 24 columns for our needs. We also use a 20px gutter which is 10px on either side of a column.
+  - <strong>Columns</strong>
+  - To instantiate a row, simply add a div with the class dws_row
+  - Within the row, adding elements with the classes dws_col-1 through to dws_col-12 will create columns that occupy 1/12th through to 12/12th's respectively. Any combination of widths can be used, with gutters automatically inserted between.
+  - <strong>Column Offsets</strong>
+  - The classes dws_col-offset-1 through to dws_col-offset-11 can be used to offset the current column by 1 to 11 columns respectively.
+  - <div class='developerNoteContainerGlobalClass'>
+      <MaterialDesignIcon name="info" />
+      Developer note!  Follow the Bootstrap documentation on breakpoint classes. Bootstrap documentation.
+    </div>
+
+codeContainer:
+  - title:
+    type:
+    text:
+    componentName: alert
+    props:
+    REACT: REACT
+    HTML: |
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <div class="row">
+        <div class="col-sm-12">.col-sm-12</div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-sm-6">.col-sm-6</div>
+        <div class="col-sm-6">.col-sm-6</div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-sm-4">.col-sm-4</div>
+        <div class="col-sm-4">.col-sm-4</div>
+        <div class="col-sm-4">.col-sm-4</div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-sm-2">.col-sm-2</div>
+        <div class="col-sm-2">.col-sm-2</div>
+        <div class="col-sm-2">.col-sm-2</div>
+        <div class="col-sm-2">.col-sm-2</div>
+        <div class="col-sm-2">.col-sm-2</div>
+        <div class="col-sm-2">.col-sm-2</div>
+      </div>
+      <br />
+    CSS:  |
+      .row div {
+        background-color: #F3F4F5;
+        text-align: center;
+        padding: 20px;
+        border: 1px solid #fff;
+      }

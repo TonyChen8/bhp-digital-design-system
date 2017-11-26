@@ -9,8 +9,8 @@ codeContainer:
     componentName: alert
     props:
     REACT: REACT
-    HTML: HTML
-    CSS: CSS1
+    HTML:
+    CSS:
     ANGULAR: ANGULAR1
   - title: Variation - grey background
     type: Example

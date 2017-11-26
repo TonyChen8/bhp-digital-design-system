@@ -9,8 +9,29 @@ codeContainer:
     componentName: alert
     props:
     REACT: REACT
-    HTML: HTML
-    CSS: CSS1
+    HTML: |
+      <span class='default-text'>Default text input<span><br /><input class='defaultTextInput' type="text" name="fname">
+    CSS: |
+      .defaultTextInput {
+        width: 270px;
+        height: 30px;
+        border-radius: 2px;
+        background-color: #ffffff;
+        border: solid 1px #dcdcdc;
+      }
+      
+      .default-text {
+        font-family: Arial;
+        font-size: 11px;
+        line-height: 1.27;
+        text-align: left;
+        color: #333333;
+      }
+
+      .defaultTextInput:focus {
+        outline: none;
+        border: solid 1px #333333;
+      }
     ANGULAR: ANGULAR1
   - title: Variations
     type: Example
@@ -18,6 +39,34 @@ codeContainer:
     componentName: alert
     props:
     REACT: REACT
-    HTML: HTML
-    CSS: CSS1
+    HTML: |
+      <span class='default-text'>Default text input</span><br /><input class='defaultTextInput' type="text" name="fname"><br /><br /><br />
+      <span class='default-text'>Focussed text input<span><br /><input class='defaultTextInput' type="text" name="fname" autofocus><br /><br /><br />
+      <span class='default-text'>Disabled text input<span><br /><input class='defaultTextInput' type="text" name="fname" disabled><br /><br /><br />
+    CSS: |
+      .defaultTextInput {
+        width: 270px;
+        height: 30px;
+        border-radius: 2px;
+        background-color: #ffffff;
+        border: solid 1px #dcdcdc;
+      }
+      
+      .default-text {
+        font-family: Arial;
+        font-size: 11px;
+        line-height: 1.27;
+        text-align: left;
+        color: #333333;
+      }
+
+      .defaultTextInput:focus {
+        outline: none;
+        border: solid 1px #333333;
+      }
+
+      .defaultTextInput:disabled {
+        background-color: rgba(220, 220, 220, 0.2);
+        border: solid 1px #dcdcdc;
+      }
     ANGULAR: ANGULAR1

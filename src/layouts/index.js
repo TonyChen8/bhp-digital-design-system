@@ -5,8 +5,10 @@ import Helmet from 'react-helmet'
 import SideBar from '../components/sidebar'
 import './style.css'
 import MaterialDesignIcon from '../library/MaterialDesignIcon';
+import _ from 'lodash';
 
 import './index.css'
+import './Hopscotch.css'
 
 const Header = () => (
   <div
@@ -52,6 +54,7 @@ const Header = () => (
 
 function route(route, index) {
   if (_.isEmpty(route)) {
+    if (index == 1) return
     return(
       <Link key ={index} className='navItem' to='/'>
         <span> Home&nbsp;</span>
@@ -61,14 +64,13 @@ function route(route, index) {
   
   return (
     <Link key ={index} className='navItem' to={route}>
-      <span>  /  {route}&nbsp;</span>
+      <span>  /  {_.startCase(_.toLower(route))}&nbsp;</span>
     </Link>
   )
 }
 
 function renderRouteContainer (pathname) {
   var routes = _.split(pathname, '/',3);
-  console.log('routes', pathname);
   return (
     <div className='routeContainer'>
       <div className='routesLinks'>{_.map(routes, route)}</div>
@@ -81,7 +83,6 @@ const TemplateWrapper = ({ children }) => (
     <SideBar />
     <div className='innerContainer'>
       <Header />
-      {renderRouteContainer(location.pathname)}
       <div className='children'>
         {children()}
       </div>

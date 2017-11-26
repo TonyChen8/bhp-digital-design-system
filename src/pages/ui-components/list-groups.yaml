@@ -1,15 +1,102 @@
-title: Time Picker
+title: List groups
 componentName: Button
 introductionText:
-  - A dialog picker is used to select a time in an application.
-  - We use the 24 hours time format for accessibility. If the minutes are not specified, the default displayed value is zero.
+  - List groups are a flexible and powerful component for displaying a series of content. List group items can be modified and extended to support just about any content within. They can also be used as navigation with the right modifier class.
 codeContainer:
   - title: Usage
-    type: Example
-    text: Below is an example of the month picker, click in the input to see the month picker dropdown.
+    type: Light theme
+    text: Below is an example of the default accordions.
     componentName: alert
     props:
     REACT: REACT
-    HTML: HTML
-    CSS: CSS1
+    HTML: |
+      <ul class="list-group">
+        <li class="list-group-item">Task List Key</li>
+        <li class="list-group-item">Task List Key</li>
+        <li class="list-group-item">Task List Key</li>
+        <li class="list-group-item">Task List Key</li>
+      </ul>
+    CSS: |
+      .list-group {
+      	display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 0;
+      	width: 186px;
+        border-radius: 2px;
+      	font-family: Arial;
+        font-size: 12px;
+        line-height: 2.5;
+        text-align: left;
+        color: #333333;
+      }
+
+      .list-group-item {
+        position: relative;
+        display: block;
+      	height: 30px;
+        padding-left: 10px;
+        margin-bottom: -1px;
+        background-color: #fff;
+        border: solid 1px #979797;
+      	box-sizing: border-box;
+      }
+
+      .list-group-item:hover {
+      	background-color: #ececec;
+      }
+    ANGULAR: ANGULAR1
+  - title:
+    type: Dark theme
+    text:
+    componentName:
+    props:
+    REACT: REACT
+    HTML: |
+      <ul class="list-group list-group-dark-theme">
+        <li class="list-group-item">Task List Key</li>
+         <li class="list-group-item">Task List Key</li>
+          <li class="list-group-item">Task List Key</li>
+          <li class="list-group-item">Task List Key</li>
+      </ul>
+    CSS: |
+      .list-group {
+      	display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 0;
+      	width: 186px;
+        border-radius: 2px;
+      	font-family: Arial;
+        font-size: 12px;
+        line-height: 2.5;
+        text-align: left;
+        color: #333333;
+      }
+
+      .list-group-item {
+        position: relative;
+        display: block;
+      	height: 30px;
+        padding-left: 10px;
+        margin-bottom: -1px;
+        background-color: #fff;
+        border: solid 1px #979797;
+      	box-sizing: border-box;
+      }
+      
+      .list-group-dark-theme .list-group-item {
+        background-color: #767684;
+        border-color: #353544;
+      	color: #fff;
+      }
+
+      .list-group-item:hover {
+      	background-color: #ececec;
+        color: #333;
+      }
     ANGULAR: ANGULAR1

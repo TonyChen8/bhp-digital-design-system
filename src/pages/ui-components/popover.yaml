@@ -21,8 +21,66 @@ codeContainer:
     componentName: alert
     props:
     REACT: REACT
-    HTML: HTML
-    CSS: CSS1
+    HTML: |
+      <div class="popover-container">
+        <a>Text on right (hover to see popover)</a>
+        <div href="#" class="tooltip-text-right">Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut laborerem ipsum dolor sit amet.</div>
+      </div>
+    CSS: |
+      .tooltip-text-left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 150px;
+        min-height: 35px;
+        position: relative;
+        margin-right: 15px;
+        padding: 20px;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 2px;
+        border: solid 1px #dcdcdc;
+        box-sizing: border-box;
+        font-family: Arial;
+        font-size: 13px;
+        line-height: 1.38;
+        text-align: left;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.54);
+      }
+      .tooltip-text-left:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 100%;
+        top: 44%;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-left-color: #dcdcdc;
+      }
+
+      .tooltip-text-left:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 100%;
+        top: 44.6%;
+        width: 0;
+        height: 0;
+        border: 9px solid transparent;
+        border-left-color: white;
+      }
+      
+      .popover-container {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+      }
+      
+      a:hover + .tooltip-text-right {
+        visibility: visible;
+      }
     ANGULAR: ANGULAR1
   - title: Variations
     type: Example
@@ -30,6 +88,271 @@ codeContainer:
     componentName: alert
     props:
     REACT: REACT
-    HTML: HTML
-    CSS: CSS1
+    HTML: |
+      <div class="main-cointainer">
+        <div class="popover-container-left">
+          <a>Text on left</a>
+          <div href="#" class="tooltip-text-left1">Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut laborerem ipsum dolor sit amet.</div>
+        </div>
+
+        <div class="popover-container-bottom">
+          <a>Text on top</a>
+          <div href="#" class="tooltip-text-bottom">Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut laborerem ipsum dolor sit amet.</div>
+        </div>
+      </div>
+      <br />
+      <div class="main-cointainer">
+        <div class="popover-container-right">
+          <a>Text on right</a>
+          <div href="#" class="tooltip-text-right">Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut laborerem ipsum dolor sit amet.</div>
+        </div>
+        <div class="popover-container-top">
+          <a>Text on bottom</a>
+          <div href="#" class="tooltip-text-top">Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut laborerem ipsum dolor sit amet.</div>
+        </div>
+      </div>
+    CSS: |
+      .popover-container {
+        display: flex;
+        align-items: center;
+      }
+
+      a {
+        font-family: Arial;
+        font-size: 13px;
+        line-height: 1.38;
+        text-align: left;
+        color: #2da3d7;
+      }
+
+      .tooltip-text-left1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 150px;
+        min-height: 35px;
+        position: relative;
+        margin-right: 15px;
+        padding: 20px;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 2px;
+        border: solid 1px #dcdcdc;
+        box-sizing: border-box;
+        font-family: Arial;
+        font-size: 13px;
+        line-height: 1.38;
+        text-align: left;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.54);
+        visibility: hidden;
+      }
+      .tooltip-text-left1:before {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 100%;
+        top: 44%;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-left-color: #dcdcdc;
+      }
+
+      .tooltip-text-left1:after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 100%;
+        top: 44.6%;
+        width: 0;
+        height: 0;
+        border: 9px solid transparent;
+        border-left-color: white;
+      }
+
+      .tooltip-text-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        max-width: 150px;
+        min-height: 35px;
+        padding: 20px;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 2px;
+        margin-top: 15px;
+        border: solid 1px #dcdcdc;
+        box-sizing: border-box;
+        font-family: Arial;
+        font-size: 13px;
+        line-height: 1.38;
+        text-align: left;
+        color: rgba(0, 0, 0, 0.54);
+        visibility: hidden;
+      }
+
+      .tooltip-text-bottom:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 44%;
+        bottom: 100%;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-bottom-color: #dcdcdc;
+      }
+
+      .tooltip-text-bottom:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 44.8%;
+        bottom: 100%;
+        width: 0;
+        height: 0;
+        border: 9px solid transparent;
+        border-bottom-color: white;
+      }
+
+      .tooltip-text-top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 150px;
+        min-height: 35px;
+        position: relative;
+        padding: 20px;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 2px;
+        margin-bottom: 15px;
+        border: solid 1px #dcdcdc;
+        box-sizing: border-box;
+        font-family: Arial;
+        font-size: 13px;
+        line-height: 1.38;
+        text-align: left;
+        color: rgba(0, 0, 0, 0.54);
+        visibility: hidden;
+      }
+
+      .tooltip-text-top:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 44%;
+        top: 100%;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-top-color: #dcdcdc;
+      }
+
+      .tooltip-text-top:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 44.8%;
+        top: 100%;
+        width: 0;
+        height: 0;
+        border: 9px solid transparent;
+        border-top-color: white;
+      }
+
+      .tooltip-text-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 150px;
+        min-height: 35px;
+        position: relative;
+        margin-right: 15px;
+        padding: 20px;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 2px;
+        border: solid 1px #dcdcdc;
+        box-sizing: border-box;
+        font-family: Arial;
+        font-size: 13px;
+        line-height: 1.38;
+        text-align: left;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.54);
+        visibility: hidden;
+      }
+      .tooltip-text-right:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 100%;
+        top: 44%;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-left-color: #dcdcdc;
+      }
+
+      .tooltip-text-right:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 100%;
+        top: 44.6%;
+        width: 0;
+        height: 0;
+        border: 9px solid transparent;
+        border-left-color: white;
+      }
+
+      .popover-container-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+      }
+      
+      .popover-container-left {
+        display: flex;
+        align-items: center;
+        width: 300px;
+      }
+
+      .popover-container-right {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        width: 300px;
+      }
+
+      .popover-container-top {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 300px;
+      }
+
+      .main-cointainer {
+        display: flex;
+      }
+
+      a:hover + .tooltip-text-left1 {
+        visibility: visible;
+      }
+
+      a:hover + .tooltip-text-right {
+        visibility: visible;
+      }
+
+      a:hover + .tooltip-text-bottom {
+        visibility: visible;
+      }
+
+      a:hover ~ .tooltip-text-top {
+        visibility: visible;
+      }
     ANGULAR: ANGULAR1

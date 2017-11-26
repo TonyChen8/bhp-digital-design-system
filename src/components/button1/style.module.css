@@ -1,0 +1,78 @@
+.btn {
+  width: 86px;
+  height: 36px;
+  margin-right: 20px;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  background-color: #fff;
+}
+
+.btnPrimary {
+  background-color: #e65400;
+}
+.btnDefault {
+  color: #333333;
+  border: solid 1px rgba(51, 51, 51, 0.15);
+}
+.btnHover {
+  color: #333333;
+  border: solid 1px #333333;
+}
+.btnDisabled {
+  opacity: 0.2;
+  color: #333333;
+}
+.btnDelete {
+  background-color: #f03a36;
+}
+
+.btnDefaultDark {
+  border: solid 1px rgba(51, 51, 51, 0.15);
+}
+
+.btnHoverDark {
+  color: #333333;
+  border: solid 1px #fff;
+}
+
+.btnDisabledDark {
+  opacity: 0.2;
+  color: #333333;
+  border: solid 1px rgba(51, 51, 51, 0.15);
+}
+
+.cardBlockText {
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.btnLinkDark {
+  background-color: #393b42;
+}
+
+.btnSuccess {
+  background-color: #5cb85c;
+}
+
+.btnInfo {
+  background-color: #03a9f4;
+}
+
+.btnWarning {
+  background-color: #f0ad4e;
+}
+
+.btnDanger {
+  background-color: #f03a36;
+}
+
+.btnLink {
+  color: #333;
+}
+
+.btnSecondSuccess {
+  background-color: #46768b;
+}

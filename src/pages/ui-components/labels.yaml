@@ -9,8 +9,23 @@ codeContainer:
     componentName: alert
     props:
     REACT:
-    HTML:
-    CSS: CSS1
+    HTML: |
+      <span class="label label-primary">Label</span>
+    CSS: |
+      .label {
+        padding: 3px 6px;;
+        border-radius: 4px;
+        font-family: Arial;
+        font-size: 12px;
+        font-weight: 100;
+        line-height: 1.5;
+        text-align: center;
+        color: #ffffff;
+      }
+
+      .label.label-primary {
+        background-color: #e65400;;
+      }
     ANGULAR: ANGULAR1
   - title: Variations colour and size
     text:
@@ -18,6 +33,40 @@ codeContainer:
     componentName: alert
     props:
     REACT:
-    HTML:
-    CSS: CSS1
+    HTML: |
+      <span class="label label-info">Label</span>
+      <span class="label label-success">Label</span>
+      <span class="label label-warning">Label</span>
+      <span class="label label-danger">Label</span>
+    CSS: |
+      .label {
+        padding: 3px 6px;;
+        border-radius: 4px;
+        font-family: Arial;
+        font-size: 12px;
+        font-weight: 100;
+        line-height: 1.5;
+        text-align: center;
+        color: #ffffff;
+      }
+      
+      .label.label-success {
+        background-color: #5cb85c;
+      }
+      
+      .label.label-danger {
+        background-color: #f03a36;;
+      }
+
+      .label.label-primary {
+        background-color: #e65400;;
+      }
+
+      .label.label-warning {
+        background-color: #fce05b;
+        color: #333333;
+      }
+      .label.label-info {
+        background-color: #03A9F4;
+      }
     ANGULAR: ANGULAR1

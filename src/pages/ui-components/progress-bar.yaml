@@ -9,6 +9,26 @@ codeContainer:
     componentName: alert
     props:
     REACT: REACT
-    HTML: HTML
-    CSS: CSS1
+    HTML: <progress class='progress' value="50" max="100"> </progress>
+    CSS: |
+      .progress {
+        display: flex;
+        position: relative;
+        width: 400px;
+        height: 20px;
+        background-color: #ececec;
+        align-items: center;
+      }
+
+      .progress::-webkit-progress-value {
+        background-color: #2da3d7;
+      }
+
+      .progress:before {
+        position:absolute;
+        left:5px;
+        right:0;
+        content: attr(value)'%';
+        font-size: 11px;
+      }
     ANGULAR: ANGULAR1

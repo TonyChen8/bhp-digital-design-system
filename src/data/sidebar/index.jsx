@@ -133,10 +133,6 @@ const sidebarMenuLinks = [
         linkTo: 'ui-components/toggle-switch',
       },
       {
-        name: 'Panels',
-        linkTo: 'ui-components/panels',
-      },
-      {
         name: 'Popover',
         linkTo: 'ui-components/popover',
       },

@@ -26,10 +26,6 @@ uiComponentsYaml(fields: {slug: {eq: $slug}}) {
     HTML
     CSS
     ANGULAR
-    props {
-      type
-      text
-    }
   }
   api {
     name

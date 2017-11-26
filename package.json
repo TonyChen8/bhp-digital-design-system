@@ -13,6 +13,7 @@
     "gatsby-transformer-yaml": "^1.5.11",
     "lodash": "^4.17.4",
     "material-design-icons": "^3.0.1",
+    "react-highlight": "^0.10.0",
     "react-paginate": "^5.0.0"
   },
   "keywords": [

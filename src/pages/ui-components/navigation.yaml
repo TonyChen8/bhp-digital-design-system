@@ -30,7 +30,358 @@ codeContainer:
     props:
     REACT: REACT
     HTML: HTML
-    CSS: CSS1
+    CSS: |
+      // Nav Default
+      @import "../bhp-ui.mixins.default";
+
+      .main-nav {
+        width: 250px;
+        background: $darker_grey;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        z-index: 1000;
+        -webkit-touch-callout: none;
+        /* iOS Safari */
+        -webkit-user-select: none;
+        /* Chrome/Safari/Opera */
+        -khtml-user-select: none;
+        /* Konqueror */
+        -moz-user-select: none;
+        /* Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer/Edge */
+        user-select: none;
+        /* Non-prefixed version */
+        .menu-wrap {
+          overflow-y: auto;
+          overflow-x: hidden;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          right: 0;
+          bottom: 85px;
+          padding-top: 10px;
+        }
+
+        .menu {
+          > ul > li {
+            list-style: none;
+
+            > a {
+              display: block;
+              color: $grey;
+              font-size: 16px;
+              text-decoration: none;
+              height: 50px;
+              line-height: 50px;
+              transition: all 0.1s ease-in-out;
+              position: relative;
+
+              &:hover {
+                background: rgba(255, 255, 255, 0.05);
+              }
+            }
+
+            &.disabled > a {
+              background: transparent;
+              color: lighten($darker_grey, 20%);
+              outline: none;
+              cursor: default;
+
+              .menu-icon-wrap {
+                background: transparent;
+              }
+            }
+
+            &.active > a {
+              background: rgba(255, 255, 255, 0.15);
+              color: #fff;
+              outline: none;
+
+              .menu-icon-wrap {
+                background: $bhp_orange_1;
+              }
+
+              .nav-bagde.badge-info {
+                display: inline-block;
+              }
+            }
+
+            > a {
+              width: 250px;
+
+              .menu-icon-wrap {
+                margin-right: 10px;
+                text-align: center;
+                width: 55px;
+                float: left;
+
+                > i {
+                  font-size: 23px;
+                  text-align: center;
+                  width: 26px;
+                  margin-top: 3px;
+                  position: relative;
+                  top: 3px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .collapsed-nav {
+        .main-nav {
+          width: 55px;
+          @include boxShadow(0px, 0px, 10px, rgba(0,0,0,0.5));
+        }
+
+        .header {
+          left: 55px;
+        }
+        .page-wrap {
+          left: 55px;
+        }
+      }
+
+      .secondary-nav {
+        height: 55px;
+        left: 0;
+        position: fixed;
+        top: 60px;
+        right: 0;
+        padding: 0 15px;
+        z-index: 10;
+        background-color: $light_grey_2;
+
+        .top-nav{
+          display: inline-block;
+        }
+        a {
+          color: $black;
+        }
+
+        @at-root #{&}__title {
+          font-weight: normal;
+          display: inline-block;
+          font-size: 18px;
+          line-height: 3;
+          margin: 0;
+        }
+
+        .header-title {
+          font-size: 20px;
+          margin: 0 0 0 20px;
+          //  line-height: 3;
+        }
+
+        &.secondary-nav__default {
+          // @include boxShadow(0px, 1px, 2px, rgba(0, 0, 0, 0.14));
+          // border-top: 1px solid transparent;
+          border-bottom: 1px solid $grey2 !important;
+        }
+
+        &.secondary-nav__large {
+          height: 80px;
+          box-shadow: none;
+          border-bottom: 1px solid $grey2 !important;
+        }
+
+        &.with-full-nav {
+          top: 80px;
+        }
+
+        .breadcrumb {
+          background-color: transparent;
+          padding: 0;
+          margin: 0;
+          font-size: 16px;
+          margin: 13px 0;
+
+          a {
+            color: #666;
+          }
+
+          .equip-list {
+            display: inline-block;
+
+            .dropdown-toggle {
+              cursor: pointer;
+              text-decoration: none;
+            }
+          }
+
+        }
+
+        .top-nav {
+          display: inline-block;
+        }
+      }
+
+      div .top-nav {
+
+        ul {
+          display: inline-block;
+          margin: 0;
+          padding: 0;
+          & > li {
+            display: inline-block;
+            margin-right: 20px;
+            color: $off_white;
+
+            & > .btn {
+              font-size: 16px;
+              border-width: 0 0 5px;
+              padding: 16px 0 11px !important;
+              transition: all 0.1s ease-in-out;
+              outline: none !important;
+              border-radius: 0;
+              border-color: transparent;
+              background: transparent;
+              background-color: transparent !important;
+              box-shadow: none;
+              margin: 0;
+              //  opacity: .75;
+              color: $medium_grey;
+
+              &:hover {
+                outline: none !important;
+                background: transparent;
+                border-color: $grey;
+                color: $black;
+                //  opacity: 1;
+              }
+            }
+
+            &.active > .btn,
+            &.factive > .btn {
+              border-color: $bhp_orange_1;
+              font-weight: bold;
+              color: $black;
+              //  opacity: 1;
+            }
+          }
+        }
+      }
+
+      .nav-bagde {
+        color: rgba(255,255,255,.5);
+        display: inline-block;
+        line-height: 1;
+        font-size: 11px;
+        padding: 3px;
+        border: 1px solid rgba(255, 255, 255, 0.26);
+        left: 6px;
+        position: relative;
+        top: -1px;
+
+        &.badge-info {
+          display: none;
+        }
+
+        &.badge-fixed {
+          visibility: visible;
+          display: inline-block;
+          color: #E6ECAE;
+          border-color: #E6ECAE;
+        }
+      }
+
+      .menu-search {
+        top: 81px;
+        position: absolute;
+        color: #969692;
+        left: 5%;
+        width: 88%;
+
+        i {
+          position: absolute;
+          top: 9px;
+          left: 18px;
+        }
+
+        input {
+          background: transparent;
+          border-width: 0;
+          color: #666;
+          border: 1px solid #666;
+          border-radius: 50px;
+          box-shadow: none;
+          padding: 0 10px 0 40px;
+          transition: all 0.15s ease-in-out;
+
+          &:focus {
+            box-shadow: none;
+            background: #fff;
+            border: 1px solid #fff;
+          }
+        }
+      }
+      // Search to be placed top right, currently unused
+      .search {
+        display: none;
+        float: right;
+        margin: 10px 15px 0 0;
+
+        input {
+          padding: 3px;
+          height: 28px;
+          border: 0;
+          border-radius: 2px;
+        }
+      }
+
+      .submenu-toggle {
+        border: none;
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+        background: transparent;
+        padding: 0 4px 0 0;
+        margin: 0;
+        border-radius: 0 2px 2px 0;
+        width: 29px;
+        height: 34px;
+        outline: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        &:hover,
+        .submenu-active & {
+          background: rgba(255, 255, 255, 0.6);
+          border-left: none;
+        }
+      }
+
+      .submenu {
+        position: absolute;
+        top: 31px;
+        left: 0;
+        z-index: 1;
+        border-radius: 2px;
+        padding: 15px 30px;
+        overflow-y: auto;
+
+        li {
+          list-style: none;
+        }
+
+        a {
+          color: #fff;
+        }
+
+        .equip-icon {
+          background: rgba(255,255,255,0.2);
+
+          &:hover {
+            background: rgba(255,255,255,0.4);
+            color: #fff;
+          }
+        }
+      }
+
     ANGULAR: ANGULAR1
   - title: Modal - Yes/No
     type: Example

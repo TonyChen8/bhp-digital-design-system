@@ -5,6 +5,7 @@ import classnames from 'classnames'
 import Alert from '../components/alert'
 import Link from 'gatsby-link';
 import _ from 'lodash'
+import Highlight from 'react-highlight';
 
 
 import s from './style.module.css'
@@ -28,7 +29,7 @@ class Template extends React.Component {
   
   rendernavigationTab({name}) {
     return (
-      <div onClick={(e) => this.handleNavigationClick(name, e)}  value={name} key ={name} className={s.navItem}>
+      <div onClick={(e) => this.handleNavigationClick(name, e)}  value={name} key ={name} className={classnames(s.navItem, this.state.code==name? s.active: '')}>
         <label value={name}>{name}</label>
       </div>
     )
@@ -48,20 +49,23 @@ class Template extends React.Component {
   renderApiContainer(api) {
     return(
       <table className={s.apiTable}>
-        <tr>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Default</th>
-          <th>Description</th>
-        </tr>
-        {_.map(api,this.renderTableRow)}
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          {_.map(api,this.renderTableRow)}
+        </tbody>
       </table>
       
     )
   }
   
-  renderCodeContainer({title, text, type, props, componentName, REACT, HTML, CSS, ANGULAR }) {
-    console.log('react');
+  renderCodeContainer({title, text, type, props, componentName, REACT, HTML, CSS, ANGULAR }, index) {
     const components = {
       button: Buttons,
       alert: Alert,
@@ -79,6 +83,7 @@ class Template extends React.Component {
     };
 
     var Code = code[this.state.code];
+    var HtmlCssCode = `<style> ${CSS} </style> ${HTML}`;
     
     function renderComponent(props) {
       if (_.isEmpty(props)) return
@@ -89,16 +94,20 @@ class Template extends React.Component {
       )
     }
     return(
-      <div>
+      <div key={index}>
         <p className='subTitleGlobalClass'>{title}</p>
         <p className='normalTextGlobalClass' dangerouslySetInnerHTML={{__html: text}}></p>
-        <div className='componentAndCodeContainerGlobalClass'>
+        <div className={classnames('componentAndCodeContainerGlobalClass',type=='Dark theme'? 'darkThemeGlobalClass': '')}>
           <p>{type}</p>
           <div className='componentsClassGlobalClass'>
             {_.map(props, renderComponent)}
+            <p className='normalTextGlobalClass' dangerouslySetInnerHTML={{__html: HtmlCssCode}}></p>
           </div>
-          <pre className='codeContainerGlobalClass'>{Code}</pre>
-        </div>
+          </div>
+          <Highlight className={classnames('html')}>
+              {Code}
+          </Highlight>
+
         
       </div>
     );
@@ -108,7 +117,6 @@ class Template extends React.Component {
   render() {
     const pageData = this.props.data.uiComponentsYaml? this.props.data.uiComponentsYaml : this.props.data.foundationsYaml
     const codeContainer = pageData.codeContainer
-    console.log('codeContainer',codeContainer);
     let navigationItems = [
       {
         name: 'REACT'
@@ -124,9 +132,9 @@ class Template extends React.Component {
       },
     ];
 
-    function renderParagraph(text) {
+    function renderParagraph(text, index) {
       return (
-        <p className='normalTextGlobalClass' dangerouslySetInnerHTML={{__html: text}}></p>
+        <p key={index} className='normalTextGlobalClass' dangerouslySetInnerHTML={{__html: text}}></p>
       );
     }
     

@@ -50,8 +50,8 @@ class SideBar extends React.Component {
             </div>
           </span>
           <div className={classnames(!subMenu && s.disable, s.sidebarArrow)}  >
-            <span onClick={()=>{this.showSubMenu(name)}} className={classnames(subMenuOpenFor && s.disable)}><MaterialDesignIcon name='keyboard_arrow_left' className='keyboard_arrow_left'/></span>
-            <span onClick={()=>{this.showSubMenu('')}} className={classnames(!subMenuOpenFor && s.disable)}><MaterialDesignIcon name='keyboard_arrow_down' className='keyboard_arrow_down'/></span>
+            <span onClick={()=>{this.showSubMenu(name)}} className={classnames(subMenuOpenFor && s.disable)}><MaterialDesignIcon name='keyboard_arrow_left' className={classnames('keyboard_arrow_left', !this.state.sidebarOpen && s.disable)}/></span>
+            <span onClick={()=>{this.showSubMenu('')}} className={classnames(!subMenuOpenFor && s.disable)}><MaterialDesignIcon name='keyboard_arrow_down' className={classnames('keyboard_arrow_down', !this.state.sidebarOpen && s.disable)}/></span>
           </div>
           <div className={classnames(!subMenuOpenFor && s.disable, s.subMenu)}>
             {_.map(subMenu, this.renderLink)}
