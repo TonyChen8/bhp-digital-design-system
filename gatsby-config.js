@@ -42,8 +42,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `foundations`,
-        path: `${__dirname}/src/pages/foundations`,
+        name: `foundation`,
+        path: `${__dirname}/src/pages/foundation`,
       },
     },
     {

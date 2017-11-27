@@ -650,6 +650,10 @@ pre tt:after {
   color: #fff;
 }
 
+.noBorderLeftGlobalClass {
+  border-left: none;
+}
+
 .darkThemeGlobalClass {
   background-color: #393b42;
   color: #fff !important;

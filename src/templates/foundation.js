@@ -13,7 +13,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   query FoundationPageQuery($slug: String!) {
-    foundationsYaml(fields: { slug: { eq: $slug } }) {
+    foundationYaml(fields: { slug: { eq: $slug } }) {
       title
       componentName
       introductionText

@@ -43,7 +43,7 @@ const gettingStarted = () => (
   <div className='pageContainerGlobalClass'>
     <div className='pageMainContentGlobalClass'>
       <p className='pageTitleGlobalClass'>Getting Started</p>
-      <p className='subTitleGlobalClass'>Using BHP Design Pattern Library (DPL) Components</p>
+      <p className='subTitleGlobalClass'>Using Digital Design System (DDS) Components</p>
       <p>
         Our components are a collection of front-end interface elements that can be reused across the BHP browser-based products.
       </p>

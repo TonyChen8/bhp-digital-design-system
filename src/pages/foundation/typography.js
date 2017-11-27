@@ -1,15 +1,17 @@
 import React from 'react'
-import s from './style.module.css'
+import s from './style.module.css';
+import classnames from 'classnames';
 
 const typography = () => (
   <div className='pageContainerGlobalClass'>
     <div className='pageMainContentGlobalClass'>
       <p className='pageTitleGlobalClass'>Typography</p>
       <p>Arial is BHP’s everyday font. As a system font, Arial ensures consistency when distributing files across workstations and platforms. Arial has been installed as our default across all desktop computers. If you require further details regarding this font for your agency/provider please contact your local Corporate Affairs team or email Corporate Brand.</p>
-      <p>Most typographic styles are based off standard HTML, however classes are also available should you wish to apply the same styles to other elements.The default body text is 13px. For optimum reading length, the paragraph-width is capped at 694px.</p>
+      <p>The font Graphik Web is accepted as the secondary option for some designs. Its use and styling similarly follows the primary font,  Arial. Typical use would be for emphasis, special design or captions.</p>
       <p>The default body text is 13px. For optimum reading length, the paragraph-width is capped at 694px.</p>
       <p>Tips: Too many type sizes and styles at once can disturb any layout. A typographic scale has a limited set of type sizes that work well together along with the layout grid. Avoid italic text as it impede the accessibility of your design.</p>
-      <p>White text on dark backgrounds hould do so at an opacity of 100%.</p>
+      <p>White text on dark backgrounds should do so at an opacity of 100%.</p>
+      <br />
 
       <div className={s.foundationsTypography}>
         <div>
@@ -79,7 +81,7 @@ const typography = () => (
       </table>
 
     </div>
-    <div className='pageRightSideMenuGlobalClass'>
+    <div classname={classnames('pageRightSideMenuGlobalClass', 'noBorderLeftGlobalClass')}>
     </div>
   </div>
 )

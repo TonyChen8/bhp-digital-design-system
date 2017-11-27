@@ -11,23 +11,23 @@ const sidebarMenuLinks = [
     subMenu: [
       {
         name: 'Typography',
-        linkTo: 'foundations/typography',
+        linkTo: 'foundation/typography',
       },
       {
         name: 'UI Colours',
-        linkTo: 'foundations/ui-colours',
+        linkTo: 'foundation/ui-colours',
       },
       {
         name: 'Font Icons',
-        linkTo: 'foundations/font-icons',
+        linkTo: 'foundation/font-icons',
       },
       {
         name: 'Grid',
-        linkTo: 'foundations/grid',
+        linkTo: 'foundation/grid',
       },
       {
         name: 'Tables',
-        linkTo: 'foundations/tables',
+        linkTo: 'foundation/tables',
       },
     ],
   },

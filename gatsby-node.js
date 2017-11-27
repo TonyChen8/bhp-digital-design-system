@@ -11,7 +11,7 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
       value: slug,
     })
   }
-  if (node.internal.type === `FoundationsYaml`) {
+  if (node.internal.type === `FoundationYaml`) {
     const slug = createFilePath({ node, getNode, basePath: 'pages' })
     createNodeField({
       node,
@@ -34,7 +34,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   return new Promise((resolve, reject) => {
     graphql(`
       {
-        allFoundationsYaml {
+        allFoundationYaml {
           edges {
             node {
               fields {
@@ -54,10 +54,10 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }
       }
     `).then(result => {
-      result.data.allFoundationsYaml.edges.map(({ node }) => {
+      result.data.allFoundationYaml.edges.map(({ node }) => {
         createPage({
           path: node.fields.slug,
-          component: path.resolve(`./src/templates/foundations.js`),
+          component: path.resolve(`./src/templates/foundation.js`),
           context: {
             // Data passed to context is available in page queries as GraphQL variables.
             slug: node.fields.slug,

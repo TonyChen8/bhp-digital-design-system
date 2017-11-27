@@ -7,7 +7,7 @@ import MaterialDesignIcon from '../library/MaterialDesignIcon';
 const DesignPrinciples = () => (
   <div>
   <div className={s.thinkBigContainer}>
-    <p>Think Big</p>
+    <p>Think big</p>
   </div>
       <div className={s.firstHalfofPage}>
       <div className={s.designPrinciplesParagraph}>
@@ -61,7 +61,7 @@ const DesignPrinciples = () => (
       <div className={s.secondHalfofPage}>
         <div className={s.designersBlock}>
           <p className={s.forDevelopers}>
-            <MaterialDesignIcon name='mode_edit' color='#333333' fontSize= '30px' className='materialDesignIcon' />    
+            <MaterialDesignIcon name='mode_edit' color='#e65400' fontSize= '30px' className='materialDesignIcon' />    
             &nbsp;For Designers
           </p>
             <span>Consistency</span>
@@ -80,8 +80,9 @@ const DesignPrinciples = () => (
             <p>Continual support through guidance.</p>
         </div>
         <div className={s.developersBlock}>
+        
           <p className={s.forDevelopers}>
-            <MaterialDesignIcon name='settings_ethernet' color='#333333' fontSize= '30px' className='materialDesignIcon' />
+            <MaterialDesignIcon name='settings_ethernet' color='#e65400' fontSize= '30px' className='materialDesignIcon' />
             &nbsp;For Developers
           </p>
           <span>Consistency</span>

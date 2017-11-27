@@ -84,7 +84,7 @@ class SideBar extends React.Component {
 
     return (
       <aside className={classnames(s.sideBar, sidebarOpen && s.fullSideBar)}>
-        <div className={s.sideMenuLogoContainer}><img src={bhpWhiteLogo} /></div>
+        <div className={s.sideMenuLogoContainer}><Link to='/design-principles'><img src={bhpWhiteLogo} /></Link></div>
         <div className={classnames(s.closeIcon,!sidebarOpen && s.disable)} onClick={this.toggleSidebar} >
           <MaterialDesignIcon name="arrow_back" />
         </div>
