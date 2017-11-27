@@ -1,6 +1,8 @@
 import React from 'react'
 import s from './style.module.css';
 import classnames from 'classnames';
+import Highlight from 'react-highlight';
+
 
 const typography = () => (
   <div className='pageContainerGlobalClass'>
@@ -33,14 +35,18 @@ const typography = () => (
           </div>
         </div>
       </div>
-      <pre className='codeBlockGlobal'>{`
+      <br />
+      <br />
+      <pre className={classnames('html','highlightGlobalClass')}>
+{`
 <h1>Heading 1</h1>
 <h2>Heading 2</h2>
 <h3>Heading 3</h3>
 <h4>Heading 4</h4>
-<h5>Heading 5</h5>
-      `}</pre>
-      <div className={s.lightThemeText}>
+<h5>Heading 5</h5>`
+}
+      </pre>
+      <div className={s.lightTheme}>
         Light theme<br />
         Body text large / <a className={s.pageAnchors}>Link text large</a>
         <p></p>

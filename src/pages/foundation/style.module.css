@@ -88,6 +88,13 @@
 }
 
 .lightThemeText {
+  font-size: 20px;
+}
+
+.darkThemeText {
+  font-size: 20px;
+}
+.lightTheme{
   font-size: 15px;
 }
 

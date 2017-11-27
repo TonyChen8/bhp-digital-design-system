@@ -1,14 +1,4 @@
-.linkInner {
-  display: flex;
-  justify-content: space-around;
-  height: 52px;
-  padding-left: 19px;
-  padding-right: 10px;
-  color: #fff;
-  align-items: center;
-  font-size: 14px;
-  opacity: 0.4;
-}
+
 
 .sideBar {
   position: relative;
@@ -21,7 +11,8 @@
 }
 
 .materialDesignIcon {
-  margin-right: 13px;
+  position: absolute;
+  left: 19px;
 }
 
 a {
@@ -30,11 +21,13 @@ a {
 
 .linkClass {
   text-decoration: none;
-  display: inline-block;
+  display: flex;
+  align-items: center;
 }
 
 .linkText {
-  flex-grow: 2;
+  left: 49px;
+  position: absolute;
 }
 
 .closeIcon {
@@ -46,8 +39,9 @@ a {
 
 .sidebarArrow {
   display: inline-block;
-  margin-top: 17px;
-  float: right;
+  position: absolute;
+  right: 9px;
+  margin-top: -11px;
   opacity: 0.4;
   cursor: pointer;
 }
@@ -76,19 +70,36 @@ a {
 
 .disable {
   display: none;
+  transition: visibility 0s linear;
   -webkit-transition: display .3s;
   transition: display .3s;
 }
 
-.subMenu {
-  padding-left: 20px;
-}
-
 .activeLink {
-  color: #fff;
+  opacity: 1 !important;
+  box-sizing: border-box;
+  border-left: 5px solid #e65400;
 }
 
 .linkContainer {
-  margin-right: 10px;
-  align-items: baseline;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+  color: #fff;
+  font-size: 14px;
+  opacity: 0.4;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.submenuContainer {
+  align-items: center;
+  opacity: 0.4;
+}
+
+.subMenuLinkContainer {
+  display: flex;
+  align-items: center;
+  color: #fff;
 }

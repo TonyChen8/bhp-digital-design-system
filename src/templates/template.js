@@ -97,16 +97,16 @@ class Template extends React.Component {
       <div key={index}>
         <p className='subTitleGlobalClass'>{title}</p>
         <p className='normalTextGlobalClass' dangerouslySetInnerHTML={{__html: text}}></p>
-        <div className={classnames('componentAndCodeContainerGlobalClass',type=='Dark theme'? 'darkThemeGlobalClass': '')}>
+        <div className={classnames('componentAndCodeContainerGlobalClass',title=='Dark theme'? 'darkThemeGlobalClass': '')}>
           <p>{type}</p>
           <div className='componentsClassGlobalClass'>
             {_.map(props, renderComponent)}
             <p className='normalTextGlobalClass' dangerouslySetInnerHTML={{__html: HtmlCssCode}}></p>
           </div>
           </div>
-          <Highlight className={classnames('html','highlightGlobalClass')}>
+          <pre className={classnames('html','highlightGlobalClass')}>
               {Code}
-          </Highlight>
+          </pre>
 
         
       </div>

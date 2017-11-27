@@ -27,6 +27,10 @@ class SideBar extends React.Component {
   }
   
   showSubMenu(menuName) {
+    if(menuName==this.state.subMenuOpenFor) {
+      // toggling sidemenu
+      menuName= '';
+    }
     this.setState({subMenuOpenFor: menuName});
   }
 
@@ -38,44 +42,38 @@ class SideBar extends React.Component {
     
     if (subMenu) {
       return (
-        <div key={name} className={s.linkContainer}>
-          <span
-            key={name}
-            className={s.linkClass}
-          >
-            <div className={s.linkInner}>
-              <MaterialDesignIcon name={miName} className={s.materialDesignIcon}/>
-              <div className={classnames(s.linkText,!this.state.sidebarOpen && s.disable)}>
-                {name}
-              </div>
+        <div>
+          <Link activeClassName={s.activeLink} onClick={e => {e.preventDefault(); this.showSubMenu(name)}} key={name} className={s.linkContainer}>
+            <MaterialDesignIcon name={miName} className={s.materialDesignIcon}/>
+            <div className={classnames(s.linkText,!this.state.sidebarOpen && s.disable)}>
+              {name}
             </div>
-          </span>
-          <div className={classnames(!subMenu && s.disable, s.sidebarArrow)}  >
-            <span onClick={()=>{this.showSubMenu(name)}} className={classnames(subMenuOpenFor && s.disable)}><MaterialDesignIcon name='keyboard_arrow_left' className={classnames('keyboard_arrow_left', !this.state.sidebarOpen && s.disable)}/></span>
-            <span onClick={()=>{this.showSubMenu('')}} className={classnames(!subMenuOpenFor && s.disable)}><MaterialDesignIcon name='keyboard_arrow_down' className={classnames('keyboard_arrow_down', !this.state.sidebarOpen && s.disable)}/></span>
-          </div>
-          <div className={classnames(!subMenuOpenFor && s.disable, s.subMenu)}>
+
+            <div>
+            <span className={classnames(subMenuOpenFor && s.disable, s.sidebarArrow)}><MaterialDesignIcon name='keyboard_arrow_left' /></span>
+            <span  className={classnames(!subMenuOpenFor && s.disable, s.sidebarArrow)}><MaterialDesignIcon name='keyboard_arrow_down' /></span>
+            </div>
+          </Link>
+          <div className={classnames(!subMenuOpenFor && s.disable)}>
             {_.map(subMenu, this.renderLink)}
           </div>
         </div>
       );
     }
     return (
-      <div key={name} className={s.linkContainer}>
+      <div>
         <Link
           key={name}
-          className={s.linkClass}
           to={linkTo}
+          className={s.linkContainer}
           activeClassName={s.activeLink}
         >
-          <div className={s.linkInner}>
-            <MaterialDesignIcon name={miName} className={s.materialDesignIcon}/>
-            <div className={classnames(s.linkText,!this.state.sidebarOpen && s.disable)}>
-              {name}
-            </div>
+          <MaterialDesignIcon name={miName} className={s.materialDesignIcon}/>
+          <div className={classnames(s.linkText,!this.state.sidebarOpen && s.disable)}>
+            {name}
           </div>
         </Link>
-      </div>
+        </div>
     );
   }
 

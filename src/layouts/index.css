@@ -662,15 +662,15 @@ pre tt:after {
 }
 
 .darkThemeGlobalClass {
-  background-color: #393b42;
-  color: #fff !important;
+  background-color: #494a58;
+  color: #979797 !important;
   a {
     text-decoration: underline;
   }
 }
 
 .darkThemeGlobalClass  p {
-  color: #fff !important;
+  color: ##979797 !important;
 }
 
 td {
@@ -760,12 +760,15 @@ td {
 }
 
 .highlightGlobalClass {
-  padding: 15px 20px;
+  padding: 29px 40px;
+  background-color: #fafafa;
+  font-family: Courier;
+  font-size: 13px;
+  text-align: left;
+  color: #333333;
 }
 
-pre {
-  padding: 0 !important
-}
+
 
 
  
