@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `BHP Design Pattern Library`,
+    title: `Digital Design System`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

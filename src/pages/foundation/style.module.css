@@ -55,8 +55,10 @@
   margin-bottom: 23px;
 }
 
-.darkThemeText {
-  padding-left: 35px;
+.darkThemeHeading {
+  padding: 22px 29px;
+  background-color: #393b42;
+  color: #fff;
 }
 
 .typographyTable {
@@ -68,4 +70,27 @@
 
 .paddingClass {
   padding-left: 8px !important;
+}
+
+.h5Text {
+  display: flex;
+  align-items: baseline;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.darkThemeVariation {
+  width: 361px;
+  height: 54px;
+  background-color: #393b42;
+  padding: 0 0  0 25px;
+  color: #fff;
+}
+
+.lightThemeText {
+  font-size: 15px;
+}
+
+.opacityClass {
+  opacity: 0.5;
 }

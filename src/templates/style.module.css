@@ -35,3 +35,7 @@
 .active {
   border-bottom: 2px solid #2da3d7;
 }
+
+.disable {
+  display: none;
+}

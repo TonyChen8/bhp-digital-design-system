@@ -21,16 +21,13 @@ class Button extends React.Component {
     textField.select()
     document.execCommand('copy')
     textField.remove()
-    
-    
-    
-    
-    // this.textArea.select();
-    // document.execCommand('copy');
-    // // This is just personal preference.
-    // // I prefer to not show the the whole text area selected.
-    // e.target.focus();
-    // this.setState({ copySuccess: 'Copied!' });
+  };
+  
+  getDefaultProps = () => {
+    return {
+      textColor: '#ecf0f1',
+      border: 'none'
+    };
   };
 
 
@@ -40,13 +37,17 @@ class Button extends React.Component {
       <div>
         <button
           className={s.buttonClass}
-          style={{backgroundColor: this.props.backgroundColor}}
+          style={{
+            backgroundColor: this.props.backgroundColor,
+            color: this.props.textColor,
+            border: this.props.border
+          }}
           onClick={this.copyToClipboard}
         >
           {this.props.name}
         </button>
         <div>
-          <input className={s.inputClass} type="text" value={this.props.buttonText} readonly />
+          <input className={s.inputClass} type="text" value={this.props.buttonText} readOnly />
         </div>
       </div>
     );

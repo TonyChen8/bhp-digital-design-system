@@ -104,7 +104,7 @@ class Template extends React.Component {
             <p className='normalTextGlobalClass' dangerouslySetInnerHTML={{__html: HtmlCssCode}}></p>
           </div>
           </div>
-          <Highlight className={classnames('html')}>
+          <Highlight className={classnames('html','highlightGlobalClass')}>
               {Code}
           </Highlight>
 
@@ -115,7 +115,7 @@ class Template extends React.Component {
   
   
   render() {
-    const pageData = this.props.data.uiComponentsYaml? this.props.data.uiComponentsYaml : this.props.data.foundationsYaml
+    const pageData = this.props.data.uiComponentsYaml? this.props.data.uiComponentsYaml : this.props.data.foundationYaml
     const codeContainer = pageData.codeContainer
     let navigationItems = [
       {
@@ -148,8 +148,10 @@ class Template extends React.Component {
           </div>
           {_.map(pageData.codeContainer, this.renderCodeContainer)}
           <br />
+          <span className={classnames(_.isEmpty(pageData.api)? s.disable: '')}>
           <h3>API</h3>
           {this.renderApiContainer(pageData.api)}
+          </span>
         </div>
       </div>
     )

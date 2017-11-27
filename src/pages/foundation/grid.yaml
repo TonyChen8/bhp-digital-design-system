@@ -1,4 +1,4 @@
-title: Grids
+title: Grid
 componentName: Button
 introductionText:
   - Our grid uses the Bootstrap grid system but we have doubled it to 24 columns for our needs. We also use a 20px gutter which is 10px on either side of a column.
@@ -8,8 +8,8 @@ introductionText:
   - <strong>Column Offsets</strong>
   - The classes dws_col-offset-1 through to dws_col-offset-11 can be used to offset the current column by 1 to 11 columns respectively.
   - <div class='developerNoteContainerGlobalClass'>
-      <MaterialDesignIcon name="info" />
-      Developer note!  Follow the Bootstrap documentation on breakpoint classes. Bootstrap documentation.
+      <MaterialDesignIcon name="info" color='#fff'/>
+      Developer note!  Follow the Bootstrap documentation on breakpoint classes. <a target="_blank" href='https://bootstrapdocs.com/v3.3.6/docs/getting-started/'>Bootstrap documentation.</a>
     </div>
 
 codeContainer:

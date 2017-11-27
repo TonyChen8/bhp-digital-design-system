@@ -34,7 +34,7 @@ const Header = () => (
             color: '#333333',
           }}
         >
-          <strong>BHP</strong> Digital Design System
+          Digital Design System
         </Link>
     </div>
     <div>
