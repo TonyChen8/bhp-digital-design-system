@@ -63,9 +63,11 @@ a {
   margin-bottom: 20px;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
-  color: #fff;
   background-color: #e65400;
+}
+
+.sideMenuLogoContainer img{
+  margin: 0;
 }
 
 .fullSideBar {

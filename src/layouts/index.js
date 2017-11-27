@@ -19,7 +19,7 @@ const Header = () => (
       padding: '20px 22px',
       color: '#333333',
       justifyContent: 'space-between',
-      border: '1px solid #d8d8d8'
+      borderBottom: '1px solid #d8d8d8'
     }}
   >
     <div
@@ -34,7 +34,7 @@ const Header = () => (
             color: '#333333',
           }}
         >
-          Design Patterns Library
+          <strong>BHP</strong> Digital Design System
         </Link>
     </div>
     <div>
@@ -42,7 +42,7 @@ const Header = () => (
           to="/"
           style={{
             textDecoration: 'none',
-            color: '#979797',
+            color: '#333333',
           }}
         >
           Help
@@ -57,14 +57,14 @@ function route(route, index) {
     if (index == 1) return
     return(
       <Link key ={index} className='navItem' to='/'>
-        <span> Home&nbsp;</span>
+        <span> Home&nbsp;&nbsp;</span>
       </Link>
     )
   }
   
   return (
     <Link key ={index} className='navItem' to={route}>
-      <span>  /  {_.startCase(_.toLower(route))}&nbsp;</span>
+      <span>  /&nbsp;&nbsp;{_.startCase(_.toLower(route))}&nbsp;</span>
     </Link>
   )
 }
@@ -78,11 +78,12 @@ function renderRouteContainer (pathname) {
   )
 }
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = ({ children, location }) => (
   <div className='templateWrapper'>
     <SideBar />
     <div className='innerContainer'>
       <Header />
+      {renderRouteContainer(location.pathname)}
       <div className='children'>
         {children()}
       </div>

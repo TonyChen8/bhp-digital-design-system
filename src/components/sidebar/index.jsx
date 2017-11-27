@@ -3,6 +3,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import _ from 'lodash';
 import MaterialDesignIcon from '../../library/MaterialDesignIcon';
+import bhpWhiteLogo from '../../library/images/BHP-White.svg';
 
 import sidebarMenuLinks from '../../data/sidebar';
 
@@ -83,7 +84,7 @@ class SideBar extends React.Component {
 
     return (
       <aside className={classnames(s.sideBar, sidebarOpen && s.fullSideBar)}>
-        <div className={s.sideMenuLogoContainer}>BHP</div>
+        <div className={s.sideMenuLogoContainer}><img src={bhpWhiteLogo} /></div>
         <div className={classnames(s.closeIcon,!sidebarOpen && s.disable)} onClick={this.toggleSidebar} >
           <MaterialDesignIcon name="arrow_back" />
         </div>

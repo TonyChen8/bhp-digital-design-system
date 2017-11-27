@@ -10,13 +10,15 @@ const DesignPrinciples = () => (
     <p>Think Big</p>
   </div>
       <div className={s.firstHalfofPage}>
-        <div className={s.mainContentofPage}>
+      <div className={s.designPrinciplesParagraph}>
         <span className={s.mainHeading}>Our Design Principles are the building blocks<br /></span>
         <span className={classnames(s.mainHeadingSecond, s.mainHeading)}>that make up the foundation of digital projects at BHP.</span>
         <p className={s.subTitlePara}>
           We are opening our brand to everyone. Our aim is to be transparent in our communications organization wide and
           we want to share systems, voices and the elements that make BHP the brand it is today.
         </p>
+      </div>
+        <div className={s.mainContentofPage}>
         <h3 className={s.subTitle}>Be contextual</h3>
         <p>
           Understand the context of the situation that the person is in, and therefore how they may think, perceive
