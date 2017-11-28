@@ -32,7 +32,7 @@ a {
   margin-right: 12px;
   margin-bottom: 60px;
   text-align: right;
-  opacity: 0.4;
+  opacity: 0.6;
   cursor: pointer;
 }
 
@@ -41,7 +41,6 @@ a {
   position: absolute;
   right: 9px;
   margin-top: -11px;
-  opacity: 0.4;
   cursor: pointer;
 }
 
@@ -94,7 +93,6 @@ a {
 
 .submenuContainer {
   align-items: center;
-  opacity: 0.4;
 }
 
 .subMenuLinkContainer {

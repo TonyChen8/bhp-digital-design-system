@@ -348,7 +348,7 @@ class uiColours extends React.Component {
               textColor='#4a4a4a'
             />
           </div>
-          <p className='subTitleGlobalClass' id="colours_combinations">Colours combinations</p>
+          <p className='subTitleGlobalClass' id="colour_combinations">Colours combinations</p>
           <p>
             If you use colour text on a full colour background then the background must be from group 1, and the text must
             be from either group 3 or 4 (of the same family), or white. Please see page 16 for examples.

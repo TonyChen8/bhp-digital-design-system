@@ -21,22 +21,16 @@ codeContainer:
     REACT: REACT
     HTML: |
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      <div class="row">
+      <div class="container-fluid">
         <div class="col-sm-12">.col-sm-12</div>
-      </div>
-      <br />
-      <div class="row">
+        <br />
         <div class="col-sm-6">.col-sm-6</div>
         <div class="col-sm-6">.col-sm-6</div>
-      </div>
-      <br />
-      <div class="row">
+        <br />
         <div class="col-sm-4">.col-sm-4</div>
         <div class="col-sm-4">.col-sm-4</div>
         <div class="col-sm-4">.col-sm-4</div>
-      </div>
-      <br />
-      <div class="row">
+        <br />
         <div class="col-sm-2">.col-sm-2</div>
         <div class="col-sm-2">.col-sm-2</div>
         <div class="col-sm-2">.col-sm-2</div>
@@ -46,11 +40,12 @@ codeContainer:
       </div>
       <br />
     CSS:  |
-      .row div {
+      .container-fluid div {
         background-color: #F3F4F5;
         text-align: center;
         padding: 20px;
-        border: 1px solid #fff;
+        border: 1px solid #b4b4b4;
+        margin-top: 15px;
       }
       
       a:focus {

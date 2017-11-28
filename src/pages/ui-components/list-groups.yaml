@@ -48,7 +48,7 @@ codeContainer:
       	background-color: #ececec;
       }
     ANGULAR: ANGULAR1
-  - title:
+  - title: Dark theme
     type: Dark theme
     text:
     componentName:
