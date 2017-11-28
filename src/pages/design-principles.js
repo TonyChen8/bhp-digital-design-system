@@ -7,7 +7,7 @@ import MaterialDesignIcon from '../library/MaterialDesignIcon';
 const DesignPrinciples = () => (
   <div>
   <div className={s.thinkBigContainer}>
-    <p>Think big</p>
+    <p>Think big.</p>
   </div>
       <div className={s.firstHalfofPage}>
       <div className={s.designPrinciplesParagraph}>

@@ -11,7 +11,7 @@ const uiColours = () => (
     <div className='pageMainContentGlobalClass'>
       <p className='pageTitleGlobalClass' id='guide'>Font icons</p>
       <p id='material_design'>We are promoting the use of <a  target="_blank" className={s.pageAnchors} href="https://github.com/google/material-design-icons/tree/master/iconfont">Material design font icons</a>. These font icons are simple, modern and friendly. Each icon is created using Material design guidelines to depict in simple and minimal forms the universal concepts used commonly throughout a user interface. </p>
-      <p id='font_awesome'>In some case (design need or topical icons) <a  target="_blank"className={s.pageAnchors} href="http://fontawesome.io/cheatsheet/">Font Awesome</a> can be used as secondary option.</p>
+      <p id='font_awesome'>In some case (design need or topical icons) <a  target="_blank"className={s.pageAnchors} href="http://fontawesome.io/">Font Awesome</a> can be used as secondary option.</p>
       <p>
         When you have to use a special icon (product / event / campaign…) we recommend using Scalable Vector
         Graphic (SVG) formats only. By not using the traditional pixel-based formats (.GIF .PNG .JPEG) you ensure
@@ -22,11 +22,11 @@ const uiColours = () => (
 
       <span className={classnames('flexContainerGlobalClass', 'noBorderGlobalClass')} >
         <MaterialDesignIcon color ='#2da3d7' name='arrow_forward' className='keyboard_arrow_left'/>
-        <a className={s.pageRightSideMenuAnchor} target="_blank" href='https://google.github.io/material-design-icons/'>Material Icons guide</a>
+        <a className={s.pageRightSideMenuAnchor} target="_blank" href='https://material.io/icons/'>Material Icons guide</a>
       </span>
       <span className={classnames('flexContainerGlobalClass', 'noBorderGlobalClass')}>
         <MaterialDesignIcon color ='#2da3d7' name='arrow_forward' className='keyboard_arrow_left'/>
-        <a className={s.pageRightSideMenuAnchor} target="_blank" href='https://material.io/icons/'>See the full set of material design icons in the Material Icons Library</a>
+        <a className={s.pageRightSideMenuAnchor} target="_blank" href='http://zavoloklom.github.io/material-design-iconic-font/cheatsheet.html' >See the full set of material design icons in the Material Icons Library</a>
       </span>
 
       <p className='subTitleGlobalClass'>Git repository</p>
@@ -91,10 +91,10 @@ const uiColours = () => (
 
     </div>
     <div className='pageRightSideMenuGlobalClass'>
-      <a className={s.pageRightSideMenuAnchor} href='#guide'>Guide</a>
-      <a className={s.pageRightSideMenuAnchor} href='#material_design'>Material Design font</a>
-      <a className={s.pageRightSideMenuAnchor} href='#font_awesome'>Font Awesome</a>
-      <a className={s.pageRightSideMenuAnchor} href='#cheat_sheet'>Cheat sheet</a>
+      <a className={s.pageRightSideMenuAnchor} target="_blank" href='https://material.io/icons/'>Guide</a>
+      <a className={s.pageRightSideMenuAnchor} target="_blank" href='https://github.com/google/material-design-icons/tree/master/iconfont'>Material Design font</a>
+      <a className={s.pageRightSideMenuAnchor} target="_blank" href='http://fontawesome.io/'>Font Awesome</a>
+      <a className={s.pageRightSideMenuAnchor} target="_blank" href='http://zavoloklom.github.io/material-design-iconic-font/cheatsheet.html' > Cheat sheet</a>
     </div>
   </div>
 )

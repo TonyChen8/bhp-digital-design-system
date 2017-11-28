@@ -19,9 +19,7 @@ class uiColours extends React.Component {
         <div className='pageMainContentGlobalClass'>
           <p className='pageTitleGlobalClass'>UI Colours</p>
           <p>
-            Our colour system includes seven distinct families; each consisting of four shades or groups.
-            Whilst we have a broad range to select from, Orange 1 is the preferred colour family for digital and Apps and
-            work with that colour’s range to ensure we do not have multiple colour families competing on the same page.
+            Our colour system includes seven distinct families; each consisting of four shades or groups. Whilst we have a broad range to select from, Orange 1 is the preferred colour family for digital projects and we encourage you to work with that colour’s range to ensure a consistent experience for our users.
           </p>
           <p className='subTitleGlobalClass' id="Type">Type</p>
           <div className={s.buttonContainer}>

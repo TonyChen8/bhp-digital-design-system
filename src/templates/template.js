@@ -28,8 +28,10 @@ class Template extends React.Component {
   }
   
   rendernavigationTab({name}) {
+    const pageData = this.props.data.uiComponentsYaml? this.props.data.uiComponentsYaml : this.props.data.foundationYaml
+    const codeContainer = pageData.codeContainer[0]
     return (
-      <div onClick={(e) => this.handleNavigationClick(name, e)}  value={name} key ={name} className={classnames(s.navItem, this.state.code==name? s.active: '')}>
+      <div onClick={(e) => this.handleNavigationClick(name, e)}  value={name} key ={name} className={classnames(s.navItem, _.isEmpty(codeContainer[name])? s.inactiveNav: '',  this.state.code==name? s.active: '')}>
         <label value={name}>{name}</label>
       </div>
     )
