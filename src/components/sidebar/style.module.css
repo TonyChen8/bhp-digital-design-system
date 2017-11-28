@@ -91,6 +91,11 @@ a {
   box-sizing: border-box;
 }
 
+.linkContainer:hover {
+  background-color: #56565c;
+}
+
+
 .submenuContainer {
   align-items: center;
 }
