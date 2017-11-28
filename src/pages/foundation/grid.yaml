@@ -52,3 +52,13 @@ codeContainer:
         padding: 20px;
         border: 1px solid #fff;
       }
+      
+      a:focus {
+          color: #fff !important;
+          text-decoration: underline;
+      }
+      
+      a:hover {
+          color: #fff !important;
+          text-decoration: underline;
+      }

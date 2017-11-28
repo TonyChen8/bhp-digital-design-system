@@ -3,73 +3,23 @@ componentName: Button
 introductionText:
   - Alerts are used to call the user's attention to some piece of information, such as a successful completion of a task or an internal system error. The type of alert used (success, info, warning or danger) will depend on the information in the alert. 
   - "<strong>Tips</strong>: keep the message short, use plain and simple language. Avoid tech-speak and above all never scare the users. Don’t state the obvious ( like “an error has occured”) and never assume the users know what you are talking about. Keep it in-brand and use language consistently. The best alerts messages are short, positive and plain."
+  - The text is always white (#FFFFFF) on the colour background but for the “warning” bhp_warning where is is the standard text color (#333333)
 codeContainer:
   - title: Usage
     type: Light theme
     componentName: alert
     props:
-    REACT: |
-      //ES6
-        import { Alert } from '@myob/myob-widgets';
-
-        ...
-
-        render: function() {
-          return (
-            <Alert type="success">
-              <strong>Success!</strong> A copy of your selected statements has been sent to your customers.
-            </Alert>
-          );
-        }
+    REACT:
     HTML: |
-      # to use material icons, please insert this in your HTML
-      # <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-
-      <div class='alertContainer primary'>
-        <span>
-          <i class="material-icons">star</i>
-          <strong>Primary!</strong> This is a primary message. We really want your attention. This is a link.
-        </span>
-        <i class="material-icons">close</i>
-      </div>
-      
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <div class='alertContainer success'>
-        <span>
-          <i class="material-icons">done</i>
-          <strong>Success!</strong> A copy of your selected purchase orders has been sent to your customers.
-        </span>
-        <i class="material-icons">close</i>
-      </div>
-      
-      <div class='alertContainer info'>
-        <span>
-          <i class="material-icons">info</i>
-          <strong>Info!</strong> This is an info message. We have stuff for you. This is a link.
-        </span>
-        <i class="material-icons">close</i>
-      </div>
-      
-      <div class='alertContainer attention'>
-        <span>
-          <i class="material-icons">notifications</i>
-          <strong>Attention!</strong> This is a warning message. We need your attention.
-        </span>
-        <i class="material-icons">close</i>
-      </div>
-      
-      <div class='alertContainer warning'>
-        <span>
-          <i class="material-icons">warning</i>
-          <strong>Oops!</strong> This is a danger message. This is a link.
-        </span>
-        <i class="material-icons">close</i>
+        <i class="material-icons">done</i>
+        <strong>Success!</strong>&nbsp;A copy of your selected purchase orders has been sent to your customers.
       </div>
     CSS: |
       .alertContainer {
         display: flex;
         align-items: center;
-        justify-content: space-between;
         width: 672px;
         height: 60px;
         box-sizing: border-box;
@@ -81,7 +31,65 @@ codeContainer:
 
       .material-icons {
         margin-right: 2px;
-        vertical-align: text-top;
+        vertical-align: middle;
+        font-size: 13px !important;
+      }
+
+      .success {
+        background-color: #ABE2D8;
+      }
+
+    ANGULAR:
+  - title: Usage
+    type: Light theme
+    componentName: alert
+    props:
+    REACT:
+    HTML: |
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+      <div class='alertContainer primary'>
+          <i class="material-icons">star</i>
+          <strong>Primary!</strong> &nbsp;This is a primary message. We really want your attention. This is a link.
+      </div>
+      
+      <div class='alertContainer success'>
+        <i class="material-icons">done</i>
+        <strong>Success!</strong>&nbsp; A copy of your selected purchase orders has been sent to your customers.
+      </div>
+      
+      <div class='alertContainer info'>
+        <i class="material-icons">info</i>
+        <strong>Info!</strong>&nbsp; This is an info message. We have stuff for you. This is a link.
+      </div>
+      
+      <div class='alertContainer attention'>
+          <i class="material-icons">notifications</i>
+          <strong>Attention!</strong>&nbsp; This is a warning message. We need your attention.
+      </div>
+      
+      <div class='alertContainer warning'>
+          <i class="material-icons">warning</i>
+          <strong>Oops!</strong>&nbsp; This is a danger message. This is a link.
+      </div>
+    CSS: |
+      .alertContainer {
+        display: flex;
+        align-items: center;
+        width: 672px;
+        height: 60px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        padding: 0 20px;
+        border-radius: 4px;
+        font-family: arial;
+        font-size: 13px;
+      }
+
+      .material-icons {
+        margin-right: 2px;
+        vertical-align: middle;;
         font-size: 13px;
       }
 
@@ -104,17 +112,39 @@ codeContainer:
       .warning {
         background-color: #FABDBC;
       }
-    ANGULAR: ''
+    ANGULAR:
+  - title: Usage
+    type: Light theme
+    componentName: alert
+    props:
+    REACT:
+    HTML: |
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <div class='small-alert-container warning'>
+          <i class="small-material-icons material-icons">warning</i>
+          This is an alert message.
+      </div>
+    CSS: |
+      .small-alert-container {
+        display: flex;
+        align-items: center;
+        width: 160px;
+        height: 22px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        padding: 0 5px;
+        font-family: Arial;
+        font-size: 10px;
+        font-weight: bold;
+        line-height: 2;
+        text-align: left;
+        color: #333333;
+        border-radius: 4px;
+      }
+
+      .small-material-icons {
+        font-size: 10px ! important;
+      }
+
+    ANGULAR:
 api:
-  - name: test
-    type: testtype
-    defaultText: defailttest
-    description: descTest
-  - name: test1
-    type: testtype1
-    defaultText: defailttest1
-    description: descTest1
-  - name: test2
-    type: testtype2
-    defaultText: defailttest2
-    description: descTest2

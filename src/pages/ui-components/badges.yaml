@@ -1,33 +1,30 @@
-title: Badge
+title: Badges
 componentName: Button
 introductionText:
-  - This component generates a small badge to the top-right of its child(ren).
+  - Badges are small components that typically communicate a numerical value to the user. They are typically used within an item.
 codeContainer:
   - title: Usage
     type: Example
-    text: Primary button is the strongest call-to-action on the page. Orange 1 is used to emphasize that focus. There should only ever be one primary button on screen at any one time. Secondary button is used for every action on the page that is not primary. There can be multiple secondary buttons on screen at any one time. The secondary button has a transparent background by default state.
+    text:
     componentName: badge
     props:
-    REACT: |
-      //ES6
-        import { Alert } from '@myob/myob-widgets';
-
-        ...
-
-        render: function() {
-          return (
-            <Alert type="success">
-              <strong>Success!</strong> A copy of your selected statements has been sent to your customers.
-            </Alert>
-          );
-        }
+    REACT:
     HTML: |
-     <span class="badge primary">99</span>
-     <span class="badge primary"><i class="material-icons">star</i>99</span>
-     <span class="badge success"><i class="material-icons">done</i>14</span>
+      <div class="badge-container">
+        <span class="badge primary">99</span>
+        <span class="badge primary"><i class="material-icons">star</i><span>99</span></span>
+        <span class="badge success"><i class="material-icons">done</i>14</span>
+      </div>
     CSS: |
+      .badge-container {
+        display: flex;
+      }
       .badge {
-        display: inline-block;
+        display: flex;
+        justify-content: center;
+        max-width: 30px;
+        margin-right: 10px;
+        align-items: center;
         box-sizing: border-box;
         min-width: 20px;
         height: 16px;
@@ -56,33 +53,26 @@ codeContainer:
         background-color: #01ab8b;
       }
 
-    ANGULAR: ANGULAR1
-  - title: Variations
+    ANGULAR:
+  - title: Variations Alerts
     type: Example
-    text: test1
+    text:
     componentName: badge
     props:
-    REACT: |
-      //ES6
-        import { Alert } from '@myob/myob-widgets';
-
-        ...
-
-        render: function() {
-          return (
-            <Alert type="success">
-              <strong>Success!</strong> A copy of your selected statements has been sent to your customers.
-            </Alert>
-          );
-        }
+    REACT:
     HTML: |
-      <span class="badge darkGrey">99</span>
-      <span class="badge lightGrey">99</span>
-      <span class="badge success">99</span>
-      <span class="badge warning">99</span>
+      <div class="badge-container">
+        <span class="badge darkGrey">99</span>
+        <span class="badge lightGrey">99</span>
+        <span class="badge success">99</span>
+        <span class="badge warning">99</span>
+      </div>
     CSS: |
       .badge {
-        display: inline-block;
+        display: flex;
+        justify-content: center;
+        max-width: 30px;
+        margin-right: 10px;
         box-sizing: border-box;
         min-width: 20px;
         height: 16px;
@@ -119,30 +109,3 @@ codeContainer:
         background-color:  #f2f2f2;
         color: #333333;
       }
-    ANGULAR: ANGULAR1
-reactCode: |
-  import React, { Component } from 'react';
-  import s from './style.module.css';
-
-  import classnames from 'classnames';
-
-  class Buttons extends React.Component {
-    render() {
-      return (
-        <div className="animated fadeIn">
-          <div>
-            <strong>Example</strong>
-          </div>
-          <div className="card-block">
-            <button type="button" className={classnames(s.btn, s.btnPrimary)}> Primary </button>&nbsp;
-            <button type="button" className={classnames(s.btn, s.btnDefault)}>Default</button>&nbsp;
-            <button type="button" className={classnames(s.btn, s.btnHover)}>Hover</button>&nbsp;
-            <button type="button" className={classnames(s.btn, s.btnDisabled)}>Disabled</button>&nbsp;
-            <button type="button" className={classnames(s.btn, s.btnDelete)}>Delete</button>&nbsp;
-          </div>
-        </div>
-      )
-    }
-  }
-
-  export default Buttons;

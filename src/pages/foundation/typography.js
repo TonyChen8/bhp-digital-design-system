@@ -49,24 +49,35 @@ const typography = () => (
       <div className={s.lightTheme}>
         Light theme<br />
         Body text large / <a className={s.pageAnchors}>Link text large</a>
-        <p></p>
+        <br />
+        <br />
+
         <div className={s.darkThemeVariation}>
           Variation Dark theme
           <br />
           Body text large / <a>Link text large</a>
         </div>
       </div>
-     
+
+     <br />
+      <br />
+
      
       <p>
         Body text / link text - this is the default text size - 13px/18px  #333333<br/>
         Note: Body text used in tables can be reduced to 11px in some cases.<br/>
       </p>
+      <br />
+<br />
+
 
       <p className={s.opacityClass}>
         Small text - this is the default text size for notes, legal texts… - 11px/15px #979797 @50% opacity<br />
         Lorem ipsum dolor sit amet, quando quodsi electram ei has, ne alii inermis neglegentur sea. <strong>An sea quodsi mentitum vivendum, ferri sadipscing pri ne.</strong>
       </p>
+      <br />
+<br />
+
       <p className='subTitleGlobalClass'>Text colours</p>
       <p>Texts will be generaly use four colours variations.</p>
       <table className={s.typographyTable}>
@@ -93,7 +104,7 @@ const typography = () => (
       </table>
 
     </div>
-    <div classname={classnames('pageRightSideMenuGlobalClass', 'noBorderLeftGlobalClass')}>
+    <div className={classnames('pageRightSideMenuGlobalClass', 'noBorderLeftGlobalClass')}>
     </div>
   </div>
 )

@@ -725,7 +725,7 @@ td {
 }
 
 .componentsClassGlobalClass {
-  padding: 10px;
+  width: 694px;
   border-bottom: solid 1px #b8babb;
 }
 
@@ -768,6 +768,9 @@ td {
   color: #333333;
 }
 
+.pageAnchorsGlobalClass {
+  color: #0099f8;
+}
 
 
 

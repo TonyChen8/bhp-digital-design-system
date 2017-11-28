@@ -348,7 +348,7 @@ class uiColours extends React.Component {
               textColor='#4a4a4a'
             />
           </div>
-          <p className='subTitleGlobalClass' id="Colours_combinations">Colours combinations</p>
+          <p className='subTitleGlobalClass' id="colours_combinations">Colours combinations</p>
           <p>
             If you use colour text on a full colour background then the background must be from group 1, and the text must
             be from either group 3 or 4 (of the same family), or white. Please see page 16 for examples.
@@ -386,7 +386,7 @@ class uiColours extends React.Component {
               height='80px'
             />
           </div>
-          <p className='subTitleGlobalClass' id='Colours_mix'>Colours mix</p>
+          <p className='subTitleGlobalClass' id='mixing_colours'>Mixing Colours</p>
           <p>Do not mix the BHP Secondary colours togheter. Use a secondary colours palette plus the main theme as accent colour: Orange1</p>
           <div className={s.coloursMixBlockContainer}>
             <Block
@@ -575,8 +575,8 @@ class uiColours extends React.Component {
           <a className={s.pageRightSideMenuAnchor} href='#Light_theme'>Light theme</a>
           <a className={s.pageRightSideMenuAnchor} href='#Dark_theme'>Dark Theme</a>
           <a className={s.pageRightSideMenuAnchor} href='#Secondary_themes'>Secondary themes</a>
-          <a className={s.pageRightSideMenuAnchor} href='#Coulours_combinations'>Coulours combinations</a>
-          <a className={s.pageRightSideMenuAnchor} href='#Colours_mix'>Colours mix</a>
+          <a className={s.pageRightSideMenuAnchor} href='#colour_combinations'>Colours combinations</a>
+          <a className={s.pageRightSideMenuAnchor} href='#mixing_colours'>Mixing Colours</a>
         </div>
       </div>
     )

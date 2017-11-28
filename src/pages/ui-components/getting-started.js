@@ -5,6 +5,7 @@ import edgeImg from '../../library/images/edge.svg';
 import firefoxImg from '../../library/images/firefox.svg';
 import safariImg from '../../library/images/safari.svg';
 import s from './style.module.css';
+import classnames from 'classnames';
 
 var BrowserContainer = ({img, name, support}) => (
   (
@@ -67,11 +68,11 @@ const gettingStarted = () => (
       </div>
       
       <p className='subTitleGlobalClass'>Third party installation of this project</p>
-      <p>For information about how to access our NPM registry, look here: <br />   https://******BHP link*******</p>
-      <p>Third party installation of this project <br />The project is available as an NPM package and deployed in our private NPM registry:  https://npm.addevcloudservices.com.au/</p>
+      <p>The project is available as an NPM package and deployed in our private NPM registry: <br />   <a className='pageAnchorsGlobalClass' href='https://npm.addevcloudservices.com.au/'>https://npm.addevcloudservices.com.au/</a></p>
+      <p>For information about how to access our NPM registry, look here:<br />  <a className='pageAnchorsGlobalClass'>  https://******BHP link*******</a></p>
       <p>The dist directory contains the pre-packaged distributable files.</p>
     </div>
-    <div className='pageRightSideMenuGlobalClass'>
+    <div classname={classnames('pageRightSideMenuGlobalClass', 'noBorderLeftGlobalClass')}>
     </div>
   </div>
 )

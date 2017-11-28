@@ -1,5 +1,3 @@
-
-
 .sideBar {
   position: relative;
   width: 52px;
@@ -35,6 +33,7 @@ a {
   margin-bottom: 60px;
   text-align: right;
   opacity: 0.4;
+  cursor: pointer;
 }
 
 .sidebarArrow {
