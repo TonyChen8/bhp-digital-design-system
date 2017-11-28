@@ -154,11 +154,6 @@ class uiColours extends React.Component {
               colorText= '#fff'
             />
             <Button
-              name='#AC3D12'
-              backgroundColor= '#AC3D12'
-              buttonText= '$dark_grey'
-            />
-            <Button
               name='#2DA3D7'
               backgroundColor= '#2DA3D7'
               buttonText= '$blue'

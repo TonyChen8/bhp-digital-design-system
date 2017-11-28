@@ -10,7 +10,7 @@ const uiColours = () => (
   <div className='pageContainerGlobalClass'>
     <div className='pageMainContentGlobalClass'>
       <p className='pageTitleGlobalClass' id='guide'>Font icons</p>
-      <p id='material_design'>We are promoting the use of <a  target="_blank" className={s.pageAnchors} href="https://material.io/icons/">Material design font icons</a>. These font icons are simple, modern and friendly. Each icon is created using Material design guidelines to depict in simple and minimal forms the universal concepts used commonly throughout a user interface. </p>
+      <p id='material_design'>We are promoting the use of <a  target="_blank" className={s.pageAnchors} href="https://github.com/google/material-design-icons/tree/master/iconfont">Material design font icons</a>. These font icons are simple, modern and friendly. Each icon is created using Material design guidelines to depict in simple and minimal forms the universal concepts used commonly throughout a user interface. </p>
       <p id='font_awesome'>In some case (design need or topical icons) <a  target="_blank"className={s.pageAnchors} href="http://fontawesome.io/cheatsheet/">Font Awesome</a> can be used as secondary option.</p>
       <p>
         When you have to use a special icon (product / event / campaign…) we recommend using Scalable Vector

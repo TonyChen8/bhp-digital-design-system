@@ -14,9 +14,8 @@ class Button extends React.Component {
   }
 
   copyToClipboard = (e) => {
-    
     var textField = document.createElement('textarea')
-    textField.innerText = this.props.backgroundColor
+    textField.innerText = e.target.type=='text'? this.props.buttonText : this.props.backgroundColor
     document.body.appendChild(textField)
     textField.select()
     document.execCommand('copy')
@@ -47,7 +46,7 @@ class Button extends React.Component {
           {this.props.name}
         </button>
         <div>
-          <input className={s.inputClass} type="text" value={this.props.buttonText} readOnly />
+          <input onClick={this.copyToClipboard} className={s.inputClass} type="text" value={this.props.buttonText} readOnly />
         </div>
       </div>
     );
