@@ -97,7 +97,7 @@ class Template extends React.Component {
     }
     return(
       <div key={index}>
-        <p className='subTitleGlobalClass'>{title}</p>
+        <p className='subTitleGlobalClass'><strong>{title}</strong></p>
         <p className='normalTextGlobalClass' dangerouslySetInnerHTML={{__html: text}}></p>
         <div className={classnames('componentAndCodeContainerGlobalClass',title=='Dark theme'? 'darkThemeGlobalClass': '')}>
           <p>{type}</p>

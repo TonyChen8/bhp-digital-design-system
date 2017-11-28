@@ -27,12 +27,6 @@ uiComponentsYaml(fields: {slug: {eq: $slug}}) {
     CSS
     ANGULAR
   }
-  api {
-    name
-    type
-    defaultText
-    description
-  }
 }
 }
 `
