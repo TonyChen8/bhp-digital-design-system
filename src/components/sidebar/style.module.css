@@ -21,6 +21,10 @@ a {
   text-decoration: none;
 }
 
+.subMenuOpen {
+  background-color: #393b42;
+}
+
 .linkClass {
   text-decoration: none;
   display: flex;

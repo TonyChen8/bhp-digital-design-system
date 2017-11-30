@@ -36,16 +36,24 @@ class SideBar extends React.Component {
 
   renderLink({name, className, linkTo, miName, subMenu}) {
     var subMenuOpenFor = '';
-    if(name==this.state.subMenuOpenFor) {
+    if(name == this.state.subMenuOpenFor) {
       subMenuOpenFor = true;
     }
 
     if (subMenu) {
       return (
-        <div>
-          <Link activeClassName={s.activeLink} onClick={e => {e.preventDefault(); this.showSubMenu(name)}} key={name} className={s.linkContainer}>
-            <MaterialDesignIcon name={miName} className={s.materialDesignIcon}/>
-            <div className={classnames(s.linkText,!this.state.sidebarOpen && s.disable)}>
+        <div className={subMenuOpenFor && s.subMenuOpen}>
+          <Link
+            activeClassName={s.activeLink}
+            onClick={e => {e.preventDefault(); this.showSubMenu(name)}}
+            key={name}
+            className={s.linkContainer}
+          >
+            <MaterialDesignIcon
+              name={miName}
+              className={s.materialDesignIcon}
+            />
+            <div className={classnames(s.linkText, !this.state.sidebarOpen && s.disable)}>
               {name}
             </div>
 
@@ -54,6 +62,7 @@ class SideBar extends React.Component {
               <span className={classnames(!subMenuOpenFor && s.disable, s.sidebarArrow)}><MaterialDesignIcon name='keyboard_arrow_down' /></span>
             </div>
           </Link>
+
           <div className={classnames(!subMenuOpenFor && s.disable)}>
             {_.map(subMenu, this.renderLink)}
           </div>
@@ -68,7 +77,10 @@ class SideBar extends React.Component {
           className={s.linkContainer}
           activeClassName={s.activeLink}
         >
-          <MaterialDesignIcon name={miName} className={s.materialDesignIcon}/>
+          <MaterialDesignIcon
+            name={miName}
+            className={s.materialDesignIcon}
+          />
           <div className={classnames(s.linkText, !this.state.sidebarOpen && s.disable)}>
             {name}
           </div>
