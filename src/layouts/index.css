@@ -619,7 +619,16 @@ h4.alternate4 {
   margin-right: 120px;
 }
 
-.pageTitleGlobalClass {
+.pageMainContentWide {
+  width: 794px;
+  margin-right: 20px;
+}
+
+.pageMainContentWide p {
+  width: 694px;
+}
+
+.pageHeader {
   margin-bottom: 44px;
 }
 
@@ -772,7 +781,6 @@ td {
 
 .componentsClassGlobalClass {
   width: 694px;
-  border-bottom: solid 1px #b8babb;
 }
 
 .developerNoteContainerGlobalClass {
@@ -788,6 +796,12 @@ td {
   color: #ffffff;
   background-color: #2da3d7;
   font-weight: lighter;
+}
+
+.developerNoteContainerGlobalClass .material-icons {
+  margin-right: 2px;
+  vertical-align: text-top;
+  font-size: 18px;
 }
 
 .developerNoteContainerGlobalClass a {

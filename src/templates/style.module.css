@@ -2,6 +2,19 @@
   margin-bottom: 10px;
 }
 
+.codeContainer {
+  padding-top: 30px;
+}
+
+.codeContainerInstance {
+  padding: 10px;
+  font-family: Arial;
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: left;
+  color: #333;
+}
+
 .navigationTab {
   display: flex;
   font-size: 14px;
@@ -15,6 +28,12 @@
   width: 73px;
   margin: 0 3px;
   text-align: center;
+  cursor: pointer;
+  margin-right: 8px;
+  font-family: Arial;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #333333;
 }
 
 .apiTable {

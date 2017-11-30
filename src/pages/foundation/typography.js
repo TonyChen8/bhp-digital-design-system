@@ -7,9 +7,7 @@ import Highlight from 'react-highlight';
 const typography = () => (
   <div className='pageContainerGlobalClass'>
     <div className='pageMainContentGlobalClass'>
-      <div className='pageTitleGlobalClass'>
-        <h3>Typography</h3>
-      </div>
+      <h3 className='pageHeader'>Typography</h3>
 
       <div className={s.pageSection}>
         <p>

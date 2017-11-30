@@ -8,7 +8,7 @@ codeContainer:
     type: Example
     componentName: alert
     props:
-    REACT:
+    REACT: REACT
     HTML: |
       <span class="label label-primary">Label</span>
     CSS: |
@@ -32,7 +32,7 @@ codeContainer:
     type: Example
     componentName: alert
     props:
-    REACT:
+    REACT: REACT
     HTML: |
       <span class="label label-info">Label</span>
       <span class="label label-success">Label</span>

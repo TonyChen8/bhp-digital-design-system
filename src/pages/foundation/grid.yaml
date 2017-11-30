@@ -8,7 +8,7 @@ introductionText:
   - <strong>Column Offsets</strong>
   - The classes col-sm-offset-1 through to col-sm-offset-11 can be used to offset the current column by 1 to 11 columns respectively.
   - <div class='developerNoteContainerGlobalClass'>
-      <MaterialDesignIcon name="info" color='#fff'/>
+      <i class='material-icons info' color='#fff'>info</i>
       Developer Note! Follow the Bootstrap documentation on breakpoint classes which can be found <a target="_blank" href='https://bootstrapdocs.com/v3.3.6/docs/getting-started/'>here.</a>
     </div>
 
@@ -20,40 +20,37 @@ codeContainer:
     props:
     REACT:
     HTML: |
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      <div class="container-fluid">
-        <div class="col-sm-12">.col-sm-12</div>
-        <br />
-        <div class="col-sm-6">.col-sm-6</div>
-        <div class="col-sm-6">.col-sm-6</div>
-        <br />
-        <div class="col-sm-4">.col-sm-4</div>
-        <div class="col-sm-4">.col-sm-4</div>
-        <div class="col-sm-4">.col-sm-4</div>
-        <br />
-        <div class="col-sm-2">.col-sm-2</div>
-        <div class="col-sm-2">.col-sm-2</div>
-        <div class="col-sm-2">.col-sm-2</div>
-        <div class="col-sm-2">.col-sm-2</div>
-        <div class="col-sm-2">.col-sm-2</div>
-        <div class="col-sm-2">.col-sm-2</div>
+      <div class="container-fluid sample-grid">
+        <div class="row">
+          <div class="col-sm-12"><div class="col-internal">.col-sm-12</div></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6"><div class="col-internal">.col-sm-6</div></div>
+          <div class="col-sm-6"><div class="col-internal">.col-sm-6</div></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4"><div class="col-internal">.col-sm-4</div></div>
+          <div class="col-sm-4"><div class="col-internal">.col-sm-4</div></div>
+          <div class="col-sm-4"><div class="col-internal">.col-sm-4</div></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2"><div class="col-internal">.col-sm-2</div></div>
+          <div class="col-sm-2"><div class="col-internal">.col-sm-2</div></div>
+          <div class="col-sm-2"><div class="col-internal">.col-sm-2</div></div>
+          <div class="col-sm-2"><div class="col-internal">.col-sm-2</div></div>
+          <div class="col-sm-2"><div class="col-internal">.col-sm-2</div></div>
+          <div class="col-sm-2"><div class="col-internal">.col-sm-2</div></div>
+        </div>
       </div>
-      <br />
     CSS:  |
-      .container-fluid div {
+      .sample-grid .row {
+        margin: 20px 0;
+      }
+
+      .sample-grid .col-internal {
         background-color: #F3F4F5;
         text-align: center;
         padding: 20px;
         border: 1px solid #b4b4b4;
-        margin-top: 15px;
       }
-      
-      a:focus {
-          color: #fff !important;
-          text-decoration: underline;
-      }
-      
-      a:hover {
-          color: #fff !important;
-          text-decoration: underline;
-      }
+

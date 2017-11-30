@@ -22,13 +22,9 @@ export const query = graphql`
         type
         text
         componentName
-        REACT
         HTML
         CSS
-        ANGULAR
       }
     }
-    
-
   }
 `

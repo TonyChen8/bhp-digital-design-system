@@ -8,6 +8,7 @@ import MaterialDesignIcon from '../library/MaterialDesignIcon';
 import _ from 'lodash';
 
 import './index.css'
+import './grid.css'
 import './Hopscotch.css'
 
 const Header = () => (
