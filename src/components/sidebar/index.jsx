@@ -25,11 +25,11 @@ class SideBar extends React.Component {
   toggleSidebar() {
     this.setState(prevState => ({sidebarOpen: !prevState.sidebarOpen}));
   }
-  
+
   showSubMenu(menuName) {
-    if(menuName==this.state.subMenuOpenFor) {
+    if(menuName == this.state.subMenuOpenFor) {
       // toggling sidemenu
-      menuName= '';
+      menuName = '';
     }
     this.setState({subMenuOpenFor: menuName});
   }
@@ -39,7 +39,7 @@ class SideBar extends React.Component {
     if(name==this.state.subMenuOpenFor) {
       subMenuOpenFor = true;
     }
-    
+
     if (subMenu) {
       return (
         <div>
@@ -50,8 +50,8 @@ class SideBar extends React.Component {
             </div>
 
             <div>
-            <span className={classnames(subMenuOpenFor && s.disable, s.sidebarArrow)}><MaterialDesignIcon name='keyboard_arrow_left' /></span>
-            <span  className={classnames(!subMenuOpenFor && s.disable, s.sidebarArrow)}><MaterialDesignIcon name='keyboard_arrow_down' /></span>
+              <span className={classnames(subMenuOpenFor && s.disable, s.sidebarArrow)}><MaterialDesignIcon name='keyboard_arrow_left' /></span>
+              <span className={classnames(!subMenuOpenFor && s.disable, s.sidebarArrow)}><MaterialDesignIcon name='keyboard_arrow_down' /></span>
             </div>
           </Link>
           <div className={classnames(!subMenuOpenFor && s.disable)}>
@@ -69,26 +69,28 @@ class SideBar extends React.Component {
           activeClassName={s.activeLink}
         >
           <MaterialDesignIcon name={miName} className={s.materialDesignIcon}/>
-          <div className={classnames(s.linkText,!this.state.sidebarOpen && s.disable)}>
+          <div className={classnames(s.linkText, !this.state.sidebarOpen && s.disable)}>
             {name}
           </div>
         </Link>
-        </div>
+      </div>
     );
   }
 
   render() {
     var sidebarOpen = this.state.sidebarOpen;
 
+    // TODO(mgnb): restore sidebar collapse functionality
+    //    <div className={classnames(s.closeIcon, !sidebarOpen && s.disable)} onClick={this.toggleSidebar} >
+    //      <MaterialDesignIcon name="arrow_back" />
+    //    </div>
+    //    <div className={classnames(s.naviconIcon, sidebarOpen && s.disable)} onClick={this.toggleSidebar} >
+    //      <MaterialDesignIcon name="menu" />
+    //    </div>
+
     return (
       <aside className={classnames(s.sideBar, sidebarOpen && s.fullSideBar)}>
         <div className={s.sideMenuLogoContainer}><Link to='/design-principles'><img src={bhpWhiteLogo} /></Link></div>
-        <div className={classnames(s.closeIcon,!sidebarOpen && s.disable)} onClick={this.toggleSidebar} >
-          <MaterialDesignIcon name="arrow_back" />
-        </div>
-        <div className={classnames(s.naviconIcon,sidebarOpen && s.disable)} onClick={this.toggleSidebar} >
-          <MaterialDesignIcon name="menu" />
-        </div>
         {_.map(this.sideBarMenuLinks, this.renderLink)}
       </aside>
     );

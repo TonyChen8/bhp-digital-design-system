@@ -2,10 +2,14 @@
   position: relative;
   width: 52px;
   min-height: 100%;
-  color: $white;
+  color: white;
   background-color: #252525;
   -webkit-transition: width .3s;
   transition: width .3s;
+}
+
+.fullSideBar {
+  width: 200px;
 }
 
 .materialDesignIcon {
@@ -47,12 +51,16 @@ a {
 .naviconIcon {
   margin-bottom: 60px;
   text-align: center;
+  cursor: pointer;
 }
 
-.sideMenuLogoContainer{
+.sideMenuLogoContainer {
   display: flex;
+  margin-bottom: 80px;
   height: 60px;
-  margin-bottom: 20px;
+  padding: 11px;
+  /* HACK(mgnb): removes irritating spacing under img */
+  line-height: 17px;
   justify-content: center;
   align-items: center;
   background-color: #e65400;
@@ -60,10 +68,6 @@ a {
 
 .sideMenuLogoContainer img{
   margin: 0;
-}
-
-.fullSideBar {
-  min-width: 200px !important;
 }
 
 .disable {
