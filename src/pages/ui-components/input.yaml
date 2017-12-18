@@ -1,72 +1,95 @@
 title: Input
-componentName: Button
-introductionText:
-  - Provides a simple, standardized input component which enforces the BHP styling. The input will allow the ability to show a tooltip next to the label and more importantly display any validation errors with the BHP styling. Text fields typically reside in forms but can appear in other places, like dialog boxes and search. Text fields validate input, help users fix errors, autocomplete words, and provide suggestions.They are generaly signle-line inputs.
-codeContainer:
-  - title: Input box
-    type: Example
-    text: Bootstrap supports all the HTML5 input types text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, and color. Note Inputs will NOT be fully styled if their type is not properly declared! 
-    componentName: alert
-    props:
-    REACT: REACT
-    HTML: |
-      <span class='default-text'>Default text input<span><br /><input class='defaultTextInput' type="text" name="fname">
-    CSS: |
-      .defaultTextInput {
-        width: 270px;
-        height: 30px;
-        border-radius: 2px;
-        background-color: #ffffff;
-        border: solid 1px #dcdcdc;
-      }
-      
-      .default-text {
-        font-family: Arial;
-        font-size: 11px;
-        line-height: 1.27;
-        text-align: left;
-        color: #333333;
-      }
+category: UI components
+preText: |
+  Provides a simple, standardized input component which enforces the BHP styling. The input will allow the ability to show a tooltip next to the label and more importantly display any validation errors with the BHP styling. Text fields typically reside in forms but can appear in other places, like dialog boxes and search. Text fields validate input, help users fix errors, autocomplete words, and provide suggestions. They are generally single-line inputs.
+examples:
+  - title: Text input
+    introduction: |
+      Bootstrap supports all the HTML5 input types: text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, and color.
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
-      .defaultTextInput:focus {
-        outline: none;
-        border: solid 1px #333333;
-      }
-    ANGULAR: ANGULAR1
+      export default () => (
+        <FormGroup>
+          <Label for="exampleInput1">Default text input</Label>
+          <Input type="text" id="exampleInput1" placeholder="Enter text" />
+        </FormGroup>
+      );
+    html: |
+      <div class="form-group">
+        <label for="exampleInput1">Default text input</label>
+        <input type="text" class="form-control" id="exampleInput1" placeholder="Enter text">
+      </div>
   - title: Variations
-    type: Example
-    text:
-    componentName: alert
-    props:
-    REACT: REACT
-    HTML: |
-      <span class='default-text'>Default text input</span><br /><input class='defaultTextInput' type="text" name="fname"><br /><br /><br />
-      <span class='default-text'>Focussed text input<span><br /><input class='defaultTextInput' type="text" name="fname" autofocus><br /><br /><br />
-      <span class='default-text'>Disabled text input<span><br /><input class='defaultTextInput' type="text" name="fname" disabled><br /><br /><br />
-    CSS: |
-      .defaultTextInput {
-        width: 270px;
-        height: 30px;
-        border-radius: 2px;
-        background-color: #ffffff;
-        border: solid 1px #dcdcdc;
-      }
-      
-      .default-text {
-        font-family: Arial;
-        font-size: 11px;
-        line-height: 1.27;
-        text-align: left;
-        color: #333333;
-      }
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { Button, Form, FormGroup, Label, Input, FormText, FormFeedback } from 'reactstrap';
 
-      .defaultTextInput:focus {
-        outline: none;
-        border: solid 1px #333333;
-      }
-
-      .defaultTextInput:disabled {
-        background-color: rgba(220, 220, 220, 0.2);
-        border: solid 1px #dcdcdc;
-      }
-    ANGULAR: ANGULAR1
+      export default () => (
+        <div>
+          <FormGroup>
+            <Label for="exampleInput2">Default text input</Label>
+            <Input
+              type="text"
+              id="exampleInput2"
+              placeholder="Enter text"
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label for="exampleInput3">Disabled</Label>
+            <Input
+              type="text"
+              id="exampleInput4"
+              placeholder="Enter text"
+              disabled
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label for="exampleInput3">Text input with an error</Label>
+            <Input
+              type="text"
+              id="exampleInput4"
+              placeholder="Enter text"
+              valid={false}
+            />
+            <FormFeedback>
+              This is a system message.
+            </FormFeedback>
+          </FormGroup>
+        </div>
+      );
+    html: |
+      <div class="form-group">
+        <label for="exampleInput2">Default text input</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInput2"
+          placeholder="Enter text"
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInput3">Disabled</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInput4"
+          placeholder="Enter text"
+          disabled
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInput3">Text input with an error</label>
+        <input
+          type="text"
+          class="form-control is-invalid"
+          id="exampleInput4"
+          placeholder="Enter text"
+        />
+        <div class="invalid-feedback">
+          This is a system message.
+        </div>
+      </div>

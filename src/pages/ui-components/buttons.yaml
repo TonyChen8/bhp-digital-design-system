@@ -1,429 +1,156 @@
 title: Buttons
-componentName: button
-introductionText:
-  - Outlined below are the rules around each button style, and how and when each style should be used. All buttons are 36px in height, with the exception of large buttons .btn-lg which are 48px in height. Hover state of the colours variations is 60% opacity of the colours. All buttons have a 2px radius rounded corners. Buttons labels are Arial bold 11px uppercase.
-  - <strong>Function:</strong> Is it important enough to be a primary button? What is the main action on the screen? What do I want to achieve? These questions are basic when putting buttons together. If a form shows Print, Edit, Save, Cancel and Reset the primary action will be Save. This is what i want to achieve.
-  - <strong>Tip:</strong> follow a timeline. Group together buttons depending on their situation on a timeline.
-  - <span>Example:</span> Delete, Cancel will always be on the left as they are taking the user back in time or earlier in a process. Save, Submit, OK will always be on the right side as they lead the user to the future, to the next step.
+category: UI components
+preText: |
+  Outlined below are the rules around each button style, and how and when each style should be used. All buttons are 36px in height, with the exception of large buttons .btn-lg which are 48px in height. Hover state of the colours variations is 60% opacity of the colours. All buttons have a 2px radius rounded corners. Buttons labels are Arial bold 11px uppercase.
 
-codeContainer:
+  **Function**: Is it important enough to be a primary button? What is the main action on the screen? What do I want to achieve? These questions are basic when putting buttons together. If a form shows Print, Edit, Save, Cancel and Reset the primary action will be Save. This is what i want to achieve.  
+
+  **Tip**: follow a timeline. Group together buttons depending on their situation on a timeline. For example:
+    -  Delete, Cancel will always be on the left as they are taking the user back in time or earlier in a process.
+    - Save, Submit, OK will always be on the right side as they lead the user to the future, to the next step.
+examples:
   - title: Usage
-    type: Example
-    text: Primary button is the strongest call-to-action on the page. Orange 1 is used to emphasize that focus. There should only ever be one primary button on screen at any one time. Secondary button is used for every action on the page that is not primary. There can be multiple secondary buttons on screen at any one time. The secondary button has a transparent background by default state.
-    componentName: badge
-    props:
-    REACT: |
-      //ES6
-        import { Alert } from '@myob/myob-widgets';
+    introduction: |
+      A primary button is the strongest call-to-action on the page. Orange 1 is used to emphasize that focus. There should only ever be one primary button on screen at any one time. Secondary button is used for every action on the page that is not primary. There can be multiple secondary buttons on screen at any one time. The secondary button has a transparent background by default state.
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { Button } from 'reactstrap';
 
-        ...
+      const Example = () => {
+        return (
+          <div>
+            <Button color="primary">Primary</Button>{' '}
+            <Button color="secondary">Secondary</Button>{' '}
+            <Button color="secondary disabled">Disabled</Button>{' '}
+            <Button color="danger">Delete</Button>{' '}
+            <Button color="danger" outline>Outlined danger</Button>
+          </div>
+        );
+      };
 
-        render: function() {
-          return (
-            <Alert type="success">
-              <strong>Success!</strong> A copy of your selected statements has been sent to your customers.
-            </Alert>
-          );
-        }
-    HTML: |
-      <button class="btn btnPrimary" type="button">Primary</button>
-      <button class="btn btnDefault" type="button">Default</button>
-      <button class="btn btnSecondary" type="button">Hover</button>
-      <button class="btn btnSecondary btnDisabled" type="button">Disabled</button>
-      <button class="btn btnDelete" type="button">Delete</button>
-    CSS: |
-      .btn {
-        box-sizing: border-box;
-        height: 36px;
-        width: 83px;
-        border-radius: 2px;
-        font-family: arial;
-        font-size: 11px;
-        font-weight: bold;
-        text-transform: uppercase;
-        text-align: center;
-        border: none;
-      }
+      export default Example;
+    html: |
+      <button type="button" class="btn btn-primary">Primary</button>
+      <button type="button" class="btn btn-secondary">Secondary</button>
+      <button type="button" class="btn btn-secondary disabled">Disabled</button>
+      <button type="button" class="btn btn-danger">Delete</button>
+      <button type="button" class="btn btn-outline-danger">Outlined danger</button>
+  - title: Colour variations
+    introduction: |
+      You can change the colour of the button by appending `-secondary` to define secondary actions, or combine with the standard color classes for alternate styles.
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { Button } from 'reactstrap';
 
-      .btnDefault {
-        border: solid 1px rgba(51, 51, 51, 0.15);
-      }
+      const Example = () => {
+        return (
+          <div>
+            <Button color="success">Success</Button>{' '}
+            <Button color="info">Info</Button>{' '}
+            <Button color="warning">Warning</Button>{' '}
+            <Button color="danger">Danger</Button>{' '}
+            <Button color="light">Light</Button>{' '}
+            <Button color="dark">Dark</Button>{' '}
+            <Button color="primary">
+              <i className="material-icons md-18 align-top">star</i>{' '}
+              Primary
+            </Button>
+          </div>
+        );
+      };
 
-      .material-icons {
-        margin-right: 2px;
-        vertical-align: text-top;
-        font-size: 9px;
-      }
+      export default Example;
+    html: |
+      <button type="button" class="btn btn-success">Success</button>
+      <button type="button" class="btn btn-info">Info</button>
+      <button type="button" class="btn btn-warning">Warning</button>
+      <button type="button" class="btn btn-danger">Danger</button>
+      <button type="button" class="btn btn-light">Light</button>
+      <button type="button" class="btn btn-dark">Dark</button>
+      <button type="button" class="btn btn-primary">
+        <i class="material-icons md-18 align-top">star</i>
+        Primary
+      </button>
+  - title: Button group
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { Button, ButtonGroup } from 'reactstrap';
 
-      .btnPrimary {
-        background-color: #e65400;
-        color: #fff;
-      }
+      const Example = () => {
+        return (
+          <ButtonGroup aria-label="Basic example">
+            <Button color="secondary" outline>Left</Button>
+            <Button color="secondary" outline>Middle</Button>
+            <Button color="secondary" outline>Right</Button>
+          </ButtonGroup>
+        );
+      };
 
-      button:hover {
-        opacity: .6;
-      }
-
-      .btnSecondary {
-        background-color: transparent;
-        border: solid 1px #333333;
-        color: #333333;
-      }
-      
-      .btnDisabled {
-        opacity: 0.4;
-        border: none;
-      }
-
-      .btnDelete {
-        background-color: #f03a36;
-        color: #fff;
-      }
-    HTMLCSS: |
-      <style>
-        .btn {
-          box-sizing: border-box;
-          height: 36px;
-          width: 83px;
-          border-radius: 2px;
-          font-family: arial;
-          font-size: 11px;
-          text-transform: uppercase;
-          text-align: center;
-          border: none;
-        }
-
-        .btnDefault {
-          border: solid 1px rgba(51, 51, 51, 0.15);
-        }
-
-        .material-icons {
-          margin-right: 2px;
-          vertical-align: text-top;
-          font-size: 9px;
-        }
-
-        .btnPrimary {
-          background-color: #e65400;
-          color: #fff;
-        }
-
-        button:hover {
-          opacity: .6;
-        }
-
-        .btnSecondary {
-          background-color: transparent;
-          border: solid 1px #333333;
-          color: #333333;
-        }
-        
-        .btnDisabled {
-          opacity: 0.4;
-          border: none;
-        }
-
-        .btnDelete {
-          background-color: #f03a36;
-          color: #fff;
-        }
-      </style>
-      <button class="btn btnPrimary" type="button">Primary</button>
-      <button class="btn btnDefault" type="button">Default</button>
-      <button class="btn btnSecondary" type="button">Hover</button>
-      <button class="btn btnSecondary btnDisabled" type="button">Disabled</button>
-      <button class="btn btnDelete" type="button">Delete</button>
-    ANGULAR: ANGULAR1
-  - title: Variations colours
-    type: Example
-    text: You can change the colour of the button by appending -secondary to define secondary actions, or combine with the standard color classes for alternate styles.
-    componentName: button
-    props:
-    REACT: |
-      //ES6
-        import { Alert } from '@myob/myob-widgets';
-
-        ...
-
-        render: function() {
-          return (
-            <Alert type="success">
-              <strong>Success!</strong> A copy of your selected statements has been sent to your customers.
-            </Alert>
-          );
-        }
-    HTML: |
-      <button class="btn btnGreen" type="button">Success</button>
-      <button class="btn btnSkyBlue" type="button">Info</button>
-      <button class="btn btnYellow" type="button">Warning</button>
-      <button class="btn btnRed" type="button">Danger</button>
-      <button class="btn btnLink" type="button">Link</button>
-      <button class="btn btnSilverGrey" type="button">Success</button>
-      <button class="btn btnPrimary" type="button"><i class="material-icons">star</i>Primary</button>
-    CSS: |
-      .btn {
-        box-sizing: border-box;
-        height: 36px;
-        width: 83px;
-        border-radius: 2px;
-        font-family: arial;
-        font-size: 11px;
-        text-transform: uppercase;
-        text-align: center;
-        border: none;
-      }
-      
-      .btnGreen {
-        background-color: #5cb85c;
-        color: #fff;
-      }
-
-      .btnSkyBlue {
-        background-color: #03a9f4;
-        color: #fff;
-      }
-
-      .btnYellow {
-        background-color: #fde05a;
-      }
-
-      .btnLink {
-        background-color: #fff;
-      }
-
-      .btnSilverGrey {
-        background-color:  #46768b;
-        color: #fff;
-      }
-
-      .btnRed {
-        background-color: #f03a36;
-        color: #fff;
-        
-      }
-    ANGULAR: ANGULAR1
-    HTMLCSS: |
-      <style>
-      .btnGreen {
-        background-color: #5cb85c;
-        color: #fff;
-      }
-
-      .btnSkyBlue {
-        background-color: #03a9f4;
-        color: #fff;
-      }
-
-      .btnYellow {
-        background-color: #fde05a;
-      }
-
-      .btnLink {
-        background-color: #fff;
-      }
-
-      .btnSilverGrey {
-        background-color:  #46768b;
-        color: #fff;
-      }
-
-      .btnRed {
-        background-color: #f03a36;
-        color: #fff;
-        
-      }
-      </style>
-      <button class="btn btnGreen" type="button">Success</button>
-      <button class="btn btnSkyBlue" type="button">Info</button>
-      <button class="btn btnYellow" type="button">Warning</button>
-      <button class="btn btnRed" type="button">Danger</button>
-      <button class="btn btnLink" type="button">Link</button>
-      <button class="btn btnSilverGrey" type="button">Success</button>
-      <button class="btn btnPrimary" type="button"><i class="material-icons">star</i>Primary</button>
-  - title: Variation buttons group
-    type: Example
-    text: You can change the colour of the button by appending -secondary to define secondary actions, or combine with the standard color classes for alternate styles.
-    componentName: button
-    props:
-    REACT: |
-      //ES6
-        import { Alert } from '@myob/myob-widgets';
-
-        ...
-
-        render: function() {
-          return (
-            <Alert type="success">
-              <strong>Success!</strong> A copy of your selected statements has been sent to your customers.
-            </Alert>
-          );
-        }
-    HTML: |
-      <div class="btnGroup">
-        <button class="btn btnDefault" type="button">Default</button>
-        <button class="btn btnDefault" type="button">Default</button>
-        <button class="btn btnDefault" type="button">Default</button>
+      export default Example;
+    html: |
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-outline-secondary">Left</button>
+        <button type="button" class="btn btn-outline-secondary">Middle</button>
+        <button type="button" class="btn btn-outline-secondary">Right</button>
       </div>
-    CSS: |
-      .btn {
-        box-sizing: border-box;
-        height: 36px;
-        width: 83px;
-        border-radius: 2px;
-        font-family: arial;
-        font-size: 11px;
-        text-transform: uppercase;
-        text-align: center;
-        border: none;
-      }
+  - title: Button sizes
+    introduction: |
+      Small buttons are used within tables or cells. They can also be used in Search, Sort and Filter rows inline with other controls such as search fields and date controls for example. Small buttons are 30px in height and a smaller font size: 12px. Large buttons have the height of 48px and a font size of 18px with a 20px horizontal padding.
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { Button } from 'reactstrap';
 
-      .btnDefault {
-        background-color: #fff;
-        border: solid 1px rgba(51, 51, 51, 0.15);
-      }
+      const Example = () => {
+        return (
+          <div>
+            <Button color="primary" size="lg">Large button</Button>{' '}
+            <Button color="secondary" size="lg" outline>Large button</Button>{' '}
+            <Button color="primary" size="sm">Small button</Button>{' '}
+            <Button color="secondary" size="sm" outline>Small button</Button>
+          </div>
+        );
+      };
 
-      .btnGroup {
-        display: flex;
-      }
+      export default Example;
+    html: |
+      <button type="button" class="btn btn-primary btn-lg">Large button</button>
+      <button type="button" class="btn btn-outline-secondary btn-lg">Large button</button>
+      <button type="button" class="btn btn-primary btn-sm">Small button</button>
+      <button type="button" class="btn btn-outline-secondary btn-sm">Small button</button>
+postText: |
+  <hr />
+  <h4 class="h4-light">Application</h4>
+  <div class="row">
+  <div class="col-4">
+  <div>
+  <button type="button" class="btn btn-secondary">Reset</button>
+  <button type="button" class="btn btn-primary">Save</button>
+  <button type="button" class="btn btn-primary">Edit</button>
+  </div>
+  <hr />
 
-      .btnGroup .btn {
-        border-radius: 0;
-      }
+  <i class="material-icons md-18 align-top">clear</i> WRONG<br />
+  The button’s order is incorrect. Following the timeline principle the correct order should be RESET, EDIT and SAVE.
 
-      .btnGroup .btn:first-child {
-        border-bottom-left-radius: 4px;
-        border-top-left-radius: 4px;
-        border-right: none;
-      }
+  The use of TWO primary buttons is confusing. Always use only one primary button. In the present case, only SAVE should be focused as primary action. 
 
-      .btnGroup .btn:last-child {
-        border-bottom-right-radius: 4px;
-        border-top-right-radius: 4px;
-        border-left: none;
-      }
-    ANGULAR: ANGULAR1
-  - title: Icon button
-    type: Example
-    text: Icons buttons are $silver and hover $coal. Best to use them separately from the text buttons, as for tools or repeatitive actions (p.e. delete elements in tables).
-    componentName: button
-    props:
-    REACT: |
-      //ES6
-        import { Alert } from '@myob/myob-widgets';
+  </div>
+  <div class="offset-2 col-4">
+  <div>
+  <button type="button" class="btn btn-secondary">Reset</button>
+  <button type="button" class="btn btn-secondary">Edit</button>
+  <button type="button" class="btn btn-primary">Save</button>
+  </div>
+  <hr />
 
-        ...
+  <i class="material-icons md-18 align-top">done</i> CORRECT<br />
+  The button’s order is following the timeline principle.
 
-        render: function() {
-          return (
-            <Alert type="success">
-              <strong>Success!</strong> A copy of your selected statements has been sent to your customers.
-            </Alert>
-          );
-        }
-    HTML: |
-     <button type="button" class="btn-link">
-       <i class="material-icons">delete</i>
-     </button>
-    CSS: |
-      .btn-link {
-        background-color: transparent;
-        border: none;
-        color: #979797;
-      }
+  The use of ONE primary button is a strong hint to help the user to continue the process.
 
-      .btn-link:hover {
-        color: #222;;
-      }
-      
-      .material-icons {
-        margin-right: 2px;
-        vertical-align: text-top;
-        font-size: 18px;
-      }
-    ANGULAR: ANGULAR1
-  - title: Size small
-    type: Example
-    text: Small buttons are used within tables or cells. They can also be used in Search, Sort and Filter rows inline with other controls such as search fields and date controls for example. Small buttons are 30px in height and a smaller font size 12px.
-    componentName: button
-    props:
-    REACT: |
-      //ES6
-        import { Alert } from '@myob/myob-widgets';
-
-        ...
-
-        render: function() {
-          return (
-            <Alert type="success">
-              <strong>Success!</strong> A copy of your selected statements has been sent to your customers.
-            </Alert>
-          );
-        }
-    HTML: |
-      <button class="btn btnSmall btnDefault" type="button">Default</button>
-    CSS: |
-      .btn {
-        box-sizing: border-box;
-        height: 36px;
-        width: 83px;
-        border-radius: 2px;
-        font-family: arial;
-        font-size: 11px;
-        text-transform: uppercase;
-        text-align: center;
-        border: none;
-      }
-
-      .btnDefault {
-        border: solid 1px rgba(51, 51, 51, 0.15);
-      }
-      
-      .btnSmall {
-        height: 30px !important;
-        font-size: 12px;
-      }
-    ANGULAR: ANGULAR
-  - title: Size large
-    type: Example
-    text: Large buttons have the height of 48px and a font size of 18px with a 20px horizontal padding.
-    componentName: button
-    props:
-    REACT: |
-      //ES6
-        import { Alert } from '@myob/myob-widgets';
-
-        ...
-
-        render: function() {
-          return (
-            <Alert type="success">
-              <strong>Success!</strong> A copy of your selected statements has been sent to your customers.
-            </Alert>
-          );
-        }
-    HTML: |
-      <button class="btn btnLarge btnDefault" type="button">Default</button>
-    CSS: |
-      .btn {
-        box-sizing: border-box;
-        height: 36px;
-        width: 83px;
-        border-radius: 2px;
-        font-family: arial;
-        font-size: 11px;
-        text-transform: uppercase;
-        text-align: center;
-        border: none;
-      }
-      
-      .btnLarge {
-        width: 122px;
-        height: 48px;
-        font-size: 18px;
-      }
-      
-      .btnDefault {
-        border: solid 1px rgba(51, 51, 51, 0.15);
-      }
-    ANGULAR: ANGULAR1
-    
+  </div>
+  </div>

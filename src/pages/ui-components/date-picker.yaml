@@ -1,38 +1,45 @@
-title: Date Picker
-componentName: Button
-introductionText:
-  - A dialog picker is used to select a single date in an application.
-  - The selected month is indicated by a filled square.
-codeContainer:
+title: Date picker
+category: UI components
+preText: |
+  A date picker is used to select a single date in an application. The selected
+  day is indicated by a filled square. The current day is indicated by a
+  different font weight (bold).
+
+  You must initialise your app with `import 'react-dates/initialize';` to use
+  this component.
+examples:
   - title: Usage
-    type: Example
-    text: Below is an example of the month picker, click in the input to see the month picker dropdown.
-    componentName: alert
-    props:
-    REACT: |
-      //ES6
-        import { Alert } from '@myob/myob-widgets';
+    introduction: |
+      Below is an example of the date picker, click in the input to see the
+      date picker dropdown.
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import moment from 'moment';
+      import { SingleDatePicker } from 'react-dates';
 
-        ...
+      export default class Example extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            date: moment(),
+            focused: false
+          };
+        }
 
-        render: function() {
+        render() {
           return (
-            <Alert type="success">
-              <strong>Success!</strong> A copy of your selected statements has been sent to your customers.
-            </Alert>
+            <div>
+              <SingleDatePicker
+                date={this.state.date}
+                onDateChange={date => this.setState({ date })}
+                focused={this.state.focused}
+                numberOfMonths={1}
+                onFocusChange={({ focused }) => this.setState({ focused })}
+                hideKeyboardShortcutsPanel
+                customInputIcon={<i className="material-icons md-18 align-middle">date_range</i>}
+              />
+            </div>
           );
         }
-    HTML: |
-      <div role="alert" class="alert-flex alert alert-success">
-        <svg class="svg-icon svg-icon-success" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" viewBox="0 0 18 18"><g fill-rule="evenodd"><path d="M17 9A8 8 0 1 0 1 9a8 8 0 1 0 16 0zM3 9c0-3.309 2.691-6 6-6s6 2.691 6 6-2.691 6-6 6-6-2.691-6-6z"></path><path d="M8.147 12.477c.255 0 .51-.098.704-.293l4.247-4.247a1.003 1.003 0 0 0-.002-1.412.996.996 0 0 0-1.412-.002l-3.538 3.538-1.414-1.415a.997.997 0 0 0-1.414 0 .997.997 0 0 0 0 1.415l2.121 2.121a.996.996 0 0 0 .707.294z"></path></g></svg>
-        <div class="alert-msg">
-            <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
-        </div>
-        <button type="button" class="close">
-            <svg class="svg-icon svg-icon-close" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 18 18"><path d="M9 7.39L5.025 3.35a1.181 1.181 0 0 0-1.675 0 1.175 1.175 0 0 0 0 1.675l4.055 3.988-4.065 4.135a1.2 1.2 0 0 0 .006 1.681l-.175-.175a1.2 1.2 0 0 0 1.681.006L9 10.58l4.148 4.08a1.2 1.2 0 0 0 1.681-.007l-.175.175a1.2 1.2 0 0 0 .006-1.681l-4.065-4.135 4.055-3.988a1.175 1.175 0 0 0 0-1.675 1.181 1.181 0 0 0-1.675 0L9 7.39z"></path></svg>
-            <span class="sr-only">Close</span>
-        </button>
-      </div>
-    CSS: CSS1
-    ANGULAR: ANGULAR1
- 
+      }

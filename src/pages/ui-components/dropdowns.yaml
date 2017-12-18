@@ -1,0 +1,104 @@
+title: Dropdowns
+category: UI components
+preText: |
+  This component presents a dropdown that is controlled by a toggle button. It is compatible with screen readers and keyboard navigation.
+examples:
+  - title: Usage
+    introduction: The state of the component can be managed externally via the `isOpen` property.
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+
+      export default class Example extends React.Component {
+        constructor(props) {
+          super(props);
+
+          this.toggle = this.toggle.bind(this);
+          this.state = {
+            dropdownOpen: false
+          };
+        }
+
+        toggle() {
+          this.setState({
+            dropdownOpen: !this.state.dropdownOpen
+          });
+        }
+
+        render() {
+          return (
+            <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+              <DropdownToggle caret>
+                Dropdown button
+              </DropdownToggle>
+              <DropdownMenu>
+                <DropdownItem>Action</DropdownItem>
+                <DropdownItem>Another Action</DropdownItem>
+                <DropdownItem>Something else here</DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
+          );
+        }
+      }
+  - title: Uncontrolled component
+    introduction: The uncontrolled variant of the component manages its own state.
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+
+      export default function Example () {
+        return (
+          <UncontrolledDropdown>
+            <DropdownToggle caret>
+              Dropdown button
+            </DropdownToggle>
+            <DropdownMenu>
+              <DropdownItem>Action</DropdownItem>
+              <DropdownItem>Another Action</DropdownItem>
+              <DropdownItem>Something else here</DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>
+        );
+      }
+  - title: Usage
+    subTitle: Example
+    html: |
+      <div class="dropdown">
+        <button
+          class="btn btn-secondary dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+  - title: Usage
+    subTitle: Example
+    html: |
+      <div class="dropdown">
+        <button
+          class="btn btn-secondary"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <i class="material-icons md-18 align-top">more_horiz</i>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>

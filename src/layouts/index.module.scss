@@ -1,0 +1,43 @@
+$header-outer: 60px;
+$header-border: 1px;
+$header-inner: $header-outer - $header-border;
+$header-padding: 20px;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  border-bottom: $header-border solid #dcdcdc;
+  height: $header-inner;
+  padding: 0 $header-padding;
+
+  h1 {
+    margin: 0;
+    line-height: $header-inner;
+    font-size: 24px;
+    font-weight: normal;
+  }
+}
+
+.headerLink {
+  color: inherit;
+  text-decoration: inherit;
+
+  &:visited {
+    color: inherit;
+    text-decoration: inherit;
+  }
+}
+
+.help {
+  line-height: $header-inner;
+}
+
+.container {
+  display: flex;
+  min-height: 800px;
+}
+
+.mainBody {
+  flex: 1;
+}

@@ -1,21 +1,38 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "bhp-design-pattern-library",
   "description": "Gatsby default starter",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Michael Bertolacci <michael@burnsred.com.au>",
   "dependencies": {
+    "array-flatten": "2.1.1",
+    "bootstrap": "^4.0.0-beta.2",
     "classnames": "^2.2.5",
-    "gatsby": "^1.9.123",
-    "gatsby-link": "^1.6.24",
+    "color": "^2.0.1",
+    "gatsby": "^1.9.127",
+    "gatsby-link": "^1.6.30",
     "gatsby-plugin-react-helmet": "^1.0.8",
-    "gatsby-plugin-typography": "^1.7.10",
-    "gatsby-source-filesystem": "^1.5.7",
-    "gatsby-transformer-yaml": "^1.5.11",
+    "gatsby-plugin-sass": "^1.0.14",
+    "gatsby-plugin-sharp": "^1.6.24",
+    "gatsby-remark-copy-linked-files": "^1.5.24",
+    "gatsby-remark-images": "^1.5.33",
+    "gatsby-source-filesystem": "^1.5.9",
+    "gatsby-transformer-remark": "^1.7.23",
+    "gatsby-transformer-yaml": "^1.5.12",
     "lodash": "^4.17.4",
     "material-design-icons": "^3.0.1",
-    "react-highlight": "^0.10.0",
-    "react-paginate": "^5.0.0",
-    "recharts": "^1.0.0-beta.5"
+    "moment": "^2.20.0",
+    "rc-time-picker": "^3.2.1",
+    "react": "15.6.2",
+    "react-collapse": "^4.0.3",
+    "react-copy-to-clipboard": "^5.0.1",
+    "react-dates": "^16.0.1",
+    "react-dom": "15.6.2",
+    "react-motion": "^0.5.2",
+    "reactstrap": "^5.0.0-alpha.4",
+    "remark": "^8.0.0",
+    "remark-html": "^7.0.0",
+    "to-case": "^2.0.0",
+    "webpack": "1.15.0"
   },
   "keywords": [
     "gatsby"
@@ -26,10 +43,9 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gatsby build && gh-pages -d public --branch master"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.7.4"
+    "prettier": "^1.8.2"
   }
 }

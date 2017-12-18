@@ -1,10 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Digital Design System`,
+    title: `BHP Design Pattern Library`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    'gatsby-transformer-yaml',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -12,49 +11,28 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+    `gatsby-transformer-yaml`,
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: `gatsby-transformer-remark`,
       options: {
-        pathToConfigModule: `src/utils/typography.js`,
-      },
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+              linkImagesToOriginal: false,
+            }
+          },
+          `gatsby-remark-copy-linked-files`
+        ]
+      }
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-plugin-sass`,
       options: {
-        name: 'components',
-        path: `${__dirname}/src/components/`,
+        precision: 8,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `ui-components`,
-        path: `${__dirname}/src/pages/ui-components`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `foundation`,
-        path: `${__dirname}/src/pages/foundation`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `patterns`,
-        path: `${__dirname}/src/pages/patterns`,
-      },
-    },
-  
-  
+    // `gatsby-remark-copy-linked-files`,
   ],
-  
 }

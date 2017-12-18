@@ -1,30 +1,31 @@
-import React from "react"
-
-import Template from './template.js'
-
+import template from './example-page-template';
 
 export default ({ data }) => {
-
-  
-  return (
-      <Template data={data} />
-  )
-}
+  const contents = data.foundationYaml;
+  return template({
+    contents,
+    hideCodeTypePicker: true
+  });
+};
 
 export const query = graphql`
-  query FoundationPageQuery($slug: String!) {
+  query FoundationQuery($slug: String!) {
     foundationYaml(fields: { slug: { eq: $slug } }) {
       title
-      componentName
-      introductionText
-      codeContainer {
+      category
+      examples {
         title
-        type
-        text
-        componentName
-        HTML
-        CSS
+        introduction
+        subTitle
+        css
+        html
+        actualHtml
+      }
+      fields {
+        slug
+        preHtml
+        postHtml
       }
     }
   }
-`
+`;

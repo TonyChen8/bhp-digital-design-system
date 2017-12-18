@@ -1,130 +1,26 @@
 title: Checkboxes
-componentName: Button
-introductionText:
-  - Provides a simple, standardized checkbox component. The checkbox will allow the ability to show a tooltip next to the label and more importantly display any validation errors.
-codeContainer:
+category: UI components
+preText: |
+  Provides a simple, standardized checkbox component. The checkbox will allow the ability to show a tooltip next to the label and more importantly display any validation errors.
+examples:
   - title: Usage
-    type: Example
-    text:
-    componentName: alert
-    props:
-    REACT: |
-      //ES6
-        import { Alert } from '@myob/myob-widgets';
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { Label, Input } from 'reactstrap';
 
-        ...
+      const Example = () => {
+        return (
+          <Label check>
+            <Input type="checkbox" />
+            Default checkbox
+          </Label>
+        );
+      };
 
-        render: function() {
-          return (
-            <Alert type="success">
-              <strong>Success!</strong> A copy of your selected statements has been sent to your customers.
-            </Alert>
-          );
-        }
-    HTML: |
-      <span>
-        <input  type="checkbox" class="checkbox" name="default_checkbox" value="default" />
-        Default checkbox<br>
-      </span>
-    CSS: |
-      .checkbox {
-        width: 15px;
-        height: 15px;
-        -webkit-appearance: none;
-        background-color: #fff;
-        border: 2px solid #333333;
-        padding: 5px;
-        border-radius: 0;
-        display: inline-block;
-        position: relative;
-        vertical-align: sub;
-        margin-right: 15px;
-      }
-
-      .checkbox:checked:after {
-        content: '\2713';
-        font-size: 15px;
-        position: absolute;
-        top: -4px;
-        left: -1px;
-        color: #ffffff;
-        font-weight: lighter;
-      }
-
-      .checkbox:checked {
-        background-color: #333333;
-      }
-
-      span {
-        display: flex;
-        align-items: center;
-        font-size: 13px;
-        font-family: arial;
-      }
-
-      .disabled {
-        opacity: 0.2;
-      }
-    ANGULAR: ANGULAR1
-  - title: Variations
-    type: Example
-    text:
-    componentName: alert
-    props:
-    REACT: |
-      //ES6
-        import { Alert } from '@myob/myob-widgets';
-
-        ...
-
-        render: function() {
-          return (
-            <Alert type="success">
-              <strong>Success!</strong> A copy of your selected statements has been sent to your customers.
-            </Alert>
-          );
-        }
-    HTML: |
-      <span><input type="checkbox" class="checkbox" name="default_checkbox" value="default" />Default1 checkbox<br></span>
-      <span><input type="checkbox" class="checkbox" name="default_checkbox" value="default" checked />Validated checkbox<br></span>
-      <span><input type="checkbox" class="checkbox disabled" disabled name="default_checkbox" value="default" />Disabled checkbox<br></span>
-    CSS: |
-      .checkbox {
-        width: 15px;
-        height: 15px;
-        -webkit-appearance: none;
-        background-color: #fff;
-        border: 2px solid #333333;
-        padding: 5px;
-        border-radius: 0;
-        display: inline-block;
-        position: relative;
-        vertical-align: sub;
-        margin-right: 15px;
-      }
-
-      .checkbox:checked:after {
-        content: '\2713';
-        font-size: 15px;
-        position: absolute;
-        top: -4px;
-        left: -1px;
-        color: #ffffff;
-        font-weight: lighter;
-      }
-
-      .checkbox:checked {
-        background-color: #333333;
-      }
-
-      span {
-        display: flex;
-        align-items: center;
-        font-size: 13px;
-        font-family: arial;
-      }
-
-      .disabled {
-        opacity: 0.2;
-      }
-    ANGULAR: ANGULAR1
+      export default Example;
+    html: |
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" />
+        Default checkbox
+      </label>

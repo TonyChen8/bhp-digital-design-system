@@ -1,0 +1,71 @@
+title: Form layouts
+category: Patterns
+preText: |
+  Example form layout for vertically aligned and horizontally aligned forms. See the [Bootstrap form documentation](https://getbootstrap.com/docs/4.0/components/forms/) for more information.
+examples:
+  - title: Vertically aligned
+    subTitle: Example
+    html: |
+      <form>
+        <div class="form-group">
+          <label for="exampleInput1">Default text input</label>
+          <input type="text" class="form-control" id="exampleInput1" placeholder="Enter text">
+        </div>
+        <div class="form-group">
+          <label for="exampleInput2">Default text input</label>
+          <input type="text" class="form-control" id="exampleInput2" placeholder="Enter text">
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input">
+            Check me out
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+  - title: Horizontally aligned
+    introduction: Horizontally aligned forms use the grid for structure.
+    subTitle: Example
+    html: |
+      <form>
+        <div class="form-group row">
+          <label for="exampleInput3" class="col-sm-2 col-form-label">Default text input</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="exampleInput3" placeholder="Enter text">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-2">Checkbox</div>
+          <div class="col-sm-10">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox"> Check me out
+              </label>
+            </div>
+          </div>
+        </div>
+      </form>
+  - title: Legend
+    introduction: |
+      Right aligned forms that have legend only have the legend left aligned and the label and input stack normally.
+    subTitle: Example
+    html: |
+      <form>
+        <fieldset>
+          <legend>Input group 1</legend>
+          <div class="form-group">
+            <label for="exampleInput1">Default text input</label>
+            <input type="text" class="form-control" id="exampleInput1" placeholder="Enter text">
+          </div>
+          <div class="form-group">
+            <label for="exampleInput2">Default text input</label>
+            <input type="text" class="form-control" id="exampleInput2" placeholder="Enter text">
+          </div>
+        </fieldset>
+      </form>

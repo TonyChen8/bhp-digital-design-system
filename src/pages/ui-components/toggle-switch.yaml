@@ -1,260 +1,189 @@
 title: Toggle switch
-componentName: Button
-introductionText:
-  - A dialog picker is used to select a time in an application.
-  - We use the 24 hours time format for accessibility. If the minutes are not specified, the default displayed value is zero.
-codeContainer:
+category: UI components
+preText: |
+  The toggle switch represents a physical switch that allows users to turn things on or off. The use of primary colour (or alerts colours) in the ON state provides a clear visual feedback for user interaction with control.
+examples:
   - title: Usage
-    type: Example
-    text: Below is an example of the month picker, click in the input to see the month picker dropdown.
-    componentName: alert
-    props:
-    REACT: REACT
-    HTML: |
-      <label class="switch">
-        <input type="checkbox" />
-        <span class="slider round slider-with-border">
-          <span class='checked-text'>YES</span>
-          <span class='unchecked-text'>NO</span>
-        </span>
-      </label>
-    CSS: |
-      .switch {
-        display: inline-block;
-        position: relative;
-        width: 48px;
-        height: 28px;
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import ToggleSwitch from '../src/library/bhp-ui/toggle-switch';
+
+      class Example extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            on: [false, true]
+          };
+        }
+
+        toggle(index) {
+          this.setState(prevState => {
+            prevState.on[index] = !prevState.on[index];
+            return prevState;
+          });
+        }
+
+        render() {
+          return (
+            <div>
+              <ToggleSwitch on={this.state.on[0]} onClick={() => this.toggle(0)} />{' '}
+              <ToggleSwitch on={this.state.on[1]} onClick={() => this.toggle(1)} />
+            </div>
+          );
+        }
       }
 
-      .switch input {
-        display:none;
+      export default Example;
+    html: |
+      <div class="toggle-switch">
+        <div class="toggle-switch-message-on">
+          YES
+        </div>
+        <div class="toggle-switch-toggler">
+        </div>
+        <div class="toggle-switch-message-off">
+          NO
+        </div>
+      </div>
+
+      <div class="toggle-switch toggle-switch-on">
+        <div class="toggle-switch-message-on">
+          YES
+        </div>
+        <div class="toggle-switch-toggler">
+        </div>
+        <div class="toggle-switch-message-off">
+          NO
+        </div>
+      </div>
+  - title: Variations
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import ToggleSwitch from '../src/library/bhp-ui/toggle-switch';
+
+      class Example extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            on: [false, true, true, true, true, true]
+          };
+        }
+
+        toggle(index) {
+          this.setState(prevState => {
+            prevState.on[index] = !prevState.on[index];
+            return prevState;
+          });
+        }
+
+        render() {
+          return (
+            <div>
+              <ToggleSwitch
+                color='primary'
+                onMessage='SÍ'
+                offMessage='NO'
+                on={this.state.on[0]}
+                onClick={() => this.toggle(0)}
+              />{' '}
+              <ToggleSwitch
+                color='primary'
+                onMessage='SÍ'
+                offMessage='NO'
+                on={this.state.on[1]}
+                onClick={() => this.toggle(1)}
+              />{' '}
+              <ToggleSwitch
+                color='info'
+                on={this.state.on[2]}
+                onClick={() => this.toggle(2)}
+              />{' '}
+              <ToggleSwitch
+                color='success'
+                on={this.state.on[3]}
+                onClick={() => this.toggle(3)}
+              />{' '}
+              <ToggleSwitch
+                color='danger'
+                on={this.state.on[4]}
+                onClick={() => this.toggle(4)}
+              />{' '}
+              <ToggleSwitch
+                color='warning'
+                on={this.state.on[5]}
+                onClick={() => this.toggle(5)}
+              />{' '}
+            </div>
+          );
+        }
       }
 
-      .slider {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        padding: 4px;
-        font-size: 8px;
-        color: #fff;
-        cursor: pointer;
-        background-color: #fff;
-        -webkit-transition: .4s;
-        transition: .4s;
-      }
+      export default Example;
+    html: |
+      <div class="toggle-switch toggle-switch-primary">
+        <div class="toggle-switch-message-on">
+          SÍ
+        </div>
+        <div class="toggle-switch-toggler">
+        </div>
+        <div class="toggle-switch-message-off">
+          NO
+        </div>
+      </div>
 
-      .slider-with-border {
-        color: #333333;
-        border: 1px solid black;
-      }
+      <div class="toggle-switch toggle-switch-primary toggle-switch-on">
+        <div class="toggle-switch-message-on">
+          SÍ
+        </div>
+        <div class="toggle-switch-toggler">
+        </div>
+        <div class="toggle-switch-message-off">
+          NO
+        </div>
+      </div>
 
-      .slider:before {
-        position: absolute;
-        content: "";
-        height: 20px;
-        width: 20px;
-        left:6px;
-        bottom:4px;
-        background-color: white;
-        -webkit-transition: .4s;
-        transition: .4s;
-      }
+      <div class="toggle-switch toggle-switch-info toggle-switch-on">
+        <div class="toggle-switch-message-on">
+          YES
+        </div>
+        <div class="toggle-switch-toggler">
+        </div>
+        <div class="toggle-switch-message-off">
+          NO
+        </div>
+      </div>
 
-      .slider-with-border:before {
-        left: 3px;
-        bottom: 2px;
-        border: 1px solid black;
-      }
+      <div class="toggle-switch toggle-switch-success toggle-switch-on">
+        <div class="toggle-switch-message-on">
+          YES
+        </div>
+        <div class="toggle-switch-toggler">
+        </div>
+        <div class="toggle-switch-message-off">
+          NO
+        </div>
+      </div>
 
+      <div class="toggle-switch toggle-switch-danger toggle-switch-on">
+        <div class="toggle-switch-message-on">
+          YES
+        </div>
+        <div class="toggle-switch-toggler">
+        </div>
+        <div class="toggle-switch-message-off">
+          NO
+        </div>
+      </div>
 
-      input:checked + span .unchecked-text {
-        visibility: hidden;
-      }
-
-      input:checked + span .checked-text {
-        visibility: visible;
-      }
-
-      .checked-text {
-        visibility: hidden;
-      }
-
-      input:checked + .slider:before {
-        -webkit-transform: translateX(18px);
-        -ms-transform: translateX(18px);
-        transform: translateX(18px);
-      }
-
-      .slider.round {
-        border-radius: 28px;
-      }
-
-      .slider.round:before {
-        border-radius: 50%;
-      }
-
-    ANGULAR: ANGULAR1
-  - title: Variations types and colours
-    type: Example
-    text: Below is an example of the month picker, click in the input to see the month picker dropdown.
-    componentName: alert
-    props:
-    REACT: REACT
-    HTML: |
-      <label class="switch disabled">
-        <input type="checkbox" disabled="disabled" />
-        <span class="slider round slider-with-border">
-          <span class='checked-text'>YES</span>
-          <span class='unchecked-text'>NO</span>
-        </span>
-      </label>
-
-      <label class="switch">
-        <input type="checkbox" checked />
-        <span class="slider round slider-primary">
-        <span class='checked-text'>YES</span>
-        <span class='unchecked-text'>NO</span>
-        </span>
-      </label>
-
-      <label class="switch">
-        <input type="checkbox" checked />
-        <span class="slider round slider-sky-blue">
-          <span class='checked-text'>YES</span>
-          <span class='unchecked-text'>NO</span>
-        </span>
-      </label>
-
-      <label class="switch">
-        <input type="checkbox" checked />
-        <span class="slider round slider-green">
-          <span class='checked-text'>YES</span>
-          <span class='unchecked-text'>NO</span>
-        </span>
-      </label>
-
-      <label class="switch">
-        <input type="checkbox" checked />
-        <span class="slider round slider-yellow">
-          <span class='checked-text'>YES</span>
-          <span class='unchecked-text'>NO</span>
-        </span>
-      </label>
-
-      <label class="switch">
-        <input type="checkbox" checked />
-        <span class="slider round slider-red">
-          <span class='checked-text'>YES</span>
-          <span class='unchecked-text'>NO</span>
-        </span>
-      </label>
-    CSS: |
-      .switch {
-        display: inline-block;
-        position: relative;
-        width: 48px;
-        height: 28px;
-      }
-
-      .switch input {
-        display:none;
-      }
-
-      .slider {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        padding: 4px;
-        font-size: 8px;
-        color: #fff;
-        cursor: pointer;
-        background-color: #fff;
-        -webkit-transition: .4s;
-        transition: .4s;
-      }
-
-      .slider-with-border {
-        color: #333333;
-        border: 1px solid black;
-      }
-
-      .slider:before {
-        position: absolute;
-        content: "";
-        height: 20px;
-        width: 20px;
-        left:6px;
-        bottom:4px;
-        background-color: white;
-        -webkit-transition: .4s;
-        transition: .4s;
-      }
-
-      .slider-with-border:before {
-        left: 3px;
-        bottom: 2px;
-        border: 1px solid black;
-      }
-
-
-      input:checked + span .unchecked-text {
-        visibility: hidden;
-      }
-
-      input:checked + span .checked-text {
-        visibility: visible;
-      }
-
-      .checked-text {
-        visibility: hidden;
-      }
-
-      input:checked + .slider:before {
-        -webkit-transform: translateX(18px);
-        -ms-transform: translateX(18px);
-        transform: translateX(18px);
-      }
-
-      .slider.round {
-        border-radius: 28px;
-      }
-
-      .slider.round:before {
-        border-radius: 50%;
-      }
-
-      .disabled {
-        opacity: 0.3;
-      }
-
-      .slider-primary {
-        background-color: #e65400;
-      }
-
-      .slider-sky-blue {
-        background-color: #03a9f4;
-      }
-
-      .slider-green {
-        background-color: #5cb85c;
-      }
-
-      .slider-yellow {
-        background-color: #fde05a;
-      }
-
-      .slider-red {
-        color: #fff;
-        background-color: #f03a36;
-      }
-    ANGULAR: ANGULAR1
+      <div class="toggle-switch toggle-switch-warning toggle-switch-on">
+        <div class="toggle-switch-message-on">
+          YES
+        </div>
+        <div class="toggle-switch-toggler">
+        </div>
+        <div class="toggle-switch-message-off">
+          NO
+        </div>
+      </div>

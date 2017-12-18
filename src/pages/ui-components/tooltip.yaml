@@ -1,250 +1,100 @@
-title: Tooltips
-componentName: Button
-introductionText:
-  - Tooltips provide a small pop-up box that appears when the user moves the mouse pointer over an element.
-codeContainer:
+title: Tooltip
+category: UI components
+preText: |
+  Tooltips can be attached to any element. When you hover the element with your
+  mouse, the title attribute is displayed in a little box next to the element
+  that can be styled. Tooltips are also useful for form elements, to show some
+  additional information in the context of each field and can be style with a
+  heading.
+examples:
   - title: Usage
-    type: Example
-    text: Where space allows use the bottom tooltip
-    componentName: alert
-    props:
-    REACT: REACT
-    HTML: |
-      <div class="tooltip-text-bottom1">Tooltip text bottom</div>
-    CSS: |
-      .tooltip-text-bottom1 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        max-width: 150px;
-        min-height: 30px;
-        text-decoration: none;
-        text-align: center;
-        border-radius: 2px;
-        margin-top: 15px;
-        border: solid 1px #dcdcdc;
-        box-sizing: border-box;
-        font-family: Arial;
-        font-size: 13px;
-        line-height: 1.38;
-        text-align: left;
-        color: rgba(0, 0, 0, 0.54);
-      }
+    introduction: |
+      The state of the tooltip can be controlled using `isOpen`.
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { Tooltip } from 'reactstrap';
 
-      .tooltip-text-bottom1:before {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 44%;
-        bottom: 100%;
-        width: 0;
-        height: 0;
-        border: 10px solid transparent;
-        border-bottom-color: #dcdcdc;
-      }
+      export default class Example extends React.Component {
+        constructor(props) {
+          super(props);
 
-      .tooltip-text-bottom1:after {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 44.8%;
-        bottom: 100%;
-        width: 0;
-        height: 0;
-        border: 9px solid transparent;
-        border-bottom-color: white;
-      }
-    ANGULAR: ANGULAR1
-  - title: Variations
-    type: Example
-    text: Secondary button is used for every action on the page that is not primary. There can be multiple secondary buttons on screen at any one time. The secondary button has a transparent background by default state.
-    componentName: alert
-    props:
-    REACT: REACT
-    HTML: |
-      <div class='tooltip-container'>
-        <div class="tooltip-text-bottom">Tooltip text bottom</div>
-        <div class="tooltip-text-top">Tooltip text top</div>
-        <div class="tooltip-text-left">Tooltip text left</div>
-        <div class="tooltip-text-right">Tooltip text right</div>
-      </div>
-    CSS: |
-      .tooltip-container {
-        display: flex;
-      }
-      .tooltip-text-bottom {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 150px;
-        height: 35px;
-        position: relative;
-        text-decoration: none;
-        text-align: center;
-        border-radius: 2px;
-        margin-top: 20px;
-        margin-right: 20px;
-        border: solid 1px #dcdcdc;
-        box-sizing: border-box;
-        font-family: Arial;
-        font-size: 12px;
-        line-height: 1.17;
-        text-align: center;
-        color: #333333;
-      }
+          this.toggle = this.toggle.bind(this);
+          this.state = {
+            tooltipOpen: false
+          };
+        }
 
-      .tooltip-text-bottom:before {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 44%;
-        bottom: 100%;
-        width: 0;
-        height: 0;
-        border: 10px solid transparent;
-        border-bottom-color: #dcdcdc;
-      }
+        toggle() {
+          this.setState({
+            tooltipOpen: !this.state.tooltipOpen
+          });
+        }
 
-      .tooltip-text-bottom:after {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 44.8%;
-        bottom: 100%;
-        width: 0;
-        height: 0;
-        border: 9px solid transparent;
-        border-bottom-color: white;
+        render() {
+          return (
+            <div>
+              <p>This is an example <a href="#" id="TooltipExample">tooltip</a>.</p>
+              <Tooltip
+                placement="bottom"
+                isOpen={this.state.tooltipOpen}
+                target="TooltipExample"
+                toggle={this.toggle}
+              >
+                Tooltip text bottom
+              </Tooltip>
+            </div>
+          );
+        }
       }
+  - title: Uncontrolled variant
+    introduction: |
+      For simple cases, an uncontrolled tooltip which manages its own state can
+      be used.
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { UncontrolledTooltip } from 'reactstrap';
 
-      .tooltip-text-top {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 150px;
-        height: 35px;
-        position: relative;
-        text-decoration: none;
-        text-align: center;
-        border-radius: 2px;
-        margin-top: 20px;
-        border: solid 1px #dcdcdc;
-        box-sizing: border-box;
-        font-family: Arial;
-        font-size: 12px;
-        line-height: 1.17;
-        text-align: center;
-        color: #333333;
+      export default function Example() {
+        return (
+          <div>
+            <p>This is an example <a href="#" id="UncontrolledTooltipExample">tooltip</a>.</p>
+            <UncontrolledTooltip placement="bottom" target="UncontrolledTooltipExample">
+              Uncontrolled tooltip text
+            </UncontrolledTooltip>
+          </div>
+        );
       }
+  - title: Positioning
+    introduction: |
+      The position of the tooltip can be controlled.
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { UncontrolledTooltip } from 'reactstrap';
 
-      .tooltip-text-top:before {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 44%;
-        top: 100%;
-        width: 0;
-        height: 0;
-        border: 10px solid transparent;
-        border-top-color: #dcdcdc;
+      export default function Example() {
+        return (
+          <div>
+            <p>
+              <span id="UncontrolledTooltipExampleTop">top</span>{' '}
+              <UncontrolledTooltip placement="top" target="UncontrolledTooltipExampleTop">
+                Top
+              </UncontrolledTooltip>
+              <span id="UncontrolledTooltipExampleRight">right</span>{' '}
+              <UncontrolledTooltip placement="right" target="UncontrolledTooltipExampleRight">
+                Right
+              </UncontrolledTooltip>
+              <span id="UncontrolledTooltipExampleBottom">bottom</span>{' '}
+              <UncontrolledTooltip placement="bottom" target="UncontrolledTooltipExampleBottom">
+                Bottom
+              </UncontrolledTooltip>
+              <span id="UncontrolledTooltipExampleLeft">left</span>
+              <UncontrolledTooltip placement="left" target="UncontrolledTooltipExampleLeft">
+                Left
+              </UncontrolledTooltip>
+            </p>
+          </div>
+        );
       }
-
-      .tooltip-text-top:after {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 44.8%;
-        top: 100%;
-        width: 0;
-        height: 0;
-        border: 9px solid transparent;
-        border-top-color: white;
-      }
-
-      .tooltip-text-left {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 150px;
-        height: 35px;
-        position: relative;
-        text-decoration: none;
-        text-align: center;
-        border-radius: 2px;
-        margin-top: 20px;
-        border: solid 1px #dcdcdc;
-        box-sizing: border-box;
-        font-family: Arial;
-        font-size: 12px;
-        line-height: 1.17;
-        text-align: center;
-        color: #333333;
-      }
-      .tooltip-text-left:before {
-        content: '';
-        display: block;
-        position: absolute;
-        right: 100%;
-        bottom: 19%;
-        width: 0;
-        height: 0;
-        border: 10px solid transparent;
-        border-right-color: #dcdcdc;
-      }
-
-      .tooltip-text-left:after {
-        content: '';
-        display: block;
-        position: absolute;
-        right: 100%;
-        bottom: 20.8%;
-        width: 0;
-        height: 0;
-        border: 9px solid transparent;
-        border-right-color: white;
-      }
-
-      .tooltip-text-right {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 150px;
-        height: 35px;
-        position: relative;
-        text-decoration: none;
-        text-align: center;
-        border-radius: 2px;
-        margin-top: 20px;
-        border: solid 1px #dcdcdc;
-        box-sizing: border-box;
-        font-family: Arial;
-        font-size: 12px;
-        line-height: 1.17;
-        text-align: center;
-        color: #333333;
-      }
-      .tooltip-text-right:before {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 100%;
-        bottom: 19%;
-        width: 0;
-        height: 0;
-        border: 10px solid transparent;
-        border-left-color: #dcdcdc;
-      }
-
-      .tooltip-text-right:after {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 100%;
-        bottom: 20.8%;
-        width: 0;
-        height: 0;
-        border: 9px solid transparent;
-        border-left-color: white;
-      }
-    ANGULAR: ANGULAR1

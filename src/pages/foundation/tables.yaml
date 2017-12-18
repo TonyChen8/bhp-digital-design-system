@@ -1,324 +1,97 @@
-title: Table
-componentName: Button
-introductionText:
-  - Tables provide structure and hierarchy for large sets of tabular data.
-  - Due to the widespread use of tables across third-party widgets like calendars and date pickers, we've designed our tables to be opt-in. Just add the base class .table to any &lt;table&gt;, then extend with custom styles or our various included modifier classes.
-codeContainer:
-  - title: Light theme
-    type: Example
-    text:
-    componentName: alert
-    props:
-    REACT:
-    HTML: |
-      <table class="table table-striped table-hover">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Column heading</th>
-            <th>Column heading</th>
-            <th>Column heading</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-          </tr>
-        </tbody>
-      </table>
-    CSS: |
-      table.table {
-        margin-bottom: 0;
-        color: #333;
-      }
-      table.table > thead > tr {
-        background-color: #d8d8d8;
-      }
-      table.table > thead > tr > th,
-      table.table > thead > tr > td {
-        padding: 5px;
-        line-height: normal;
-      }
-      table.table > thead > tr > th .header-link,
-      table.table > thead > tr > td .header-link {
-        text-align: center;
-        line-height: 1;
-      }
-      table.table > thead > tr > th .header-link a,
-      table.table > thead > tr > td .header-link a {
-        font-size: 0.7em;
-        opacity: .7;
-        text-decoration: underline;
-      }
-      table.table > thead > tr > th .header-link a:hover,
-      table.table > thead > tr > td .header-link a:hover {
-        opacity: 1;
-      }
-      table.table > thead > tr > th i,
-      table.table > thead > tr > td i {
-        position: relative;
-        top: 2px;
-      }
-      table.table > thead > tr > th .mesicon-arrow-ascending,
-      table.table > thead > tr > th .mesicon-arrow-descending,
-      table.table > thead > tr > td .mesicon-arrow-ascending,
-      table.table > thead > tr > td .mesicon-arrow-descending {
-        font-size: 7px;
-        top: -1px;
-      }
-      table.table > thead > tr > th .mes-table-header-cell,
-      table.table > thead > tr > td .mes-table-header-cell {
-        cursor: pointer;
-      }
-      table.table > tbody > tr {
-        background-color: #f9f9f9;
-        border-bottom: 1px solid #dddddd;
-      }
-      table.table > tbody > tr:nth-child(odd) {
-        background: #fff;
-      }
-      table.table > tbody > tr:hover {
-        background: rgba(0, 0, 0, 0.05);
-      }
-      table.table > tbody > tr:hover .showOnHover {
-        visibility: visible;
-      }
-      table.table > tbody > tr:hover .showOnHover-dis-none {
-        display: inherit;
-      }
-      table.table > tbody > tr:hover .hideOnHover {
-        visibility: hidden;
-        display: none;
-      }
-      table.table > tbody > tr > th,
-      table.table > tbody > tr > td {
-        padding: 4px;
-      }
-      table.table > tbody > tr:last-child > th,
-      table.table > tbody > tr:last-child > td {
-      }
-    ANGULAR:
-  - title: Dark theme
-    type: Example
-    text:
-    componentName: alert
-    props:
-    REACT:
-    HTML: |
-      <table class="table table-dark table-striped table-hover">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Column heading</th>
-            <th>Column heading</th>
-            <th>Column heading</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-          </tr>
-        </tbody>
-      </table>
-    CSS: |
-      <style>
-        table.table-dark > thead > tr > th,
-        table.table-dark > thead > tr > td {
-          border-color: #3F414E;
-        }
-        table.table-dark > thead > tr {
-          background-color: #60606D;
-          color: #fff;
-        }
-        table.table-dark > tbody > tr {
-          background-color: #525361;
-          color: #fff;
-        }
-        table.table-dark > tbody > tr:nth-child(odd) {
-          background-color: #494A58;
-        }
-        table.table-dark > tbody > tr:hover {
-          background-color: #363746;
-        }
-        table.table-dark > tbody > tr > th,
-        table.table-dark > tbody > tr > td {
-          border-color: #3F414E;
-        }
-        table.table-dark > tbody > tr:last-child > th,
-        table.table-dark > tbody > tr:last-child > td {
-          border-color: #3F414E;
-        }
-      </style>
-    ANGULAR:
-  - title: Contextual classes
-    type: Example
-    text: Use contextual classes (danger, info...) to color table rows or individual cells.
-    componentName: alert
-    props:
-    REACT:
-    HTML: |
-      <table class="table table-striped table-hover">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Column heading</th>
-            <th>Column heading</th>
-            <th>Column heading</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-          </tr>
-          <tr class="table-row-danger">
-            <td>2</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-          </tr>
-          <tr class="table-row-warning">
-            <td>4</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-          </tr>
-        </tbody>
-      </table>
-    CSS: |
-      table.table > tbody > tr.table-row-danger {
-        background-color: rgba(240,58,54,0.3);
-      }
+title: Tables
+category: Foundation
+preText: |
+  Tables provide structure and hierarchy for large sets of tabular data.
 
-      table.table > tbody > tr.table-row-warning {
-        background-color: rgba(252,224,91,0.3);
-      }
-    ANGULAR:
-  - title: Dark theme
-    text:
-    type: Dark theme
-    componentName: alert
-    props:
-    REACT:
-    HTML: |
-      <table class="table table-dark table-striped table-hover">
+  Due to the widespread use of tables across third-party widgets like calendars and date pickers, we've designed our tables to be opt-in. Just add the base class `.table` to any `<table>`, then extend with custom styles or our various included modifier classes.
+
+  See the [Bootstrap documentation on tables](https://getbootstrap.com/docs/4.0/content/tables/) for more information.
+examples:
+  - html: |
+      <table class="table table-striped">
         <thead>
           <tr>
-            <th>#</th>
-            <th>Column heading</th>
-            <th>Column heading</th>
-            <th>Column heading</th>
+            <th scope="col">#</th>
+            <th scope="col">Column heading</th>
+            <th scope="col">Column heading</th>
+            <th scope="col">Column heading</th>
           </tr>
         </thead>
         <tbody>
-          <tr class="table-row-danger-dark-theme">
-            <td>1</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-          </tr>
-          <tr class="table-row-danger-success-theme">
-            <td>2</td>
+          <tr>
+            <th scope="row">1</th>
             <td>Column content</td>
             <td>Column content</td>
             <td>Column content</td>
           </tr>
           <tr>
-            <td>3</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-          </tr>
-          <tr class="table-row-danger-info-theme">
-            <td>4</td>
+            <th scope="row">2</th>
             <td>Column content</td>
             <td>Column content</td>
             <td>Column content</td>
           </tr>
           <tr>
-            <td>5</td>
+            <th scope="row">3</th>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
             <td>Column content</td>
             <td>Column content</td>
             <td>Column content</td>
           </tr>
         </tbody>
       </table>
-    CSS: |
-      table.table > tbody > tr.table-row-danger-dark-theme {
-        background-color: rgba(240,58,54,0.6);
-      }
-      table.table > tbody > tr.table-row-danger-success-theme {
-        background-color: rgba(1,171,139,0.6);
-      }
-      table.table > tbody > tr.table-row-danger-info-theme {
-        background-color: rgba(45,163,215,0.6);
-      }
-    ANGULAR:
+  - title: Contextual classes
+    introduction: Use contextual classes (danger, info, etc) to color table rows or individual cells.
+    html: |
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Column heading</th>
+            <th scope="col">Column heading</th>
+            <th scope="col">Column heading</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td class="bg-info">Column content</td>
+          </tr>
+          <tr class="bg-danger text-white">
+            <th scope="row">2</th>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+          </tr>
+          <tr class="bg-warning">
+            <th scope="row">4</th>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+          </tr>
+        </tbody>
+      </table>

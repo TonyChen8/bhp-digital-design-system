@@ -1,24 +1,88 @@
 title: BHP Logo
-componentName: Button
-introductionText:
-  - An SVG logo component that supports the BHP logo, with BHP’s primary brand colour, and its black and white logo versions.
-  - The single most identifiable element of our identity is our logo. Consistent use of our logo is key to retaining brand strength through immediate recognition of who we are and what we stand for as a Company.
-codeContainer:
+category: UI components
+preText: |
+  An SVG logo component that supports the BHP logo, with BHP’s primary brand
+  colour, and its black and white logo versions.
+
+  The single most identifiable element of our identity is our logo. Consistent
+  use of our logo is key to retaining brand strength through immediate
+  recognition of who we are and what we stand for as a Company.
+
+  <img src="/logo-usage.png" /><br/>
+examples:
   - title: Primary logo
-    type: Example
-    text: The primary logo is the first option when choosing and applying a logo. Our logo must be sized large enough to be easily read on every application. 
-    componentName: alert
-    props:
-    REACT: REACT
-    HTML: HTML
-    CSS: CSS1
-    ANGULAR: ANGULAR1
-  - title: Alternative logo versions
-    type: Example
-    text: The first preference is to use the orange logo, however sometimes to ensure legibility the black or white options will work better.
-    componentName: alert
-    props:
-    REACT: REACT
-    HTML: HTML
-    CSS: CSS1
-    ANGULAR: ANGULAR1
+    introduction: |
+      The primary logo is the first option when choosing and applying a logo.
+      Our logo must be sized large enough to be easily read on every
+      application.
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import BHPLogo from '../src/library/bhp-ui/bhp-logo';
+
+
+      export default () => {
+        return (
+          <div>
+            <BHPLogo className='mr-4' width={100} />
+            <BHPLogo />
+          </div>
+        );
+      };
+  - title: Colour variants
+    introduction: |
+      The first preference is to use the orange logo, however sometimes to
+      ensure legibility the black or white options will work better.
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { grays } from '../src/library/bhp-ui/colours';
+      import BHPLogo from '../src/library/bhp-ui/bhp-logo';
+
+      export default () => {
+        return (
+          <div className='d-flex'>
+            <BHPLogo className='m-2' />
+            <BHPLogo className='m-2' color='black' />
+            <BHPLogo className='m-2' color={grays['500']} />
+            <div className='p-2 bg-primary'>
+              <BHPLogo className='align-middle' color='white' />
+            </div>
+          </div>
+        );
+      };
+postText: |
+  <hr />
+  <h4 class="h4-light">Application</h4>
+
+  <div class="row">
+  <div class="col-4">
+  <img src="/logo-usage-bad.png" width="50%" />
+  </div>
+  <div class="offset-2 col-4">
+  <img src="/logo-orange.svg" width="90" />
+  </div>
+
+  <div class="row">
+  <div class="col-4 text-danger">
+  <hr />
+
+  <i class="material-icons md-18 align-top">clear</i> WRONG<br />
+
+  Any changes to our logo diminish its integrity and the equity of our brand.
+  The examples shown here are some specific "do nots" for our logo.
+
+
+  </div>
+  <div class="offset-2 col-4 text-success">
+  <hr />
+
+  <i class="material-icons md-18 align-top">done</i> CORRECT<br />
+
+  While minimum sizes are specified, it is preferred that the logo appears
+  larger than the minimum size when possible.
+
+  MINIMUM SIZE: height: 24 pixels
+
+  </div>
+  </div>

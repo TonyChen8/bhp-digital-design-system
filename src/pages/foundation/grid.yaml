@@ -1,56 +1,116 @@
 title: Grid
-componentName: Button
-introductionText:
-  - Our grid uses the 12 columns Bootstrap grid system with a 20px gutter (10px on either side of a column).
-  - <strong>Columns</strong>
-  - To instantiate a row, simply add a div with the class container-fluid
-  - Within the row, adding elements with the classes col-sm-1 through to col-sm-12 will create columns that occupy 1/12th through to 12/12th's respectively. Any combination of widths can be used, with gutters automatically inserted between.
-  - <strong>Column Offsets</strong>
-  - The classes col-sm-offset-1 through to col-sm-offset-11 can be used to offset the current column by 1 to 11 columns respectively.
-  - <div class='developerNoteContainerGlobalClass'>
-      <i class='material-icons info' color='#fff'>info</i>
-      Developer Note! Follow the Bootstrap documentation on breakpoint classes which can be found <a target="_blank" href='https://bootstrapdocs.com/v3.3.6/docs/getting-started/'>here.</a>
-    </div>
+category: Foundation
+preText: |
+  Our grid uses the Bootstrap grid system with 12 columns and 30px gutter.
 
-codeContainer:
-  - title:
-    type:
-    text:
-    componentName: alert
-    props:
-    REACT:
-    HTML: |
-      <div class="container-fluid sample-grid">
+  ##### Columns
+
+  To instantiate a row, simply add a div with the class `row`
+
+  Within the row, adding elements with the classes `col-1` through to `col-12` will create columns that occupy 1/12th through to 12/12th's respectively. Any combination of widths can be used, with gutters automatically inserted between.
+
+  ##### Column Offsets
+
+  The classes `offset-1` through to `offset-11` can be used to offset the current column by 1 to 11 columns respectively.
+
+  <div class="alert alert-info" role="alert">
+    <i class="material-icons md-18 align-top">info</i> <strong>Developer note:</strong>
+    Follow the <a href="https://getbootstrap.com/docs/4.0/layout/grid/">Bootstrap documentation on breakpoint classes</a>.
+  </div>
+examples:
+  - css: |
+      .row {
+        margin-bottom: 10px;
+      }
+
+      .row .inner {
+        padding: 5px;
+        background-color: #f8f8f8;
+        border: 1px solid #eaeaea;
+      }
+    html: |
+      <div class="container">
         <div class="row">
-          <div class="col-sm-12"><div class="col-internal">.col-sm-12</div></div>
+          <div class="col-3">.col-3</div>
+          <div class="col-3 offset-4">.col-3 .offset-4</div>
         </div>
+
         <div class="row">
-          <div class="col-sm-6"><div class="col-internal">.col-sm-6</div></div>
-          <div class="col-sm-6"><div class="col-internal">.col-sm-6</div></div>
+          <div class="col-3">.col-3</div>
+          <div class="col-6">.col-6</div>
+          <div class="col-3">.col-3</div>
         </div>
+
         <div class="row">
-          <div class="col-sm-4"><div class="col-internal">.col-sm-4</div></div>
-          <div class="col-sm-4"><div class="col-internal">.col-sm-4</div></div>
-          <div class="col-sm-4"><div class="col-internal">.col-sm-4</div></div>
+          <div class="col-1">.col-1</div>
+          <div class="col-11">.col-11</div>
         </div>
+
         <div class="row">
-          <div class="col-sm-2"><div class="col-internal">.col-sm-2</div></div>
-          <div class="col-sm-2"><div class="col-internal">.col-sm-2</div></div>
-          <div class="col-sm-2"><div class="col-internal">.col-sm-2</div></div>
-          <div class="col-sm-2"><div class="col-internal">.col-sm-2</div></div>
-          <div class="col-sm-2"><div class="col-internal">.col-sm-2</div></div>
-          <div class="col-sm-2"><div class="col-internal">.col-sm-2</div></div>
+          <div class="col-2">.col-2</div>
+          <div class="col-10">.col-10</div>
+        </div>
+
+        <div class="row">
+          <div class="col-3">.col-3</div>
+          <div class="col-9">.col-9</div>
+        </div>
+
+        <div class="row">
+          <div class="col-4">.col-4</div>
+          <div class="col-8">.col-8</div>
+        </div>
+
+        <div class="row">
+          <div class="col-5">.col-5</div>
+          <div class="col-7">.col-7</div>
+        </div>
+
+        <div class="row">
+          <div class="col-6">.col-6</div>
+          <div class="col-6">.col-6</div>
         </div>
       </div>
-    CSS:  |
-      .sample-grid .row {
-        margin: 20px 0;
-      }
+    actualHtml: |
+      <div class="container">
+        <div class="row">
+          <div class="col-3"><div class="inner">.col-3</div></div>
+          <div class="col-3 offset-4"><div class="inner">.col-3 .offset-4</div></div>
+        </div>
 
-      .sample-grid .col-internal {
-        background-color: #F3F4F5;
-        text-align: center;
-        padding: 20px;
-        border: 1px solid #b4b4b4;
-      }
+        <div class="row">
+          <div class="col-3"><div class="inner">.col-3</div></div>
+          <div class="col-6"><div class="inner">.col-6</div></div>
+          <div class="col-3"><div class="inner">.col-3</div></div>
+        </div>
 
+        <div class="row">
+          <div class="col-1"><div class="inner">.col-1</div></div>
+          <div class="col-11"><div class="inner">.col-11</div></div>
+        </div>
+
+        <div class="row">
+          <div class="col-2"><div class="inner">.col-2</div></div>
+          <div class="col-10"><div class="inner">.col-10</div></div>
+        </div>
+
+        <div class="row">
+          <div class="col-3"><div class="inner">.col-3</div></div>
+          <div class="col-9"><div class="inner">.col-9</div></div>
+        </div>
+
+        <div class="row">
+          <div class="col-4"><div class="inner">.col-4</div></div>
+          <div class="col-8"><div class="inner">.col-8</div></div>
+        </div>
+
+        <div class="row">
+          <div class="col-5"><div class="inner">.col-5</div></div>
+          <div class="col-7"><div class="inner">.col-7</div></div>
+        </div>
+
+        <div class="row">
+          <div class="col-6"><div class="inner">.col-6</div></div>
+          <div class="col-6"><div class="inner">.col-6</div></div>
+        </div>
+      </div>

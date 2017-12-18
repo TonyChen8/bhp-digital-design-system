@@ -1,111 +1,61 @@
-title: Badges
-componentName: Button
-introductionText:
-  - Badges are small components that typically communicate a numerical value to the user. They are typically used within an item.
-codeContainer:
+title: Badges and labels
+category: UI components
+preText: |
+  Badges are small components that typically communicate a numerical value to the user. They are typically used within an item.
+examples:
   - title: Usage
-    type: Example
-    text:
-    componentName: badge
-    props:
-    REACT:
-    HTML: |
-      <div class="badge-container">
-        <span class="badge primary">99</span>
-        <span class="badge primary"><i class="material-icons">star</i><span>99</span></span>
-        <span class="badge success"><i class="material-icons">done</i>14</span>
-      </div>
-    CSS: |
-      .badge-container {
-        display: flex;
-      }
-      .badge {
-        display: flex;
-        justify-content: center;
-        max-width: 30px;
-        margin-right: 10px;
-        align-items: center;
-        box-sizing: border-box;
-        min-width: 20px;
-        height: 16px;
-        vertical-align: middle;
-        padding: 3px 7px;
-        font-size: 9px;
-        font-weight: 400;
-        color: #fff;
-        line-height: 1;
-        white-space: nowrap;
-        text-align: center;
-        border-radius: 6px;
-      }
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { Badge } from 'reactstrap';
 
-      .material-icons {
-        margin-right: 2px;
-        vertical-align: text-top;
-        font-size: 9px;
-      }
+      const Example = () => {
+        return (
+          <div>
+            <Badge color="primary">4</Badge>{' '}
+            <Badge color="primary">
+              <i className="material-icons md-12 align-middle">star</i>{' '}
+              99
+            </Badge>{' '}
+            <Badge color="success">
+              <i className="material-icons md-12 align-middle">done</i>{' '}
+              14
+            </Badge>
+          </div>
+        );
+      };
 
-      .primary {
-        background-color: #e65400;
-      }
+      export default Example;
+    html: |
+      <span class="badge badge-primary">4</span>
+      <span class="badge badge-primary">
+        <i class="material-icons md-12 align-middle">star</i>
+        99
+      </span>
+      <span class="badge badge-success">
+        <i class="material-icons md-12 align-middle">done</i>
+        14
+      </span>
+  - title: Variations
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { Badge } from 'reactstrap';
 
-      .success {
-        background-color: #01ab8b;
-      }
+      const Example = () => {
+        return (
+          <div>
+            <Badge color="dark">99</Badge>{' '}
+            <Badge color="light">99</Badge>{' '}
+            <Badge color="success">99</Badge>{' '}
+            <Badge color="danger">99</Badge>{' '}
+          </div>
+        );
+      };
 
-    ANGULAR:
-  - title: Variations Alerts
-    type: Example
-    text:
-    componentName: badge
-    props:
-    REACT:
-    HTML: |
-      <div class="badge-container">
-        <span class="badge darkGrey">99</span>
-        <span class="badge lightGrey">99</span>
-        <span class="badge success">99</span>
-        <span class="badge warning">99</span>
-      </div>
-    CSS: |
-      .badge {
-        display: flex;
-        justify-content: center;
-        max-width: 30px;
-        margin-right: 10px;
-        box-sizing: border-box;
-        min-width: 20px;
-        height: 16px;
-        vertical-align: middle;
-        padding: 3px 7px;
-        font-size: 9px;
-        font-weight: 400;
-        color: #fff;
-        line-height: 1;
-        white-space: nowrap;
-        text-align: center;
-        border-radius: 6px;
-      }
-
-      .material-icons {
-        margin-right: 2px;
-        vertical-align: text-top;
-        font-size: 9px;
-      }
-
-      .success {
-        background-color: #01ab8b;
-      }
-
-      .warning {
-        background-color: #f03a36;
-      }
-
-      .darkGrey {
-        background-color:  #7e858b;
-      }
-
-      .lightGrey {
-        background-color:  #f2f2f2;
-        color: #333333;
-      }
+      export default Example;
+    html: |
+      <span class="badge badge-dark">99</span>
+      <span class="badge badge-light">99</span>
+      <span class="badge badge-success">99</span>
+      <span class="badge badge-danger">99</span>

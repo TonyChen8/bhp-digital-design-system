@@ -1,0 +1,39 @@
+@import '~react-dates/lib/css/_datepicker.css';
+
+.DateInput_input__focused {
+  border-color: theme-color(bhp-orange-3);
+}
+
+.CalendarMonth_caption {
+  padding-top: 26px;
+  font-size: 12px;
+  color: $body-color;
+  > strong {
+    font-weight: normal;
+  }
+}
+
+.CalendarDay__default {
+  border-color: transparent;
+  color: $body-color;
+}
+
+.CalendarDay__blocked_out_of_range,
+.CalendarDay__blocked_out_of_range:active,
+.CalendarDay__blocked_out_of_range:hover {
+  border-color: transparent;
+  opacity: 0.5;
+  color: $body-color;
+}
+
+.CalendarDay__today {
+  font-weight: bold;
+}
+
+.CalendarDay__selected,
+.CalendarDay__selected:active,
+.CalendarDay__selected:hover {
+  border-color: transparent;
+  background-color: theme-color(bhp-orange-3);
+  color: $body-color;
+}

@@ -1,358 +1,156 @@
 title: Popover
-componentName: Button
-introductionText:
-  - Popovers are designed to give secondary content about a particular element to a page or contain further options/actions for the user in a container. The popover interaction is more efficient for small interactions because it keeps the user in the context of the action.
-  - |
-      <h4>When and how to use this component</h4>
-        <ul>
-          <li>When you have more information you need to present to the user as a secondary.</li>
-          <li>When you have too much information to fit in a Tooltip*.</li>
-          <li>Only one popover can be open at any one time.</li>
-          <li>Popovers can be fired from any clickable object within an interface including buttons, clickable icons, and links.</li>
-          <li>Clicking anywhere on the screen should dismiss the popover.</li>
-          <li> If a screen is resized, the popover should open witn the viewport at all times.</li>
-        </ul>
-        <p>(*) If you require more detailed secondary information, consider using a modal dialog instead.</p>
+category: UI components
+preText: |
+  Popovers are designed to give secondary content about a particular element to
+  a page or contain further options/actions for the user in a container. The
+  popover interaction is more efficient for small interactions because it keeps
+  the user in the context of the action.
 
-codeContainer:
+  When and how to use this component:
+
+  - When you have more information you need to present to the user as a
+    secondary.
+  - When you have too much information to fit in a Tooltip*.
+  - Only one popover can be open at any one time.
+  - Popovers can be fired from any clickable object within an interface
+    including buttons, clickable icons, and links.
+  - Clicking anywhere on the screen should dismiss the popover.
+  - If a screen is resized, the popover should open witn the viewport at all
+    times.
+
+  <div class="alert alert-info">
+    <i class="material-icons md-18 align-top">info</i>
+    If you require more detailed secondary information, consider using a modal dialog instead.
+  </div>
+examples:
   - title: Usage
-    type: Example
-    text: Below is an example of the default panel.
-    componentName: alert
-    props:
-    REACT: REACT
-    HTML: |
-      <div class="popover-container">
-        <a>Text on right (hover to see popover)</a>
-        <div href="#" class="tooltip-text-right">Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut laborerem ipsum dolor sit amet.</div>
-      </div>
-    CSS: |
-      .tooltip-text-left {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        max-width: 150px;
-        min-height: 35px;
-        position: relative;
-        margin-right: 15px;
-        padding: 20px;
-        text-decoration: none;
-        text-align: center;
-        border-radius: 2px;
-        border: solid 1px #dcdcdc;
-        box-sizing: border-box;
-        font-family: Arial;
-        font-size: 13px;
-        line-height: 1.38;
-        text-align: left;
-        text-align: center;
-        color: rgba(0, 0, 0, 0.54);
+    introduction: |
+      The state of the popover is controlled using `isOpen`.
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { Button, Popover, PopoverHeader, PopoverBody } from 'reactstrap';
+
+      export default class Example extends React.Component {
+        constructor(props) {
+          super(props);
+
+          this.toggle = this.toggle.bind(this);
+          this.state = {
+            popoverOpen: false
+          };
+        }
+
+        toggle() {
+          this.setState({
+            popoverOpen: !this.state.popoverOpen
+          });
+        }
+
+        render() {
+          return (
+            <div>
+              <Button id="Popover1" onClick={this.toggle}>
+                Popover on right
+              </Button>
+              <Popover
+                placement="right"
+                isOpen={this.state.popoverOpen}
+                target="Popover1"
+                toggle={this.toggle}
+              >
+                <PopoverHeader>Popover Title</PopoverHeader>
+                <PopoverBody>
+                  Lorem ipsum dolor sit amet, conse ctetur adipisicing elit,
+                  sed do eiusmod tempor incididunt ut laborerem ipsum dolor sit
+                  amet, conse ctetur adipisicing elit, sed do eiusmod tempor
+                  incididunt ut labore.
+                </PopoverBody>
+              </Popover>
+            </div>
+          );
+        }
       }
-      .tooltip-text-left:before {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 100%;
-        top: 44%;
-        width: 0;
-        height: 0;
-        border: 10px solid transparent;
-        border-left-color: #dcdcdc;
+  - title: Positioning
+    introduction: |
+      The position of the popover can be controlled with the `placement`
+      property.
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { Button, Popover, PopoverHeader, PopoverBody } from 'reactstrap';
+
+      class PopoverExample extends React.Component {
+        constructor(props) {
+          super(props);
+
+          this.toggle = this.toggle.bind(this);
+          this.state = {
+            popoverOpen: false
+          };
+        }
+
+        toggle() {
+          this.setState({
+            popoverOpen: !this.state.popoverOpen
+          });
+        }
+
+        render() {
+          const { buttonText, placement, id, withTitle } = this.props;
+          return (
+            <div>
+              <Button id={id} onClick={this.toggle}>
+                {buttonText}
+              </Button>
+              <Popover
+                placement={placement}
+                isOpen={this.state.popoverOpen}
+                target={id}
+                toggle={this.toggle}
+              >
+                {withTitle &&
+                  <PopoverHeader>Popover Title</PopoverHeader>
+                }
+                <PopoverBody>
+                  Lorem ipsum dolor sit amet, conse ctetur adipisicing elit,
+                  sed do eiusmod tempor incididunt ut laborerem ipsum dolor sit
+                  amet, conse ctetur adipisicing elit, sed do eiusmod tempor
+                  incididunt ut labore.
+                </PopoverBody>
+              </Popover>
+            </div>
+          );
+        }
       }
 
-      .tooltip-text-left:after {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 100%;
-        top: 44.6%;
-        width: 0;
-        height: 0;
-        border: 9px solid transparent;
-        border-left-color: white;
-      }
-      
-      .popover-container {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: flex-end;
-      }
-      
-      a:hover + .tooltip-text-right {
-        visibility: visible;
-      }
-    ANGULAR: ANGULAR1
-  - title: Variations
-    type: Example
-    text:
-    componentName: alert
-    props:
-    REACT: REACT
-    HTML: |
-      <div class="main-cointainer">
-        <div class="popover-container-left">
-          <a>Text on left</a>
-          <div href="#" class="tooltip-text-left1">Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut laborerem ipsum dolor sit amet.</div>
-        </div>
+      export default () => {
+        return (
+          <div>
+            <PopoverExample
+              id='PopoverLeft'
+              buttonText='Popover on left with title'
+              placement='left'
+              withTitle
+            /><br/>
 
-        <div class="popover-container-bottom">
-          <a>Text on top</a>
-          <div href="#" class="tooltip-text-bottom">Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut laborerem ipsum dolor sit amet.</div>
-        </div>
-      </div>
-      <br />
-      <div class="main-cointainer">
-        <div class="popover-container-right">
-          <a>Text on right</a>
-          <div href="#" class="tooltip-text-right">Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut laborerem ipsum dolor sit amet.</div>
-        </div>
-        <div class="popover-container-top">
-          <a>Text on bottom</a>
-          <div href="#" class="tooltip-text-top">Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut laborerem ipsum dolor sit amet.</div>
-        </div>
-      </div>
-    CSS: |
-      .popover-container {
-        display: flex;
-        align-items: center;
-      }
+            <PopoverExample
+              id='PopoverLeftNoTitle'
+              buttonText='Popover on left without title'
+              placement='left'
+            /><br />
 
-      a {
-        font-family: Arial;
-        font-size: 13px;
-        line-height: 1.38;
-        text-align: left;
-        color: #2da3d7;
-      }
+            <PopoverExample
+              id='PopoverTop'
+              buttonText='Popover on top'
+              placement='top'
+            /><br />
 
-      .tooltip-text-left1 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        max-width: 150px;
-        min-height: 35px;
-        position: relative;
-        margin-right: 15px;
-        padding: 20px;
-        text-decoration: none;
-        text-align: center;
-        border-radius: 2px;
-        border: solid 1px #dcdcdc;
-        box-sizing: border-box;
-        font-family: Arial;
-        font-size: 13px;
-        line-height: 1.38;
-        text-align: left;
-        text-align: center;
-        color: rgba(0, 0, 0, 0.54);
-        visibility: hidden;
+            <PopoverExample
+              id='PopoverBottom'
+              buttonText='Popover below'
+              placement='bottom'
+            />
+          </div>
+        );
       }
-      .tooltip-text-left1:before {
-        content: '';
-        display: block;
-        position: absolute;
-        right: 100%;
-        top: 44%;
-        width: 0;
-        height: 0;
-        border: 10px solid transparent;
-        border-left-color: #dcdcdc;
-      }
-
-      .tooltip-text-left1:after {
-        content: '';
-        display: block;
-        position: absolute;
-        right: 100%;
-        top: 44.6%;
-        width: 0;
-        height: 0;
-        border: 9px solid transparent;
-        border-left-color: white;
-      }
-
-      .tooltip-text-bottom {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        max-width: 150px;
-        min-height: 35px;
-        padding: 20px;
-        text-decoration: none;
-        text-align: center;
-        border-radius: 2px;
-        margin-top: 15px;
-        border: solid 1px #dcdcdc;
-        box-sizing: border-box;
-        font-family: Arial;
-        font-size: 13px;
-        line-height: 1.38;
-        text-align: left;
-        color: rgba(0, 0, 0, 0.54);
-        visibility: hidden;
-      }
-
-      .tooltip-text-bottom:before {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 44%;
-        bottom: 100%;
-        width: 0;
-        height: 0;
-        border: 10px solid transparent;
-        border-bottom-color: #dcdcdc;
-      }
-
-      .tooltip-text-bottom:after {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 44.8%;
-        bottom: 100%;
-        width: 0;
-        height: 0;
-        border: 9px solid transparent;
-        border-bottom-color: white;
-      }
-
-      .tooltip-text-top {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        max-width: 150px;
-        min-height: 35px;
-        position: relative;
-        padding: 20px;
-        text-decoration: none;
-        text-align: center;
-        border-radius: 2px;
-        margin-bottom: 15px;
-        border: solid 1px #dcdcdc;
-        box-sizing: border-box;
-        font-family: Arial;
-        font-size: 13px;
-        line-height: 1.38;
-        text-align: left;
-        color: rgba(0, 0, 0, 0.54);
-        visibility: hidden;
-      }
-
-      .tooltip-text-top:before {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 44%;
-        top: 100%;
-        width: 0;
-        height: 0;
-        border: 10px solid transparent;
-        border-top-color: #dcdcdc;
-      }
-
-      .tooltip-text-top:after {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 44.8%;
-        top: 100%;
-        width: 0;
-        height: 0;
-        border: 9px solid transparent;
-        border-top-color: white;
-      }
-
-      .tooltip-text-right {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        max-width: 150px;
-        min-height: 35px;
-        position: relative;
-        margin-right: 15px;
-        padding: 20px;
-        text-decoration: none;
-        text-align: center;
-        border-radius: 2px;
-        border: solid 1px #dcdcdc;
-        box-sizing: border-box;
-        font-family: Arial;
-        font-size: 13px;
-        line-height: 1.38;
-        text-align: left;
-        text-align: center;
-        color: rgba(0, 0, 0, 0.54);
-        visibility: hidden;
-      }
-      .tooltip-text-right:before {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 100%;
-        top: 44%;
-        width: 0;
-        height: 0;
-        border: 10px solid transparent;
-        border-left-color: #dcdcdc;
-      }
-
-      .tooltip-text-right:after {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 100%;
-        top: 44.6%;
-        width: 0;
-        height: 0;
-        border: 9px solid transparent;
-        border-left-color: white;
-      }
-
-      .popover-container-bottom {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 300px;
-      }
-      
-      .popover-container-left {
-        display: flex;
-        align-items: center;
-        width: 300px;
-      }
-
-      .popover-container-right {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        width: 300px;
-      }
-
-      .popover-container-top {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-        width: 300px;
-      }
-
-      .main-cointainer {
-        display: flex;
-      }
-
-      a:hover + .tooltip-text-left1 {
-        visibility: visible;
-      }
-
-      a:hover + .tooltip-text-right {
-        visibility: visible;
-      }
-
-      a:hover + .tooltip-text-bottom {
-        visibility: visible;
-      }
-
-      a:hover ~ .tooltip-text-top {
-        visibility: visible;
-      }
-    ANGULAR: ANGULAR1

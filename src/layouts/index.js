@@ -1,91 +1,39 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
-import SideBar from '../components/sidebar'
-import './style.css'
-import MaterialDesignIcon from '../library/MaterialDesignIcon';
-import _ from 'lodash';
+import Link from 'gatsby-link';
+import 'react-dates/initialize';
 
-import './index.css'
-import './grid.css'
-import './Hopscotch.css'
+import SideBar from '../components/side-bar';
 
-const Header = () => (
-  <div
-    style={{
-      display: 'flex',
-      height: '60px',
-      backgroundColor: '#ffffff',
-      padding: '20px 22px',
-      color: '#333333',
-      justifyContent: 'space-between',
-      borderBottom: '1px solid #d8d8d8'
-    }}
-  >
+import './index.scss'
+import s from './index.module.scss';
+
+const TemplateWrapper = ({ children, data }) => (
+  <div>
+    <Helmet
+      title={data.site.siteMetadata.title}
+    />
+
     <div
-      style={{
-        fontSize: '24px',
-      }}
+      className={s.container}
     >
-        <Link
-          to="/"
-          style={{
-            textDecoration: 'none',
-            color: '#333333',
-          }}
-        >
-          Digital Design System
-        </Link>
-    </div>
-    <div>
-        <Link
-          to="/"
-          style={{
-            textDecoration: 'none',
-            color: '#333333',
-          }}
-        >
-          Help
-        </Link>
-    </div>
-  </div>
-)
+      <SideBar className={s.sideBar} />
 
+      <div className={s.mainBody}>
+        <header className={s.header}>
+          <h1>
+            <Link
+              className={s.headerLink}
+              to='/'
+            >Digital Design System</Link>
+          </h1>
 
-function route(route, index) {
-  if (_.isEmpty(route)) {
-    if (index == 1) return
-    return(
-      <Link key ={index} className='navItem' to='/'>
-        <span> Home&nbsp;&nbsp;</span>
-      </Link>
-    )
-  }
-  
-  return (
-    <Link key ={index} className='navItem' to={route}>
-      <span>  /&nbsp;&nbsp;{_.startCase(_.toLower(route))}&nbsp;</span>
-    </Link>
-  )
-}
+          <div className={s.help}>
+            Help
+          </div>
+        </header>
 
-function renderRouteContainer (pathname) {
-  var routes = _.split(pathname, '/',3);
-  return (
-    <div className='routeContainer'>
-      <div className='routesLinks'>{_.map(routes, route)}</div>
-    </div>
-  )
-}
-
-const TemplateWrapper = ({ children, location }) => (
-  <div className='templateWrapper'>
-    <SideBar />
-    <div className='innerContainer'>
-      <Header />
-      {renderRouteContainer(location.pathname)}
-      <div className='children'>
         {children()}
       </div>
     </div>
@@ -96,4 +44,14 @@ TemplateWrapper.propTypes = {
   children: PropTypes.func,
 }
 
-export default TemplateWrapper
+export default TemplateWrapper;
+
+export const query = graphql`
+  query LayoutQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`;

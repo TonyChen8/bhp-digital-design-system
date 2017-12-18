@@ -1,0 +1,22 @@
+@import "base.scss";
+
+.pageHeader {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.codeExampleContainer {
+  :global(.dark-theme-inset) {
+    color: white;
+    background-color: #333;
+
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+}
+
+.codeTypePicker {
+  margin-bottom: 20px !important;
+}

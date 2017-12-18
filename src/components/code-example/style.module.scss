@@ -1,0 +1,31 @@
+$example-border-color: #c1c1c1;
+$example-padding: 10px;
+
+.exampleDisplay {
+  border: 1px solid $example-border-color;
+}
+
+.exampleSubTitle {
+  padding: $example-padding;
+  font-size: 13px;
+  color: #979797;
+}
+
+.exampleHtml {
+  padding: $example-padding;
+  font-size: 13px;
+}
+
+.exampleCode {
+  position: relative;
+  border-top: 1px solid $example-border-color;
+  margin: 0;
+  padding: $example-padding;
+  background-color: #ecf0f1;
+}
+
+.copyButton {
+  position: absolute;
+  top: $example-padding;
+  right: $example-padding;
+}

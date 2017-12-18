@@ -1,102 +1,30 @@
 title: List groups
-componentName: Button
-introductionText:
-  - List groups are a flexible and powerful component for displaying a series of content. List group items can be modified and extended to support just about any content within. They can also be used as navigation with the right modifier class.
-codeContainer:
+category: UI components
+examples:
   - title: Usage
-    type: Light theme
-    text: Below is an example of the default accordions.
-    componentName: alert
-    props:
-    REACT: REACT
-    HTML: |
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { ListGroup, ListGroupItem } from 'reactstrap';
+
+      const Example = () => {
+        return (
+          <ListGroup>
+            <ListGroupItem>Task list key</ListGroupItem>
+            <ListGroupItem>Task list key</ListGroupItem>
+            <ListGroupItem active>Task list key</ListGroupItem>
+            <ListGroupItem>Task list key</ListGroupItem>
+            <ListGroupItem>Task list key</ListGroupItem>
+          </ListGroup>
+        );
+      };
+
+      export default Example;
+    html: |
       <ul class="list-group">
-        <li class="list-group-item">Task List Key</li>
-        <li class="list-group-item">Task List Key</li>
-        <li class="list-group-item">Task List Key</li>
-        <li class="list-group-item">Task List Key</li>
+        <li class="list-group-item">Task list key</li>
+        <li class="list-group-item">Task list key</li>
+        <li class="list-group-item active">Task list key</li>
+        <li class="list-group-item">Task list key</li>
+        <li class="list-group-item">Task list key</li>
       </ul>
-    CSS: |
-      .list-group {
-      	display: -ms-flexbox;
-        display: flex;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        padding-left: 0;
-        margin-bottom: 0;
-      	width: 186px;
-        border-radius: 2px;
-      	font-family: Arial;
-        font-size: 12px;
-        line-height: 2.5;
-        text-align: left;
-        color: #333333;
-      }
-
-      .list-group-item {
-        position: relative;
-        display: block;
-      	height: 30px;
-        padding-left: 10px;
-        margin-bottom: -1px;
-        background-color: #fff;
-        border: solid 1px #979797;
-      	box-sizing: border-box;
-      }
-
-      .list-group-item:hover {
-      	background-color: #ececec;
-      }
-    ANGULAR: ANGULAR1
-  - title: Dark theme
-    type: Dark theme
-    text:
-    componentName:
-    props:
-    REACT: REACT
-    HTML: |
-      <ul class="list-group list-group-dark-theme">
-        <li class="list-group-item">Task List Key</li>
-         <li class="list-group-item">Task List Key</li>
-          <li class="list-group-item">Task List Key</li>
-          <li class="list-group-item">Task List Key</li>
-      </ul>
-    CSS: |
-      .list-group {
-      	display: -ms-flexbox;
-        display: flex;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        padding-left: 0;
-        margin-bottom: 0;
-      	width: 186px;
-        border-radius: 2px;
-      	font-family: Arial;
-        font-size: 12px;
-        line-height: 2.5;
-        text-align: left;
-        color: #333333;
-      }
-
-      .list-group-item {
-        position: relative;
-        display: block;
-      	height: 30px;
-        padding-left: 10px;
-        margin-bottom: -1px;
-        background-color: #fff;
-        border: solid 1px #979797;
-      	box-sizing: border-box;
-      }
-      
-      .list-group-dark-theme .list-group-item {
-        background-color: #767684;
-        border-color: #353544;
-      	color: #fff;
-      }
-
-      .list-group-item:hover {
-      	background-color: #ececec;
-        color: #333;
-      }
-    ANGULAR: ANGULAR1

@@ -1,16 +1,10 @@
-# gatsby-starter-default
-The default Gatsby starter
+# bhp-design-pattern-library
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
+The BHP Design Pattern Library.
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-example-site
-```
+This project uses [Gatsby](https://www.gatsbyjs.org/docs/).
 
-## Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
-
-Classname which end with GlobalClass has css in src/layouts/index.css file. for ex. pageContainerGlobalClass
+To get started, globally install (`npm -g`) the packages `yarn` and
+`gatsby-cli`. Then, in the project directory, run `yarn` to install add
+dependencies. You can develop using `gatsby develop`, and build a version for
+deployment using `gatsby build`.

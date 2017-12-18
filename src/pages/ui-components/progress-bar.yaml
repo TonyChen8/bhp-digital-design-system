@@ -1,34 +1,96 @@
 title: Progress bar
-componentName: Button
-introductionText:
-  - Panels are used to outline certain sections of your content, which can be styled differently. Typically, panels are arranged in grid columns from the Grid component.
-codeContainer:
+category: UI components
+preText: |
+  Progress bars fill from 0% to 100% to show the progress of a task. It also will animate to show there is a task waiting to be done. A progress bar can contain a text value indicating current progress.
+examples:
   - title: Usage
-    type: Example
-    text: Below is an example of the default accordions.
-    componentName: alert
-    props:
-    REACT: REACT
-    HTML: <progress class='progress' value="50" max="100"> </progress>
-    CSS: |
-      .progress {
-        display: flex;
-        position: relative;
-        width: 400px;
-        height: 20px;
-        background-color: #ececec;
-        align-items: center;
-      }
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { Progress } from 'reactstrap';
 
-      .progress::-webkit-progress-value {
-        background-color: #2da3d7;
-      }
-
-      .progress:before {
-        position:absolute;
-        left:5px;
-        right:0;
-        content: attr(value)'%';
-        font-size: 11px;
-      }
-    ANGULAR: ANGULAR1
+      export default () => {
+        return (
+          <div>
+            <Progress className="mb-2" color="info" value="0" />
+            <Progress className="mb-2" color="info" value={25}>25%</Progress>
+            <Progress className="mb-2" color="info" value={50}>50%</Progress>
+            <Progress className="mb-2" color="info" value={75}>75%</Progress>
+            <Progress className="mb-2" color="info" value={100}>100%</Progress>
+          </div>
+        );
+      };
+    html: |
+      <div class="progress">
+        <div
+          class="progress-bar bg-info"
+          role="progressbar"
+          aria-valuenow="0"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+      <div class="progress">
+        <div
+          class="progress-bar bg-info"
+          role="progressbar"
+          style="width: 25%"
+          aria-valuenow="25"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          25%
+        </div>
+      </div>
+      <div class="progress">
+        <div
+          class="progress-bar bg-info"
+          role="progressbar"
+          style="width: 50%"
+          aria-valuenow="50"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          50%
+        </div>
+      </div>
+      <div class="progress">
+        <div
+          class="progress-bar bg-info"
+          role="progressbar"
+          style="width: 75%"
+          aria-valuenow="75"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          75%
+        </div>
+      </div>
+      <div class="progress">
+        <div
+          class="progress-bar bg-info"
+          role="progressbar"
+          style="width: 100%"
+          aria-valuenow="100"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          100%
+        </div>
+      </div>
+    actualHtml: |
+      <div class="progress mb-2">
+        <div class="progress-bar bg-info" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+      <div class="progress mb-2">
+        <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+      </div>
+      <div class="progress mb-2">
+        <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+      </div>
+      <div class="progress mb-2">
+        <div class="progress-bar bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+      </div>
+      <div class="progress mb-2">
+        <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+      </div>
