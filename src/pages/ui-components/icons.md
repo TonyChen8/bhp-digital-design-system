@@ -10,13 +10,19 @@ category: "UI components"
 
 <h3 class="page-header">Icons</h3>
 
-We are promoting the use of [Material design font icons](/foundation/font-icons/).
+The preferred reusable font icon libraries are described in
+[Foundation / Font Icon](/foundation/font-icons/), along with instructions
+on how to use them.
 
-When you have to use a special icon (product / event / campaign) we advise using SVG formats only.
+When you have to use a special icon (product / event / campaign) we advise
+using SVG formats only.
 
-When creating stand alone icons, products icons, and event icons, ensure that you keep the style, weight and size consistent with the Material Font Icons.  All custom icons must be pixel perfect.
+When creating stand alone icons, products icons, and event icons, ensure that
+you keep the style, weight and size consistent with the Material Font Icons.
+All custom icons must be pixel perfect.
 
-To explore the custom icons library, please go to the [download page](/download/).
+Some custom icons already exist. To explore the custom icons library, please go
+to the [download page](/download/).
 
 <h4 class="h4-light">Styling</h4>
 
