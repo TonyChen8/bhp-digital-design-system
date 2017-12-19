@@ -38,7 +38,9 @@ examples:
       <button type="button" class="btn btn-outline-danger">Outlined danger</button>
   - title: Colour variations
     introduction: |
-      You can change the colour of the button by appending `-secondary` to define secondary actions, or combine with the standard color classes for alternate styles.
+      You can change the colour of the button by appending `secondary` to define
+      secondary actions, or combine with the standard color classes for
+      alternate styles.
     subTitle: Example
     react: |
       import React from 'react';
@@ -53,6 +55,8 @@ examples:
             <Button color="danger">Danger</Button>{' '}
             <Button color="light">Light</Button>{' '}
             <Button color="dark">Dark</Button>{' '}
+            <Button color="secondary">Secondary</Button>{' '}
+            <Button color="secondary" outline>Secondary outline</Button>{' '}
             <Button color="primary">
               <i className="material-icons md-18 align-top">star</i>{' '}
               Primary
@@ -69,6 +73,8 @@ examples:
       <button type="button" class="btn btn-danger">Danger</button>
       <button type="button" class="btn btn-light">Light</button>
       <button type="button" class="btn btn-dark">Dark</button>
+      <button type="button" class="btn btn-secondary">Secondary</button>
+      <button type="button" class="btn btn-outline-secondary">Secondary outline</button>
       <button type="button" class="btn btn-primary">
         <i class="material-icons md-18 align-top">star</i>
         Primary
