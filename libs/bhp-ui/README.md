@@ -1,5 +1,10 @@
 # bhp-ui
 
+TODOS:
+
+- Add package dependencies
+- Described Javascript layout
+
 ## SCSS
 
 Usage:

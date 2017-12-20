@@ -1,7 +1,8 @@
 // Components
-export * from './accordion';
-export BHPLogo from './bhp-logo';
-export ToggleSwitch from './toggle-switch';
+export * from './components/accordion';
+export BHPLogo from './components/bhp-logo';
+export MDIcon from './components/md-icon';
+export ToggleSwitch from './components/toggle-switch';
 
 // Colours
 import bhpColours from './themes/bhp-colours';
@@ -12,4 +13,3 @@ export {
   darkTheme,
   lightTheme,
 };
-

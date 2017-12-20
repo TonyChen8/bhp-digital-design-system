@@ -3,7 +3,7 @@ import Link from 'gatsby-link';
 import classnames from 'classnames';
 import { withRouter } from 'react-router'
 
-import MDIcon from '../md-icon';
+import { MDIcon } from 'bhp-ui';
 import { BHPLogo } from 'bhp-ui';
 import s from './style.module.scss';
 
