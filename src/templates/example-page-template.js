@@ -48,7 +48,7 @@ class Template extends React.Component {
     codeType = codeType || filteredCodeTypes[0].name;
 
     return (
-      <div className={s.uiComponentContainer}>
+      <div className={s.examplePageContainer}>
         <div className='container'>
           <h3 className={s.pageHeader}>{contents.title}</h3>
 
