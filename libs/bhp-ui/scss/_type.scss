@@ -1,0 +1,24 @@
+@each $class in h1, h2, h3, h4, h5, h6 {
+  .#{$class}-light {
+    @extend .#{$class};
+    font-weight: normal;
+  }
+}
+
+h5,
+.h5 {
+  text-transform: uppercase;
+}
+
+p {
+  max-width: 694px;
+}
+
+small,
+.small {
+  opacity: 0.5;
+}
+
+.text-muted {
+  opacity: 0.5;
+}

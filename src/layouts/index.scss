@@ -5,16 +5,6 @@
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
-.material-icons.md-top { vertical-align: top; }
 
-@import '../library/bhp-ui/bhp-ui.scss';
-
-// @import '../library/bhp-ui/bhp-variables.default.scss';
-// @import '../library/bhp-ui/bhp-variables.dark.scss';
-// @import '../library/bhp-ui/bhp-ui.scss';
-
-// body {
-//   margin: 0;
-//   // Override the bhp-ui off-white
-//   background-color: white;
-// }
+@import 'base';
+@import '~bhp-ui/scss/index';

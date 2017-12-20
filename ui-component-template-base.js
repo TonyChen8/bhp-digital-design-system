@@ -1,3 +1,6 @@
+// HACK(mgnb): this is a template that is copied into .cache by
+// gatsby-on-create-node so that React example can be compiled into their own
+// webpack modules
 import template from '../src/templates/example-page-template';
 
 REACT_EXAMPLE_IMPORT_PLACEHOLDER

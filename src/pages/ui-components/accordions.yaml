@@ -18,7 +18,7 @@ examples:
         AccordionItem,
         AccordionItemHeader,
         AccordionItemBody
-      } from '../src/library/bhp-ui/accordion';
+      } from 'bhp-ui';
 
       export default class Example extends React.Component {
         constructor(props) {
@@ -95,7 +95,7 @@ examples:
         AccordionItem,
         AccordionItemHeader,
         AccordionItemBody
-      } from '../src/library/bhp-ui/accordion';
+      } from 'bhp-ui';
 
       export default class Example extends React.Component {
         constructor(props) {

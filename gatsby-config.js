@@ -33,6 +33,5 @@ module.exports = {
         precision: 8,
       },
     },
-    // `gatsby-remark-copy-linked-files`,
   ],
 }

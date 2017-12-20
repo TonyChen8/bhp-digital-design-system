@@ -1,5 +1,4 @@
-@import 'bhp-base';
-
+// Bootstrap requirements and components
 @import 'node_modules/bootstrap/scss/root';
 @import 'node_modules/bootstrap/scss/print';
 @import 'node_modules/bootstrap/scss/reboot';
@@ -33,36 +32,13 @@
 @import 'node_modules/bootstrap/scss/carousel';
 @import 'node_modules/bootstrap/scss/utilities';
 
-@each $class in h1, h2, h3, h4, h5, h6 {
-  .#{$class}-light {
-    @extend .#{$class};
-    font-weight: normal;
-  }
-}
-
-h5,
-.h5 {
-  text-transform: uppercase;
-}
-
-p {
-  max-width: 694px;
-}
-
-small,
-.small {
-  opacity: 0.5;
-}
-
-.text-muted {
-  opacity: 0.5;
-}
+@import 'type';
 
 // Components
-@import 'accordion';
-@import 'nav';
-@import 'toggle-switch';
+@import 'components/accordion';
+@import 'components/nav';
+@import 'components/toggle-switch';
 
-// Overrides for other components
-@import 'react-dates';
-@import 'time-picker';
+// Overrides for styles in dependency modules
+@import 'components/react-dates';
+@import 'components/time-picker';

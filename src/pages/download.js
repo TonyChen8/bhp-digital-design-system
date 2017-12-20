@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import React from 'react';
 import Breadcrumbs from '../components/breadcrumbs';
-import downloadFiles from '../library/downloads';
+import downloadFiles from '../downloads';
 
 import s from './download.module.scss';
 
@@ -36,7 +36,7 @@ export default () => {
                 {name}
 
                 <a href={src} download={name}>
-                  <i className='material-icons md-24 md-top'>file_download</i>
+                  <i className='material-icons md-24 align-top'>file_download</i>
                 </a>
               </div>
             </div>

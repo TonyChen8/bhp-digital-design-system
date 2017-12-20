@@ -7,7 +7,7 @@ examples:
     subTitle: Example
     react: |
       import React from 'react';
-      import ToggleSwitch from '../src/library/bhp-ui/toggle-switch';
+      import { ToggleSwitch } from 'bhp-ui';
 
       class Example extends React.Component {
         constructor(props) {
@@ -61,7 +61,7 @@ examples:
     subTitle: Example
     react: |
       import React from 'react';
-      import ToggleSwitch from '../src/library/bhp-ui/toggle-switch';
+      import { ToggleSwitch } from 'bhp-ui';
 
       class Example extends React.Component {
         constructor(props) {

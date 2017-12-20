@@ -1,4 +1,4 @@
-import bhpColours from './bhp';
+import bhpColours from './bhp-colours';
 
 const themeColours = Object.assign(bhpColours, {
   primary: bhpColours.bhpOrange[0],
@@ -29,9 +29,8 @@ const grays = {
 
 const linkColour = themeColours.bhpBlue[2];
 
-export {
+export default {
   colours,
-  bhpColours,
   themeColours,
   linkColour,
   grays

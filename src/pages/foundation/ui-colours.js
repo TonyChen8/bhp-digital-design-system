@@ -5,19 +5,9 @@ import classnames from 'classnames';
 import React from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Breadcrumbs from '../../components/breadcrumbs';
+import { lightTheme, darkTheme } from 'bhp-ui';
+
 import chartExample from './chart-example.png';
-
-import {
-  colours,
-  themeColours,
-  linkColour,
-  grays
-} from '../../library/bhp-ui/colours';
-
-import {
-  colours as darkThemeColours,
-  grays as darkThemeGrays
-} from '../../library/bhp-ui/colours/dark-theme';
 
 import s from './ui-colours.module.scss';
 
@@ -41,11 +31,11 @@ const baseColoursToArray = (which, colours, codeFunction) => {
   }).flatten().value();
 }
 
-const coloursToArray = which => baseColoursToArray(which, colours, 'color');
-const graysToArray = which => baseColoursToArray(which, grays, 'gray');
-const themeColoursToArray = which => baseColoursToArray(which, themeColours, 'theme-color');
-const darkThemeColoursToArray = which => baseColoursToArray(which, darkThemeColours, 'color');
-const darkThemeGraysToArray = which => baseColoursToArray(which, darkThemeGrays, 'gray');
+const coloursToArray = which => baseColoursToArray(which, lightTheme.colours, 'color');
+const graysToArray = which => baseColoursToArray(which, lightTheme.grays, 'gray');
+const themeColoursToArray = which => baseColoursToArray(which, lightTheme.themeColours, 'theme-color');
+const darkThemeColoursToArray = which => baseColoursToArray(which, darkTheme.colours, 'color');
+const darkThemeGraysToArray = which => baseColoursToArray(which, darkTheme.grays, 'gray');
 
 class FoundationUIColours extends React.Component {
   renderColourSection({ title, colours }) {
@@ -98,7 +88,7 @@ class FoundationUIColours extends React.Component {
             <div
               key={`${group}-${number}`}
               className={s.colourMixBox}
-              style={{ backgroundColor: themeColours[group][number] }}
+              style={{ backgroundColor: lightTheme.themeColours[group][number] }}
             >
               {number + 1}
             </div>
@@ -143,7 +133,7 @@ class FoundationUIColours extends React.Component {
           ]).concat([{
             name: 'linkColor',
             code: '$link-color',
-            hex: linkColour
+            hex: lightTheme.linkColour
           }]).concat(themeColoursToArray([
             'primary'
           ]))

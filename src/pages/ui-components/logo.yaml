@@ -18,7 +18,7 @@ examples:
     subTitle: Example
     react: |
       import React from 'react';
-      import BHPLogo from '../src/library/bhp-ui/bhp-logo';
+      import { BHPLogo } from 'bhp-ui';
 
 
       export default () => {
@@ -36,15 +36,15 @@ examples:
     subTitle: Example
     react: |
       import React from 'react';
-      import { grays } from '../src/library/bhp-ui/colours';
-      import BHPLogo from '../src/library/bhp-ui/bhp-logo';
+      import { lightTheme } from 'bhp-ui';
+      import { BHPLogo } from 'bhp-ui';
 
       export default () => {
         return (
           <div className='d-flex'>
             <BHPLogo className='m-2' />
             <BHPLogo className='m-2' color='black' />
-            <BHPLogo className='m-2' color={grays['500']} />
+            <BHPLogo className='m-2' color={lightTheme.grays['500']} />
             <div className='p-2 bg-primary'>
               <BHPLogo className='align-middle' color='white' />
             </div>

@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import { withRouter } from 'react-router'
 
 import MDIcon from '../md-icon';
-import BHPLogo from '../../library/bhp-ui/bhp-logo';
+import { BHPLogo } from 'bhp-ui';
 import s from './style.module.scss';
 
 // TODO(mgnb): move this to a yaml file

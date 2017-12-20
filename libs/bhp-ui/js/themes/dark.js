@@ -1,4 +1,4 @@
-import bhpColours from './bhp';
+import bhpColours from './bhp-colours';
 
 const colours = {
   white: '#ffffff',
@@ -18,7 +18,7 @@ const grays = {
   '900': '#212529',
 };
 
-export {
+export default {
   colours,
   grays
 };
