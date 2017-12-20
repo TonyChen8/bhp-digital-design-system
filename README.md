@@ -1,6 +1,6 @@
 # bhp-design-pattern-library
 
-The BHP Design Pattern Library.
+The BHP Digital Design System.
 
 This project uses [Gatsby](https://www.gatsbyjs.org/docs/).
 

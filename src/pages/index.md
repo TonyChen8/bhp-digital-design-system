@@ -30,13 +30,13 @@ voices and the elements that make BHP the brand it is today.
 
 <div class="col-md">
 
-#### What is the Digital Design Library?
+#### What is the Digital Design System?
 
-The Digital Design Library is a repository of commonly used component parts that will help bring BHP digital projects to life faster and with a common end user experience.
+The Digital Design System is a repository of commonly used component parts that will help bring BHP digital projects to life faster and with a common end user experience.
 
 #### Applicable to who?
 
-The Digital Design Library has been developed to assist people involved in bringing digital ideas to life within BHP.  Developers and designers who have been tasked with creating digital tools at BHP will have a common reference library to speed up the ideation process and ensure a common look and feel across all of BHP's digital assets.
+The Digital Design System has been developed to assist people involved in bringing digital ideas to life within BHP.  Developers and designers who have been tasked with creating digital tools at BHP will have a common reference library to speed up the ideation process and ensure a common look and feel across all of BHP's digital assets.
 
 #### Why?
 
@@ -47,13 +47,13 @@ By centralising all the most commonly used component parts, designers and develo
 
 #### Scope
 
-All custom built software projects across BHP will find the Digital Design Library useful.  This version of the application had contributions across teams throughout technology and other parts of the business.
+All custom built software projects across BHP will find the Digital Design System useful.  This version of the application had contributions across teams throughout technology and other parts of the business.
 
 #### How?
 
 You can use this library in many ways.  Designers can access the guidance on re-using components that are compliant with the BHP Brand Guidelines whilst developers have access to the pre-built components that they can simply and quickly integrate into their project.
 
-The Digital Design Library has been developed in line with the Bootstrap framework so that it can easily be used on all digital projects across BHP.
+The Digital Design System has been developed in line with the Bootstrap framework so that it can easily be used on all digital projects across BHP.
 
 </div>
 
