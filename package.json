@@ -5,6 +5,7 @@
   "author": "Michael Bertolacci <michael@burnsred.com.au>",
   "dependencies": {
     "array-flatten": "2.1.1",
+    "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.0.0-beta.2",
     "classnames": "^2.2.5",
     "color": "^2.0.1",
