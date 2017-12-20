@@ -9,7 +9,7 @@ category: "UI components"
 
 <h3 class="page-header">Getting Started</h3>
 
-#### <span class="h4-light">Using BHP Design Pattern Library (DPL) Components</span>
+#### <span class="h4-light">Using BHP Digital Design System (DDS) Components</span>
 
 Our components are a collection of front-end interface elements that can be reused across the BHP browser-based products.
 
