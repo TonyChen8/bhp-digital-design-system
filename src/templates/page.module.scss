@@ -8,6 +8,10 @@
   :global(section) {
     padding: 40px 0;
     background-color: white;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
   }
 
   :global(.hero-primary) {
