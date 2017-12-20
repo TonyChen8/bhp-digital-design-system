@@ -9,7 +9,7 @@ preText: |
 
   Tips: Too many type sizes and styles at once can disturb any layout. A typographic scale has a limited set of type sizes that work well together along with the layout grid. Avoid italic text as it impedes the accessibility of your design.
 
-  White text on dark backgrounds hould do so at an opacity of 100%.
+  White text on dark backgrounds should have an opacity of 100%.
 examples:
   - html: |
       <h1>Heading 1, bold 42</h1>
