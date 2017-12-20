@@ -32,11 +32,11 @@ voices and the elements that make BHP the brand it is today.
 
 #### What is the Digital Design Library?
 
-The digital Digital Design Library is a repository of commonly used component parts that will help bring BHP digital projects to life faster and with a common end user experience.
+The Digital Design Library is a repository of commonly used component parts that will help bring BHP digital projects to life faster and with a common end user experience.
 
 #### Applicable to who?
 
-The digital design library has been developed to assist people involved in bringing digital ideas to life within BHP.  Developers and designers who have been tasked with creating digital tools at BHP will have a common reference library to speed up the ideation process and ensure a common look and feel across all of BHP’s digital assets.
+The Digital Design Library has been developed to assist people involved in bringing digital ideas to life within BHP.  Developers and designers who have been tasked with creating digital tools at BHP will have a common reference library to speed up the ideation process and ensure a common look and feel across all of BHP's digital assets.
 
 #### Why?
 
@@ -53,7 +53,7 @@ All custom built software projects across BHP will find the Digital Design Libra
 
 You can use this library in many ways.  Designers can access the guidance on re-using components that are compliant with the BHP Brand Guidelines whilst developers have access to the pre-built components that they can simply and quickly integrate into their project.
 
-The digital design library has been developed in line with the Bootstrap framework so that it can easily be used on all digital projects across BHP.
+The Digital Design Library has been developed in line with the Bootstrap framework so that it can easily be used on all digital projects across BHP.
 
 </div>
 
@@ -90,7 +90,6 @@ The level of usability should be such that it requires no special expertise or d
 #### <span class="text-bhp-orange-1">Be findable</span>
 
 By creating a consistent user interface we can provide a layer of logic for users to learn and remember where to go, what to see and what actions they need to perform. Making things findable also means that it should tailor for beginners with no prior experience that need to be able to pick things up quickly, and for experienced users to become proficient if they are being asked to change from an existing application which they are familiar with to a new application.
-
 
 #### <span class="text-bhp-orange-1">Be simple</span>
 
