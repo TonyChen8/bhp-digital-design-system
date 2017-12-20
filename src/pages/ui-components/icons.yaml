@@ -25,7 +25,7 @@ examples:
         <div>
           <MDIcon name='content_cut' />{' '}
           <MDIcon name='update' size={12} /> {' '}
-          <MDIcon name='skip_next' size={36} />{' '}
+          <MDIcon name='note_add' size={36} />{' '}
           <MDIcon
             className='text-primary'
             name='turned_in'
@@ -37,7 +37,7 @@ examples:
       <div>
         <i class="material-icons">content_cut</i>
         <i class="material-icons md-12">update</i>
-        <i class="material-icons md-36">skip_next</i>
+        <i class="material-icons md-36">note_add</i>
         <i class="material-icons text-primary md-48">turned_in</i>
       </div>
 postText: |
