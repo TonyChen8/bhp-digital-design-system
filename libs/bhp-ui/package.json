@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "main": "js/index.js",
   "peerDependencies": {
-    "bootstrap": "^4.0.0"
+    "bootstrap": "^4.0.0",
+    "react-autosuggest": "^9.3.2"
   }
 }

@@ -1,5 +1,6 @@
 // Components
 export * from './components/accordion';
+export * from './components/autosuggest';
 export BHPLogo from './components/bhp-logo';
 export * from './components/floating-badge';
 export MDIcon from './components/md-icon';

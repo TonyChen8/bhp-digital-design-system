@@ -1,0 +1,39 @@
+title: Autosuggest
+category: UI components
+preText: |
+  This component provides an input field along with a dropdown box of suggestions. Typing in the input box will present a list of matching suggestions which can be clicked. When tabbing out, the input text is replaced with the highlighted suggestion. Free text is allowed by entering any text and clicking away from the input box without tabbing. If restrictions on input are desired, it is up to the parent to implement form level validation.
+
+  The simple version of this component, demonstrated below, works only with strings. Documentation for the full version may be found at the [react-autosuggest github page](https://github.com/moroshko/react-autosuggest/).
+examples:
+  - title: Usage
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { SimpleAutosuggest } from 'bhp-ui';
+
+      class Example extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            value: ''
+          };
+        }
+
+        render() {
+          const { value } = this.state;
+          return (
+            <div>
+              <SimpleAutosuggest
+                placeholder='Enter some text'
+                value={value}
+                suggestions={['pen', 'pineapple', 'apple']}
+                onChange={(event, { newValue }) => this.setState({ value: newValue })}
+              />
+
+              {!!value && `The current value is "${value}".`}
+            </div>
+          );
+        }
+      };
+
+      export default Example;

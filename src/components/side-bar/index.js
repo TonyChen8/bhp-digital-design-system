@@ -56,10 +56,10 @@ const entries = [
         name: 'Alerts',
         linkTo: '/ui-components/alerts',
       },
-      // {
-      //   name: 'Auto suggest input',
-      //   linkTo: '/ui-components/auto-suggest-input',
-      // },
+      {
+        name: 'Autosuggest',
+        linkTo: '/ui-components/autosuggest',
+      },
       {
         name: 'Badges and labels',
         linkTo: '/ui-components/badges',
