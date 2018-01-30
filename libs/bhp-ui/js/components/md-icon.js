@@ -6,7 +6,7 @@ class MDIcon extends React.Component {
     const { name, className, style, size } = this.props;
 
     const actualClassName = classnames(
-      'material-icons', name, className,
+      'material-icons', className,
     );
     const actualStyle = Object.assign({}, style || {}, size ? { fontSize: `${size}px` } : {});
     return (
