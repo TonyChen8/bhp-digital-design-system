@@ -59,3 +59,36 @@ examples:
       <span class="badge badge-light">99</span>
       <span class="badge badge-success">99</span>
       <span class="badge badge-danger">99</span>
+  - title: Floating badge
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { FloatingBadge, FloatingBadgeOuter, MDIcon } from 'bhp-ui';
+
+      const Example = () => {
+        return (
+          <div>
+            <FloatingBadgeOuter>
+              <MDIcon name='error' />
+              <FloatingBadge color='danger'>99</FloatingBadge>
+            </FloatingBadgeOuter>
+            {' '}
+            <FloatingBadgeOuter className='pl-3'>
+              <MDIcon name='warning' />
+              <FloatingBadge color='warning'>99</FloatingBadge>
+            </FloatingBadgeOuter>
+          </div>
+        );
+      };
+
+      export default Example;
+    html: |
+      <div class="floating-badge-outer">
+        <i class="material-icons">error</i>
+        <span class="badge badge-danger floating-badge">99</span>
+      </div>
+      <div class="floating-badge-outer pl-3">
+        <i class="material-icons">warning</i>
+        <span class="badge badge-warning floating-badge">99</span>
+      </div>
+
