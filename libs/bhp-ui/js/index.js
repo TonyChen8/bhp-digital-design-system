@@ -3,6 +3,7 @@ export * from './components/accordion';
 export BHPLogo from './components/bhp-logo';
 export * from './components/floating-badge';
 export MDIcon from './components/md-icon';
+export SearchInput from './components/search-input';
 export Spinner from './components/spinner';
 export ToggleSwitch from './components/toggle-switch';
 
