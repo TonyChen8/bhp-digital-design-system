@@ -67,9 +67,9 @@ examples:
             <th scope="row">1</th>
             <td>Column content</td>
             <td>Column content</td>
-            <td class="bg-info">Column content</td>
+            <td class="table-info">Column content</td>
           </tr>
-          <tr class="bg-danger text-white">
+          <tr class="table-danger">
             <th scope="row">2</th>
             <td>Column content</td>
             <td>Column content</td>
@@ -81,7 +81,7 @@ examples:
             <td>Column content</td>
             <td>Column content</td>
           </tr>
-          <tr class="bg-warning">
+          <tr class="table-warning">
             <th scope="row">4</th>
             <td>Column content</td>
             <td>Column content</td>
