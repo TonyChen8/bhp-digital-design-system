@@ -160,3 +160,31 @@ postText: |
 
   </div>
   </div>
+  <hr />
+  <h4 class="h4-light">Colour Definition</h4>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Style</th>
+        <th scope="col">Use</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>btn-secondary</td>
+        <td>Use for secondary type actions such as "Refresh", "Update", etc. Mostly used when a btn-primary has already been used in the same context.</td>
+      </tr>
+      <tr>
+        <td>btn-primary</td>
+        <td>Use for primary type of actions. A primary colour provides consistency across an application. It trains a user to look for that colours when trying to find an action. This uses the section primary colour which can be found across all types of buttons, tabs, and other action-related components.</td>
+      </tr>
+      <tr>
+        <td>btn-success</td>
+        <td>Use for "Save", "Apply", "Accept" and similar buttons.</td>
+      </tr>
+      <tr>
+        <td>btn-danger</td>
+        <td>Use for "Delete", "Cancel" and similar buttons.</td>
+      </tr>
+    </tbody>
+  </table>
