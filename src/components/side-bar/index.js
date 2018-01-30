@@ -128,10 +128,6 @@ const entries = [
       //   name: 'Search',
       //   linkTo: '/ui-components/search',
       // },
-      // {
-      //   name: 'Spinner',
-      //   linkTo: '/ui-components/spinner',
-      // },
       {
         name: 'Popover',
         linkTo: '/ui-components/popover',
@@ -139,6 +135,10 @@ const entries = [
       {
         name: 'Progress bar',
         linkTo: '/ui-components/progress-bar',
+      },
+      {
+        name: 'Spinner',
+        linkTo: '/ui-components/spinner',
       },
       {
         name: 'Tabs',
