@@ -38,7 +38,7 @@ examples:
         render() {
           return (
             <div>
-              <Navbar className="bg-light" light expand="lg">
+              <Navbar light expand="lg">
                 <NavbarBrand href="/">Navbar</NavbarBrand>
                 <NavbarToggler onClick={this.toggle} />
                 <Collapse isOpen={this.state.isOpen} navbar>
@@ -76,7 +76,7 @@ examples:
         }
       }
     html: |
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#">Navbar</a>
         <button
           class="navbar-toggler"

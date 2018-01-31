@@ -1,4 +1,4 @@
-@import '../layouts/base';
+@import '../layouts/base-light';
 
 .markdown {
   :global(.page-header) {
@@ -7,7 +7,6 @@
 
   :global(section) {
     padding: 40px 0;
-    background-color: white;
 
     &:last-child {
       padding-bottom: 0;
@@ -64,5 +63,16 @@
     border: 1px solid #c1c1c1;
     padding: 10px;
     background-color: #ecf0f1;
+  }
+}
+
+:global(.dark-theme) .markdown {
+  :global(.hero-tertiary) {
+    background-color: #555;
+    color: white;
+  }
+
+  pre {
+    background-color: #444;
   }
 }

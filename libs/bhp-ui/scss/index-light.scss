@@ -1,0 +1,13 @@
+@import 'themes/light';
+
+@import '~bhp-ui/scss/0-root';
+
+@import '~bhp-ui/scss/1-base';
+
+@import '~bhp-ui/scss/2-before-theme';
+
+.light-theme {
+  @import '~bhp-ui/scss/3-within-theme';
+}
+
+@import '~bhp-ui/scss/4-after-theme';

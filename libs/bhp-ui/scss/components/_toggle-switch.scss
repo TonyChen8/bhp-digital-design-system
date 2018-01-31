@@ -3,7 +3,7 @@
   padding: $toggle-switch-padding;
   line-height: $toggle-switch-outer-height - 2 * ($toggle-switch-padding + $toggle-switch-border-width);
   border-radius: $toggle-switch-outer-height / 2;
-  border: $toggle-switch-border-width solid black;
+  border: $toggle-switch-border-width solid $toggle-switch-border-color;
   cursor: pointer;
   vertical-align: top;
 
@@ -18,7 +18,7 @@
   }
 
   .toggle-switch-toggler {
-    border: $toggle-switch-border-width solid black;
+    border: $toggle-switch-border-width solid $toggle-switch-border-color;
     width: $toggle-switch-outer-height - 2 * ($toggle-switch-padding + $toggle-switch-border-width);
     height: $toggle-switch-outer-height - 2 * ($toggle-switch-padding + $toggle-switch-border-width);
     border-radius: ($toggle-switch-outer-height - 2 * ($toggle-switch-padding + $toggle-switch-border-width)) / 2;

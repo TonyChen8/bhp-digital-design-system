@@ -79,8 +79,8 @@ examples:
       </div>
     css: |
       .example-modal-inline {
-        position: relative;
-        display: block;
+        position: relative !important;
+        display: block !important;
       }
   - title: Modal - user response
     introduction: |

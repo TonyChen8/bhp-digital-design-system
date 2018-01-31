@@ -55,7 +55,7 @@ class FoundationUIColours extends React.Component {
                     className={classnames(
                       'd-flex flex-column justify-content-center',
                       s.hexBox,
-                      Color(hex).dark() && 'text-white',
+                      Color(hex).dark() ? 'text-white' : 'text-dark',
                       Color(hex).luminosity() > 0.9 && 'border'
                     )}
                     style={{ backgroundColor: hex }}

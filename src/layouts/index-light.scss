@@ -1,0 +1,9 @@
+@import 'base-light';
+
+@import '~bhp-ui/scss/2-before-theme';
+
+html.light-theme {
+  @import '~bhp-ui/scss/3-within-theme';
+}
+
+@import '~bhp-ui/scss/4-after-theme';

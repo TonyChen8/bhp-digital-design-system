@@ -24,6 +24,12 @@ $example-padding: 10px;
   background-color: #ecf0f1;
 }
 
+:global(.dark-theme) {
+  .exampleCode {
+    background-color: #444;
+  }
+}
+
 .copyButton {
   position: absolute;
   top: $example-padding;

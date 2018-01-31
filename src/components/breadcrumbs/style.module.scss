@@ -8,7 +8,11 @@
   color: #979797;
 
   a {
-    color: inherit;
-    text-decoration: none;
+    color: inherit !important;
+    text-decoration: none !important;
   }
+}
+
+:global(.dark-theme) .breadcrumbs {
+  border-bottom-color: #555;
 }

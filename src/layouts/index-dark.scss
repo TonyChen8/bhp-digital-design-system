@@ -1,0 +1,9 @@
+@import 'base-dark';
+
+@import '~bhp-ui/scss/2-before-theme';
+
+html.dark-theme {
+  @import '~bhp-ui/scss/3-within-theme';
+}
+
+@import '~bhp-ui/scss/4-after-theme';

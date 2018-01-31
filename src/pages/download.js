@@ -1,11 +1,12 @@
 import classnames from 'classnames';
 import React from 'react';
+import { withTheme } from 'bhp-ui';
 import Breadcrumbs from '../components/breadcrumbs';
 import downloadFiles from '../downloads';
 
 import s from './download.module.scss';
 
-export default () => {
+export default withTheme(({ theme }) => {
   return (
     <div>
       <Breadcrumbs
@@ -23,7 +24,7 @@ export default () => {
         </p>
 
         <div className='d-flex flex-wrap'>
-          {downloadFiles.map(({ name, src }) =>
+          {downloadFiles[theme.name].map(({ name, src }) =>
             <div
               key={name}
               className={s.downloadFile}
@@ -45,4 +46,4 @@ export default () => {
       </div>
     </div>
   );
-};
+});
