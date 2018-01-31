@@ -37,7 +37,7 @@ const AccordionItemHeader = ({ isOpen, className, children, withArrow, ...otherP
 
 
 const AccordionItemBody = ({ isOpen, className, children, ...otherProps }) => (
-  <Collapse isOpened={isOpen}>
+  <Collapse isOpened={!!isOpen}>
     <div
       className={classnames('accordion-item-body', className)}
       {...otherProps}
