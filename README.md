@@ -1,4 +1,4 @@
-# bhp-design-pattern-library
+# bhp-digital-design-system
 
 The BHP Digital Design System.
 
