@@ -13,17 +13,27 @@ category: "UI components"
 
 Our components are a collection of front-end interface elements that can be reused across the BHP browser-based products.
 
-We offer four variations of components — React, HTML, CSS and Angular variations where applicable. If your project can utilise React components then it is recommended to use these going forward. Using React components in your project enables BHP to adhere to a consistent interactive experience that will scale over time and help reduce technical debt throughout our web-based product lines.
+We offer three variations of components: React, HTML, and Angular variations, where applicable. If your project can utilise React components then it is recommended to use these going forward. Using React components in your project enables BHP to adhere to a consistent interactive experience that will scale over time and help reduce technical debt throughout our web-based product lines.
 
-#### <span class="h4-light">React widgets</span>
+#### <span class="h4-light">BHP UI NPM module</span>
+
+An NPM module named BHP UI (`bhp-ui` on NPM) is [available on Github](https://github.com/BHP-DevHub/bhp-ui). Instructions for installing this library are given at that repository. This contains two custom Bootstrap themes, light and dark, demonstrated on this website, along with SCSS files that can be used to build custom versions of the themes.
+
+#### <span class="h4-light">BHP UI React</span>
+
+For projects using React, an additional NPM module, BHP UI React (`bhp-ui-react` on NPM) is [available on Github](https://github.com/BHP-DevHub/bhp-ui-react) containing the React components documented on this website.
 
 Our BHP widget repository contains the common React widgets used by our web-based products. You will need private Github access to this repository to begin working with BHP widgets at this stage. Please contact your dev manager to enable this. Always visit the Github repository for latest updates.
 
-##### Contributing to our React widgets
+##### Starter app
 
-We encourage all BHP developers to contribute to our React widget library.
+To ease the process of starting a new BHP app, a starter app template has [been made available on Github](https://github.com/BHP-DevHub/bhp-react-app). Developers can download a zip copy of this template from that repository and follow the instructions in the README.md file to get a basic skeleton React project using the BHP UI styles and BHP UI React components.
 
-##### Browser support
+#### <span class="h4-light">Contributing</span>
+
+We encourage all BHP developers to contribute improvements, bug reports, and other feedback to the two libraries. Feedback should be provided via the Github Issues section of the corresponding repositories.
+
+#### <span class="h4-light">Browser support</span>
 
 Our React and HTML components are designed to work as intended in the following browsers:
 
@@ -52,14 +62,6 @@ Our React and HTML components are designed to work as intended in the following 
     <div>(latest two versions)</div>
   </div>
 </div>
-
-#### <span class="h4-light">Third party installation of this project</span>
-
-The project is available as an NPM package and deployed in our private NPM registry:  https://npm.addevcloudservices.com.au/
-
-For information about how to access our NPM registry, look here:  https://******BHP link*******
-
-The dist directory contains the pre-packaged distributable files.
 
 </div>
 
