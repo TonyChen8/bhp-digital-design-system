@@ -45,7 +45,7 @@ const entries = [
     mdiName: 'widgets',
     subMenu: [
       {
-        name: 'Getting Started',
+        name: 'Getting started',
         linkTo: '/ui-components/getting-started',
       },
       {

@@ -1,5 +1,5 @@
 ---
-title: "Getting Started"
+title: "Getting started"
 category: "UI components"
 ---
 
@@ -7,7 +7,7 @@ category: "UI components"
 
 <div class="container">
 
-<h3 class="page-header">Getting Started</h3>
+<h3 class="page-header">Getting started</h3>
 
 #### <span class="h4-light">Using BHP Digital Design System (DDS) Components</span>
 
