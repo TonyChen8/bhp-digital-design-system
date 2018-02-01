@@ -5,7 +5,7 @@ import classnames from 'classnames';
 import React from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Breadcrumbs from '../../components/breadcrumbs';
-import { lightTheme, darkTheme } from 'bhp-ui';
+import { lightTheme, darkTheme } from 'bhp-ui-react';
 
 import chartExample from './chart-example.png';
 

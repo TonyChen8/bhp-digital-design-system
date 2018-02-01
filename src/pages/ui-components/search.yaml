@@ -7,7 +7,7 @@ examples:
     subTitle: Example
     react: |
       import React from 'react';
-      import { SearchInput } from 'bhp-ui';
+      import { SearchInput } from 'bhp-ui-react';
 
       class Example extends React.Component {
         constructor(props) {

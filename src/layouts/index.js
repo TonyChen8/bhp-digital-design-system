@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import Link from 'gatsby-link';
 import 'react-dates/initialize';
 import { Label, Input } from 'reactstrap';
-import { ThemeManager, withTheme, lightTheme, darkTheme } from 'bhp-ui';
+import { ThemeManager, withTheme, lightTheme, darkTheme } from 'bhp-ui-react';
 
 import SideBar from '../components/side-bar';
 

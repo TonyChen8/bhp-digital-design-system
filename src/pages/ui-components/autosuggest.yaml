@@ -9,7 +9,7 @@ examples:
     subTitle: Example
     react: |
       import React from 'react';
-      import { SimpleAutosuggest } from 'bhp-ui';
+      import { SimpleAutosuggest } from 'bhp-ui-react';
 
       class Example extends React.Component {
         constructor(props) {

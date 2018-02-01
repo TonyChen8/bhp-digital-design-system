@@ -3,8 +3,8 @@ import Link from 'gatsby-link';
 import classnames from 'classnames';
 import { withRouter } from 'react-router'
 
-import { MDIcon } from 'bhp-ui';
-import { BHPLogo } from 'bhp-ui';
+import { MDIcon } from 'bhp-ui-react';
+import { BHPLogo } from 'bhp-ui-react';
 import s from './style.module.scss';
 
 // TODO(mgnb): move this to a yaml file

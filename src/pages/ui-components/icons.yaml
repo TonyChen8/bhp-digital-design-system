@@ -19,7 +19,7 @@ examples:
     subTitle: Example
     react: |
       import React from 'react';
-      import { MDIcon } from 'bhp-ui';
+      import { MDIcon } from 'bhp-ui-react';
 
       export default () => (
         <div>

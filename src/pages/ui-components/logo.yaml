@@ -18,7 +18,7 @@ examples:
     subTitle: Example
     react: |
       import React from 'react';
-      import { BHPLogo } from 'bhp-ui';
+      import { BHPLogo } from 'bhp-ui-react';
 
 
       export default () => {
@@ -36,8 +36,8 @@ examples:
     subTitle: Example
     react: |
       import React from 'react';
-      import { lightTheme } from 'bhp-ui';
-      import { BHPLogo } from 'bhp-ui';
+      import { lightTheme } from 'bhp-ui-react';
+      import { BHPLogo } from 'bhp-ui-react';
 
       export default () => {
         return (

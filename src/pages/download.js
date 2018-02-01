@@ -1,6 +1,6 @@
 import classnames from 'classnames';
 import React from 'react';
-import { withTheme } from 'bhp-ui';
+import { withTheme } from 'bhp-ui-react';
 import Breadcrumbs from '../components/breadcrumbs';
 import downloadFiles from '../downloads';
 

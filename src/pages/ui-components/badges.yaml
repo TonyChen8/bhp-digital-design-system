@@ -63,7 +63,7 @@ examples:
     subTitle: Example
     react: |
       import React from 'react';
-      import { FloatingBadge, FloatingBadgeOuter, MDIcon } from 'bhp-ui';
+      import { FloatingBadge, FloatingBadgeOuter, MDIcon } from 'bhp-ui-react';
 
       const Example = () => {
         return (
