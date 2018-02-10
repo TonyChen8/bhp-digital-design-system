@@ -1,0 +1,2 @@
+webpackJsonp([0x9b1defbb15ad],{485:function(e,t,a){"use strict";function n(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0,t.query=void 0;var u=a(16),d=n(u);t.default=function(e){var t=e.data,a=t.foundationYaml;return(0,d.default)({contents:a,hideCodeTypePicker:!0})};t.query="** extracted graphql fragment **"}});
+//# sourceMappingURL=component---src-templates-foundation-js-2015fdde8ee9c8a7ef0c.js.map
