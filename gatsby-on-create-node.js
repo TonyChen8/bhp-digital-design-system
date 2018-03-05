@@ -1,6 +1,7 @@
 const path = require(`path`)
 const fs = require(`fs`)
 const _ = require(`lodash`)
+const slash = require(`slash`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const remark = require('remark')
 const html = require('remark-html')
@@ -34,7 +35,7 @@ module.exports = ({ node, getNode, boundActionCreators }) => {
     // imports each of the react examples
     const reactExamplePaths = node.examples.map(({ react }, index) => {
       if (!react) return null;
-      const path = `${__dirname}/.cache/${_.kebabCase(`${slug}-react-example${index}`)}.js`;
+      const path = `${slash(__dirname)}/.cache/${_.kebabCase(`${slug}-react-example${index}`)}.js`;
       fs.writeFileSync(path, react);
       return path;
     });

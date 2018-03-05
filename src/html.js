@@ -26,10 +26,8 @@ module.exports = class HTML extends React.Component {
         <head>
           <meta charSet='utf-8' />
           <meta httpEquiv='x-ua-compatible' content='ie=edge' />
-          <meta
-            name='viewport'
-            content='width=device-width, initial-scale=1, shrink-to-fit=no'
-          />
+            <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+          
           <link
             rel='icon'
             href={favicon}

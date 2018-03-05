@@ -4,7 +4,9 @@ import s from './style.module.scss';
 
 export default ({ category, slug, title }) => {
   return (
+      
     <div className={s.breadcrumbs}>
+    <div className="container">
       <Link to='/'>Home</Link>
       {' / '}
       {category &&
@@ -14,6 +16,7 @@ export default ({ category, slug, title }) => {
         </span>
       }
       <Link to={slug}>{title}</Link>
+    </div>
     </div>
   );
 };

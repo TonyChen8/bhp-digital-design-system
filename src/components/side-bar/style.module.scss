@@ -1,19 +1,42 @@
-@import '../../layouts/base-light';
+@import "../../layouts/base-light";
+
+$sidebar-width:200px;
 
 .outer {
-  width: 200px;
+  width: $sidebar-width;
   background-color: #2b2c30;
+  z-index: 9;
+  height: auto;
+  position: relative;
+  left: 0;
+  top: 0;
+  transition: all .3s ease-out;
+
 
   .logoOuter {
     display: flex;
     justify-content: center;
-    margin-bottom: 100px;
     padding: 16px 0;
-    background-color: theme-color('bhp-orange-1');
+    background-color: theme-color("bhp-orange-1");
   }
 
   .selectedEntry {
     background-color: #393b42;
+  }
+
+  .overlay {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: RGBA(0, 0, 0, 0.6);
+  }
+
+  .entries {
+    overflow: auto;
+    height: calc( 100vh - 60px);
   }
 }
 
@@ -50,11 +73,39 @@
   }
 
   .activeLink {
-    border-left: 5px solid theme-color('bhp-orange-1');
+    border-left: 5px solid theme-color("bhp-orange-1");
     color: white;
 
     &:hover {
       color: white;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hideSideBar {
+    left: -$sidebar-width;
+    position: fixed;
+    height: 100vh;
+    z-index: 99;
+  }
+
+  .outer {
+    height: 100vh;
+    position: fixed;
+
+    &.hideSideBar {
+      .overlay {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .outer {
+    .overlay {
+      display: none;
     }
   }
 }
