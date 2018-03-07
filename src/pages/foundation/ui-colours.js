@@ -50,7 +50,7 @@ class FoundationUIColours extends React.Component {
                 key={name}
                 className='col-12 col-sm-6 col-md-3'
               >
-                <CopyToClipboard text={hex}>
+                <CopyToClipboard text={code}>
                   <div
                     className={classnames(
                       'd-flex flex-column justify-content-center',
@@ -62,7 +62,7 @@ class FoundationUIColours extends React.Component {
                   >
                     <div className={s.copyMessage}>Click to copy</div>
 
-                    <div>{hex}</div>
+                    <div>{name}</div>
                   </div>
                 </CopyToClipboard>
 
