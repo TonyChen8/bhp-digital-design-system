@@ -37,6 +37,7 @@ export const query = graphql`
         introduction
         subTitle
         react
+        angular
         css
         html
         actualHtml
