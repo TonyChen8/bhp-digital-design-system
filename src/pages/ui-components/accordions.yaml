@@ -84,6 +84,52 @@ examples:
           );
         }
       }
+
+    html: |
+      <div id="accordion">
+        <div class="accordion-item">
+          <div class="accordion-item-header" id="headingOne">
+            <div onclick="updateIcon()" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <i class="accordion-item-header-arrow material-icons md-18 align-middle">keyboard_arrow_right</i>
+            Section 1
+            </div>
+          </div>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="accordion-item-body">
+              Ullamco non do minim excepteur aute occaecat nostrud eiusmod ut amet deserunt exercitation ut aute in sed incididunt labore aliquip in laboris commodo sunt consectetur nostrud ea.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-item-header" id="headingTwo">
+            <div onclick="updateIcon()" class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <i class="accordion-item-header-arrow material-icons md-18 align-middle">keyboard_arrow_right</i>
+              Section 2
+            </div>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="accordion-item-body">
+              Minim aute nostrud occaecat ad laboris sit anim nisi sunt duis id adipisicing sunt culpa enim aute ut dolor amet tempor consequat excepteur labore consequat dolore eiusmod ex aliqua proident elit dolore ullamco exercitation dolor ut ut fugiat irure est proident qui qui ut officia nostrud commodo ex cillum deserunt laborum reprehenderit sit aute dolore do nisi enim aute fugiat sit minim sunt est cupidatat in pariatur in labore aliquip consequat consequat est laboris consectetur mollit laboris minim adipisicing dolore sit commodo occaecat laborum ut voluptate exercitation anim aute nisi minim laboris quis ea qui enim commodo aliqua voluptate laboris aute. fugiat culpa in nostrud id.
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+      function updateIcon(){
+        setTimeout(function(){
+          var elements = document.querySelectorAll("#accordion .collapsed i");
+          for ( var index in  elements ) {
+            elements[index].innerHTML="keyboard_arrow_right"
+          }
+          var expandedElement = document.querySelector("#accordion div[aria-expanded='true'] i")
+          if(expandedElement){
+             expandedElement.innerHTML="keyboard_arrow_down";
+           }
+        },50)
+      }
+      </script>
+
   - title: Multiple sections open
     introduction: |
       Alternatively, multiple sections can be allowed to be open.
@@ -162,4 +208,48 @@ examples:
           );
         }
       }
+    html: |
+      <div id="accordion">
+        <div class="accordion-item">
+          <div class="accordion-item-header" id="headingOne">
+            <div onclick="updateIcon(this)" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <i class="accordion-item-header-arrow material-icons md-18 align-middle">keyboard_arrow_down</i>
+            Section 1
+            </div>
+          </div>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
+            <div class="accordion-item-body">
+              Ullamco non do minim excepteur aute occaecat nostrud eiusmod ut amet deserunt exercitation ut aute in sed incididunt labore aliquip in laboris commodo sunt consectetur nostrud ea.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-item-header" id="headingTwo">
+            <div onclick="updateIcon(this)" class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <i class="accordion-item-header-arrow material-icons md-18 align-middle">keyboard_arrow_down</i>
+              Section 2
+            </div>
+          </div>
+          <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo">
+            <div class="accordion-item-body">
+              Minim aute nostrud occaecat ad laboris sit anim nisi sunt duis id adipisicing sunt culpa enim aute ut dolor amet tempor consequat excepteur labore consequat dolore eiusmod ex aliqua proident elit dolore ullamco exercitation dolor ut ut fugiat irure est proident qui qui ut officia nostrud commodo ex cillum deserunt laborum reprehenderit sit aute dolore do nisi enim aute fugiat sit minim sunt est cupidatat in pariatur in labore aliquip consequat consequat est laboris consectetur mollit laboris minim adipisicing dolore sit commodo occaecat laborum ut voluptate exercitation anim aute nisi minim laboris quis ea qui enim commodo aliqua voluptate laboris aute. fugiat culpa in nostrud id.
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+      function updateIcon(element){
+        setTimeout(function(){
+          var i = element.getElementsByTagName("i")
+          if(i.length>0){
+            if(element.getAttribute("aria-expanded") === "true"){
+              i[0].innerHTML="keyboard_arrow_down"
+            }else{
+              i[0].innerHTML="keyboard_arrow_right"
+            }
+          }
+        },50)
+      }
+      </script>
 
