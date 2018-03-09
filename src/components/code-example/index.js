@@ -24,18 +24,18 @@ export default ({ contents, codeType }) => {
     if (codeType === "html" || codeType === "angular") {
       let code = codeType === "html" ? contents.html : contents.angular;
 
-      let src = htmlEnvironment.join(" ").toString() + code;
+      let src = htmlEnvironment.join(" ").toString() + `<style>${contents.css || ""}</style>` + code;
+      console.log(src)
       src = src.replace(/"/g,"&quot;");
       let id = "iframe"+ Date.now();
       return (
         `<iframe style= "width: 100%" id="` + id + `" frameBorder="0" onLoad="
                 let iframe = document.getElementById('` + id + `');
-                console.log(iframe);
                   try {
                         iframe.contentWindow.document.getElementsByTagName('html')[0].className ='light-theme';
                         let bHeight = iframe.contentWindow.document.body.scrollHeight;
                         let dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
-                        let height = Math.max(bHeight, dHeight);
+                        let height = Math.min(bHeight, dHeight);
                         iframe.height = height;
                   } catch (ex) {console.error(ex)}"
         srcdoc="` + src + `" />`
@@ -68,7 +68,7 @@ export default ({ contents, codeType }) => {
           <div
             className={s.exampleHtml}
             dangerouslySetInnerHTML={{
-              __html: `<style>${contents.css || ""}</style>${runEnvironment}`
+              __html: `${runEnvironment}`
             }}
           />
         )}

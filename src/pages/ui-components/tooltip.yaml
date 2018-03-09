@@ -66,6 +66,23 @@ examples:
           </div>
         );
       }
+
+    html: |
+      <div class="container-size">
+        <a href="#"
+          data-toggle="tooltip"
+          data-placement="bottom"
+          title="Tooltip on bottom"
+        >
+          Tooltip
+        </a>
+        <script>$(function () {$('[data-toggle="tooltip"]').tooltip()})</script>
+      </div>
+    css: |
+      .container-size{
+        height: 80px;
+      }
+
   - title: Positioning
     introduction: |
       The position of the tooltip can be controlled.
@@ -97,4 +114,40 @@ examples:
             </p>
           </div>
         );
+      }
+    html: |
+      <div class="container-size">
+        <a href="#"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Tooltip on top"
+        >
+          &nbsp;&nbsp;&nbsp; Tooltip on top  &nbsp;&nbsp;&nbsp;
+        </a>
+        <a href="#"
+          data-toggle="tooltip"
+          data-placement="right"
+          title="Tooltip on right"
+        >
+          &nbsp;&nbsp;&nbsp; Tooltip on right &nbsp;&nbsp;&nbsp;
+        </a>
+        <a href="#"
+          data-toggle="tooltip"
+          data-placement="bottom"
+          title="Tooltip on bottom"
+        >
+          &nbsp;&nbsp;&nbsp; Tooltip on bottom &nbsp;&nbsp;&nbsp;
+        </a>
+        <a href="#"
+          data-toggle="tooltip"
+          data-placement="left"
+          title="Tooltip on left"
+        >
+          &nbsp;&nbsp;&nbsp; Tooltip on left &nbsp;&nbsp;&nbsp;
+        </a>
+      </div>
+      <script>$(function () {$('[data-toggle="tooltip"]').tooltip()})</script>
+    css: |
+      .container-size{
+        height: 80px;
       }

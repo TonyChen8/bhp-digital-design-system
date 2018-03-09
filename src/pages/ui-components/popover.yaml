@@ -71,6 +71,21 @@ examples:
           );
         }
       }
+    html: |
+      <button
+          type="button"
+          class="btn btn-secondary"
+          data-toggle="popover"
+          title="Popover title"
+          data-content="Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut laborerem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore."
+      >
+          Popover on right
+      </button>;
+      <script>
+        $(function() {
+            $('[data-toggle="popover"]').popover()
+        })
+      </script>
   - title: Positioning
     introduction: |
       The position of the popover can be controlled with the `placement`
@@ -154,3 +169,67 @@ examples:
           </div>
         );
       }
+
+    html: |
+      <div>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-container="body"
+          data-toggle="popover"
+          data-placement="left"
+          title="Popover title"
+          data-content="Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut laborerem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore."
+        >
+          Popover on left with title
+        </button>
+      </div>
+      <br>
+      <div>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-container="body"
+          data-toggle="popover"
+          data-placement="left"
+          data-content="Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut laborerem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore."
+        >
+          Popover on left without title
+        </button>
+      </div>
+      <br>
+      <div>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-container="body"
+          data-toggle="popover"
+          data-placement="top"
+          data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+        >
+          Popover on top
+        </button>
+      </div>
+      <br>
+      <div>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-container="body"
+          data-toggle="popover"
+          data-placement="bottom"
+          data-content="Vivamus
+          sagittis lacus vel augue laoreet rutrum faucibus."
+        >
+          Popover on below
+        </button>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <script>
+        $(function() {
+            $('[data-toggle="popover"]').popover()
+        })
+      </script>

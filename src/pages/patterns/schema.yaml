@@ -7,5 +7,6 @@ examples:
     subTitle: example
     css: example
     html: example
+    angular: example
     actualHtml: example
 postText: example

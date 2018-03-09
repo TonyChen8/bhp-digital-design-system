@@ -83,6 +83,7 @@ examples:
 
       export default Example;
     html: |
+      <br />
       <div class="floating-badge-outer">
         <i class="material-icons">error</i>
         <span class="badge badge-danger floating-badge">99</span>

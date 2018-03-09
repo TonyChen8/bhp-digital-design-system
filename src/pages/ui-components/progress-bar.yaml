@@ -30,6 +30,7 @@ examples:
           aria-valuemax="100"
         ></div>
       </div>
+      <br />
       <div class="progress">
         <div
           class="progress-bar bg-info"
@@ -42,6 +43,7 @@ examples:
           25%
         </div>
       </div>
+      <br />
       <div class="progress">
         <div
           class="progress-bar bg-info"
@@ -54,6 +56,7 @@ examples:
           50%
         </div>
       </div>
+      <br />
       <div class="progress">
         <div
           class="progress-bar bg-info"
@@ -66,6 +69,7 @@ examples:
           75%
         </div>
       </div>
+      <br />
       <div class="progress">
         <div
           class="progress-bar bg-info"
@@ -77,6 +81,7 @@ examples:
         >
           100%
         </div>
+      <br />
       </div>
     actualHtml: |
       <div class="progress mb-2">

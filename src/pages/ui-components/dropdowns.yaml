@@ -65,7 +65,7 @@ examples:
   - title: Usage
     subTitle: Example
     html: |
-      <div class="dropdown">
+      <div class="dropdown container-size">
         <button
           class="btn btn-secondary dropdown-toggle"
           type="button"
@@ -82,10 +82,15 @@ examples:
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </div>
+    css: |
+      .container-size{
+        height: 150px;
+      }
+
   - title: Usage
     subTitle: Example
     html: |
-      <div class="dropdown">
+      <div class="dropdown container-size">
         <button
           class="btn btn-secondary"
           type="button"
@@ -94,7 +99,7 @@ examples:
           aria-haspopup="true"
           aria-expanded="false"
         >
-          <i class="material-icons md-18 align-top">more_horiz</i>
+          Dropdown button <i class="material-icons md-18 align-top">more_horiz</i>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <a class="dropdown-item" href="#">Action</a>
@@ -102,3 +107,7 @@ examples:
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </div>
+    css: |
+      .container-size{
+        height: 150px;
+      }
