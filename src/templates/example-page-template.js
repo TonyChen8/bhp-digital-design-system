@@ -9,7 +9,8 @@ const allCodeTypes = [
   { name: "react", title: "React" },
   { name: "html", title: "HTML" },
   { name: "css", title: "CSS" },
-  { name: "angular", title: "Angular" }
+  { name: "angular", title: "Angular Markup" },
+  { name: "component", title: "Angular Component" },
 ];
 
 const CodeTypePicker = ({ codeType, codeTypes, onSelect }) => {

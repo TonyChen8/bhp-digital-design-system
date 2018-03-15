@@ -1,15 +1,8 @@
 import React from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import s from "./style.module.scss";
-
-const htmlEnvironment = [
-  "<link rel='stylesheet' href='/index-dark.css'>",
-  "<link rel='stylesheet' href='/index-light.css'>",
-  "<link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>",
-  "<script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' ></script>",
-  "<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' ></script>",
-  "<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' ></script>",
-];
+import { GetHtml } from "./html-env.js";
+import { GetAngular } from "./angular-env.js";
 
 export default ({ contents, codeType }) => {
   const source =
@@ -18,32 +11,6 @@ export default ({ contents, codeType }) => {
       : contents[codeType];
 
   const ReactExample = contents.react ? contents.react.fn : null;
-
-  //create a new environment to run plain javascript and AngularJs
-  const runEnvironment = (() => {
-    if (codeType === "html" || codeType === "angular") {
-      let code = codeType === "html" ? contents.html : contents.angular;
-
-      let src = htmlEnvironment.join(" ").toString() + `<style>${contents.css || ""}</style>` + code;
-      console.log(src)
-      src = src.replace(/"/g,"&quot;");
-      let id = "iframe"+ Date.now();
-      return (
-        `<iframe style= "width: 100%" id="` + id + `" frameBorder="0" onLoad="
-                let iframe = document.getElementById('` + id + `');
-                  try {
-                        iframe.contentWindow.document.getElementsByTagName('html')[0].className ='light-theme';
-                        let bHeight = iframe.contentWindow.document.body.scrollHeight;
-                        let dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
-                        let height = Math.min(bHeight, dHeight);
-                        iframe.height = height;
-                  } catch (ex) {console.error(ex)}"
-        srcdoc="` + src + `" />`
-      );
-    } else {
-      return contents.actualHtml ? contents.actualHtml : contents.html;
-    }
-  })();
 
   return (
     <div className={s.exampleContainer}>
@@ -56,22 +23,26 @@ export default ({ contents, codeType }) => {
           <div className={s.exampleSubTitle}>{contents.subTitle}</div>
         )}
 
-        {codeType == "react" ? (
-          ReactExample ? (
-            <div className={s.exampleHtml}>
-              <ReactExample />
-            </div>
-          ) : (
-            ""
-          )
-        ) : (
-          <div
-            className={s.exampleHtml}
-            dangerouslySetInnerHTML={{
-              __html: `${runEnvironment}`
-            }}
-          />
-        )}
+        {codeType === "react" ||  codeType === "css"
+          ? ReactExample
+              ? <div className={s.exampleHtml}>
+                  <style>{contents.css || ""}</style>
+                  <ReactExample />
+                </div>
+              : ""
+          : <div
+              className={s.exampleHtml}
+              dangerouslySetInnerHTML={
+                codeType == "html"
+                ? {__html: `${GetHtml(contents)}`}
+                : codeType == "angular"
+                  ? {__html: `${GetAngular(contents)}`}
+                  : contents.actualHtml
+                    ? {__html: contents.actualHtml}
+                    : {__html: contents.html}
+              }
+            />
+        }
 
         <div className={s.exampleCode}>
           <pre>
