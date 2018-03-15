@@ -57,6 +57,10 @@ const entries = [
         linkTo: "/ui-components/alerts"
       },
       {
+        name: "Appbar",
+        linkTo: "/ui-components/appbar"
+      },
+      {
         name: "Autosuggest",
         linkTo: "/ui-components/autosuggest"
       },
@@ -238,7 +242,7 @@ class SideBar extends React.Component {
 
   render() {
     return (
-      <aside className={classnames(s.outer, this.props.hideSideBar === true && s.hideSideBar)} >
+      <aside className={classnames(s.outer, this.props.isSideBarOpen === false && s.hideSideBar)} >
         <div className={s.overlay} onClick={this.props.onToggle}></div>
         <Link className={s.logoOuter} to="/">
           <BHPLogo color="white" />

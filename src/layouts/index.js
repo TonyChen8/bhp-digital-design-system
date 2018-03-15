@@ -18,7 +18,7 @@ const TemplateWrapper = withTheme(({ componentInstance, children, data, theme, t
     <Helmet title={data.site.siteMetadata.title} htmlAttributes={{ class: theme.className }} />
 
     <div className={s.container}>
-      <SideBar className={s.sideBar} hideSideBar={componentInstance.state.hideSideBar} 
+      <SideBar className={s.sideBar} isSideBarOpen={componentInstance.state.isSideBarOpen}
       onToggle={componentInstance.toggleSidebar.bind(componentInstance)} />
 
       <div className={s.mainBody}>
@@ -32,8 +32,9 @@ const TemplateWrapper = withTheme(({ componentInstance, children, data, theme, t
                   className={"material-icons md-24 align-top " + s.expandBtn}
                   onClick={componentInstance.toggleSidebar.bind(componentInstance)}
                 >
-                  dehaze
+                  menu
                 </i>
+
                 <h1>
                   <Link className={s.headerLink} to="/">
                     Digital Design System
@@ -88,12 +89,12 @@ export default class Wrapper extends React.Component {
     super(props);
 
     this.state = {
-      hideSideBar: true
+      isSideBarOpen: false
     };
   }
 
 toggleSidebar(){
-  this.setState({ hideSideBar: !this.state.hideSideBar })
+  this.setState({ isSideBarOpen: !this.state.isSideBarOpen })
 }
 
   render() {

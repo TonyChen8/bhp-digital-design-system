@@ -30,6 +30,11 @@ $theme-margin-bigger: 15px;
     .expandBtn {
       padding: 18px 10px 18px 0;
       display: none;
+      opacity: .6;
+
+      &:hover {
+        opacity: .9;
+      }
     }
 
     .title {
