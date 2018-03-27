@@ -24,6 +24,7 @@
     "lodash": "^4.17.4",
     "material-design-icons": "^3.0.1",
     "moment": "^2.20.0",
+    "ngx-bootstrap": "^2.0.3",
     "rc-time-picker": "^3.2.1",
     "react": "15.6.2",
     "react-autosuggest": "^9.3.2",

@@ -93,6 +93,31 @@ examples:
         margin-left: auto;
         margin-right: 5px;
       }
-
+    angular: |
+      <BHPAppBar containerClass="bg-bhp-orange-1 appbar-container" appbarClass="appbar-right">
+        <i icon class="material-icons md-48 align-middle md-light icon">menu</i>
+        <BHPLogo logo color='white' ></BHPLogo>
+        <div appbarClass="appbar-right dropdown">
+            <Button dropdownToggle btnColor="primary" type="button" class="btn dropdown-toggle">
+              Button dropdown
+              <span class="caret"></span>
+            </Button>
+            <ul *dropdownMenu class="dropdown-menu" role="menu">
+              <li role="menuitem">
+                <a class="dropdown-item" href="#">Action</a>
+              </li>
+              <li role="menuitem">
+                <a class="dropdown-item" href="#">Another action</a>
+              </li>
+              <li role="menuitem">
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+              <li class="divider dropdown-divider"></li>
+              <li role="menuitem">
+                <a class="dropdown-item" href="#">Separated link</a>
+              </li>
+            </ul>
+        </div>
+      </BHPAppBar>
 
 

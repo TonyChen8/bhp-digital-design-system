@@ -43,3 +43,10 @@ examples:
           );
         }
       }
+
+    angular-hide: |
+      <label>
+        Date
+        <input [owlDateTimeTrigger]="dt3" [owlDateTime]="dt3">
+        <owl-date-time [pickerType]="'calendar'" #dt3></owl-date-time>
+      </label>

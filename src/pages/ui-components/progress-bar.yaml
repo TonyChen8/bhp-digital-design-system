@@ -83,6 +83,13 @@ examples:
         </div>
       <br />
       </div>
+    angular: |
+      <progressbar class="mb-2" type="info" [value]="0" ></progressbar>
+      <progressbar class="mb-2" type="info" [value]="25" >25%</progressbar>
+      <progressbar class="mb-2" type="info" [value]="50" >50%</progressbar>
+      <progressbar class="mb-2" type="info" [value]="75" >75%</progressbar>
+      <progressbar class="mb-2" type="info" [value]="100" >100%</progressbar>
+
     actualHtml: |
       <div class="progress mb-2">
         <div class="progress-bar bg-info" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>

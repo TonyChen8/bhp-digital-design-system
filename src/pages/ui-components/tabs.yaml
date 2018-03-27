@@ -43,3 +43,21 @@ examples:
           <a class="nav-link disabled" href="#">Tab four (disabled)</a>
         </li>
       </ul>
+    angular: |
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" [ngClass]="{'active': select===1}" (click)="select=1" >Tab one</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [ngClass]="{'active': select===2}" (click)="select=2" >Tab two</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [ngClass]="{'active': select===3}" (click)="select=3" >Tab three</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" [ngClass]="{'active': select===4}" (click)="select=4" >Tab four (disabled)</a>
+        </li>
+      </ul>
+      <div>
+        Selected: {{select}}
+      </div>

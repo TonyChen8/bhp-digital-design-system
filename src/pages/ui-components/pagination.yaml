@@ -65,3 +65,20 @@ examples:
           </li>
         </ul>
       </nav>
+    angular: |
+      <div class="row">
+        <div class="col-xs-12 col-12">
+          <pagination
+            nextText="&rsaquo;"
+            previousText="&lsaquo;"
+            [totalItems]="666"
+            [maxSize]="10"
+            [(ngModel)]="currentPage"
+            (pageChanged)="$event"
+          >
+          </pagination>
+        </div>
+      </div>
+      <pre class="card card-block card-header mb-3">
+        Page changed to: {{currentPage}}
+      </pre>

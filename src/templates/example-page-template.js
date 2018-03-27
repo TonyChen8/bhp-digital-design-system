@@ -9,7 +9,7 @@ const allCodeTypes = [
   { name: "react", title: "React" },
   { name: "html", title: "HTML" },
   { name: "css", title: "CSS" },
-  { name: "angular", title: "Angular Markup" },
+  { name: "angular", title: "Angular" },
   { name: "component", title: "Angular Component" },
 ];
 

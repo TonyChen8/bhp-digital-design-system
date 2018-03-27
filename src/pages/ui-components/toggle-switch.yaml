@@ -66,6 +66,19 @@ examples:
             }
         }
       </script>
+
+    angular: |
+      <BHPSwitch [isOn]="false" switchClass="">
+        <div left>YES</div>
+        <div right>NO</div>
+      </BHPSwitch>
+      <BHPSwitch [isOn]="true" switchClass="">
+        <div left>YES</div>
+        <div right>NO</div>
+      </BHPSwitch>
+
+
+
   - title: Variations
     subTitle: Example
     react: |
@@ -205,3 +218,34 @@ examples:
             }
         }
        </script>
+
+    angular: |
+      <BHPSwitch [isOn]="false" switchClass="toggle-switch-primary">
+        <div left>SÍ</div>
+        <div right>NO</div>
+      </BHPSwitch>
+
+      <BHPSwitch [isOn]="true" switchClass="toggle-switch-primary">
+        <div left>SÍ</div>
+        <div right>NO</div>
+      </BHPSwitch>
+
+      <BHPSwitch [isOn]="true" switchClass="toggle-switch-info">
+        <div left>YES</div>
+        <div right>NO</div>
+      </BHPSwitch>
+
+      <BHPSwitch [isOn]="true" switchClass="toggle-switch-success">
+        <div left>YES</div>
+        <div right>NO</div>
+      </BHPSwitch>
+
+      <BHPSwitch [isOn]="true" switchClass="toggle-switch-danger">
+        <div left>YES</div>
+        <div right>NO</div>
+      </BHPSwitch>
+
+      <BHPSwitch [isOn]="true" switchClass="toggle-switch-warning">
+        <div left>YES</div>
+        <div right>NO</div>
+      </BHPSwitch>

@@ -131,39 +131,33 @@ examples:
       </script>
 
     angular: |
-      <accordion class="accordion" [closeOthers]="true">
-
-        <accordion-group class="accordion-item" heading="Section 1">
-          <p>
-            Ullamco non do minim excepteur aute occaecat nostrud eiusmod ut
-            amet deserunt exercitation ut aute in sed incididunt labore
-            aliquip in laboris commodo sunt consectetur nostrud ea.
-          </p>
-        </accordion-group>
-
-        <accordion-group class="accordion-item" isOpen="true" heading="Section 2">
-          <p>
-            Minim aute nostrud occaecat ad laboris sit anim nisi sunt
-            duis id adipisicing sunt culpa enim aute ut dolor amet tempor
-            consequat excepteur labore consequat dolore eiusmod ex aliqua
-            proident elit dolore ullamco exercitation dolor ut ut fugiat
-            irure est proident qui qui ut officia nostrud commodo ex
-            cillum deserunt laborum reprehenderit sit aute dolore do nisi
-            enim aute fugiat sit minim sunt est cupidatat in pariatur in
-            labore aliquip consequat consequat est laboris consectetur
-            mollit laboris minim adipisicing dolore sit commodo occaecat
-            laborum ut voluptate exercitation anim aute nisi minim laboris
-            quis ea qui enim commodo aliqua voluptate laboris aute.
-            fugiat culpa in nostrud id.
-          </p>
-        </accordion-group>
-      </accordion>
-
-
-    component: |
-      function Component (){
-        oneAtATime: boolean = true;
-      }
+      <div style="height:250px">
+        <Accordion closeOthers=true>
+            <AccordionPanel heading="Section 1">
+              <p>
+                Ullamco non do minim excepteur aute occaecat nostrud eiusmod
+                ut amet deserunt exercitation ut aute in sed incididunt labore
+                aliquip in laboris commodo sunt consectetur nostrud ea.
+              </p>
+            </AccordionPanel>
+            <AccordionPanel heading="Section 2" [isOpen]=true panelClass="">
+              <p>
+                Minim aute nostrud occaecat ad laboris sit anim nisi sunt
+                duis id adipisicing sunt culpa enim aute ut dolor amet tempor
+                consequat excepteur labore consequat dolore eiusmod ex aliqua
+                proident elit dolore ullamco exercitation dolor ut ut fugiat
+                irure est proident qui qui ut officia nostrud commodo ex
+                cillum deserunt laborum reprehenderit sit aute dolore do nisi
+                enim aute fugiat sit minim sunt est cupidatat in pariatur in
+                labore aliquip consequat consequat est laboris consectetur
+                mollit laboris minim adipisicing dolore sit commodo occaecat
+                laborum ut voluptate exercitation anim aute nisi minim laboris
+                quis ea qui enim commodo aliqua voluptate laboris aute.
+                fugiat culpa in nostrud id.
+              </p>
+            </AccordionPanel>
+        </Accordion>
+      </div>
 
   - title: Multiple sections open
     introduction: |
@@ -287,4 +281,32 @@ examples:
         },50)
       }
       </script>
+    angular: |
+      <div style="height:250px">
+        <Accordion closeOthers=false>
+            <AccordionPanel heading="Section 1">
+              <p>
+                Ullamco non do minim excepteur aute occaecat nostrud eiusmod
+                ut amet deserunt exercitation ut aute in sed incididunt labore
+                aliquip in laboris commodo sunt consectetur nostrud ea.
+              </p>
+            </AccordionPanel>
+            <AccordionPanel heading="Section 2" [isOpen]=true panelClass="">
+              <p>
+                Minim aute nostrud occaecat ad laboris sit anim nisi sunt
+                duis id adipisicing sunt culpa enim aute ut dolor amet tempor
+                consequat excepteur labore consequat dolore eiusmod ex aliqua
+                proident elit dolore ullamco exercitation dolor ut ut fugiat
+                irure est proident qui qui ut officia nostrud commodo ex
+                cillum deserunt laborum reprehenderit sit aute dolore do nisi
+                enim aute fugiat sit minim sunt est cupidatat in pariatur in
+                labore aliquip consequat consequat est laboris consectetur
+                mollit laboris minim adipisicing dolore sit commodo occaecat
+                laborum ut voluptate exercitation anim aute nisi minim laboris
+                quis ea qui enim commodo aliqua voluptate laboris aute.
+                fugiat culpa in nostrud id.
+              </p>
+            </AccordionPanel>
+        </Accordion>
+      </div>
 

@@ -66,3 +66,19 @@ examples:
           </p>
         </div>
       </div>
+
+    angular: |
+      <div>
+        <h5>Lorem 1</h5>
+        <Card>
+          Lorem ipsum Fugiat sit mollit incididunt in occaecat repre henderit cillum magna Excepteur enim eu deserunt eiusmod dolor occaecat dolore officia mollit dolore consectetur elit in enim esse consectetur amet do exercitation.
+        </Card>
+        <br />
+        <h5>Lorem 2</h5>
+        <Card titleTag="h5" title="Card title">
+          Lorem ipsum Fugiat sit mollit incididunt in occaecat repre henderit cillum magna Excepteur enim eu deserunt eiusmod dolor occaecat dolore officia mollit dolore consectetur elit in enim esse consectetur amet do exercitation.
+        </Card>
+      </div>
+
+
+

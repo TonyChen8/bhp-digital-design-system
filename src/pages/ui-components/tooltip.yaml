@@ -47,6 +47,19 @@ examples:
           );
         }
       }
+    angular: |
+      <div class="container-size">
+        <a type="button"
+                tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                placement="bottom">
+          tooltip.
+        </a>
+      </div>
+    css: |
+      .container-size{
+        height: 80px;
+      }
+
   - title: Uncontrolled variant
     introduction: |
       For simple cases, an uncontrolled tooltip which manages its own state can
@@ -151,3 +164,35 @@ examples:
       .container-size{
         height: 80px;
       }
+    angular: |
+      <div class="container-size">
+        <Button type="button" class="btn btn-default btn-secondary mb-2"
+                tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                placement="top">
+          Tooltip on top
+        </Button>
+
+        <Button type="button" class="btn btn-default btn-secondary mb-2"
+                tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                placement="right">
+          Tooltip on right
+        </Button>
+
+        <Button type="button" class="btn btn-default btn-secondary mb-2"
+                tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                placement="auto">
+          Tooltip auto
+        </Button>
+
+        <Button type="button" class="btn btn-default btn-secondary mb-2"
+                tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                placement="left">
+          Tooltip on left
+        </Button>
+
+        <Button type="button" class="btn btn-default btn-secondary mb-2"
+                tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                placement="bottom">
+          Tooltip on bottom
+        </Button>
+      </div>

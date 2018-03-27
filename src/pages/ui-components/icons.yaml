@@ -40,6 +40,14 @@ examples:
         <i class="material-icons md-36">note_add</i>
         <i class="material-icons text-primary md-48">turned_in</i>
       </div>
+    angular: |
+      <div>
+        <MDIcon name="content_cut" ></MDIcon>
+        <MDIcon name="update" size="12" ></MDIcon>
+        <MDIcon name="note_add" size="36" ></MDIcon>
+        <MDIcon class="text-primary" name='turned_in' size="48" ></MDIcon>
+      </div>
+
 postText: |
   <hr />
   <h4 class="h4-light">Styling</h4>

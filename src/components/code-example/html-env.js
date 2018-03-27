@@ -19,7 +19,7 @@ const GetHtml = ( contents ) => {
         `<style>${contents.css || ""}</style>` +
     `</head>` +
     `<body>` +
-        html + script.join(" ").toString() +
+        script.join(" ").toString() + html +
     `</body>`;
 
   src = src.replace(/"/g, "&quot;");

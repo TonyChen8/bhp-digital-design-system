@@ -72,20 +72,37 @@ examples:
         }
       }
     html: |
-      <button
-          type="button"
-          class="btn btn-secondary"
-          data-toggle="popover"
-          title="Popover title"
-          data-content="Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut laborerem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore."
-      >
-          Popover on right
-      </button>;
+      <div style="padding: 50px 50px;">
+        <button
+            type="button"
+            class="btn btn-secondary"
+            data-toggle="popover"
+            title="Popover title"
+            data-content="Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut laborerem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore."
+        >
+            Popover on right
+        </button>
+      </div>
       <script>
         $(function() {
             $('[data-toggle="popover"]').popover()
         })
       </script>
+
+    angular: |
+      <div style="padding: 50px 50px;">
+        <button type="button" class="btn btn-primary"
+                popover="Lorem ipsum dolor sit amet, conse ctetur adipisicing elit,
+                  sed do eiusmod tempor incididunt ut laborerem ipsum dolor sit
+                  amet, conse ctetur adipisicing elit, sed do eiusmod tempor
+                  incididunt ut labore."
+                popoverTitle="Popover Title"
+                placement="right"
+                >
+          Popover on right
+        </button>
+      </div>
+
   - title: Positioning
     introduction: |
       The position of the popover can be controlled with the `placement`
@@ -171,7 +188,7 @@ examples:
       }
 
     html: |
-      <div>
+      <div style="padding: 50px 50px;">
         <button
           type="button"
           class="btn btn-secondary"
@@ -183,9 +200,7 @@ examples:
         >
           Popover on left with title
         </button>
-      </div>
-      <br>
-      <div>
+
         <button
           type="button"
           class="btn btn-secondary"
@@ -196,9 +211,7 @@ examples:
         >
           Popover on left without title
         </button>
-      </div>
-      <br>
-      <div>
+
         <button
           type="button"
           class="btn btn-secondary"
@@ -209,9 +222,7 @@ examples:
         >
           Popover on top
         </button>
-      </div>
-      <br>
-      <div>
+
         <button
           type="button"
           class="btn btn-secondary"
@@ -224,12 +235,46 @@ examples:
           Popover on below
         </button>
       </div>
-      <br>
-      <br>
-      <br>
-      <br>
+
       <script>
         $(function() {
             $('[data-toggle="popover"]').popover()
         })
       </script>
+    angular: |
+      <div style="padding: 100px 100px;">
+        <Button type="button" class="btn btn-default btn-secondary"
+                popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                popoverTitle="Popover on top"
+                placement="top">
+          Popover on top
+        </Button>
+
+        <Button type="button" class="btn btn-default btn-secondary"
+                popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                popoverTitle="Popover on right"
+                placement="right">
+          Popover on right
+        </Button>
+
+        <Button type="button" class="btn btn-default btn-secondary"
+                popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                popoverTitle="Popover auto"
+                placement="auto">
+          Popover auto
+        </Button>
+
+        <Button type="button" class="btn btn-default btn-secondary"
+                popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                popoverTitle="Popover on left"
+                placement="left">
+          Popover on left
+        </Button>
+
+        <Button type="button" class="btn btn-default btn-secondary"
+                popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                popoverTitle="Popover on bottom"
+                placement="bottom">
+          Popover on bottom
+        </Button>
+      </div>

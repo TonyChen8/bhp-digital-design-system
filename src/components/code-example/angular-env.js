@@ -17,18 +17,9 @@ const css = [
 const GetAngular = ( contents ) => {
   let id = "iframe" + Date.now();
   let code = contents.angular || "";
+  code = code.replace(/"/g, "\\\"");
   let mainScript = MainBundle.replace(/@code@/g, code.split("\n").join(""))
-
-  // this function will be set to component's controller in template
-  let componentConstructor = `function(){ }`
-  if (contents.component && contents.component.length>0) {
-    window.eval( `var f = `+ contents.component)
-    if (typeof(f) === "function") {
-      componentConstructor = contents.component;
-    }else{
-      console.error("Component constructor must be a function.")
-    }
-  }
+  mainScript = mainScript.replace(/@constructor@/g, contents.component)
 
   let src =
     `<head>` +
@@ -36,9 +27,6 @@ const GetAngular = ( contents ) => {
         `<style>${contents.css || ""}</style>` +
     `</head>
       <body>
-        <script>
-          window.AppComponent =` + componentConstructor +
-        `</script>
         <app-root></app-root>` +
         script.join(" ").toString() + mainScript +
     `</body>`;

@@ -28,3 +28,7 @@ examples:
           Default checkbox
         </label>
       </div>
+    angular: |
+      <Checkbox>
+        Default checkbox
+      </Checkbox>

@@ -28,3 +28,15 @@ examples:
         <li class="list-group-item">Task list key</li>
         <li class="list-group-item">Task list key</li>
       </ul>
+    angular: |
+      <ListGroup [sources]=sources (userSelected)="select=$event"></ListGroup>
+      <p>selected: {{select.key}}</p>
+      <p>value: {{select.value}}</p>
+      <p>index: {{select.index}}</p>
+    component: |
+      this.sources = [
+        { key: "Tom", value: 1 },
+        { key: "John", value: 2 },
+        { key: "Jim", value: 3 }
+      ];
+      this.select={ key: "", value: "", index:"" };

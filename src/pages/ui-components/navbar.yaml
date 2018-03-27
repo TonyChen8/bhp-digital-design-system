@@ -108,7 +108,37 @@ examples:
           </div>
         </nav>
       </div>
+    angular: |
+      <div class="container-size">
+        <NavBar #navbar class="navbar navbar-expand-lg navbar-expand-lg navbar-dark bg-bhp-orange-1">
+          <div static>
+            <BHPLogo  color='white' ></BHPLogo>
+          </div>
+          <Button toggle class="btn navbar-toggler"  btnColor="primary outline" (click)="navbar.toggle()">
+            <span class="navbar-toggler-icon "></span>
+          </Button>
 
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+            <Button class="btn" btnColor="primary">Search</Button>
+          </form>
+        </NavBar>
+      </div>
     css: |
       .container-size{
         min-height:250px;
