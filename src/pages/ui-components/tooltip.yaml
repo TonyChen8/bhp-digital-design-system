@@ -48,17 +48,13 @@ examples:
         }
       }
     angular: |
-      <div class="container-size">
+      <div style="padding: 50px">
         <a type="button"
                 tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
                 placement="bottom">
           tooltip.
         </a>
       </div>
-    css: |
-      .container-size{
-        height: 80px;
-      }
 
   - title: Uncontrolled variant
     introduction: |
@@ -81,7 +77,7 @@ examples:
       }
 
     html: |
-      <div class="container-size">
+      <div style="padding: 50px">
         <a href="#"
           data-toggle="tooltip"
           data-placement="bottom"
@@ -91,10 +87,6 @@ examples:
         </a>
         <script>$(function () {$('[data-toggle="tooltip"]').tooltip()})</script>
       </div>
-    css: |
-      .container-size{
-        height: 80px;
-      }
 
   - title: Positioning
     introduction: |
@@ -129,7 +121,7 @@ examples:
         );
       }
     html: |
-      <div class="container-size">
+      <div style="padding: 50px">
         <a href="#"
           data-toggle="tooltip"
           data-placement="top"
@@ -165,7 +157,7 @@ examples:
         height: 80px;
       }
     angular: |
-      <div class="container-size">
+      <div style="padding: 50px">
         <Button type="button" class="btn btn-default btn-secondary mb-2"
                 tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
                 placement="top">

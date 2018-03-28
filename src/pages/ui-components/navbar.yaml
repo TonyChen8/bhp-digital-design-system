@@ -110,7 +110,7 @@ examples:
       </div>
     angular: |
       <div class="container-size">
-        <NavBar #navbar class="navbar navbar-expand-lg navbar-expand-lg navbar-dark bg-bhp-orange-1">
+        <BHPNavBar #navbar class="navbar navbar-expand-lg navbar-expand-lg navbar-dark bg-bhp-orange-1">
           <div static>
             <BHPLogo  color='white' ></BHPLogo>
           </div>
@@ -137,7 +137,7 @@ examples:
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
             <Button class="btn" btnColor="primary">Search</Button>
           </form>
-        </NavBar>
+        </BHPNavBar>
       </div>
     css: |
       .container-size{

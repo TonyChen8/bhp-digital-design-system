@@ -30,10 +30,10 @@ examples:
       </div>
 
     angular: |
-      <Alert color="success">
+      <BHPAlert color="success">
         <i class="material-icons md-18 align-top">done</i>
         <strong>Success!</strong> A copy of your selected purchase orders has been sent to your customers.
-      </Alert>
+      </BHPAlert>
 
   - title: "Variations: types and inline"
     subTitle: Light theme
@@ -100,25 +100,25 @@ examples:
       </div>
 
     angular: |
-      <Alert color="primary">
+      <BHPAlert color="primary">
         <i class="material-icons md-18 align-top">star</i>
         <strong>Primary!</strong> This is a primary message. We really want your
-      </Alert>
-      <Alert color="success">
+      </BHPAlert>
+      <BHPAlert color="success">
         <i class="material-icons md-18 align-top">done</i>
         <strong>Success!</strong> A copy of your selected purchase orders has been sent to your customers.
-      </Alert>
-      <Alert color="info">
+      </BHPAlert>
+      <BHPAlert color="info">
         <i class="material-icons md-18 align-top">info</i>
         <strong>Info!</strong> This is an info message. We have stuff for you.
         <a class="alert-link" href="https://www.bhp.com">This is a link.</a>
-      </Alert>
-      <Alert color="warning">
+      </BHPAlert>
+      <BHPAlert color="warning">
         <i class="material-icons md-18 align-top">warning</i>
         <strong>Warning!</strong> This is a warning message. We need your attention.
-      </Alert>
-      <Alert color="danger">
+      </BHPAlert>
+      <BHPAlert color="danger">
         <i class="material-icons md-18 align-top">error</i>
         <strong>Danger!</strong> This is a danger message.
         <a class="alert-link" href="https://www.bhp.com">This is a link.</a>
-      </Alert>
+      </BHPAlert>

@@ -141,6 +141,10 @@ const entries = [
         linkTo: "/ui-components/search"
       },
       {
+        name: "Sidebar",
+        linkTo: "/ui-components/sidebar"
+      },
+      {
         name: "Spinner",
         linkTo: "/ui-components/spinner"
       },

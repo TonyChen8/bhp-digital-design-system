@@ -89,11 +89,11 @@ examples:
       </div>
     angular: |
       <div style="height: 250px">
-        <Button class="btn" btnColor="primary outline" (click)="modal.openModal()">Launch Modal</Button>
-        <Modal #modal [context]="{name: 'All changes you just made have been saved to the database.'}">
+        <Button class="btn" btnColor="primary outline" (click)="modal.openBHPModal()">Launch Modal</Button>
+        <BHPModal #modal [context]="{name: 'All changes you just made have been saved to the database.'}">
           <div class="modal-header">
             <h4 class="modal-title pull-left">Changes saved</h4>
-            <button type="button" class="close pull-right" aria-label="Close" (click)="modal.closeModal()">
+            <button type="button" class="close pull-right" aria-label="Close" (click)="modal.closeBHPModal()">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
@@ -101,9 +101,10 @@ examples:
             {{modal.context.name}}
           </div>
           <div class="modal-footer">
-            <Button class="btn" btnColor="secondary" (click)="modal.closeModal()">Close</Button>
+            <Button class="btn" btnColor="secondary" (click)="modal.closeBHPModal()">Close</Button>
           </div>
-        </Modal>
+        </BHPModal>
+      </div>
     css: |
       .container-size{
         height: 250px;

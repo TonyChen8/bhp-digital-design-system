@@ -132,15 +132,15 @@ examples:
 
     angular: |
       <div style="height:250px">
-        <Accordion closeOthers=true>
-            <AccordionPanel heading="Section 1">
+        <BHPAccordion closeOthers=true>
+            <BHPAccordionPanel heading="Section 1">
               <p>
                 Ullamco non do minim excepteur aute occaecat nostrud eiusmod
                 ut amet deserunt exercitation ut aute in sed incididunt labore
                 aliquip in laboris commodo sunt consectetur nostrud ea.
               </p>
-            </AccordionPanel>
-            <AccordionPanel heading="Section 2" [isOpen]=true panelClass="">
+            </BHPAccordionPanel>
+            <BHPAccordionPanel heading="Section 2" [isOpen]=true panelClass="">
               <p>
                 Minim aute nostrud occaecat ad laboris sit anim nisi sunt
                 duis id adipisicing sunt culpa enim aute ut dolor amet tempor
@@ -155,8 +155,8 @@ examples:
                 quis ea qui enim commodo aliqua voluptate laboris aute.
                 fugiat culpa in nostrud id.
               </p>
-            </AccordionPanel>
-        </Accordion>
+            </BHPAccordionPanel>
+        </BHPAccordion>
       </div>
 
   - title: Multiple sections open
@@ -283,15 +283,15 @@ examples:
       </script>
     angular: |
       <div style="height:250px">
-        <Accordion closeOthers=false>
-            <AccordionPanel heading="Section 1">
+        <BHPAccordion closeOthers=false>
+            <BHPAccordionPanel heading="Section 1">
               <p>
                 Ullamco non do minim excepteur aute occaecat nostrud eiusmod
                 ut amet deserunt exercitation ut aute in sed incididunt labore
                 aliquip in laboris commodo sunt consectetur nostrud ea.
               </p>
-            </AccordionPanel>
-            <AccordionPanel heading="Section 2" [isOpen]=true panelClass="">
+            </BHPAccordionPanel>
+            <BHPAccordionPanel heading="Section 2" [isOpen]=true panelClass="">
               <p>
                 Minim aute nostrud occaecat ad laboris sit anim nisi sunt
                 duis id adipisicing sunt culpa enim aute ut dolor amet tempor
@@ -306,7 +306,7 @@ examples:
                 quis ea qui enim commodo aliqua voluptate laboris aute.
                 fugiat culpa in nostrud id.
               </p>
-            </AccordionPanel>
-        </Accordion>
+            </BHPAccordionPanel>
+        </BHPAccordion>
       </div>
 

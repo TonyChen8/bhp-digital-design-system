@@ -42,10 +42,10 @@ examples:
       </div>
     angular: |
       <div>
-        <MDIcon name="content_cut" ></MDIcon>
-        <MDIcon name="update" size="12" ></MDIcon>
-        <MDIcon name="note_add" size="36" ></MDIcon>
-        <MDIcon class="text-primary" name='turned_in' size="48" ></MDIcon>
+        <BHPIcon name="content_cut" ></BHPIcon>
+        <BHPIcon name="update" size="12" ></BHPIcon>
+        <BHPIcon name="note_add" size="36" ></BHPIcon>
+        <BHPIcon class="text-primary" name='turned_in' size="48" ></BHPIcon>
       </div>
 
 postText: |

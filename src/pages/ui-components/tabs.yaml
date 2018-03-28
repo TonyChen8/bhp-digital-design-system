@@ -55,7 +55,7 @@ examples:
           <a class="nav-link" [ngClass]="{'active': select===3}" (click)="select=3" >Tab three</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" [ngClass]="{'active': select===4}" (click)="select=4" >Tab four (disabled)</a>
+          <a class="nav-link disabled" >Tab four (disabled)</a>
         </li>
       </ul>
       <div>

@@ -38,15 +38,15 @@ examples:
       </span>
 
     angular: |
-      <Badge color="primary">4</Badge>
-      <Badge color="primary">
+      <BHPBadge color="primary">4</BHPBadge>
+      <BHPBadge color="primary">
         <i class="material-icons md-12 align-middle">star</i>
         99
-      </Badge>
-      <Badge color="success">
+      </BHPBadge>
+      <BHPBadge color="success">
         <i class="material-icons md-12 align-middle">done</i>
         14
-      </Badge>
+      </BHPBadge>
 
   - title: Variations
     subTitle: Example
@@ -74,10 +74,10 @@ examples:
       <span class="badge badge-danger">99</span>
 
     angular: |
-      <Badge color="dark">99</Badge>
-      <Badge color="light">99</Badge>
-      <Badge color="success">99</Badge>
-      <Badge color="danger">99</Badge>
+      <BHPBadge color="dark">99</BHPBadge>
+      <BHPBadge color="light">99</BHPBadge>
+      <BHPBadge color="success">99</BHPBadge>
+      <BHPBadge color="danger">99</BHPBadge>
 
   - title: Floating badge
     subTitle: Example
@@ -114,11 +114,13 @@ examples:
       </div>
 
     angular: |
-      <FloatingBadgeOuter>
-        <i class="material-icons">error</i>
-        <FloatingBadge color='danger'>99</FloatingBadge>
-      </FloatingBadgeOuter>
-      <FloatingBadgeOuter class='pl-3'>
-        <i class="material-icons">warning</i>
-        <FloatingBadge color='warning'>99</FloatingBadge>
-      </FloatingBadgeOuter>
+      <div style="padding:10px">
+        <BHPFloatingBadgeOuter>
+          <i class="material-icons">error</i>
+          <BHPFloatingBadge color='danger'>99</BHPFloatingBadge>
+        </BHPFloatingBadgeOuter>
+        <BHPFloatingBadgeOuter class='pl-3'>
+          <i class="material-icons">warning</i>
+          <BHPFloatingBadge color='warning'>99</BHPFloatingBadge>
+        </BHPFloatingBadgeOuter>
+      </div>

@@ -29,6 +29,6 @@ examples:
         </label>
       </div>
     angular: |
-      <Checkbox>
+      <BHPCheckbox>
         Default checkbox
-      </Checkbox>
+      </BHPCheckbox>
