@@ -100,15 +100,15 @@ examples:
         return (
           <div>
             <p>
-              <span id="UncontrolledTooltipExampleTop">top</span>{' '}
+              <span id="UncontrolledTooltipExampleTop">top</span>
               <UncontrolledTooltip placement="top" target="UncontrolledTooltipExampleTop">
                 Top
               </UncontrolledTooltip>
-              <span id="UncontrolledTooltipExampleRight">right</span>{' '}
+              <span id="UncontrolledTooltipExampleRight">right</span>
               <UncontrolledTooltip placement="right" target="UncontrolledTooltipExampleRight">
                 Right
               </UncontrolledTooltip>
-              <span id="UncontrolledTooltipExampleBottom">bottom</span>{' '}
+              <span id="UncontrolledTooltipExampleBottom">bottom</span>
               <UncontrolledTooltip placement="bottom" target="UncontrolledTooltipExampleBottom">
                 Bottom
               </UncontrolledTooltip>

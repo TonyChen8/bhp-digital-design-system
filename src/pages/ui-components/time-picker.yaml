@@ -46,8 +46,8 @@ examples:
 
       export default () => (
         <div>
-          <ExampleTimePicker />{' '}
-          <ExampleTimePicker disabled />{' '}
+          <ExampleTimePicker />
+          <ExampleTimePicker disabled />
           <ExampleTimePicker allowEmpty={false} />
           <ExampleTimePicker showSecond={false} />
         </div>

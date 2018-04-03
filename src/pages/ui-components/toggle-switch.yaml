@@ -27,7 +27,7 @@ examples:
         render() {
           return (
             <div>
-              <ToggleSwitch on={this.state.on[0]} onClick={() => this.toggle(0)} />{' '}
+              <ToggleSwitch on={this.state.on[0]} onClick={() => this.toggle(0)} />
               <ToggleSwitch on={this.state.on[1]} onClick={() => this.toggle(1)} />
             </div>
           );
@@ -109,34 +109,34 @@ examples:
                 offMessage='NO'
                 on={this.state.on[0]}
                 onClick={() => this.toggle(0)}
-              />{' '}
+              />
               <ToggleSwitch
                 color='primary'
                 onMessage='SÍ'
                 offMessage='NO'
                 on={this.state.on[1]}
                 onClick={() => this.toggle(1)}
-              />{' '}
+              />
               <ToggleSwitch
                 color='info'
                 on={this.state.on[2]}
                 onClick={() => this.toggle(2)}
-              />{' '}
+              />
               <ToggleSwitch
                 color='success'
                 on={this.state.on[3]}
                 onClick={() => this.toggle(3)}
-              />{' '}
+              />
               <ToggleSwitch
                 color='danger'
                 on={this.state.on[4]}
                 onClick={() => this.toggle(4)}
-              />{' '}
+              />
               <ToggleSwitch
                 color='warning'
                 on={this.state.on[5]}
                 onClick={() => this.toggle(5)}
-              />{' '}
+              />
             </div>
           );
         }

@@ -14,7 +14,7 @@ examples:
       const Example = () => {
         return (
           <Alert color="success">
-            <i className="material-icons md-18 align-top">done</i>{' '}
+            <i className="material-icons md-18 align-top">done</i>
             <strong>Success!</strong> A copy of your selected purchase orders has been
             sent to your customers.
           </Alert>
@@ -45,27 +45,27 @@ examples:
         return (
           <div>
             <Alert color="primary">
-              <i className="material-icons md-18 align-top">star</i>{' '}
+              <i className="material-icons md-18 align-top">star</i>
               <strong>Primary!</strong> This is a primary message. We really want your
               attention. <a className="alert-link" href="https://www.bhp.com">This is a link.</a>
             </Alert>
             <Alert color="success">
-              <i className="material-icons md-18 align-top">done</i>{' '}
+              <i className="material-icons md-18 align-top">done</i>
               <strong>Success!</strong> A copy of your selected purchase orders has been
               sent to your customers.
             </Alert>
             <Alert color="info">
-              <i className="material-icons md-18 align-top">info</i>{' '}
-              <strong>Info!</strong> This is an info message. We have stuff for you.{' '}
+              <i className="material-icons md-18 align-top">info</i>
+              <strong>Info!</strong> This is an info message. We have stuff for you.
               <a className="alert-link" href="https://www.bhp.com">This is a link.</a>
             </Alert>
             <Alert color="warning">
-              <i className="material-icons md-18 align-top">warning</i>{' '}
+              <i className="material-icons md-18 align-top">warning</i>
               <strong>Warning!</strong> This is a warning message. We need your attention.
             </Alert>
             <Alert color="danger">
-              <i className="material-icons md-18 align-top">error</i>{' '}
-              <strong>Danger!</strong> This is a danger message.{' '}
+              <i className="material-icons md-18 align-top">error</i>
+              <strong>Danger!</strong> This is a danger message.
               <a className="alert-link" href="https://www.bhp.com">This is a link.</a>
             </Alert>
           </div>

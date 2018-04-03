@@ -23,9 +23,9 @@ examples:
 
       export default () => (
         <div>
-          <MDIcon name='content_cut' />{' '}
-          <MDIcon name='update' size={12} /> {' '}
-          <MDIcon name='note_add' size={36} />{' '}
+          <MDIcon name='content_cut' />
+          <MDIcon name='update' size={12} />
+          <MDIcon name='note_add' size={36} />
           <MDIcon
             className='text-primary'
             name='turned_in'
