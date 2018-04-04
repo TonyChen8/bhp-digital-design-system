@@ -81,6 +81,7 @@ $theme-margin-bigger: 15px;
     }
   }
 
+  .gitHubLink,
   .themePicker {
     display: flex;
     label {
@@ -135,13 +136,7 @@ $theme-margin-bigger: 15px;
       .expandBtn {
         display: inline-block;
       }
-    }
-  }
-}
 
-@media screen and (max-width: 480px) {
-  .mainBody {
-    .header {
       .titleLayout {
         flex-direction: column;
         -webkit-flex-direction: column;
@@ -150,6 +145,8 @@ $theme-margin-bigger: 15px;
         text-align: center;
       }
     }
+
+    .gitHubLink,
     .themePicker {
       label {
         padding: $theme-margin-bigger 10px;

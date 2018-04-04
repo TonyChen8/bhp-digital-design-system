@@ -13,6 +13,13 @@ import "./index-light.scss";
 import "./index-dark.scss";
 import s from "./index.module.scss";
 
+const gitHubLink = [
+  {url: "", name: "Select a repository" },
+  {url: "https://github.com/BHP-DevHub/bhp-ui-react", name: "React" },
+  {url: "https://github.com/BHP-DevHub/bhp-ui-angular", name: "Angular" },
+  {url: "https://github.com/BHP-DevHub/bhp-ui-html", name: "Html" },
+];
+
 const TemplateWrapper = withTheme(({ componentInstance, children, data, theme, themes, selectTheme }) => (
   <div>
     <Helmet title={data.site.siteMetadata.title} htmlAttributes={{ class: theme.className }} />
@@ -43,6 +50,25 @@ const TemplateWrapper = withTheme(({ componentInstance, children, data, theme, t
               </div>
 
               <div className={s.themeHelp}>
+                <div className={s.gitHubLink}>
+                  <Label for="git-hub-link">Github:</Label>
+
+                  <div className="pl-2 pr-4">
+                    <Input
+                      className="d-inline-block"
+                      name="git-hub-link"
+                      type="select"
+                      onChange={event => event.target.value.length>0 && window.open(event.target.value,'_blank')}
+                    >
+                      {gitHubLink.map(link => (
+                        <option key={link.name} value={link.url}>
+                          {link.name}
+                        </option>
+                      ))}
+                    </Input>
+                  </div>
+                </div>
+
                 <div className={s.themePicker}>
                   <Label for="theme-name">Theme:</Label>
 

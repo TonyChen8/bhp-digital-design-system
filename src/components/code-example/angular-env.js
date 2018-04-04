@@ -10,6 +10,7 @@ const css = [
   "<link rel='stylesheet' href='/index-dark.css'>",
   "<link rel='stylesheet' href='/index-light.css'>",
   "<link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>",
+  "<script defer src='https://use.fontawesome.com/releases/v5.0.9/js/all.js'></script>"
 ];
 
 

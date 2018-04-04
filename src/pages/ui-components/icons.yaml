@@ -18,34 +18,30 @@ examples:
   - title: Usage
     subTitle: Example
     react: |
-      import React from 'react';
-      import { MDIcon } from 'bhp-ui-react';
+      import React from "react";
+      import { BHPIcon } from "bhp-ui-react";
 
       export default () => (
         <div>
-          <MDIcon name='content_cut' />
-          <MDIcon name='update' size={12} />
-          <MDIcon name='note_add' size={36} />
-          <MDIcon
-            className='text-primary'
-            name='turned_in'
-            size={48}
-          />
+          <BHPIcon className="fa-cut" size={12} />
+          <BHPIcon className="fa-search" size={18} />
+          <BHPIcon className="fa-plus-square" size={25} />
+          <BHPIcon className="fa-bookmark text-primary" size={48} />
         </div>
       );
     html: |
-      <div>
-        <i class="material-icons">content_cut</i>
-        <i class="material-icons md-12">update</i>
-        <i class="material-icons md-36">note_add</i>
-        <i class="material-icons text-primary md-48">turned_in</i>
+      <div style="height: 50px">
+        <i class="fas fa-cut"></i>
+        <i class="fas fa-search md-12"></i>
+        <i class="fas fa-plus-square md-36"></i>
+        <i class="fas fa-bookmark text-primary md-48"></i>
       </div>
     angular: |
-      <div>
-        <BHPIcon name="content_cut" ></BHPIcon>
-        <BHPIcon name="update" size="12" ></BHPIcon>
-        <BHPIcon name="note_add" size="36" ></BHPIcon>
-        <BHPIcon class="text-primary" name='turned_in' size="48" ></BHPIcon>
+      <div style="height: 50px">
+        <BHPIcon name="fa-cut" size="12"></BHPIcon>
+        <BHPIcon name="fa-search" size="18"></BHPIcon>
+        <BHPIcon name="fa-plus-square"  size="24" ></BHPIcon>
+        <BHPIcon name="fa-bookmark" size="30" class="text-primary" ></BHPIcon>
       </div>
 
 postText: |
@@ -56,12 +52,12 @@ postText: |
   <div class="col-4 text-danger">
   <img src="/icons-truck-no.png" />
   <hr />
-  <i class="material-icons md-18 align-top">clear</i> WRONG<br />
+  <i class="fas  md-18 align-top">clear</i> WRONG<br />
   <p>This icon does not follow the precise and colour neutral style preferred for BHP Digital styling.</p>
   </div>
   <div class="offset-2 col-4 text-success">
   <img src="/icons-truck-yes.png" />
   <hr />
-  <i class="material-icons md-18 align-top">done</i> CORRECT<br />
+  <i class="fas  md-18 align-top">done</i> CORRECT<br />
   <p>Clean, precise, colour neutral and a smart use of negative space is preferred.</p>
   </div>

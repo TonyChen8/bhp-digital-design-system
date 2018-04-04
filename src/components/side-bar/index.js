@@ -69,6 +69,10 @@ const entries = [
         linkTo: "/ui-components/badges"
       },
       {
+        name: "Breadcrumbs",
+        linkTo: "/ui-components/breadcrumbs"
+      },
+      {
         name: "Buttons",
         linkTo: "/ui-components/buttons"
       },
@@ -151,6 +155,10 @@ const entries = [
       {
         name: "Tabs",
         linkTo: "/ui-components/tabs"
+      },
+      {
+        name: "Texts",
+        linkTo: "/ui-components/texts"
       },
       {
         name: "Time picker",
