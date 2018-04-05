@@ -23,26 +23,10 @@ export default ({ contents, codeType }) => {
           <div className={s.exampleSubTitle}>{contents.subTitle}</div>
         )}
 
-        {codeType === "react" ||  codeType === "css"
-          ? ReactExample
-              ? <div className={s.exampleHtml}>
-                  <style>{contents.css || ""}</style>
-                  <ReactExample />
-                </div>
-              : ""
-          : <div
-              className={s.exampleHtml}
-              dangerouslySetInnerHTML={
-                codeType == "html"
-                ? {__html: `${GetHtml(contents)}`}
-                : codeType == "angular"
-                  ? {__html: `${GetAngular(contents)}`}
-                  : contents.actualHtml
-                    ? {__html: contents.actualHtml}
-                    : {__html: contents.html}
-              }
-            />
-        }
+        <div className={s.exampleHtml}>
+          <style>{contents.css || ""}</style>
+          <ReactExample />
+        </div>
 
         <div className={s.exampleCode}>
           <pre>

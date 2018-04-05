@@ -1,0 +1,84 @@
+title: Breadcrumbs
+category: UI components
+preText: |
+   Breadcrumbs is a graphical control element used as a navigational aid in user interfaces.
+examples:
+  - title: Usage
+    introduction: Below is an example of the primary usage of the tabs.
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
+
+      export default ()  => {
+        return (
+          <div>
+            <Breadcrumb>
+              <BreadcrumbItem active>Home</BreadcrumbItem>
+            </Breadcrumb>
+            <Breadcrumb>
+              <BreadcrumbItem><a href="#">Home</a></BreadcrumbItem>
+              <BreadcrumbItem active>Library</BreadcrumbItem>
+            </Breadcrumb>
+            <Breadcrumb>
+              <BreadcrumbItem><a href="#">Home</a></BreadcrumbItem>
+              <BreadcrumbItem><a href="#">Library</a></BreadcrumbItem>
+              <BreadcrumbItem active>Data</BreadcrumbItem>
+            </Breadcrumb>
+          </div>
+        );
+      };
+
+    html: |
+      <nav class="breadcrumb">
+        <a class="breadcrumb-item" href="#">Home</a>
+        <a class="breadcrumb-item" href="#">Library</a>
+        <a class="breadcrumb-item" href="#">Data</a>
+        <span class="breadcrumb-item active">Bootstrap</span>
+      </nav>
+    angular: |
+      import { McBreadcrumbsModule } from 'ngx-breadcrumbs';
+      @NgModule({
+        declarations: [AppComponent,],
+        imports: [
+           McBreadcrumbsModule.forRoot()
+        ],
+        bootstrap: [AppComponent]
+      })
+
+      import { YourComponent } from "path/to/your/component";
+
+      const routes: Routes = [
+        {
+          path: "Home",
+          data: {
+            breadcrumbs: true
+          },
+          children: [
+            {
+              path: "Library",
+              data: {
+                breadcrumbs: "Library"
+              },
+              children: [
+                {
+                  path: ":id",
+                  component: YourComponent,
+                  data: {
+                    breadcrumbs: "Data"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ];
+
+      @NgModule({
+        declarations: [YourComponent],
+        imports: [
+          YourComponent.forRoot(),
+          RouterModule.forRoot(routes)
+        ],
+        exports: [RouterModule]
+      })
