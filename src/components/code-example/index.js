@@ -1,8 +1,6 @@
 import React from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import s from "./style.module.scss";
-import { GetHtml } from "./html-env.js";
-import { GetAngular } from "./angular-env.js";
 
 export default ({ contents, codeType }) => {
   const source =

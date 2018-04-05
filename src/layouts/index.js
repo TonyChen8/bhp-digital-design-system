@@ -51,7 +51,7 @@ const TemplateWrapper = withTheme(({ componentInstance, children, data, theme, t
 
               <div className={s.themeHelp}>
                 <div className={s.gitHubLink}>
-                  <Label for="git-hub-link">Github:</Label>
+                  <Label for="git-hub-link">Download:</Label>
 
                   <div className="pl-2 pr-4">
                     <Input

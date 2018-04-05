@@ -37,6 +37,8 @@ examples:
         <span class="breadcrumb-item active">Bootstrap</span>
       </nav>
     angular: |
+      In src\app\app.module.ts:
+
       import { McBreadcrumbsModule } from 'ngx-breadcrumbs';
       @NgModule({
         declarations: [AppComponent,],
@@ -45,6 +47,9 @@ examples:
         ],
         bootstrap: [AppComponent]
       })
+
+      Generate routing module: ng generate module app-routing --flat --module=app
+      In src\app\app-routing.module.ts:
 
       import { YourComponent } from "path/to/your/component";
 
