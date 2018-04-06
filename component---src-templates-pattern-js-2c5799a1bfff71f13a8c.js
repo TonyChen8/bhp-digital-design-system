@@ -1,2 +1,2 @@
-webpackJsonp([0xf7183b450270],{487:function(e,t,r){"use strict";function a(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0,t.query=void 0;var n=r(16),u=a(n);t.default=function(e){var t=e.data,r=t.patternsYaml;return(0,u.default)({contents:r,hideCodeTypePicker:!0})};t.query="** extracted graphql fragment **"}});
+webpackJsonp([0xf7183b450270],{496:function(e,t,r){"use strict";function a(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0,t.query=void 0;var n=r(11),u=a(n);t.default=function(e){var t=e.data,r=t.patternsYaml;return(0,u.default)({contents:r,hideCodeTypePicker:!0})};t.query="** extracted graphql fragment **"}});
 //# sourceMappingURL=component---src-templates-pattern-js-2c5799a1bfff71f13a8c.js.map

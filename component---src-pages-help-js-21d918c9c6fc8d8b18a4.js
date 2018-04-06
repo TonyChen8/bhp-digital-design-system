@@ -1,2 +1,0 @@
-webpackJsonp([0xe49e599ac2bb],{495:function(e,t,l){"use strict";function u(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0;var a=l(1),n=u(a),r=function(){return n.default.createElement("div",null,n.default.createElement("h1",null,"Help Page"),n.default.createElement("p",null,"This is a help page"))};t.default=r,e.exports=t.default}});
-//# sourceMappingURL=component---src-pages-help-js-21d918c9c6fc8d8b18a4.js.map
