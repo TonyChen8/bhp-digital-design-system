@@ -1,0 +1,126 @@
+title: Badges and labels
+category: UI components
+preText: |
+  Badges are small components that typically communicate a numerical value to the user. They are typically used within an item.
+examples:
+  - title: Usage
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { Badge } from 'reactstrap';
+
+      const Example = () => {
+        return (
+          <div>
+            <Badge color="primary">4</Badge>
+            <Badge color="primary">
+              <i className="material-icons md-12 align-middle">star</i>
+              99
+            </Badge>
+            <Badge color="success">
+              <i className="material-icons md-12 align-middle">done</i>
+              14
+            </Badge>
+          </div>
+        );
+      };
+
+      export default Example;
+    html: |
+      <span class="badge badge-primary">4</span>
+      <span class="badge badge-primary">
+        <i class="material-icons md-12 align-middle">star</i>
+        99
+      </span>
+      <span class="badge badge-success">
+        <i class="material-icons md-12 align-middle">done</i>
+        14
+      </span>
+
+    angular: |
+      <BHPBadge color="primary">4</BHPBadge>
+      <BHPBadge color="primary">
+        <i class="material-icons md-12 align-middle">star</i>
+        99
+      </BHPBadge>
+      <BHPBadge color="success">
+        <i class="material-icons md-12 align-middle">done</i>
+        14
+      </BHPBadge>
+
+  - title: Variations
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { Badge } from 'reactstrap';
+
+      const Example = () => {
+        return (
+          <div>
+            <Badge color="dark">99</Badge>
+            <Badge color="light">99</Badge>
+            <Badge color="success">99</Badge>
+            <Badge color="danger">99</Badge>
+          </div>
+        );
+      };
+
+      export default Example;
+
+    html: |
+      <span class="badge badge-dark">99</span>
+      <span class="badge badge-light">99</span>
+      <span class="badge badge-success">99</span>
+      <span class="badge badge-danger">99</span>
+
+    angular: |
+      <BHPBadge color="dark">99</BHPBadge>
+      <BHPBadge color="light">99</BHPBadge>
+      <BHPBadge color="success">99</BHPBadge>
+      <BHPBadge color="danger">99</BHPBadge>
+
+  - title: Floating badge
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { FloatingBadge, FloatingBadgeOuter, MDIcon } from 'bhp-ui-react';
+
+      const Example = () => {
+        return (
+          <div>
+            <FloatingBadgeOuter>
+              <MDIcon name='error' />
+              <FloatingBadge color='danger'>99</FloatingBadge>
+            </FloatingBadgeOuter>
+
+            <FloatingBadgeOuter className='pl-3'>
+              <MDIcon name='warning' />
+              <FloatingBadge color='warning'>99</FloatingBadge>
+            </FloatingBadgeOuter>
+          </div>
+        );
+      };
+
+      export default Example;
+    html: |
+      <br />
+      <div class="floating-badge-outer">
+        <i class="material-icons">error</i>
+        <span class="badge badge-danger floating-badge">99</span>
+      </div>
+      <div class="floating-badge-outer pl-3">
+        <i class="material-icons">warning</i>
+        <span class="badge badge-warning floating-badge">99</span>
+      </div>
+
+    angular: |
+      <div style="padding:10px">
+        <BHPFloatingBadgeOuter>
+          <i class="material-icons">error</i>
+          <BHPFloatingBadge color='danger'>99</BHPFloatingBadge>
+        </BHPFloatingBadgeOuter>
+        <BHPFloatingBadgeOuter class='pl-3'>
+          <i class="material-icons">warning</i>
+          <BHPFloatingBadge color='warning'>99</BHPFloatingBadge>
+        </BHPFloatingBadgeOuter>
+      </div>

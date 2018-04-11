@@ -1,14 +1,11 @@
 $header-outer: 60px;
 $header-border: 1px;
-// $header-inner: $header-outer - $header-border;
 $header-padding: 15px;
 $sidebar-width:200px;
 $theme-margin: 7px;
 $theme-margin-bigger: 15px;
 
-
 .container {
-  display: flex; // min-height: 800px;
   .hideSideBar {
     left: -$sidebar-width;
     position: fixed;
@@ -24,7 +21,7 @@ $theme-margin-bigger: 15px;
   overflow: hidden;
 
   .header {
-    display: flex; // justify-content: space-between;
+    display: flex; 
     border-bottom: $header-border solid #dcdcdc;
 
     .expandBtn {

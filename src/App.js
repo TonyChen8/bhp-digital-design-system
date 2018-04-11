@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import Layout from "./layouts";
+import BHPRouter from "./router";
 
-class App extends Component {
-  render() {
-    return <Layout />;
-  }
+export default class App extends Component {
+	render() {
+		return <BHPRouter />;
+	}
 }
-
-export default App;

@@ -1,0 +1,200 @@
+title: Sidebar
+category: UI components
+preText: |
+  Sidebar can be toggled by clicking the menu button when screen size is less than 769px.
+
+examples:
+  - title: Usage
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { MDIcon } from 'bhp-ui-react';
+
+      export default class Example extends React.Component {
+        constructor(props) {
+          super(props);
+
+          this.toggle = this.toggle.bind(this);
+          this.state = {
+            isOpen: false
+          };
+        }
+
+        toggle() {
+          this.setState({
+            isOpen: !this.state.isOpen
+          });
+        }
+
+        render() {
+          return (
+            <div className="container-main" style={{height: '200px'}}>
+              <div className={this.state.isOpen===true? 'container-sidebar sidebar-show' : 'container-sidebar'}>
+                <div className="sidebar-backdrop" onClick={this.toggle}></div>
+                <div className="sidebar">
+                  <a href="">example 1</a>
+                  <ul>
+                    <li><a href="">example 2</a></li>
+                    <li><a href="">example 3</a></li>
+                    <li><a href="">example 4</a></li>
+                    <li><a href="">example 5</a></li>
+                    <li><a href="">example 6</a></li>
+                    <li><a href="">example 7</a></li>
+                    <li><a href="">example 8</a></li>
+                    <li><a href="">example 9</a></li>
+                    <li><a href="">example 10</a></li>
+                    <li><a href="">example 11</a></li>
+                    <li><a href="">example 12</a></li>
+                    <li><a href="">example 13</a></li>
+                    <li><a href="">example 14</a></li>
+                  </ul>
+                  <div><a href="">example 15</a></div>
+                  <div><a href="">example 16</a></div>
+                  <div><a href="">example 17</a></div>
+                  <div><a href="">example 18</a></div>
+                  <div><a href="">example 19</a></div>
+                  <div><a href="">example 20</a></div>
+                </div>
+              </div>
+              <div className="container-body" >
+                <span onClick={this.toggle}>
+                  <MDIcon name='menu' size={48}  />
+                </span>
+              </div>
+            </div>
+          )
+        }
+      };
+    html: |
+      <div class="container-main" style="height: 200px; ">
+        <div class="container-sidebar">
+          <div class="sidebar-backdrop"></div>
+          <div class="sidebar">
+            <a href="">example 1</a>
+            <ul>
+              <li><a href="">example 2</a></li>
+              <li><a href="">example 3</a></li>
+              <li><a href="">example 4</a></li>
+              <li><a href="">example 5</a></li>
+              <li><a href="">example 6</a></li>
+              <li><a href="">example 7</a></li>
+              <li><a href="">example 8</a></li>
+              <li><a href="">example 9</a></li>
+              <li><a href="">example 10</a></li>
+              <li><a href="">example 11</a></li>
+              <li><a href="">example 12</a></li>
+              <li><a href="">example 13</a></li>
+              <li><a href="">example 14</a></li>
+            </ul>
+            <div><a href="">example 15</a></div>
+            <div><a href="">example 16</a></div>
+            <div><a href="">example 17</a></div>
+            <div><a href="">example 18</a></div>
+            <div><a href="">example 19</a></div>
+            <div><a href="">example 20</a></div>
+          </div>
+        </div>
+        <div class="container-body">
+          <i icon class="material-icons md-48 align-middle md-light icon">menu</i>
+        </div>
+      </div>
+      <script>
+        var toggle=function(){
+          if($('.container-sidebar').hasClass('sidebar-show')){
+            $('.container-sidebar').removeClass('sidebar-show');
+          }else{
+            $('.container-sidebar').addClass('sidebar-show');
+          }
+        }
+        $('.sidebar-backdrop').on('click',toggle)
+        $('.container-body').on('click',toggle)
+      </script>
+    css: |
+      .container-main {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        overflow: hidden;
+        height: 200px;
+      }
+
+      .container-sidebar {
+        width: 150px;
+      }
+
+      .sidebar {
+        left: 0;
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+        background-color: white;
+        transition: left .3s ease-out;
+      }
+
+      .container-body {
+        flex: 1;
+      }
+
+      @media screen and (max-width: 768px) {
+        .container-sidebar {
+          position: absolute;
+          width: 0;
+          height: 100%;
+        }
+        .container-sidebar.sidebar-show {
+          width: 100%;
+          height: 100%;
+        }
+
+        .sidebar {
+          position: absolute;
+          left: -150px;
+          width: 150px;
+        }
+        .sidebar-show .sidebar {
+          left: 0;
+        }
+        .sidebar-backdrop {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.35);
+        }
+      }
+
+    angular: |
+      <div class="container-main" style="height: 200px; ">
+        <div class="container-sidebar" [ngClass]="{'sidebar-show': isOpen}">
+          <div class="sidebar-backdrop" (click)="isOpen=!isOpen"></div>
+          <div class="sidebar">
+            <a href="">example 1</a>
+            <ul>
+              <li><a href="">example 2</a></li>
+              <li><a href="">example 3</a></li>
+              <li><a href="">example 4</a></li>
+              <li><a href="">example 5</a></li>
+              <li><a href="">example 6</a></li>
+              <li><a href="">example 7</a></li>
+              <li><a href="">example 8</a></li>
+              <li><a href="">example 9</a></li>
+              <li><a href="">example 10</a></li>
+              <li><a href="">example 11</a></li>
+              <li><a href="">example 12</a></li>
+              <li><a href="">example 13</a></li>
+              <li><a href="">example 14</a></li>
+            </ul>
+            <div><a href="">example 15</a></div>
+            <div><a href="">example 16</a></div>
+            <div><a href="">example 17</a></div>
+            <div><a href="">example 18</a></div>
+            <div><a href="">example 19</a></div>
+            <div><a href="">example 20</a></div>
+          </div>
+        </div>
+        <div class="container-body">
+          <BHPIcon size="48" name="menu"  (click)="isOpen=!isOpen"></BHPIcon>
+        </div>
+      </div>
+

@@ -1,0 +1,82 @@
+title: Cards
+category: UI components
+preText: |
+  Cards are used to separate field groups or large blocks of text.
+examples:
+  - title: Usage
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import {
+        Card,
+        CardText,
+        CardBody,
+        CardTitle,
+      } from 'reactstrap';
+
+      export default () => {
+        return (
+          <div>
+            <h5>Lorem 1</h5>
+            <Card>
+              <CardBody>
+                Lorem ipsum Fugiat sit mollit incididunt in occaecat repre henderit
+                cillum magna Excepteur enim eu deserunt eiusmod dolor occaecat dolore
+                officia mollit dolore consectetur elit in enim esse consectetur amet
+                do exercitation.
+              </CardBody>
+            </Card>
+            <br />
+            <h5>Lorem 2</h5>
+            <Card>
+              <CardBody>
+                <CardTitle tag='h5'>Card title</CardTitle>
+                <CardText>
+                  Lorem ipsum Fugiat sit mollit incididunt in occaecat repre henderit
+                  cillum magna Excepteur enim eu deserunt eiusmod dolor occaecat
+                  dolore officia mollit dolore consectetur elit in enim esse
+                  consectetur amet do exercitation.
+                </CardText>
+              </CardBody>
+            </Card>
+          </div>
+
+        );
+      };
+    html: |
+      <h5>Lorem 1</h5>
+      <div class="card">
+        <div class="card-body">
+          Lorem ipsum Fugiat sit mollit incididunt in occaecat repre henderit
+          cillum magna Excepteur enim eu deserunt eiusmod dolor occaecat dolore
+          officia mollit dolore consectetur elit in enim esse consectetur amet
+          do exercitation.
+        </div>
+      </div>
+      <br />
+      <h5>Lorem 2</h5>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Lorem ipsum Fugiat sit mollit incididunt in occaecat repre henderit
+            cillum magna Excepteur enim eu deserunt eiusmod dolor occaecat
+            dolore officia mollit dolore consectetur elit in enim esse
+            consectetur amet do exercitation.
+          </p>
+        </div>
+      </div>
+
+    angular: |
+      <h5>Lorem 1</h5>
+      <BHPCard>
+        Lorem ipsum Fugiat sit mollit incididunt in occaecat repre henderit cillum magna Excepteur enim eu deserunt eiusmod dolor occaecat dolore officia mollit dolore consectetur elit in enim esse consectetur amet do exercitation.
+      </BHPCard>
+      <br />
+      <h5>Lorem 2</h5>
+      <BHPCard titleTag="h5" title="Card title">
+        Lorem ipsum Fugiat sit mollit incididunt in occaecat repre henderit cillum magna Excepteur enim eu deserunt eiusmod dolor occaecat dolore officia mollit dolore consectetur elit in enim esse consectetur amet do exercitation.
+      </BHPCard>
+
+
+
