@@ -1,0 +1,17 @@
+.breadcrumbs {
+  line-height: 45px;
+  border-bottom: 1px solid #dcdcdc;
+
+  font-weight: bold;
+  font-size: 11px;
+  color: #979797;
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+}
+
+:global(.dark-theme) .breadcrumbs {
+  border-bottom-color: #555;
+}

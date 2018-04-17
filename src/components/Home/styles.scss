@@ -5,9 +5,12 @@
     margin-bottom: 30px;
   }
 
-  :global(section) {
-    padding: 40px 0;
-
+  .home {
+    section {
+      padding: 40px 0;
+    }
+  }
+  section {
     &:last-child {
       padding-bottom: 0;
     }
@@ -17,7 +20,7 @@
     padding: 0;
     text-align: center;
     color: white;
-    background-image: url(./think-big.jpg);
+    background-image: url(../../static/think-big.jpg);
     background-size: cover;
 
     h1 {

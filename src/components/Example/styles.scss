@@ -1,6 +1,95 @@
 $example-border-color: #c1c1c1;
 $example-padding: 10px;
 
+.markdown {
+  .pageHeader {
+    margin-bottom: 30px;
+  }
+
+  section {
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  pre {
+    border: 1px solid #c1c1c1;
+    padding: 10px;
+    background-color: #ecf0f1;
+  }
+
+  .exampleCode {
+    pre {
+      border: none;
+    }
+  }
+}
+
+// all of the images are used in yaml should be build and pack by webpack,
+// so we add them as styles to compile them
+.imageChartExample:before,
+.imageTrackNo:before,
+.imageTrack:before,
+.imageLogoUsageBad:before,
+.imageLogoUsageCorrect:before,
+.imageLogoUsage:after,
+.imageEdge:after,
+.imageChrome:after,
+.imageFirefox:after,
+.imageSafari:after {
+  content: "";
+  width: auto;
+  height: 50px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.imageChartExample:before,
+.imageTrackNo:before,
+.imageTrack:before,
+.imageLogoUsageBad:before,
+.imageLogoUsageCorrect:before,
+.imageLogoUsage:after {
+  background-position: left;
+}
+
+.imageEdge:after {
+  background-image: url(../../static/edge.svg);
+}
+.imageChrome:after {
+  background-image: url(../../static/chrome.svg);
+}
+.imageFirefox:after {
+  background-image: url(../../static/firefox.svg);
+}
+.imageSafari:after {
+  background-image: url(../../static/safari.svg);
+}
+.imageTrackNo:before {
+  background-image: url(../../static/icons-truck-no.png);
+}
+.imageTrack:before {
+  background-image: url(../../static/icons-truck-yes.png);
+}
+.imageLogoUsageBad:before {
+  background-image: url(../../static/logo-usage-bad.png);
+}
+.imageLogoUsageCorrect:before {
+  background-image: url(../../static/logo-usage-correct.png);
+}
+.imageLogoUsage:after {
+  background-image: url(../../static/logo-usage.png);
+  width: auto;
+  height: 160px;
+}
+.imageChartExample:before {
+  background-image: url(../../static/chart-example.png);
+  width: auto;
+  height: 260px;
+}
+
 .codeTypePicker {
   margin-bottom: 20px;
 }
@@ -28,7 +117,7 @@ $example-padding: 10px;
   background-color: #ecf0f1;
 }
 
-:global(.dark-theme) {
+.dark-theme {
   .exampleCode {
     background-color: #444;
   }

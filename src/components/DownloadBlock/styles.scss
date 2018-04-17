@@ -1,0 +1,48 @@
+.pageHeader {
+  margin-top: 40px !important;
+  margin-bottom: 30px !important;
+}
+
+.downloadFile {
+  margin: 0 10px 10px 0;
+  border: 1px solid #dcdcdc;
+  width: 200px;
+  border-radius: 4px;
+
+  .downloadImage {
+    line-height: 150px;
+    text-align: center;
+
+    img {
+      width: 80px;
+      vertical-align: middle;
+    }
+  }
+
+  .downloadName {
+    border-top: 1px solid #dcdcdc;
+    height: 50px;
+
+    a {
+      color: #333;
+
+      &:hover {
+        background-color: #eee;
+      }
+    }
+
+    .md-24 {
+      font-size: 24px;
+    }
+  }
+}
+
+:global(.dark-theme) {
+  .downloadFile .downloadName a {
+    color: white;
+
+    &:hover {
+      background-color: #555;
+    }
+  }
+}

@@ -1,9 +1,10 @@
 
-<section class="hero-primary">
+<div class="home">
+<div class="hero-primary">
 
 # Think big.
 
-</section>
+</div>
 
 <section class="hero-secondary">
 
@@ -108,7 +109,7 @@ The number of different views should be kept to a minimum. The level of content 
 
 <div class="col-md">
 
-### <span class="text-bhp-orange-1"><i class="material-icons">mode_edit</i> For Designers</span>
+### <span class="text-bhp-orange-1"><i class="fas fa-pencil-alt"></i> For Designers</span>
 
 ##### Consistency
 
@@ -134,7 +135,7 @@ Continual support through guidance.
 
 <div class="col-md">
 
-### <span class="text-bhp-orange-1"><i class="material-icons md-36 md-top">settings_ethernet</i> For Developers</span>
+### <span class="text-bhp-orange-1"><i class="fas fa-code "></i> For Developers</span>
 
 ##### Consistency
 
@@ -163,3 +164,4 @@ Leave code in a better state than you found it.
 </div>
 
 </section>
+</div>

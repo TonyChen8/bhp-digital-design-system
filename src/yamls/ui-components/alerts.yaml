@@ -1,0 +1,124 @@
+title: Alerts
+category: UI components
+preText: |
+  Alerts are used to call the user's attention to some piece of information, such as a successful completion of a task or an internal system error. The type of alert used (success, info, warning or danger) will depend on the information in the alert. 
+
+  **Tips**: keep the message short, use plain and simple language. Avoid tech-speak and above all never scare the users. Don’t state the obvious (like "an error has occured") and never assume the users know what you are talking about. Keep it in-brand and use language consistently. The best alerts messages are short, positive and plain.
+examples:
+  - title: Usage
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { Alert } from 'reactstrap';
+
+      const Example = () => {
+        return (
+          <Alert color="success">
+            <i className="fas fa-check md-18">done</i>
+            <strong>Success!</strong> A copy of your selected purchase orders has been
+            sent to your customers.
+          </Alert>
+        );
+      };
+
+      export default Example;
+    html: |
+      <div class="alert alert-success">
+        <i class="fas fa-check md-18"></i>
+        <strong>Success!</strong> A copy of your selected purchase orders has been
+        sent to your customers.
+      </div>
+
+    angular: |
+      <BHPAlert color="success">
+        <i class="fas fa-check md-18"></i>
+        <strong>Success!</strong> A copy of your selected purchase orders has been sent to your customers.
+      </BHPAlert>
+
+  - title: "Variations: types and inline"
+    subTitle: Light theme
+    react: |
+      import React from 'react';
+      import { Alert } from 'reactstrap';
+
+      const Example = () => {
+        return (
+          <div>
+            <Alert color="primary">
+              <i className="fas fa-star md-18"></i>
+              <strong>Primary!</strong> This is a primary message. We really want your
+              attention. <a className="alert-link" href="https://www.bhp.com">This is a link.</a>
+            </Alert>
+            <Alert color="success">
+              <i className="fas fa-check md-18"></i>
+              <strong>Success!</strong> A copy of your selected purchase orders has been
+              sent to your customers.
+            </Alert>
+            <Alert color="info">
+              <i className="fas fa-info-circle md-18"></i>
+              <strong>Info!</strong> This is an info message. We have stuff for you.
+              <a className="alert-link" href="https://www.bhp.com">This is a link.</a>
+            </Alert>
+            <Alert color="warning">
+              <i className="fas fa-exclamation-triangle md-18"></i>
+              <strong>Warning!</strong> This is a warning message. We need your attention.
+            </Alert>
+            <Alert color="danger">
+              <i className="fas fa-exclamation-circle md-18"></i>
+              <strong>Danger!</strong> This is a danger message.
+              <a className="alert-link" href="https://www.bhp.com">This is a link.</a>
+            </Alert>
+          </div>
+        );
+      };
+
+      export default Example;
+    html: |
+      <div class="alert alert-primary">
+        <i class="fas fa-star md-18"></i>
+        <strong>Primary!</strong> This is a primary message. We really want your
+        attention. <a class="alert-link" href="https://www.bhp.com">This is a link.</a>
+      </div>
+      <div class="alert alert-success">
+        <i class="fas fa-check md-18"></i>
+        <strong>Success!</strong> A copy of your selected purchase orders has been
+        sent to your customers.
+      </div>
+      <div class="alert alert-info">
+        <i class="fas fa-info-circle md-18"></i>
+        <strong>Info!</strong> This is an info message. We have stuff for you.
+        <a class="alert-link" href="https://www.bhp.com">This is a link.</a>
+      </div>
+      <div class="alert alert-warning">
+        <i class="fas fa-exclamation-triangle md-18"></i>
+        <strong>Warning!</strong> This is a warning message. We need your attention.
+      </div>
+      <div class="alert alert-danger">
+        <i class="fas fa-exclamation-circle md-18"></i>
+        <strong>Danger!</strong> This is a danger message.
+        <a class="alert-link" href="https://www.bhp.com">This is a link.</a>
+      </div>
+
+    angular: |
+      <BHPAlert color="primary">
+        <i class="fas fa-star md-18"></i>
+        <strong>Primary!</strong> This is a primary message. We really want your
+      </BHPAlert>
+      <BHPAlert color="success">
+        <i class="fas fa-check md-18"></i>
+        <strong>Success!</strong> A copy of your selected purchase orders has been sent to your customers.
+      </BHPAlert>
+      <BHPAlert color="info">
+        <i class="fas fa-info-circle md-18"></i>
+        <strong>Info!</strong> This is an info message. We have stuff for you.
+        <a class="alert-link" href="https://www.bhp.com">This is a link.</a>
+      </BHPAlert>
+      <BHPAlert color="warning">
+        <i class="fas fa-exclamation-triangle md-18"></i>
+        <strong>Warning!</strong> This is a warning message. We need your attention.
+      </BHPAlert>
+      <BHPAlert color="danger">
+        <i class="fas fa-exclamation-circle md-18"></i>
+        <strong>Danger!</strong> This is a danger message.
+        <a class="alert-link" href="https://www.bhp.com">This is a link.</a>
+      </BHPAlert>

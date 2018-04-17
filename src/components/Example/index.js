@@ -2,53 +2,92 @@ import React, { Component } from "react";
 import "./styles.css";
 import Yaml2Js from "js-yaml";
 import classnames from "classnames";
-import { getFile, asyncComponent, getPrefixedUrl } from "../Commons/helper";
-
+import { getFile, asyncComponent } from "../Commons/helper";
 import { Nav, NavItem, NavLink } from "reactstrap";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import Remarkable from "remarkable";
 
-const codeTypes = [
-  { type: "react", display: "React" },
-  { type: "html", display: "HTML" },
-  { type: "angular", display: "Angular" },
-  { type: "css", display: "CSS" }
-];
+const md = new Remarkable({
+  html: true, // Enable HTML tags in source
+  xhtmlOut: false, // Use '/' to close single tags (<br />)
+  breaks: false, // Convert '\n' in paragraphs into <br>
+  linkify: false, // Autoconvert URL-like text to links
+
+  // Enable some language-neutral replacement + quotes beautification
+  typographer: false
+});
+
+const codeTypes = {
+  react: "React",
+  html: "HTML",
+  angular: "Angular",
+  css: "CSS"
+};
 
 export default class Home extends Component {
   constructor(props) {
     super(props);
+    let { type } = props.config;
     this.state = {
-      html: "",
+      yaml: "",
+      htmls: [],
       error: null,
-      activeTab: codeTypes[0],
+      activeTab: type && codeTypes[type] ? type : "react",
       types: [],
-      AsyncReactExample: null
+      AsyncReactExample: [],
+      AsyncReactScript: []
     };
-    this.toggle = this.toggle.bind(this);
+    this.toggleTab = this.toggleTab.bind(this);
   }
 
   componentDidMount() {
-    let instance = this;
-    let { yaml, components } = this.props.config;
-console.log(yaml, components)
+    let { type, yaml, components, scripts } = this.props.config;
+    // read yaml file content
     getFile(yaml).then(text => {
       try {
         let doc = Yaml2Js.safeLoad(text);
         let types = [];
         if (doc.examples && doc.examples.length > 0) {
-          for (let index = 0; index < codeTypes.length; index++) {
-            if (doc.examples[0].hasOwnProperty(codeTypes[index].type)) {
-              types.push(codeTypes[index]);
+          for (let key in codeTypes) {
+            if (doc.examples[0].hasOwnProperty(key)) {
+              types.push(key);
             }
           }
         }
 
-        instance.setState({ html: doc, types: types });
+        this.setState({ yaml: doc, types: types });
       } catch (e) {
-        instance.setState({ html: null, error: e });
-        console.log(e);
+        this.setState({ yaml: null, error: e });
+        console.error(e);
       }
     });
 
+    // if it is html, read raw html
+    if (type === "html") {
+      let htmlPaths = [];
+
+      //resolve all html paths
+      Promise.all(components).then(
+        paths => {
+          htmlPaths = paths.map(path => getFile(path));
+          // get all htmls raw data
+          Promise.all(htmlPaths).then(
+            htmls => {
+              // update UI
+              this.setState({ htmls: htmls });
+            },
+            error => {
+              this.setState({ error: error });
+            }
+          );
+        },
+        error => {
+          this.setState({ error: error });
+        }
+      );
+    }
+
+    // react components
     let asyncComponents = [];
     for (let i in components) {
       asyncComponents.push(asyncComponent(() => components[i]));
@@ -56,9 +95,18 @@ console.log(yaml, components)
     this.setState({
       AsyncReactExample: asyncComponents
     });
+
+    // react scripts
+    let asyncScripts = [];
+    for (let i in scripts) {
+      asyncScripts.push(asyncComponent(() => scripts[i]));
+    }
+    this.setState({
+      AsyncReactScript: asyncScripts
+    });
   }
 
-  toggle(codeType) {
+  toggleTab(codeType) {
     if (this.state.activeTab !== codeType) {
       this.setState({
         activeTab: codeType
@@ -67,28 +115,44 @@ console.log(yaml, components)
   }
 
   render() {
-    const { html, types, activeTab, AsyncReactExample } = this.state;
-    if (!html) {
-      return <div dangerouslySetInnerHTML={{ __html: this.state.error }} />;
+    const {
+      htmls,
+      yaml,
+      types,
+      activeTab,
+      AsyncReactExample,
+      AsyncReactScript,
+      error
+    } = this.state;
+    if (error) {
+      return <div dangerouslySetInnerHTML={{ __html: error }} />;
     }
 
+    const examples = yaml.examples
+      ? Array.isArray(yaml.examples) ? yaml.examples : [yaml.examples]
+      : null;
+
     return (
-      <div>
-        <div className="container">
-          {html.title && <h3 className="pageHeader">{html.title}</h3>}
-          {html.preText && <p>{html.preText}</p>}
-          {types.length > 0 && (
+      <div className="markdown">
+        <section>
+          {yaml.title && <h3 className="pageHeader">{yaml.title}</h3>}
+          {yaml.preText && (
+            <div
+              dangerouslySetInnerHTML={{ __html: md.render(yaml.preText) }}
+            />
+          )}
+          {types.length > 1 && (
             <div className="codeTypePicker">
               <Nav tabs>
                 {types.map((codeType, index) => (
                   <NavItem key={index}>
                     <NavLink
-                      onClick={() => this.toggle(codeType)}
+                      onClick={() => this.toggleTab(codeType)}
                       className={classnames({
                         active: this.state.activeTab === codeType
                       })}
                     >
-                      {codeType.display}
+                      {codeTypes[codeType]}
                     </NavLink>
                   </NavItem>
                 ))}
@@ -96,42 +160,68 @@ console.log(yaml, components)
             </div>
           )}
 
-          {html.examples &&
-            html.examples.map((example, index) => {
+          {examples &&
+            examples.map((example, index) => {
               let Example = null;
-              console.log(AsyncReactExample[0]);
+              let Script = null;
+
               return (
                 <div key={index}>
                   {index > 0 && <hr />}
                   {example.title && (
                     <h4 className="h4-light">{example.title}</h4>
                   )}
+
                   {example.introduction && <p>{example.introduction}</p>}
-                  <div className="exampleDisplay">
-                    {example.subTitle && (
-                      <div className="exampleSubTitle">{example.subTitle}</div>
-                    )}
 
-                    <div className="exampleHtml">
-                      {AsyncReactExample &&
-                        (Example = AsyncReactExample[index]) && <Example />}
-                    </div>
+                  {AsyncReactScript.length > 0 &&
+                    AsyncReactScript[index] &&
+                    (Script = AsyncReactScript[index]) && <Script />}
 
-                    <div className="exampleCode">
-                      <pre>
-                        <code>{example[activeTab.type]}</code>
-                      </pre>
-                      <div className="copyButton">
-                        <button className="btn btn-outline-secondary">
-                          Copy
-                        </button>
+                  {(AsyncReactExample.length > 0 || htmls.length > 0) && (
+                    <div className="exampleDisplay">
+                      {example.subTitle && (
+                        <div className="exampleSubTitle">
+                          {example.subTitle}
+                        </div>
+                      )}
+
+                      <div className="exampleHtml">
+                        {htmls.length > 0 &&
+                          htmls[index] && (
+                            <div
+                              dangerouslySetInnerHTML={{ __html: htmls[index] }}
+                            />
+                          )}
+                        {AsyncReactExample.length > 0 &&
+                          AsyncReactExample[index] &&
+                          (Example = AsyncReactExample[index]) && <Example />}
+                      </div>
+
+                      <div className="exampleCode">
+                        <pre>
+                          <code>{example[activeTab]}</code>
+                        </pre>
+                        <div className="copyButton">
+                          <CopyToClipboard text={example[activeTab]}>
+                            <button className="btn btn-outline-secondary">
+                              Copy
+                            </button>
+                          </CopyToClipboard>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               );
             })}
-        </div>
+
+          {yaml.postText && (
+            <div
+              dangerouslySetInnerHTML={{ __html: md.render(yaml.postText) }}
+            />
+          )}
+        </section>
       </div>
     );
   }
