@@ -1,0 +1,2 @@
+webpackJsonp([68],{237:function(e,a,t){"use strict";Object.defineProperty(a,"__esModule",{value:!0});var c=t(0),l=t.n(c),r=t(15),n=function(){return l.a.createElement("div",null,l.a.createElement(r.Badge,{color:"primary"},"4"),l.a.createElement(r.Badge,{color:"primary"},l.a.createElement("i",{className:"fas fa-star md-12 align-middle"}),"99"),l.a.createElement(r.Badge,{color:"success"},l.a.createElement("i",{className:"fas fa-check md-12 align-middle"}),"14"))};a.default=n}});
+//# sourceMappingURL=68.d141e28c.chunk.js.map

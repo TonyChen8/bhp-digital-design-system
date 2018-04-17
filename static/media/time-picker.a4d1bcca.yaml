@@ -1,0 +1,54 @@
+title: Time picker
+category: UI components
+preText: |
+  A dialog picker used to select a time in an application.
+
+  We use 24 hour time for accessibility. If the minutes are not specified, the
+  default displayed value is zero.
+
+  It is a custom-themed version of
+  [rc-time-picker](https://github.com/react-component/time-picker), so the
+  documentation there may be helpful.
+examples:
+  - title: Usage
+    introduction: |
+      Below is an example of the time picker, click in the input to see the
+      time picker dropdown.
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import moment from 'moment';
+      import TimePicker from 'rc-time-picker';
+
+      class ExampleTimePicker extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            value: moment(),
+            open: false
+          };
+        }
+
+        render() {
+          const { value, open } = this.state;
+          return (
+            <TimePicker
+              open={open}
+              value={value}
+              onChange={value => this.setState({ value })}
+              onOpen={open => this.setState({ open: true })}
+              onClose={open => this.setState({ open: false })}
+              {...this.props}
+            />
+          );
+        }
+      }
+
+      export default () => (
+        <div>
+          <ExampleTimePicker />
+          <ExampleTimePicker disabled />
+          <ExampleTimePicker allowEmpty={false} />
+          <ExampleTimePicker showSecond={false} />
+        </div>
+      );

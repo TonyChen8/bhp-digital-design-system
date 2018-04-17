@@ -1,0 +1,251 @@
+title: Toggle switch
+category: UI components
+preText: |
+  The toggle switch represents a physical switch that allows users to turn things on or off. The use of primary colour (or alerts colours) in the ON state provides a clear visual feedback for user interaction with control.
+examples:
+  - title: Usage
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { ToggleSwitch } from 'bhp-ui-react';
+
+      class Example extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            on: [false, true]
+          };
+        }
+
+        toggle(index) {
+          this.setState(prevState => {
+            prevState.on[index] = !prevState.on[index];
+            return prevState;
+          });
+        }
+
+        render() {
+          return (
+            <div>
+              <ToggleSwitch on={this.state.on[0]} onClick={() => this.toggle(0)} />
+              <ToggleSwitch on={this.state.on[1]} onClick={() => this.toggle(1)} />
+            </div>
+          );
+        }
+      }
+
+      export default Example;
+    html: |
+      <div onclick="toggle(this)" class="toggle-switch">
+        <div class="toggle-switch-message-on">
+          YES
+        </div>
+        <div class="toggle-switch-toggler">
+        </div>
+        <div class="toggle-switch-message-off">
+          NO
+        </div>
+      </div>
+
+      <div onclick="toggle(this)" class="toggle-switch toggle-switch-on">
+        <div class="toggle-switch-message-on">
+          YES
+        </div>
+        <div class="toggle-switch-toggler">
+        </div>
+        <div class="toggle-switch-message-off">
+          NO
+        </div>
+      </div>
+      <script>
+        function toggle(element){
+            if($(element).length > 0){
+                $(element).hasClass("toggle-switch-on")
+                ? $(element).removeClass("toggle-switch-on")
+                : $(element).addClass("toggle-switch-on")
+            }
+        }
+      </script>
+
+    angular: |
+      <BHPSwitch [isOn]="false" switchClass="">
+        <div left>YES</div>
+        <div right>NO</div>
+      </BHPSwitch>
+      <BHPSwitch [isOn]="true" switchClass="">
+        <div left>YES</div>
+        <div right>NO</div>
+      </BHPSwitch>
+
+
+
+  - title: Variations
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { ToggleSwitch } from 'bhp-ui-react';
+
+      class Example extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            on: [false, true, true, true, true, true]
+          };
+        }
+
+        toggle(index) {
+          this.setState(prevState => {
+            prevState.on[index] = !prevState.on[index];
+            return prevState;
+          });
+        }
+
+        render() {
+          return (
+            <div>
+              <ToggleSwitch
+                color='primary'
+                onMessage='SÍ'
+                offMessage='NO'
+                on={this.state.on[0]}
+                onClick={() => this.toggle(0)}
+              />
+              <ToggleSwitch
+                color='primary'
+                onMessage='SÍ'
+                offMessage='NO'
+                on={this.state.on[1]}
+                onClick={() => this.toggle(1)}
+              />
+              <ToggleSwitch
+                color='info'
+                on={this.state.on[2]}
+                onClick={() => this.toggle(2)}
+              />
+              <ToggleSwitch
+                color='success'
+                on={this.state.on[3]}
+                onClick={() => this.toggle(3)}
+              />
+              <ToggleSwitch
+                color='danger'
+                on={this.state.on[4]}
+                onClick={() => this.toggle(4)}
+              />
+              <ToggleSwitch
+                color='warning'
+                on={this.state.on[5]}
+                onClick={() => this.toggle(5)}
+              />
+            </div>
+          );
+        }
+      }
+
+      export default Example;
+    html: |
+      <div onclick="toggle(this)" class="toggle-switch toggle-switch-primary">
+        <div class="toggle-switch-message-on">
+          SÍ
+        </div>
+        <div class="toggle-switch-toggler">
+        </div>
+        <div class="toggle-switch-message-off">
+          NO
+        </div>
+      </div>
+
+      <div onclick="toggle(this)" class="toggle-switch toggle-switch-primary toggle-switch-on">
+        <div class="toggle-switch-message-on">
+          SÍ
+        </div>
+        <div class="toggle-switch-toggler">
+        </div>
+        <div class="toggle-switch-message-off">
+          NO
+        </div>
+      </div>
+
+      <div onclick="toggle(this)" class="toggle-switch toggle-switch-info toggle-switch-on">
+        <div class="toggle-switch-message-on">
+          YES
+        </div>
+        <div class="toggle-switch-toggler">
+        </div>
+        <div class="toggle-switch-message-off">
+          NO
+        </div>
+      </div>
+
+      <div onclick="toggle(this)" class="toggle-switch toggle-switch-success toggle-switch-on">
+        <div class="toggle-switch-message-on">
+          YES
+        </div>
+        <div class="toggle-switch-toggler">
+        </div>
+        <div class="toggle-switch-message-off">
+          NO
+        </div>
+      </div>
+
+      <div onclick="toggle(this)" class="toggle-switch toggle-switch-danger toggle-switch-on">
+        <div class="toggle-switch-message-on">
+          YES
+        </div>
+        <div class="toggle-switch-toggler">
+        </div>
+        <div class="toggle-switch-message-off">
+          NO
+        </div>
+      </div>
+
+      <div onclick="toggle(this)" class="toggle-switch toggle-switch-warning toggle-switch-on">
+        <div class="toggle-switch-message-on">
+          YES
+        </div>
+        <div class="toggle-switch-toggler">
+        </div>
+        <div class="toggle-switch-message-off">
+          NO
+        </div>
+      </div>
+      <script>
+        function toggle(element){
+            if($(element).length > 0){
+                $(element).hasClass("toggle-switch-on")
+                ? $(element).removeClass("toggle-switch-on")
+                : $(element).addClass("toggle-switch-on")
+            }
+        }
+       </script>
+
+    angular: |
+      <BHPSwitch [isOn]="false" switchClass="toggle-switch-primary">
+        <div left>SÍ</div>
+        <div right>NO</div>
+      </BHPSwitch>
+
+      <BHPSwitch [isOn]="true" switchClass="toggle-switch-primary">
+        <div left>SÍ</div>
+        <div right>NO</div>
+      </BHPSwitch>
+
+      <BHPSwitch [isOn]="true" switchClass="toggle-switch-info">
+        <div left>YES</div>
+        <div right>NO</div>
+      </BHPSwitch>
+
+      <BHPSwitch [isOn]="true" switchClass="toggle-switch-success">
+        <div left>YES</div>
+        <div right>NO</div>
+      </BHPSwitch>
+
+      <BHPSwitch [isOn]="true" switchClass="toggle-switch-danger">
+        <div left>YES</div>
+        <div right>NO</div>
+      </BHPSwitch>
+
+      <BHPSwitch [isOn]="true" switchClass="toggle-switch-warning">
+        <div left>YES</div>
+        <div right>NO</div>
+      </BHPSwitch>

@@ -1,2 +1,0 @@
-webpackJsonp([60335399758886],{217:function(t,e){t.exports={data:{site:{siteMetadata:{title:"BHP Digital Design System"}}},layoutContext:{}}}});
-//# sourceMappingURL=path----e80e1f4c8b912e6e68fc.js.map

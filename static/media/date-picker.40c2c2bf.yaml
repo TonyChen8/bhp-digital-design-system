@@ -1,0 +1,54 @@
+title: Date picker
+category: UI components
+preText: |
+  A date picker is used to select a single date in an application. The selected
+  day is indicated by a filled square. The current day is indicated by a
+  different font weight (bold).
+
+  You must initialise your app with `import 'react-dates/initialize';` to use
+  this component.
+examples:
+  - title: Usage
+    introduction: |
+      Below is an example of the date picker, click in the input to see the
+      date picker dropdown.
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import moment from 'moment';
+      import { SingleDatePicker } from 'react-dates';
+      import "react-dates/initialize";
+
+
+      export default class Example extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            date: moment(),
+            focused: false
+          };
+        }
+
+        render() {
+          return (
+            <div>
+              <SingleDatePicker
+                date={this.state.date}
+                onDateChange={date => this.setState({ date })}
+                focused={this.state.focused}
+                numberOfMonths={1}
+                onFocusChange={({ focused }) => this.setState({ focused })}
+                hideKeyboardShortcutsPanel
+                customInputIcon={<i className="fas fa-calendar-alt md-18 align-middle"></i>}
+              />
+            </div>
+          );
+        }
+      }
+
+    angular-hide: |
+      <label>
+        Date
+        <input [owlDateTimeTrigger]="dt3" [owlDateTime]="dt3">
+        <owl-date-time [pickerType]="'calendar'" #dt3></owl-date-time>
+      </label>

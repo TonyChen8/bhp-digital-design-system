@@ -1,0 +1,24 @@
+title: Download legacy images
+category: download
+preText: |
+  Search our curated library of logos and icons that have been created for previous BHP Projects.
+
+examples:
+  - title:
+    script: |
+      import React from "react";
+      import { withTheme } from "bhp-ui-react";
+      import DownloadBlock from "../components/DownloadBlock";
+      import downloadFiles from "../components/DownloadBlock/config";
+
+      export default withTheme(({ theme }) => {
+        return (
+          <div className="d-flex flex-wrap">
+            {downloadFiles[theme.name].map(({ name, src }) => (
+              <DownloadBlock key={name} name={name} src={src} />
+            ))}
+          </div>
+        );
+      });
+
+

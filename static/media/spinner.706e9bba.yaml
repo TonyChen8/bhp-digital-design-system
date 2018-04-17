@@ -1,0 +1,72 @@
+title: Spinner
+category: UI components
+preText: |
+  A custom BHP spinner has been designed using BHP brand colours.
+examples:
+  - title: Usage
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { Spinner } from 'bhp-ui-react';
+
+      export default () => {
+        return (
+          <div>
+            <Spinner color='primary' />
+            <Spinner color='secondary' />
+          </div>
+        );
+      };
+    html: |
+      <div class="spinner spinner-primary">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="spinner spinner-secondary">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+    angular: |
+      <BHPSpinner color="primary" ></BHPSpinner>
+      <BHPSpinner color="secondary" ></BHPSpinner>
+
+  - title: Sizes
+    react: |
+      import React from 'react';
+      import { Spinner } from 'bhp-ui-react';
+
+      export default () => {
+        return (
+          <div>
+            <Spinner color='primary' size='lg' />
+            <Spinner color='primary' />
+            <Spinner color='primary' size='sm' />
+          </div>
+        );
+      };
+    html: |
+      <div class="spinner spinner-primary spinner-lg">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <div class="spinner spinner-primary">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <div class="spinner spinner-primary spinner-sm">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+    angular: |
+      <BHPSpinner color="primary" size="lg" ></BHPSpinner>
+      <BHPSpinner color="primary" size="" ></BHPSpinner>
+      <BHPSpinner color="primary" size="sm" ></BHPSpinner>

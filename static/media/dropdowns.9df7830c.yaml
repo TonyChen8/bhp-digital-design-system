@@ -1,0 +1,110 @@
+title: Dropdowns
+category: UI components
+preText: |
+  This component presents a dropdown that is controlled by a toggle button. It is compatible with screen readers and keyboard navigation.
+examples:
+  - title: Usage
+    introduction: The state of the component can be managed externally via the `isOpen` property.
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+
+      export default class Example extends React.Component {
+        constructor(props) {
+          super(props);
+
+          this.toggle = this.toggle.bind(this);
+          this.state = {
+            dropdownOpen: false
+          };
+        }
+
+        toggle() {
+          this.setState({
+            dropdownOpen: !this.state.dropdownOpen
+          });
+        }
+
+        render() {
+          return (
+            <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+              <DropdownToggle caret>
+                Dropdown button
+              </DropdownToggle>
+              <DropdownMenu>
+                <DropdownItem>Action</DropdownItem>
+                <DropdownItem>Another Action</DropdownItem>
+                <DropdownItem>Something else here</DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
+          );
+        }
+      }
+
+    angular: |
+      <div style="height:200px">
+        <BHPDropdown #drop containerClass="btn-group" menuClass="" [isOpen]="true">
+          <Button dropdownToggle (click)="drop.toggle()" btnColor="primary" type="button" class="btn dropdown-toggle">
+            Button dropdown
+            <span class="caret"></span>
+          </Button>
+            <li role="menuitem">
+              <a class="dropdown-item" href="#">Action</a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item" href="#">Another action</a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+            <li class="divider dropdown-divider"></li>
+            <li role="menuitem">
+              <a class="dropdown-item" href="#">Separated link</a>
+            </li>
+        </BHPDropdown>
+      </div>
+
+  - title: Uncontrolled component
+    introduction: The uncontrolled variant of the component manages its own state.
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+
+      export default function Example () {
+        return (
+          <UncontrolledDropdown>
+            <DropdownToggle caret>
+              Dropdown button
+            </DropdownToggle>
+            <DropdownMenu>
+              <DropdownItem>Action</DropdownItem>
+              <DropdownItem>Another Action</DropdownItem>
+              <DropdownItem>Something else here</DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>
+        );
+      }
+    html: |
+      <div class="dropdown container-size">
+        <button
+          class="btn btn-secondary dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+    css: |
+      .container-size{
+        height: 150px;
+      }

@@ -1,0 +1,70 @@
+title: Typography
+category: Foundation
+preText: |
+  Arial is BHP's everyday font. As a system font, Arial ensures consistency when distributing files across workstations and platforms. Arial has been installed as our default across all desktop computers. If you require further details regarding this font for your agency/provider please contact your local Corporate Affairs team or email Corporate Brand.
+
+  The font Graphik Web is accepted as the secondary option for some designs. Its use and styling similarly follows the primary font, Arial. Typical use would be for emphasis, special design or captions.
+
+  The default body text is 13px. For optimum reading length, the paragraph-width is capped at 694px.
+
+  Tips: Too many type sizes and styles at once can disturb any layout. A typographic scale has a limited set of type sizes that work well together along with the layout grid. Avoid italic text as it impedes the accessibility of your design.
+
+  White text on dark backgrounds should have an opacity of 100%.
+examples:
+  - html: |
+      <h1>Heading 1, bold 42</h1>
+      <h2 class="text-bhp-orange-1">Heading 2, bold 32</h2>
+      <h3>Heading 3, bold 30</h3>
+      <h4>Heading 4, bold 22</h4>
+      <h5>HEADING 5, <span class="text-lowercase">bold 14 uppercase</span></h5>
+    actualHtml: |
+      <div class="p-3">
+        <h1>Heading 1, bold 42</h1>
+        <h2 class="text-bhp-orange-1">Heading 2, bold 32</h2>
+        <h3>Heading 3, bold 30</h3>
+        <h4>Heading 4, bold 22</h4>
+        <h5>HEADING 5, <span class="text-lowercase">bold 14 uppercase</span></h5>
+      </div>
+  - html: |
+      <p class="lead">
+        Body text large / <a href="https://www.bhp.com">Link text large</a><br />
+      </p>
+    actualHtml: |
+      <p class="lead">
+        Body text large / <a href="https://www.bhp.com">Link text large</a><br />
+      </p>
+  - html: |
+      <p>
+        Body text / <a href="https://www.bhp.com">link text</a>
+        - this is the default text size - 13px/18px #333333<br />
+        Note: Body text used in tables can be reduced to 11px in some cases.
+      </p>
+  - html: |
+      <p class="small">
+        Small text - this is the default text size for notes, legal texts...
+        - 11px/15px #979797 @50% opacity<br />
+        Lorem ipsum dolor sit amet, quando quodsi electram ei has, ne alii inermis
+        neglegentur sea.
+        <strong>An sea quodsi mentitum vivendum, ferri sadipscing pri ne.</strong>
+      </p>
+  - title: Text colours
+    introduction: 'Texts will generally use four colour variations:'
+    html: |
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2 p-2">Default colour</div>
+          <div class="col-md-2 p-2">#333</div>
+        </div>
+        <div class="row text-bhp-orange-1">
+          <div class="col-md-2 p-2">Primary colour</div>
+          <div class="col-md-2 p-2">#dd5900</div>
+        </div>
+        <div class="row text-white">
+          <div class="col-md-2 p-2 bg-bhp-orange-1">Negative colour</div>
+          <div class="col-md-2 p-2 bg-bhp-orange-1">#fff</div>
+        </div>
+        <div class="row text-muted">
+          <div class="col-md-2 p-2">Notes/Disabled colour</div>
+          <div class="col-md-2 p-2">#333 @50% opacity</div>
+        </div>
+      </div>

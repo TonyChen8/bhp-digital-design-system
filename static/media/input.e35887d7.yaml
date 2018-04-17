@@ -1,0 +1,125 @@
+title: Input
+category: UI components
+preText: |
+  Provides a simple, standardized input component which enforces the BHP styling. The input will allow the ability to show a tooltip next to the label and more importantly display any validation errors with the BHP styling. Text fields typically reside in forms but can appear in other places, like dialog boxes and search. Text fields validate input, help users fix errors, autocomplete words, and provide suggestions. They are generally single-line inputs.
+examples:
+  - title: Text input
+    introduction: |
+      Bootstrap supports all the HTML5 input types: text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, and color.
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+
+      export default () => (
+        <FormGroup>
+          <Label for="exampleInput1">Default text input</Label>
+          <Input type="text" id="exampleInput1" placeholder="Enter text" />
+        </FormGroup>
+      );
+    html: |
+      <div class="form-group">
+        <label for="exampleInput1">Default text input</label>
+        <input type="text" class="form-control" id="exampleInput1" placeholder="Enter text">
+      </div>
+    angular: |
+      <div class="form-group">
+        <label for="exampleInput1">Default text input</label>
+        <input [(ngModel)]="input" type="text" class="form-control" id="exampleInput1" placeholder="Enter text">
+      </div>
+      <div>Text is: {{input}}</div>
+
+  - title: Variations
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { Button, Form, FormGroup, Label, Input, FormText, FormFeedback } from 'reactstrap';
+
+      export default () => (
+        <div>
+          <FormGroup>
+            <Label for="exampleInput2">Default text input</Label>
+            <Input
+              type="text"
+              id="exampleInput2"
+              placeholder="Enter text"
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label for="exampleInput3">Disabled</Label>
+            <Input
+              type="text"
+              id="exampleInput4"
+              placeholder="Enter text"
+              disabled
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label for="exampleInput3">Text input with an error</Label>
+            <Input
+              type="text"
+              id="exampleInput4"
+              placeholder="Enter text"
+              valid={false}
+            />
+            <FormFeedback>
+              This is a system message.
+            </FormFeedback>
+          </FormGroup>
+        </div>
+      );
+    html: |
+      <div class="form-group">
+        <label for="exampleInput2">Default text input</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInput2"
+          placeholder="Enter text"
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInput3">Disabled</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInput4"
+          placeholder="Enter text"
+          disabled
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInput3">Text input with an error</label>
+        <input
+          type="text"
+          class="form-control is-invalid"
+          id="exampleInput4"
+          placeholder="Enter text"
+        />
+        <div class="invalid-feedback">
+          This is a system message.
+        </div>
+      </div>
+    angular: |
+      <div class="form-group">
+        <div class="form-group">
+          <label for="exampleInput2">Default text input</label>
+          <input [(ngModel)]="input" type="text" class="form-control" id="exampleInput2" placeholder="Enter text" />
+          <div>Text is: {{input}}</div>
+        </div>
+        <div class="form-group">
+          <label for="exampleInput3">Disabled</label>
+          <input [(ngModel)]="inputDisable" type="text" class="form-control" id="exampleInput4" placeholder="Enter text" disabled />
+        </div>
+        <div class="form-group">
+          <label for="exampleInput3">Text input with an error</label>
+          <input [(ngModel)]="inputError" type="text" class="form-control" [ngClass]="{'is-invalid': !inputError || inputError.length <= 0}" id="exampleInput4" placeholder="Enter text" />
+          <div *ngIf="!inputError || inputError.length <= 0" class="invalid-feedback">
+            This is a system message.
+          </div>
+          <div>Text is: {{inputError}} </div>
+        </div>
+      </div>
+
+
+

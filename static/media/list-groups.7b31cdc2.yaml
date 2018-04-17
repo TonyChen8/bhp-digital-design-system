@@ -1,0 +1,42 @@
+title: List groups
+category: UI components
+examples:
+  - title: Usage
+    subTitle: Example
+    react: |
+      import React from 'react';
+      import { ListGroup, ListGroupItem } from 'reactstrap';
+
+      const Example = () => {
+        return (
+          <ListGroup>
+            <ListGroupItem>Task list key</ListGroupItem>
+            <ListGroupItem>Task list key</ListGroupItem>
+            <ListGroupItem active>Task list key</ListGroupItem>
+            <ListGroupItem>Task list key</ListGroupItem>
+            <ListGroupItem>Task list key</ListGroupItem>
+          </ListGroup>
+        );
+      };
+
+      export default Example;
+    html: |
+      <ul class="list-group">
+        <li class="list-group-item">Task list key</li>
+        <li class="list-group-item">Task list key</li>
+        <li class="list-group-item active">Task list key</li>
+        <li class="list-group-item">Task list key</li>
+        <li class="list-group-item">Task list key</li>
+      </ul>
+    angular: |
+      <ListGroup [sources]=sources (userSelected)="select=$event"></ListGroup>
+      <p>selected: {{select.key}}</p>
+      <p>value: {{select.value}}</p>
+      <p>index: {{select.index}}</p>
+    component: |
+      this.sources = [
+        { key: "Tom", value: 1 },
+        { key: "John", value: 2 },
+        { key: "Jim", value: 3 }
+      ];
+      this.select={ key: "", value: "", index:"" };

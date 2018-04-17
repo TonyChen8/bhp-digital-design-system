@@ -1,0 +1,2 @@
+webpackJsonp([59],{246:function(e,t,c){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a=c(0),n=c.n(a),r=c(15),u=function(){return n.a.createElement(r.FormGroup,{check:!0},n.a.createElement(r.Label,{check:!0},n.a.createElement(r.Input,{type:"checkbox"}),"Default checkbox"))};t.default=u}});
+//# sourceMappingURL=59.7c0366ce.chunk.js.map
