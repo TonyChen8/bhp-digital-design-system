@@ -1,16 +1,11 @@
 import React, { Component } from "react";
-
-import Helmet from "react-helmet";
-import {
-  ThemeManager,
-  withTheme,
-  lightTheme,
-  darkTheme,
-  BHPIcon
-} from "bhp-ui-react";
 import { Link } from "react-router-dom";
-import { getPrefixedUrl } from "../Commons/helper";
 import { Label, Input } from "reactstrap";
+
+import { BHPIcon } from "bhp-ui-react";
+
+import { getPrefixedUrl } from "../Commons/helper";
+import ThemeManager, { Themes } from "../ThemeManager";
 import SideBar from "../Sidebar";
 import Breadcrumbs from "../Breadcrumbs";
 
@@ -23,25 +18,31 @@ const gitHubLink = [
   { url: "https://github.com/BHP-DevHub/bhp-ui-html", name: "Html" }
 ];
 
-const TemplateWrapper = withTheme(
-  ({
-    componentInstance,
-    children,
-    data,
-    theme,
-    themes,
-    selectTheme,
-    currentRoute
-  }) => (
-    <div>
-      <Helmet htmlAttributes={{ class: theme.className }} />
+export default class Layout extends Component {
+  constructor(props) {
+    super(props);
+    this.themeIndex = 0;
 
+    this.state = {
+      isSideBarOpen: false,
+      theme: Themes[this.themeIndex]
+    };
+  }
+
+  toggleSidebar() {
+    this.setState({ isSideBarOpen: !this.state.isSideBarOpen });
+  }
+
+  render() {
+    const { pathname } = this.props;
+    const { isSideBarOpen, theme } = this.state;
+    return (
       <div className={"mainContainer"}>
         <SideBar
           className="sideBar"
-          currentRoute={currentRoute}
-          isSideBarOpen={componentInstance.state.isSideBarOpen}
-          onToggle={componentInstance.toggleSidebar.bind(componentInstance)}
+          currentRoute={pathname}
+          isSideBarOpen={isSideBarOpen}
+          onToggle={this.toggleSidebar.bind(this)}
         />
         <div className={"mainBody"}>
           <div className="headerContainer">
@@ -52,9 +53,7 @@ const TemplateWrapper = withTheme(
                   <BHPIcon
                     className="fas fa-bars align-middle expandBtn"
                     size={24}
-                    onClick={componentInstance.toggleSidebar.bind(
-                      componentInstance
-                    )}
+                    onClick={this.toggleSidebar.bind(this)}
                   />
 
                   <h1>
@@ -91,19 +90,24 @@ const TemplateWrapper = withTheme(
                     <Label for="theme-name">Theme:</Label>
 
                     <div className="pl-2 pr-4">
-                      <Input
-                        className="d-inline-block"
-                        name="theme-name"
-                        type="select"
-                        value={theme.name}
-                        onChange={event => selectTheme(event.target.value)}
-                      >
-                        {themes.map(theme => (
-                          <option key={theme.name} value={theme.name}>
-                            {theme.label}
-                          </option>
-                        ))}
-                      </Input>
+                      <ThemeManager theme={theme}>
+                        <Input
+                          className="d-inline-block"
+                          name="theme-name"
+                          type="select"
+                          value={this.themeIndex}
+                          onChange={event => {
+                            this.themeIndex = event.target.value;
+                            this.setState({ theme: Themes[this.themeIndex] });
+                          }}
+                        >
+                          {Themes.map((optionTheme, index) => (
+                            <option key={optionTheme.name} value={index}>
+                              {optionTheme.label}
+                            </option>
+                          ))}
+                        </Input>
+                      </ThemeManager>
                     </div>
                   </div>
 
@@ -119,49 +123,18 @@ const TemplateWrapper = withTheme(
               category="Foundation"
               slug="foundation/ui-colours"
               title="UI Colours"
-              currentRoute={currentRoute}
+              currentRoute={pathname}
             />
           </div>
           <div className={"bodyContainer"}>
-            {currentRoute === getPrefixedUrl("/") ? (
-              componentInstance.props.children
+            {pathname === getPrefixedUrl("/") ? (
+              this.props.children
             ) : (
-              <div className="container">
-                {componentInstance.props.children}
-              </div>
+              <div className="container">{this.props.children}</div>
             )}
           </div>
         </div>
       </div>
-    </div>
-  )
-);
-
-export default class Layout extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      isSideBarOpen: false
-    };
-  }
-
-  toggleSidebar() {
-    this.setState({ isSideBarOpen: !this.state.isSideBarOpen });
-  }
-
-  render() {
-    return (
-      <ThemeManager
-        themes={[lightTheme, darkTheme]}
-        initialThemeName={lightTheme.name}
-      >
-        <TemplateWrapper
-          componentInstance={this}
-          currentRoute={this.props.pathname}
-          {...this.props}
-        />
-      </ThemeManager>
     );
   }
 }

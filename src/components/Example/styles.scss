@@ -1,4 +1,6 @@
-$example-border-color: #c1c1c1;
+@import "../../styles/colors.scss";
+@import "bhp-ui/scss/themes/dark/dark-colors";
+
 $example-padding: 10px;
 
 .markdown {
@@ -13,9 +15,9 @@ $example-padding: 10px;
   }
 
   pre {
-    border: 1px solid #c1c1c1;
+    border: 1px solid $gray-200;
     padding: 10px;
-    background-color: #ecf0f1;
+    background-color: $gray-100;
   }
 
   .exampleCode {
@@ -24,6 +26,8 @@ $example-padding: 10px;
     }
   }
 }
+
+
 
 // all of the images are used in yaml should be build and pack by webpack,
 // so we add them as styles to compile them
@@ -95,7 +99,7 @@ $example-padding: 10px;
 }
 
 .exampleDisplay {
-  border: 1px solid $example-border-color;
+  border: 1px solid $gray-200;
 }
 
 .exampleSubTitle {
@@ -111,20 +115,25 @@ $example-padding: 10px;
 
 .exampleCode {
   position: relative;
-  border-top: 1px solid $example-border-color;
+  border-top: 1px solid $gray-200;
   margin: 0;
   padding: $example-padding;
   background-color: #ecf0f1;
-}
-
-.dark-theme {
-  .exampleCode {
-    background-color: #444;
-  }
 }
 
 .copyButton {
   position: absolute;
   top: $example-padding;
   right: $example-padding;
+}
+
+.dark-theme {
+  $color-bg-pre: #444;
+  .markdown {
+  pre,
+  .exampleCode {
+    background-color: $color-bg-pre;
+    color: $bhp_grey_4;
+  }
+}
 }

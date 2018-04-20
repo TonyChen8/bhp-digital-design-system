@@ -1,7 +1,7 @@
-@import "../../styles/base-light.scss";
+@import "../../styles/colors.scss";
 
 .markdown {
-  :global(.page-header) {
+  .page-header {
     margin-bottom: 30px;
   }
 
@@ -16,7 +16,7 @@
     }
   }
 
-  :global(.hero-primary) {
+  .hero-primary {
     padding: 0;
     text-align: center;
     color: white;
@@ -30,9 +30,9 @@
     }
   }
 
-  :global(.hero-secondary) {
+  .hero-secondary {
     padding: 60px 0;
-    background-color: theme-color("bhp-orange-1");
+    background-color: $bhp_orange_1;
 
     h2 {
       font-size: 36px;
@@ -47,14 +47,15 @@
     }
   }
 
-  :global(.hero-tertiary) {
-    background-color: #f7f6f2;
+  .hero-tertiary {
+    background-color: $gray-200;
   }
 
-  :global(.hero-quaternary) {
+  .hero-quaternary {
     h5 {
       margin: 20px 0 3px 0;
       color: #9f9f9f;
+      text-transform: uppercase;
     }
 
     p {
@@ -69,20 +70,31 @@
   }
 }
 
-:global(.dark-theme) .markdown {
-  :global(.hero-tertiary) {
-    background-color: #555;
-    color: white;
+.dark-theme {
+  $color-bg-hero-tertiary: #555;
+  $color-text-hero-tertiary: white;
+  .markdown {
+    .hero-tertiary {
+      background-color: $color-bg-hero-tertiary;
+      color: $color-text-hero-tertiary;
+    }
   }
+}
 
-  pre {
-    background-color: #444;
+.warm-theme {
+  $color-bg-hero-tertiary: $gray-200;
+  $color-text-hero-tertiary: "initial";
+  .markdown {
+    .hero-tertiary {
+      background-color: $color-bg-hero-tertiary;
+      color: $color-text-hero-tertiary;
+    }
   }
 }
 
 @media screen and (max-width: 480px) {
   .markdown {
-    :global(.hero-primary) {
+    .hero-primary {
       h1 {
         font-size: 48px;
       }

@@ -14,7 +14,7 @@ examples:
       const Example = () => {
         return (
           <Alert color="success">
-            <i className="fas fa-check md-18">done</i>
+            <i className="fas fa-check md-18"></i>
             <strong>Success!</strong> A copy of your selected purchase orders has been
             sent to your customers.
           </Alert>

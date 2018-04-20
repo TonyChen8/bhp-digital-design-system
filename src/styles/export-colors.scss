@@ -1,0 +1,19 @@
+@import "./colors.scss";
+@import "bhp-ui/scss/themes/dark/_dark-colors.scss";
+@import "bhp-ui/scss/themes/light/_light-colors.scss";
+@import "bhp-ui/scss/themes/warm/_warm-colors.scss";
+
+:export {
+  @each $item in $bhp-colors {
+   #{nth($item, 1)}: #{nth($item, 2)};
+  }
+  @each $item in $theme-colors {
+    #{nth($item, 1)}: #{nth($item, 2)};
+  }
+  @each $item in $colors {
+    #{nth($item, 1)}: #{nth($item, 2)};
+  }
+  @each $item in $grays {
+    gray-#{nth($item, 1)}: #{nth($item, 2)};
+  }
+}

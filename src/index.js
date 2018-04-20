@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import "./styles/root.css";
-import "./styles/index-light.css";
-import "./styles/index-dark.css";
+import "./styles/bhp-ui.css";
+import "./styles/index.css";
 
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';

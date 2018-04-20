@@ -1,6 +1,7 @@
 .pageHeader {
   margin-top: 40px !important;
   margin-bottom: 30px !important;
+  background-color: color("black");
 }
 
 .hexBox {
@@ -37,4 +38,73 @@
 .colourMixText {
   padding-left: 15px;
   line-height: 54px;
+}
+
+@import "bhp-ui/scss/themes/light/_light-colors.scss";
+
+@mixin other-props($color) {
+  @if (lightness($color) > 60) {
+    color: #000;
+    border: 1px solid $gray-300;
+  } @else {
+    color: #fff;
+    border: 1px solid $gray-500;
+  }
+}
+
+// shared colors
+@each $item in $bhp-colors {
+  .#{nth($item, 1)} {
+    background-color: nth($item, 2);
+    @include other-props(nth($item, 2));
+  }
+}
+
+// theme colors
+@each $item in $theme-colors {
+  .#{nth($item, 1)} {
+    background-color: nth($item, 2);
+    @include other-props(nth($item, 2));
+  }
+}
+
+.off-white {
+  background-color: $off_white;
+  @include other-props($off_white);
+}
+
+@import "bhp-ui/scss/themes/dark/_dark-colors.scss";
+
+// grays
+@each $item in $grays {
+  .gray-#{nth($item, 1)} {
+    background-color: nth($item, 2);
+    @include other-props(nth($item, 2));
+  }
+}
+
+// colors
+$colors: (
+  "blue": $blue,
+  "black": $black,
+  "off-white": $off_white,
+  "indigo": $indigo,
+  "purple": $purple,
+  "pink": $pink,
+  "red": $red,
+  "orange": $orange,
+  "yellow": $yellow,
+  "green": $green,
+  "teal": $teal,
+  "cyan": $cyan,
+  "white": $white,
+  "gray": $gray-600,
+  "gray-dark": $gray-800
+);
+
+@each $item in $colors {
+  .#{nth($item, 1)} {
+    background-color: nth($item, 2);
+    @include other-props(nth($item, 2));
+  }
 }

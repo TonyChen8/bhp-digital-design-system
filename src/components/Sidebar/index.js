@@ -21,13 +21,13 @@ const SideBarLink = ({
         key={name}
         className={classnames(
           "link",
-          getPrefixedUrl(linkTo) === currentRoute ? "activeLink" : ""
+          getPrefixedUrl(linkTo) === currentRoute ? "active-link" : ""
         )}
         to={getPrefixedUrl(linkTo)}
         onClick={onClick}
       >
         {mdiName && (
-          <BHPIcon className={`fas fa-${mdiName} linkIcon`} name={mdiName} />
+          <BHPIcon className={`fas fa-${mdiName} link-icon`} name={mdiName} />
         )}
         {name}
         {showToggle && (
@@ -39,7 +39,7 @@ const SideBarLink = ({
     return (
       <div key={name} className={"link"} onClick={onClick}>
         {mdiName && (
-          <BHPIcon className={`fas fa-${mdiName} linkIcon`} name={mdiName} />
+          <BHPIcon className={`fas fa-${mdiName} link-icon`} name={mdiName} />
         )}
         {name}
         {showToggle && (
@@ -84,7 +84,7 @@ class SideBar extends React.Component {
     return (
       <div
         key={name}
-        className={classnames("entry", isSelectedSubMenu && "selectedEntry")}
+        className={classnames("entry", isSelectedSubMenu && "selected-entry")}
       >
         <SideBarLink
           name={name}
@@ -111,11 +111,11 @@ class SideBar extends React.Component {
       <aside
         className={classnames(
           "outer",
-          this.props.isSideBarOpen === false && "hideSideBar"
+          this.props.isSideBarOpen === false && "hide-side-bar"
         )}
       >
         <div className={"overlay"} onClick={this.props.onToggle} />
-        <Link className={"logoOuter"} to={getPrefixedUrl("/")}>
+        <Link className={"logo-outer"} to={getPrefixedUrl("/")}>
           <BHPLogo color="white" />
         </Link>
 

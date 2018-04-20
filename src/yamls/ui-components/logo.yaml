@@ -53,19 +53,42 @@ examples:
       import React from 'react';
       import { lightTheme } from 'bhp-ui-react';
       import { BHPLogo } from 'bhp-ui-react';
+      import colors from "../styles/export-colors.css"
 
       export default () => {
         return (
           <div className='d-flex'>
             <BHPLogo className='m-2' />
             <BHPLogo className='m-2' color='black' />
-            <BHPLogo className='m-2' color={lightTheme.grays['500']} />
+            <BHPLogo className='m-2' color={colors["gray-500"]} />
             <div className='p-2 bg-primary'>
               <BHPLogo className='align-middle' color='white' />
             </div>
           </div>
         );
       };
+    css: |
+      @import "bhp-ui/scss/do-not-change/colours_reset";
+      @import "bhp-ui/scss/themes/shared-colors";
+      @import "bhp-ui/scss/themes/dark/_dark-colors.scss";
+      @import "bhp-ui/scss/themes/light/_light-colors.scss";
+      @import "bhp-ui/scss/themes/warm/_warm-colors.scss";
+
+      :export {
+        @each $item in $bhp-colors {
+         #{nth($item, 1)}: #{nth($item, 2)};
+        }
+        @each $item in $theme-colors {
+          #{nth($item, 1)}: #{nth($item, 2)};
+        }
+        @each $item in $colors {
+          #{nth($item, 1)}: #{nth($item, 2)};
+        }
+        @each $item in $grays {
+          gray-#{nth($item, 1)}: #{nth($item, 2)};
+        }
+      }
+
     html: |
       <div class="d-flex">
         <svg xmlns="http://www.w3.org/2000/svg" width="74" height="28" viewBox="0 0 74 28" class="m-2">

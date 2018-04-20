@@ -1,0 +1,17 @@
+@import "bhp-ui/scss/base";
+@import "colors.scss";
+
+@each $item in $bhp-colors {
+  .text-#{nth($item, 1)} {
+    color: nth($item, 2) !important;
+  }
+  .bg-#{nth($item, 1)} {
+    background-color: nth($item, 2) !important;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  html {
+    font-size: 14px;
+  }
+}

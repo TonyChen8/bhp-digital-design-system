@@ -1,32 +1,20 @@
 import React, { Component } from "react";
 import "./styles.css";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import Color from "color";
 import classnames from "classnames";
 
 export default class ColorBlock extends Component {
-  constructor(props) {
-    super(props);
-
-    const { colorHexValue } = props;
-    this.state = {
-      style: { backgroundColor: colorHexValue ? colorHexValue : "white" }
-    };
-  }
   render() {
-    const { colorHexValue, colorName, cssCode } = this.props;
+    const { color, colorName, cssCode } = this.props;
     return (
       <div className="col-12 col-sm-6 col-md-3">
-        <div className="hexBox " style={this.state.style}>
+        <div className="hexBox">
           <CopyToClipboard text={cssCode}>
             <div
               className={classnames(
-                "d-flex flex-column justify-content-center",
-                "hexBox",
-                Color(colorHexValue).dark() ? "text-white" : "text-dark",
-                Color(colorHexValue).luminosity() > 0.9 && "border"
+                "d-flex flex-column justify-content-center hexBox",
+                color
               )}
-              style={{ backgroundColor: colorHexValue }}
             >
               <div className="copyMessage">Click to copy</div>
 
