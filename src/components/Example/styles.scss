@@ -3,44 +3,18 @@
 
 $example-padding: 10px;
 
-.markdown {
-  .pageHeader {
-    margin-bottom: 30px;
-  }
-
-  section {
-    &:last-child {
-      padding-bottom: 0;
-    }
-  }
-
-  pre {
-    border: 1px solid $gray-200;
-    padding: 10px;
-    background-color: $gray-100;
-  }
-
-  .exampleCode {
-    pre {
-      border: none;
-    }
-  }
-}
-
-
-
 // all of the images are used in yaml should be build and pack by webpack,
 // so we add them as styles to compile them
-.imageChartExample:before,
-.imageTrackNo:before,
-.imageTrack:before,
-.imageLogoUsageBad:before,
-.imageLogoUsageCorrect:before,
-.imageLogoUsage:after,
-.imageEdge:after,
-.imageChrome:after,
-.imageFirefox:after,
-.imageSafari:after {
+.image-chart-example:before,
+.image-track-no:before,
+.image-track:before,
+.image-logo-usage-bad:before,
+.image-logo-usage-correct:before,
+.image-logo-usage:after,
+.image-edge:after,
+.image-chrome:after,
+.image-firefox:after,
+.image-safari:after {
   content: "";
   width: auto;
   height: 50px;
@@ -50,70 +24,70 @@ $example-padding: 10px;
   background-position: center;
 }
 
-.imageChartExample:before,
-.imageTrackNo:before,
-.imageTrack:before,
-.imageLogoUsageBad:before,
-.imageLogoUsageCorrect:before,
-.imageLogoUsage:after {
+.image-chart-example:before,
+.image-track-no:before,
+.image-track:before,
+.image-logo-usage-bad:before,
+.image-logo-usage-correct:before,
+.image-logo-usage:after {
   background-position: left;
 }
 
-.imageEdge:after {
+.image-edge:after {
   background-image: url(../../static/edge.svg);
 }
-.imageChrome:after {
+.image-chrome:after {
   background-image: url(../../static/chrome.svg);
 }
-.imageFirefox:after {
+.image-firefox:after {
   background-image: url(../../static/firefox.svg);
 }
-.imageSafari:after {
+.image-safari:after {
   background-image: url(../../static/safari.svg);
 }
-.imageTrackNo:before {
+.image-track-no:before {
   background-image: url(../../static/icons-truck-no.png);
 }
-.imageTrack:before {
+.image-track:before {
   background-image: url(../../static/icons-truck-yes.png);
 }
-.imageLogoUsageBad:before {
+.image-logo-usage-bad:before {
   background-image: url(../../static/logo-usage-bad.png);
 }
-.imageLogoUsageCorrect:before {
+.image-logo-usage-correct:before {
   background-image: url(../../static/logo-usage-correct.png);
 }
-.imageLogoUsage:after {
+.image-logo-usage:after {
   background-image: url(../../static/logo-usage.png);
   width: auto;
   height: 160px;
 }
-.imageChartExample:before {
+.image-chart-example:before {
   background-image: url(../../static/chart-example.png);
   width: auto;
   height: 260px;
 }
 
-.codeTypePicker {
+.code-type-picker {
   margin-bottom: 20px;
 }
 
-.exampleDisplay {
+.example-display {
   border: 1px solid $gray-200;
 }
 
-.exampleSubTitle {
+.example-sub-title {
   padding: $example-padding;
   font-size: 13px;
   color: #979797;
 }
 
-.exampleHtml {
+.example-html {
   padding: $example-padding;
   font-size: 13px;
 }
 
-.exampleCode {
+.example-code {
   position: relative;
   border-top: 1px solid $gray-200;
   margin: 0;
@@ -121,7 +95,7 @@ $example-padding: 10px;
   background-color: #ecf0f1;
 }
 
-.copyButton {
+.copy-button {
   position: absolute;
   top: $example-padding;
   right: $example-padding;
@@ -130,10 +104,10 @@ $example-padding: 10px;
 .dark-theme {
   $color-bg-pre: #444;
   .markdown {
-  pre,
-  .exampleCode {
-    background-color: $color-bg-pre;
-    color: $bhp_grey_4;
+    pre,
+    .example-code {
+      background-color: $color-bg-pre;
+      color: $bhp_grey_4;
+    }
   }
-}
 }

@@ -8,7 +8,7 @@ preText: |
   use of our logo is key to retaining brand strength through immediate
   recognition of who we are and what we stand for as a Company.
 
-  <div class="imageLogoUsage" /><br/>
+  <div class="image-logo-usage" /><br/>
 examples:
   - title: Primary logo
     introduction: |
@@ -68,6 +68,10 @@ examples:
         );
       };
     css: |
+      /* export-colors.css
+       * use this scss code to generate css file to
+       * make sure colors are synchronized from bhp-ui lib.
+
       @import "bhp-ui/scss/do-not-change/colours_reset";
       @import "bhp-ui/scss/themes/shared-colors";
       @import "bhp-ui/scss/themes/dark/_dark-colors.scss";
@@ -88,6 +92,7 @@ examples:
           gray-#{nth($item, 1)}: #{nth($item, 2)};
         }
       }
+      */
 
     html: |
       <div class="d-flex">
@@ -122,10 +127,10 @@ postText: |
 
   <div class="row">
   <div class="col-4">
-  <span class="imageLogoUsageBad" width="50%" />
+  <span class="image-logo-usage-bad" width="50%" />
   </div>
   <div class="offset-2 col-4">
-  <span class="imageLogoUsageCorrect" />
+  <span class="image-logo-usage-correct" />
   </div>
   </div>
 

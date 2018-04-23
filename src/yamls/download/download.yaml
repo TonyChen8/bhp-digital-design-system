@@ -9,7 +9,7 @@ examples:
       import React, { Component } from "react";
       import DownloadBlock from "../components/DownloadBlock";
       import downloadFiles from "../components/DownloadBlock/config";
-      import { ThemeSubscriber } from "../components/ThemeManager";
+      import { ThemeSubscriber } from "bhp-ui-react";
 
       export default class Download extends Component {
         constructor(props) {

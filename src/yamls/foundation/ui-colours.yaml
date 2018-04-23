@@ -11,8 +11,8 @@ examples:
       export default class Example extends React.Component {
         render() {
           const colors = [
-            ["black", "color('black')", "black"],
-            ["off-white", "color('off-white')", "off-white"],
+            ["dark", "color('dark')", "dark"],
+            ["theme-bg-color", "color('theme-bg-color')", "theme-bg-color"],
             ["$bhp_blue_3", "$bhp_blue_3", "bhp-blue-3"],
             ["primary", "theme-color('primary')", "primary"]
           ];
@@ -85,6 +85,7 @@ examples:
             ["gray-800", "gray('800')", "gray-800"],
             ["gray-900", "gray('900')", "gray-900"],
             ["blue", "color('blue')", "blue"],
+            ["theme-bg-color", "color('theme-bg-color')", "theme-bg-color"],
           ];
           return (
             <div className="row">
@@ -109,17 +110,53 @@ examples:
       export default class Example extends React.Component {
         render() {
           const colors = [
-            ["gray-100", "gray('100')", "gray-100"],
-            ["gray-200", "gray('200')", "gray-200"],
-            ["gray-300", "gray('300')", "gray-300"],
-            ["gray-400", "gray('400')", "gray-400"],
-            ["gray-500", "gray('500')", "gray-500"],
-            ["gray-600", "gray('600')", "gray-600"],
-            ["gray-700", "gray('700')", "gray-700"],
-            ["gray-800", "gray('800')", "gray-800"],
-            ["gray-900", "gray('900')", "gray-900"],
-            ["blue", "color('blue')", "blue"],
-            ["off-white", "color('off-white')", "off-white"],
+            ["gray-100", "gray('100')", "d-gray-100"],
+            ["gray-200", "gray('200')", "d-gray-200"],
+            ["gray-300", "gray('300')", "d-gray-300"],
+            ["gray-400", "gray('400')", "d-gray-400"],
+            ["gray-500", "gray('500')", "d-gray-500"],
+            ["gray-600", "gray('600')", "d-gray-600"],
+            ["gray-700", "gray('700')", "d-gray-700"],
+            ["gray-800", "gray('800')", "d-gray-800"],
+            ["gray-900", "gray('900')", "d-gray-900"],
+            ["blue", "color('blue')", "d-blue"],
+            ["theme-bg-color", "color('theme-bg-color')", "d-theme-bg-color"],
+          ];
+          return (
+            <div className="row">
+              {colors.map((color, index) => {
+                return (
+                  <ColorBlock
+                    key={index}
+                    colorName={color[0]}
+                    cssCode={color[1]}
+                    color={color[2]}
+                  />
+                );
+              })}
+            </div>
+          );
+        }
+      }
+
+  - title: Warm theme backgrounds and headers
+    script: |
+      import React from "react";
+      import ColorBlock from "../components/ColorBlock";
+      export default class Example extends React.Component {
+        render() {
+          const colors = [
+            ["gray-100", "gray('100')", "w-gray-100"],
+            ["gray-200", "gray('200')", "w-gray-200"],
+            ["gray-300", "gray('300')", "w-gray-300"],
+            ["gray-400", "gray('400')", "w-gray-400"],
+            ["gray-500", "gray('500')", "w-gray-500"],
+            ["gray-600", "gray('600')", "w-gray-600"],
+            ["gray-700", "gray('700')", "w-gray-700"],
+            ["gray-800", "gray('800')", "w-gray-800"],
+            ["gray-900", "gray('900')", "w-gray-900"],
+            ["blue", "color('blue')", "w-blue"],
+            ["theme-bg-color", "color('theme-bg-color')", "w-theme-bg-color"],
           ];
           return (
             <div className="row">
@@ -252,14 +289,14 @@ examples:
                         return (
                           <div
                             key={index}
-                            className={`colourMixBox ${colorblock}`}
+                            className={`colour-mix-box ${colorblock}`}
                           >
                             {colorblock.replace(/.*-/i,"")}
                           </div>
                         );
                       })}
                     </div>
-                    <div className="colourMixText">{row}</div>
+                    <div className="colour-mix-text">{row}</div>
                   </div>
                 );
               })}
@@ -274,7 +311,7 @@ examples:
       export default class Example extends React.Component {
         render() {
           return (
-            <div className="imageChartExample">
+            <div className="image-chart-example">
             </div>
           );
         }

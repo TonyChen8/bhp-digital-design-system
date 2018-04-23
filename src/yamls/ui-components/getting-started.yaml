@@ -32,25 +32,25 @@ preText: |
 
   <div class="d-flex text-center">
     <div class="d-flex flex-column m-3">
-      <div class="imageEdge"></div>
+      <div class="image-edge"></div>
       <div><strong>Internet Explorer 10</strong></div>
       <div>(or later)</div>
     </div>
 
     <div class="d-flex flex-column m-3">
-      <div class="imageChrome"></div>
+      <div class="image-chrome"></div>
       <div><strong>Chrome</strong></div>
       <div>(latest two versions)</div>
     </div>
 
     <div class="d-flex flex-column m-3">
-      <div class="imageFirefox"></div>
+      <div class="image-firefox"></div>
       <div><strong>Firefox</strong></div>
       <div>(latest two versions)</div>
     </div>
 
     <div class="d-flex flex-column m-3">
-      <div class="imageSafari"></div>
+      <div class="image-safari"></div>
       <div><strong>Safari</strong></div>
       <div>(latest two versions)</div>
     </div>

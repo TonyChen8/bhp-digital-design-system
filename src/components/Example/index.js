@@ -135,14 +135,14 @@ export default class Home extends Component {
     return (
       <div className="markdown">
         <section>
-          {yaml.title && <h3 className="pageHeader">{yaml.title}</h3>}
+          {yaml.title && <h3 className="page-header">{yaml.title}</h3>}
           {yaml.preText && (
             <div
               dangerouslySetInnerHTML={{ __html: md.render(yaml.preText) }}
             />
           )}
           {types.length > 1 && (
-            <div className="codeTypePicker">
+            <div className="code-type-picker">
               <Nav tabs>
                 {types.map((codeType, index) => (
                   <NavItem key={index}>
@@ -179,14 +179,14 @@ export default class Home extends Component {
                     (Script = AsyncReactScript[index]) && <Script />}
 
                   {(AsyncReactExample.length > 0 || htmls.length > 0) && (
-                    <div className="exampleDisplay">
+                    <div className="example-display">
                       {example.subTitle && (
-                        <div className="exampleSubTitle">
+                        <div className="example-sub-title">
                           {example.subTitle}
                         </div>
                       )}
 
-                      <div className="exampleHtml">
+                      <div className="example-html">
                         {htmls.length > 0 &&
                           htmls[index] && (
                             <div
@@ -198,11 +198,11 @@ export default class Home extends Component {
                           (Example = AsyncReactExample[index]) && <Example />}
                       </div>
 
-                      <div className="exampleCode">
+                      <div className="example-code">
                         <pre>
                           <code>{example[activeTab]}</code>
                         </pre>
-                        <div className="copyButton">
+                        <div className="copy-button">
                           <CopyToClipboard text={example[activeTab]}>
                             <button className="btn btn-outline-secondary">
                               Copy

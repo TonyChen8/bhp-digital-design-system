@@ -50,12 +50,12 @@ postText: |
   <h4 class="h4-light">Styling</h4>
 
   <div class="row">
-  <div class="col-4 text-danger imageTrackNo">
+  <div class="col-4 text-danger image-track-no">
   <hr />
   <i class="fas fa-times "></i> WRONG<br />
   <p>This icon does not follow the precise and colour neutral style preferred for BHP Digital styling.</p>
   </div>
-  <div class="offset-2 col-4 text-success imageTrack">
+  <div class="offset-2 col-4 text-success image-track">
   <hr />
   <i class="fas fa-check "></i> CORRECT<br />
   <p>Clean, precise, colour neutral and a smart use of negative space is preferred.</p>

@@ -8,21 +8,21 @@ export default class ColorBlock extends Component {
     const { color, colorName, cssCode } = this.props;
     return (
       <div className="col-12 col-sm-6 col-md-3">
-        <div className="hexBox">
+        <div className="hex-box">
           <CopyToClipboard text={cssCode}>
             <div
               className={classnames(
-                "d-flex flex-column justify-content-center hexBox",
+                "d-flex flex-column justify-content-center hex-box",
                 color
               )}
             >
-              <div className="copyMessage">Click to copy</div>
+              <div className="copy-message">Click to copy</div>
 
               <div>{colorName}</div>
             </div>
           </CopyToClipboard>
         </div>
-        <div className="codeBox">{cssCode}</div>
+        <div className="code-box">{cssCode}</div>
       </div>
     );
   }

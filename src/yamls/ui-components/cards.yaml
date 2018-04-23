@@ -9,6 +9,8 @@ examples:
       import React from 'react';
       import {
         Card,
+        CardHeader,
+        CardFooter,
         CardText,
         CardBody,
         CardTitle,
@@ -19,16 +21,19 @@ examples:
           <div>
             <h5>Lorem 1</h5>
             <Card>
+              <CardHeader>Header</CardHeader>
               <CardBody>
                 Lorem ipsum Fugiat sit mollit incididunt in occaecat repre henderit
                 cillum magna Excepteur enim eu deserunt eiusmod dolor occaecat dolore
                 officia mollit dolore consectetur elit in enim esse consectetur amet
                 do exercitation.
               </CardBody>
+              <CardFooter>Footer</CardFooter>
             </Card>
             <br />
             <h5>Lorem 2</h5>
             <Card>
+              <CardHeader>Header</CardHeader>
               <CardBody>
                 <CardTitle tag='h5'>Card title</CardTitle>
                 <CardText>
@@ -38,6 +43,7 @@ examples:
                   consectetur amet do exercitation.
                 </CardText>
               </CardBody>
+              <CardFooter>Footer</CardFooter>
             </Card>
           </div>
 

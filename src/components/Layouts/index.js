@@ -2,10 +2,9 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Label, Input } from "reactstrap";
 
-import { BHPIcon } from "bhp-ui-react";
+import { BHPIcon, Themes, ThemeManager } from "bhp-ui-react";
 
 import { getPrefixedUrl } from "../Commons/helper";
-import ThemeManager, { Themes } from "../ThemeManager";
 import SideBar from "../Sidebar";
 import Breadcrumbs from "../Breadcrumbs";
 
@@ -37,34 +36,34 @@ export default class Layout extends Component {
     const { pathname } = this.props;
     const { isSideBarOpen, theme } = this.state;
     return (
-      <div className={"mainContainer"}>
+      <div className={"main-container"}>
         <SideBar
-          className="sideBar"
+          className="side-bar"
           currentRoute={pathname}
           isSideBarOpen={isSideBarOpen}
           onToggle={this.toggleSidebar.bind(this)}
         />
-        <div className={"mainBody"}>
-          <div className="headerContainer">
+        <div className={"main-body"}>
+          <div className="header-container">
             <header className={"header"}>
-              <div className={"leftSideBarBtn"} />
-              <div className={"container titleLayout"}>
+              <div className={"left-side-bar-btn"} />
+              <div className={"container title-layout"}>
                 <div className={"title"}>
                   <BHPIcon
-                    className="fas fa-bars align-middle expandBtn"
+                    className="fas fa-bars align-middle expand-btn"
                     size={24}
                     onClick={this.toggleSidebar.bind(this)}
                   />
 
                   <h1>
-                    <Link className={"headerLink"} to={getPrefixedUrl("/")}>
+                    <Link className={"header-link"} to={getPrefixedUrl("/")}>
                       Digital Design System
                     </Link>
                   </h1>
                 </div>
 
-                <div className={"themeHelp"}>
-                  <div className={"gitHubLink"}>
+                <div className={"theme-help"}>
+                  <div className={"git-hub-link"}>
                     <Label for="git-hub-link">Download:</Label>
 
                     <div className="pl-2 pr-4">
@@ -86,7 +85,7 @@ export default class Layout extends Component {
                     </div>
                   </div>
 
-                  <div className={"themePicker"}>
+                  <div className={"theme-picker"}>
                     <Label for="theme-name">Theme:</Label>
 
                     <div className="pl-2 pr-4">
@@ -112,7 +111,7 @@ export default class Layout extends Component {
                   </div>
 
                   <div className={"help"}>
-                    <Link className={"headerLink"} to={getPrefixedUrl("/help")}>
+                    <Link className={"header-link"} to={getPrefixedUrl("/help")}>
                       Help
                     </Link>
                   </div>
@@ -126,7 +125,7 @@ export default class Layout extends Component {
               currentRoute={pathname}
             />
           </div>
-          <div className={"bodyContainer"}>
+          <div className={"body-container"}>
             {pathname === getPrefixedUrl("/") ? (
               this.props.children
             ) : (

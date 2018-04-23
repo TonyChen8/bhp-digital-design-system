@@ -7,12 +7,12 @@ export default class DownloadBlock extends Component {
     const { name, src } = this.props;
 
     return (
-      <div key={name} className="downloadFile">
-        <div className="downloadImage">
+      <div key={name} className="download-file">
+        <div className="download-image">
           <img src={src} alt="" />
         </div>
 
-        <div className="downloadName d-flex align-items-center justify-content-between p-2">
+        <div className="download-name d-flex align-items-center justify-content-between p-2">
           {name}
           <a href={src} download={name}>
             <i className="fa fa-download md-24 align-top" />

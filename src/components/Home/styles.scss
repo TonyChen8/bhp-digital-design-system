@@ -1,18 +1,10 @@
 @import "../../styles/colors.scss";
 
 .markdown {
-  .page-header {
-    margin-bottom: 30px;
-  }
 
   .home {
     section {
       padding: 40px 0;
-    }
-  }
-  section {
-    &:last-child {
-      padding-bottom: 0;
     }
   }
 
@@ -61,12 +53,6 @@
     p {
       margin-top: 4px;
     }
-  }
-
-  pre {
-    border: 1px solid #c1c1c1;
-    padding: 10px;
-    background-color: #ecf0f1;
   }
 }
 

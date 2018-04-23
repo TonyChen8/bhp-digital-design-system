@@ -6,9 +6,15 @@ examples:
   - title: Usage
     subTitle: Example
     react: |
-      import React from 'react';
-      import { NavBar, BHPLogo } from 'bhp-ui-react';
-      import { Button, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+      import React from "react";
+      import { NavBar, BHPLogo } from "bhp-ui-react";
+      import {
+        Button,
+        Dropdown,
+        DropdownToggle,
+        DropdownMenu,
+        DropdownItem
+      } from "reactstrap";
 
       export default class Example extends React.Component {
         constructor(props) {
@@ -29,20 +35,20 @@ examples:
           return (
             <div className="">
               <NavBar
-                containerStyle="navbar-expand-lg navbar-dark bg-bhp-orange-1"
-                toggleButton={<span className='navbar-toggler-icon'/>}
-                bodyStyle="navbar-collapse"
-                staticComponent={<BHPLogo className='align-middle' color='white' />}
+                className="navbar-expand-lg navbar-dark bg-bhp-orange-1"
+                staticComponent={<BHPLogo className="align-middle" color="white" />}
               >
-                <ul className="navbar-nav mr-auto" >
-                    <li className="nav-item active">
-                      <a className="nav-link" >Home <span className="sr-only">(current)</span></a>
-                    </li>
-                    <li className="nav-item">
-                      <a className="nav-link" >Link</a>
-                    </li>
-                    <li className="nav-item dropdown">
-                      <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+                <ul className="navbar-nav mr-auto navbar-items-container">
+                  <li className="nav-item active">
+                    <a className="nav-link">
+                      Home <span className="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link">Link</a>
+                  </li>
+                  <li className="nav-item dropdown">
+                    <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
                       <DropdownToggle color="primary" caret>
                         Dropdown button
                       </DropdownToggle>
@@ -52,20 +58,28 @@ examples:
                         <DropdownItem>Something else here</DropdownItem>
                       </DropdownMenu>
                     </Dropdown>
-                    </li>
-                    <li className="nav-item">
-                      <a className="nav-link disabled" >Disabled</a>
-                    </li>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link disabled">Disabled</a>
+                  </li>
+                  <li className="nav-item navbar-form-container">
+                    <form className="form-inline my-2 my-lg-0">
+                      <input
+                        className="form-control mr-sm-2"
+                        type="search"
+                        placeholder="Search"
+                        aria-label="Search"
+                      />
+                      <Button color="primary">Search</Button>
+                    </form>
+                  </li>
                 </ul>
-                <form className="form-inline my-2 my-lg-0">
-                  <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                   <Button color="primary" >Search</Button>
-                </form>
               </NavBar>
             </div>
           );
         }
-      };
+      }
+
     html: |
       <div class="container-size">
         <nav class="navbar navbar-expand-lg navbar-dark bg-bhp-orange-1">
@@ -140,6 +154,14 @@ examples:
         </BHPNavBar>
       </div>
     css: |
-      .container-size{
-        min-height:250px;
+      @media (min-width: 1000px)
+      {
+        .navbar-items-container{
+          flex: 1 ;
+          align-items: center;
+        }
+        .navbar-form-container{
+          margin-left: auto
+        }
       }
+

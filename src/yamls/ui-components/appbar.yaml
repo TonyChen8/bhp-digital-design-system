@@ -57,7 +57,7 @@ examples:
                   </DropdownMenu>
                 </Dropdown>
               }
-              containerStyle="bg-bhp-orange-1 appbar-container"
+              className="bg-bhp-orange-1 appbar-container"
             >
               <BHPLogo height="40" className="align-middle" color="white" />
             </AppBar>

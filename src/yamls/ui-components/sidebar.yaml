@@ -38,7 +38,7 @@ examples:
                 <div className="sidebar">
                   <div className="entry" style={{backgroundColor: "#393b42"}}>
                     <div className="link" onClick={()=>this.select(1)}>
-                      <i className="fas fa-file linkIcon"></i>
+                      <i className="fas fa-file link-icon"></i>
                       UI components 1
                       <i className={`fas fa-angle-${this.state.selectItem === 1? "down" : "right"} toggle`}></i>
                     </div>
@@ -51,7 +51,7 @@ examples:
                     </div>}
 
                     <div className="link" onClick={()=>this.select(2)}>
-                      <i className="fas fa-file linkIcon"></i>
+                      <i className="fas fa-file link-icon"></i>
                         UI components 2
                       <i className={`fas fa-angle-${this.state.selectItem === 2? "down" : "right"} toggle`}></i>
                     </div>
@@ -64,7 +64,7 @@ examples:
                     </div>}
 
                     <div className="link" onClick={()=>this.select(3)}>
-                      <i className="fas fa-file linkIcon"></i>
+                      <i className="fas fa-file link-icon"></i>
                         UI components 3
                       <i className={`fas fa-angle-${this.state.selectItem === 3? "down" : "right"} toggle`}></i>
                     </div>
