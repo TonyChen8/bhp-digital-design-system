@@ -100,14 +100,3 @@ $example-padding: 10px;
   top: $example-padding;
   right: $example-padding;
 }
-
-.dark-theme {
-  $color-bg-pre: #444;
-  .markdown {
-    pre,
-    .example-code {
-      background-color: $color-bg-pre;
-      color: $bhp_grey_4;
-    }
-  }
-}

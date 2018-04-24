@@ -29,6 +29,21 @@
 
   pre {
     padding: 10px;
-    margin-bottom: 0;
+    margin-bottom: 1em;
   }
+}
+
+@import "bhp-ui/scss/themes/light/light-colors";
+.light-theme {
+  @import "style-with-theme.scss";
+}
+
+@import "bhp-ui/scss/themes/dark/dark-colors";
+.dark-theme {
+  @import "style-with-theme.scss";
+}
+
+@import "bhp-ui/scss/themes/warm/warm-colors";
+.warm-theme {
+  @import "style-with-theme.scss";
 }

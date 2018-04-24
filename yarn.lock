@@ -1082,11 +1082,16 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
-bhp-ui-react@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/bhp-ui-react/-/bhp-ui-react-0.0.2.tgz#5534b3850bc827722c1f38678e4f831685a8d69a"
+bhp-ui-react@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/bhp-ui-react/-/bhp-ui-react-0.0.3.tgz#71fb6ca831fdf9f76b7129752ac462f965d772fc"
   dependencies:
+    hoist-non-react-statics "^2.5.0"
     prop-types "^15.6.0"
+    react-autosuggest "^9.3.4"
+    react-collapse "^4.0.3"
+    react-motion "^0.5.2"
+    reactstrap "^5.0.0"
 
 bhp-ui@^0.0.1:
   version "0.0.1"
@@ -1927,10 +1932,6 @@ css-what@2.1:
 cssesc@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/cssesc/-/cssesc-0.1.0.tgz#c814903e45623371a0477b40109aaafbeeaddbb4"
-
-cssmin@^0.4.3:
-  version "0.4.3"
-  resolved "https://registry.yarnpkg.com/cssmin/-/cssmin-0.4.3.tgz#c9194077e0ebdacd691d5f59015b9d819f38d015"
 
 "cssnano@>=2.6.1 <4":
   version "3.10.0"
@@ -5066,7 +5067,7 @@ node-sass-chokidar@^1.2.2:
     sass-graph "^2.1.1"
     stdout-stream "^1.4.0"
 
-"node-sass@^3.1.2, ^4.0.0", node-sass@^4.7.2:
+node-sass@^4.7.2:
   version "4.8.3"
   resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-4.8.3.tgz#d077cc20a08ac06f661ca44fb6f19cd2ed41debb"
   dependencies:
@@ -6816,14 +6817,6 @@ schema-utils@^0.3.0:
   resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-0.3.0.tgz#f5877222ce3e931edae039f17eb3716e7137f8cf"
   dependencies:
     ajv "^5.0.0"
-
-scss-to-json@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/scss-to-json/-/scss-to-json-2.0.0.tgz#dd8f74869da3d99fb44c8f5235f534ebb130ea47"
-  dependencies:
-    cssmin "^0.4.3"
-    minimist "^1.2.0"
-    node-sass "^3.1.2, ^4.0.0"
 
 scss-tokenizer@^0.2.3:
   version "0.2.3"
