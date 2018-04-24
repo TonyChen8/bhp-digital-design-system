@@ -9,7 +9,6 @@ export default ({ contents, codeType }) => {
       : contents[codeType];
 
   const ReactExample = contents.react ? contents.react.fn : null;
-
   return (
     <div className={s.exampleContainer}>
       {contents.title && <h4 className="h4-light">{contents.title}</h4>}
@@ -21,10 +20,25 @@ export default ({ contents, codeType }) => {
           <div className={s.exampleSubTitle}>{contents.subTitle}</div>
         )}
 
-        <div className={s.exampleHtml}>
-          <style>{contents.css || ""}</style>
-          <ReactExample />
-        </div>
+        {
+        codeType === "react" ||
+        codeType === "angular" ||
+        codeType === "css"
+        ? ReactExample
+            ? <div className={s.exampleHtml}>
+                <style>{contents.css || ""}</style>
+                <ReactExample />
+              </div>
+            : ""
+        : <div
+            className={s.exampleHtml}
+            dangerouslySetInnerHTML={{
+              __html: `<style>${contents.css || ""}</style>${
+                contents.actualHtml ? contents.actualHtml : contents.html
+              }`
+            }}
+          />
+        }
 
         <div className={s.exampleCode}>
           <pre>

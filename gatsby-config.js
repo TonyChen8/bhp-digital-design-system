@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `BHP Digital Design System`,
   },
+  pathPrefix: '/bhp-digital-design-system',
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
