@@ -1,0 +1,49 @@
+@import "bhp-ui/scss/base";
+@import "colors.scss";
+
+@each $item in $bhp-colors {
+  .text-#{nth($item, 1)} {
+    color: nth($item, 2) !important;
+  }
+  .bg-#{nth($item, 1)} {
+    background-color: nth($item, 2) !important;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  html {
+    font-size: 14px;
+  }
+}
+
+.markdown {
+  .page-header {
+    margin-bottom: 30px;
+  }
+
+  section {
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  pre {
+    padding: 10px;
+    margin-bottom: 1em;
+  }
+}
+
+@import "bhp-ui/scss/themes/light/light-colors";
+.light-theme {
+  @import "style-with-theme.scss";
+}
+
+@import "bhp-ui/scss/themes/dark/dark-colors";
+.dark-theme {
+  @import "style-with-theme.scss";
+}
+
+@import "bhp-ui/scss/themes/warm/warm-colors";
+.warm-theme {
+  @import "style-with-theme.scss";
+}

@@ -1,0 +1,89 @@
+@import "../../styles/colors.scss";
+
+.markdown {
+
+  .home {
+    section {
+      padding: 40px 0;
+    }
+  }
+
+  .hero-primary {
+    padding: 0;
+    text-align: center;
+    color: white;
+    background-image: url(../../static/think-big.jpg);
+    background-size: cover;
+
+    h1 {
+      margin: 0;
+      line-height: 260px;
+      font-size: 72px;
+    }
+  }
+
+  .hero-secondary {
+    padding: 60px 0;
+    background-color: $bhp_orange_1;
+
+    h2 {
+      font-size: 36px;
+      line-height: 1.1;
+    }
+
+    p {
+      max-width: none;
+      line-height: 1.27;
+      font-size: 22px;
+      color: white;
+    }
+  }
+
+  .hero-tertiary {
+    background-color: $gray-200;
+  }
+
+  .hero-quaternary {
+    h5 {
+      margin: 20px 0 3px 0;
+      color: #9f9f9f;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin-top: 4px;
+    }
+  }
+}
+
+.dark-theme {
+  $color-bg-hero-tertiary: #555;
+  $color-text-hero-tertiary: white;
+  .markdown {
+    .hero-tertiary {
+      background-color: $color-bg-hero-tertiary;
+      color: $color-text-hero-tertiary;
+    }
+  }
+}
+
+.warm-theme {
+  $color-bg-hero-tertiary: $gray-200;
+  $color-text-hero-tertiary: "initial";
+  .markdown {
+    .hero-tertiary {
+      background-color: $color-bg-hero-tertiary;
+      color: $color-text-hero-tertiary;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .markdown {
+    .hero-primary {
+      h1 {
+        font-size: 48px;
+      }
+    }
+  }
+}

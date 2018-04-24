@@ -1,0 +1,167 @@
+title: Navbar
+category: UI components
+preText: |
+  The navbar is a wrapper that positions branding, navigation, and other elements in a concise header. It's easily extensible and, thanks to the Collapse plugin, can easily integrate responsive behaviors.
+examples:
+  - title: Usage
+    subTitle: Example
+    react: |
+      import React from "react";
+      import { NavBar, BHPLogo } from "bhp-ui-react";
+      import {
+        Button,
+        Dropdown,
+        DropdownToggle,
+        DropdownMenu,
+        DropdownItem
+      } from "reactstrap";
+
+      export default class Example extends React.Component {
+        constructor(props) {
+          super(props);
+
+          this.toggle = this.toggle.bind(this);
+          this.state = {
+            dropdownOpen: false
+          };
+        }
+
+        toggle() {
+          this.setState({
+            dropdownOpen: !this.state.dropdownOpen
+          });
+        }
+        render() {
+          return (
+            <div className="">
+              <NavBar
+                className="navbar-expand-lg navbar-dark bg-bhp-orange-1"
+                staticComponent={<BHPLogo className="align-middle" color="white" />}
+              >
+                <ul className="navbar-nav mr-auto navbar-items-container">
+                  <li className="nav-item active">
+                    <a className="nav-link">
+                      Home <span className="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link">Link</a>
+                  </li>
+                  <li className="nav-item dropdown">
+                    <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+                      <DropdownToggle color="primary" caret>
+                        Dropdown button
+                      </DropdownToggle>
+                      <DropdownMenu>
+                        <DropdownItem>Action</DropdownItem>
+                        <DropdownItem>Another Action</DropdownItem>
+                        <DropdownItem>Something else here</DropdownItem>
+                      </DropdownMenu>
+                    </Dropdown>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link disabled">Disabled</a>
+                  </li>
+                  <li className="nav-item navbar-form-container">
+                    <form className="form-inline my-2 my-lg-0">
+                      <input
+                        className="form-control mr-sm-2"
+                        type="search"
+                        placeholder="Search"
+                        aria-label="Search"
+                      />
+                      <Button color="primary">Search</Button>
+                    </form>
+                  </li>
+                </ul>
+              </NavBar>
+            </div>
+          );
+        }
+      }
+
+    html: |
+      <div class="container-size">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-bhp-orange-1">
+          <a class="navbar-brand" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="74" height="28" viewBox="0 0 74 28" class="align-middle">
+              <path fill="white" fill-rule="evenodd" d="M11.113 6H7v6h4.113C13.019 12 14 10.586 14 9s-.981-3-2.887-3zm.262 11H7v5h4.375C13.067 22 14 20.881 14 19.5c0-1.38-1.175-2.5-2.625-2.5zM22 20.386C22 25.008 17.775 28 13.185 28H0V0h12.75c4.679 0 8.563 3.354 8.563 7.492 0 3.273-1.571 5.032-3.743 6.356C20.08 14.903 22 16.48 22 20.386zM40.926 0v11.298h-9.853V0H24v28h7.073V17.684h9.853V28H48V0h-7.074zm23.178 6H59v6h5.104C65.704 12 67 10.586 67 9s-1.297-3-2.896-3zM74 8.842c0 4.883-4.013 8.842-8.962 8.842H58.97V28H52V0h13.038C69.988 0 74 3.959 74 8.842z"></path>
+            </svg>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" >Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" >Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" >Action</a>
+                  <a class="dropdown-item" >Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" >Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" >Disabled</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button type="button" class="btn btn-primary">Search</button>
+            </form>
+          </div>
+        </nav>
+      </div>
+    angular: |
+      <div class="container-size">
+        <BHPNavBar #navbar class="navbar navbar-expand-lg navbar-expand-lg navbar-dark bg-bhp-orange-1">
+          <div static>
+            <BHPLogo  color='white' ></BHPLogo>
+          </div>
+          <Button toggle class="btn navbar-toggler"  btnColor="primary outline" (click)="navbar.toggle()">
+            <span class="navbar-toggler-icon "></span>
+          </Button>
+
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+            <Button class="btn" btnColor="primary">Search</Button>
+          </form>
+        </BHPNavBar>
+      </div>
+    css: |
+      @media (min-width: 1000px)
+      {
+        .navbar-items-container{
+          flex: 1 ;
+          align-items: center;
+        }
+        .navbar-form-container{
+          margin-left: auto
+        }
+      }
+

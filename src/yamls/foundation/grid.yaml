@@ -1,0 +1,78 @@
+title: Grid
+category: Foundation
+preText: |
+  Our grid uses the Bootstrap grid system with 12 columns and 30px gutter.
+
+  ##### Columns
+
+  To instantiate a row, simply add a div with the class `row`
+
+  Within the row, adding elements with the classes `col-1` through to `col-12` will create columns that occupy 1/12th through to 12/12th's respectively. Any combination of widths can be used, with gutters automatically inserted between.
+
+  ##### Column Offsets
+
+  The classes `offset-1` through to `offset-11` can be used to offset the current column by 1 to 11 columns respectively.
+
+  <div class="alert alert-info" role="alert">
+    <i class="fas fa-info-circle"></i> <strong>Developer note:</strong>
+    Follow the <a href="https://getbootstrap.com/docs/4.0/layout/grid/">Bootstrap documentation on breakpoint classes</a>.
+  </div>
+examples:
+  - css: |
+      .row {
+        margin-bottom: 10px;
+      }
+
+      .row .inner {
+        padding: 5px;
+        background-color: #f8f8f8;
+        border: 1px solid #eaeaea;
+      }
+
+      .dark-theme .row .inner {
+        background-color: #444;
+        border: 1px solid #555;
+      }
+    html: |
+      <div class="container">
+        <div class="row">
+          <div class="col-3">.col-3</div>
+          <div class="col-3 offset-4">.col-3 .offset-4</div>
+        </div>
+
+        <div class="row">
+          <div class="col-3">.col-3</div>
+          <div class="col-6">.col-6</div>
+          <div class="col-3">.col-3</div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">.col-1</div>
+          <div class="col-11">.col-11</div>
+        </div>
+
+        <div class="row">
+          <div class="col-2">.col-2</div>
+          <div class="col-10">.col-10</div>
+        </div>
+
+        <div class="row">
+          <div class="col-3">.col-3</div>
+          <div class="col-9">.col-9</div>
+        </div>
+
+        <div class="row">
+          <div class="col-4">.col-4</div>
+          <div class="col-8">.col-8</div>
+        </div>
+
+        <div class="row">
+          <div class="col-5">.col-5</div>
+          <div class="col-7">.col-7</div>
+        </div>
+
+        <div class="row">
+          <div class="col-6">.col-6</div>
+          <div class="col-6">.col-6</div>
+        </div>
+      </div>

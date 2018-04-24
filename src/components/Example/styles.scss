@@ -1,0 +1,102 @@
+@import "../../styles/colors.scss";
+@import "bhp-ui/scss/themes/dark/dark-colors";
+
+$example-padding: 10px;
+
+// all of the images are used in yaml should be build and pack by webpack,
+// so we add them as styles to compile them
+.image-chart-example:before,
+.image-track-no:before,
+.image-track:before,
+.image-logo-usage-bad:before,
+.image-logo-usage-correct:before,
+.image-logo-usage:after,
+.image-edge:after,
+.image-chrome:after,
+.image-firefox:after,
+.image-safari:after {
+  content: "";
+  width: auto;
+  height: 50px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.image-chart-example:before,
+.image-track-no:before,
+.image-track:before,
+.image-logo-usage-bad:before,
+.image-logo-usage-correct:before,
+.image-logo-usage:after {
+  background-position: left;
+}
+
+.image-edge:after {
+  background-image: url(../../static/edge.svg);
+}
+.image-chrome:after {
+  background-image: url(../../static/chrome.svg);
+}
+.image-firefox:after {
+  background-image: url(../../static/firefox.svg);
+}
+.image-safari:after {
+  background-image: url(../../static/safari.svg);
+}
+.image-track-no:before {
+  background-image: url(../../static/icons-truck-no.png);
+}
+.image-track:before {
+  background-image: url(../../static/icons-truck-yes.png);
+}
+.image-logo-usage-bad:before {
+  background-image: url(../../static/logo-usage-bad.png);
+}
+.image-logo-usage-correct:before {
+  background-image: url(../../static/logo-usage-correct.png);
+}
+.image-logo-usage:after {
+  background-image: url(../../static/logo-usage.png);
+  width: auto;
+  height: 160px;
+}
+.image-chart-example:before {
+  background-image: url(../../static/chart-example.png);
+  width: auto;
+  height: 260px;
+}
+
+.code-type-picker {
+  margin-bottom: 20px;
+}
+
+.example-display {
+  border: 1px solid $gray-200;
+}
+
+.example-sub-title {
+  padding: $example-padding;
+  font-size: 13px;
+  color: #979797;
+}
+
+.example-html {
+  padding: $example-padding;
+  font-size: 13px;
+}
+
+.example-code {
+  position: relative;
+  border-top: 1px solid $gray-200;
+  margin: 0;
+  padding: $example-padding;
+  background-color: #ecf0f1;
+}
+
+.copy-button {
+  position: absolute;
+  top: $example-padding;
+  right: $example-padding;
+}

@@ -1,0 +1,152 @@
+
+.page-header {
+  margin-top: 40px !important;
+  margin-bottom: 30px !important;
+  background-color: color("black");
+}
+
+.hex-box {
+  height: 80px;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+
+  .copy-message {
+    display: none;
+  }
+
+  &:hover .copy-message {
+    display: block;
+  }
+}
+
+.code-box {
+  margin: 5px 0 10px 0;
+  border: 1px solid #f2f2f2;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.colour-mix-box {
+  width: 54px;
+  line-height: 54px;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.colour-mix-text {
+  padding-left: 15px;
+  line-height: 54px;
+}
+
+@mixin other-props($color) {
+  @if (lightness($color) > 60) {
+    color: #000;
+    border: 1px solid $gray-300;
+  } @else {
+    color: #fff;
+    border: 1px solid $gray-500;
+  }
+}
+
+@import "bhp-ui/scss/themes/light/_light-colors.scss";
+// shared colors
+@each $item in $bhp-colors {
+  .#{nth($item, 1)} {
+    background-color: nth($item, 2);
+    @include other-props(nth($item, 2));
+  }
+}
+
+// theme colors
+@each $item in $theme-colors {
+  .#{nth($item, 1)} {
+    background-color: nth($item, 2);
+    @include other-props(nth($item, 2));
+  }
+}
+
+// grays
+@each $item in $grays {
+  .gray-#{nth($item, 1)} {
+    background-color: nth($item, 2);
+    @include other-props(nth($item, 2));
+  }
+}
+
+// colors
+@each $item in $colors {
+  .#{nth($item, 1)} {
+    background-color: nth($item, 2);
+    @include other-props(nth($item, 2));
+  }
+}
+
+@import "bhp-ui/scss/themes/dark/_dark-colors.scss";
+// shared colors
+@each $item in $bhp-colors {
+  .d-#{nth($item, 1)} {
+    background-color: nth($item, 2);
+    @include other-props(nth($item, 2));
+  }
+}
+
+// theme colors
+@each $item in $theme-colors {
+  .d-#{nth($item, 1)} {
+    background-color: nth($item, 2);
+    @include other-props(nth($item, 2));
+  }
+}
+
+// grays
+@each $item in $grays {
+  .d-gray-#{nth($item, 1)} {
+    background-color: nth($item, 2);
+    @include other-props(nth($item, 2));
+  }
+}
+
+// colors
+@each $item in $colors {
+  .d-#{nth($item, 1)} {
+    background-color: nth($item, 2);
+    @include other-props(nth($item, 2));
+  }
+}
+
+
+@import "bhp-ui/scss/themes/warm/_warm-colors.scss";
+// shared colors
+@each $item in $bhp-colors {
+  .w-#{nth($item, 1)} {
+    background-color: nth($item, 2);
+    @include other-props(nth($item, 2));
+  }
+}
+
+// theme colors
+@each $item in $theme-colors {
+  .w-#{nth($item, 1)} {
+    background-color: nth($item, 2);
+    @include other-props(nth($item, 2));
+  }
+}
+
+// grays
+@each $item in $grays {
+  .w-gray-#{nth($item, 1)} {
+    background-color: nth($item, 2);
+    @include other-props(nth($item, 2));
+  }
+}
+
+// colors
+@each $item in $colors {
+  .w-#{nth($item, 1)} {
+    background-color: nth($item, 2);
+    @include other-props(nth($item, 2));
+  }
+}

@@ -1,0 +1,318 @@
+title: UI Colours
+category: Foundation
+preText: |
+  Our colour system includes seven distinct families, each consisting of four shades or groups. Whilst we have a broad range to select from, Orange 1 is the preferred colour family for digital and Apps and work with that colour’s range to ensure we do not have multiple colour families competing on the same page.
+
+examples:
+  - title: Type
+    script: |
+      import React from "react";
+      import ColorBlock from "../components/ColorBlock";
+      export default class Example extends React.Component {
+        render() {
+          const colors = [
+            ["dark", "color('dark')", "dark"],
+            ["theme-bg-color", "color('theme-bg-color')", "theme-bg-color"],
+            ["$bhp_blue_3", "$bhp_blue_3", "bhp-blue-3"],
+            ["primary", "theme-color('primary')", "primary"]
+          ];
+          return (
+            <div className="row">
+              {colors.map((color, index) => {
+                return (
+                  <ColorBlock
+                    key={index}
+                    colorName={color[0]}
+                    cssCode={color[1]}
+                    color={color[2]}
+                  />
+                );
+              })}
+            </div>
+          );
+        }
+      }
+
+
+
+  - title: Main theme
+    script: |
+      import React from "react";
+      import ColorBlock from "../components/ColorBlock";
+      export default class Example extends React.Component {
+        render() {
+          const colors = [
+            ["bhp-orange-1", "theme-color('bhp-orange-1')", "bhp-orange-1"],
+            ["bhp-orange-2", "theme-color('bhp-orange-2')", "bhp-orange-2"],
+            ["bhp-orange-3", "theme-color('bhp-orange-3')", "bhp-orange-3"],
+            ["bhp-orange-4", "theme-color('bhp-orange-4')", "bhp-orange-4"],
+            ["success", "theme-color('success')", "success"],
+            ["info", "theme-color('info')", "info"],
+            ["warning", "theme-color('warning')", "warning"],
+            ["danger", "theme-color('danger')", "danger"],
+          ];
+          return (
+            <div className="row">
+              {colors.map((color, index) => {
+                return (
+                  <ColorBlock
+                    key={index}
+                    colorName={color[0]}
+                    cssCode={color[1]}
+                    color={color[2]}
+                  />
+                );
+              })}
+            </div>
+          );
+        }
+      }
+
+  - title: Light theme typography, backgrounds, headers and links
+    script: |
+      import React from "react";
+      import ColorBlock from "../components/ColorBlock";
+      export default class Example extends React.Component {
+        render() {
+          const colors = [
+            ["gray-100", "gray('100')", "gray-100"],
+            ["gray-200", "gray('200')", "gray-200"],
+            ["gray-300", "gray('300')", "gray-300"],
+            ["gray-400", "gray('400')", "gray-400"],
+            ["gray-500", "gray('500')", "gray-500"],
+            ["gray-600", "gray('600')", "gray-600"],
+            ["gray-700", "gray('700')", "gray-700"],
+            ["gray-800", "gray('800')", "gray-800"],
+            ["gray-900", "gray('900')", "gray-900"],
+            ["blue", "color('blue')", "blue"],
+            ["theme-bg-color", "color('theme-bg-color')", "theme-bg-color"],
+          ];
+          return (
+            <div className="row">
+              {colors.map((color, index) => {
+                return (
+                  <ColorBlock
+                    key={index}
+                    colorName={color[0]}
+                    cssCode={color[1]}
+                    color={color[2]}
+                  />
+                );
+              })}
+            </div>
+          );
+        }
+      }
+  - title: Dark theme backgrounds and headers
+    script: |
+      import React from "react";
+      import ColorBlock from "../components/ColorBlock";
+      export default class Example extends React.Component {
+        render() {
+          const colors = [
+            ["gray-100", "gray('100')", "d-gray-100"],
+            ["gray-200", "gray('200')", "d-gray-200"],
+            ["gray-300", "gray('300')", "d-gray-300"],
+            ["gray-400", "gray('400')", "d-gray-400"],
+            ["gray-500", "gray('500')", "d-gray-500"],
+            ["gray-600", "gray('600')", "d-gray-600"],
+            ["gray-700", "gray('700')", "d-gray-700"],
+            ["gray-800", "gray('800')", "d-gray-800"],
+            ["gray-900", "gray('900')", "d-gray-900"],
+            ["blue", "color('blue')", "d-blue"],
+            ["theme-bg-color", "color('theme-bg-color')", "d-theme-bg-color"],
+          ];
+          return (
+            <div className="row">
+              {colors.map((color, index) => {
+                return (
+                  <ColorBlock
+                    key={index}
+                    colorName={color[0]}
+                    cssCode={color[1]}
+                    color={color[2]}
+                  />
+                );
+              })}
+            </div>
+          );
+        }
+      }
+
+  - title: Warm theme backgrounds and headers
+    script: |
+      import React from "react";
+      import ColorBlock from "../components/ColorBlock";
+      export default class Example extends React.Component {
+        render() {
+          const colors = [
+            ["gray-100", "gray('100')", "w-gray-100"],
+            ["gray-200", "gray('200')", "w-gray-200"],
+            ["gray-300", "gray('300')", "w-gray-300"],
+            ["gray-400", "gray('400')", "w-gray-400"],
+            ["gray-500", "gray('500')", "w-gray-500"],
+            ["gray-600", "gray('600')", "w-gray-600"],
+            ["gray-700", "gray('700')", "w-gray-700"],
+            ["gray-800", "gray('800')", "w-gray-800"],
+            ["gray-900", "gray('900')", "w-gray-900"],
+            ["blue", "color('blue')", "w-blue"],
+            ["theme-bg-color", "color('theme-bg-color')", "w-theme-bg-color"],
+          ];
+          return (
+            <div className="row">
+              {colors.map((color, index) => {
+                return (
+                  <ColorBlock
+                    key={index}
+                    colorName={color[0]}
+                    cssCode={color[1]}
+                    color={color[2]}
+                  />
+                );
+              })}
+            </div>
+          );
+        }
+      }
+
+  - title: Secondary themes
+    script: |
+      import React from "react";
+      import ColorBlock from "../components/ColorBlock";
+      export default class Example extends React.Component {
+        render() {
+          const colors = [
+            ["bhp-purple-1", "theme-color('bhp-purple-1')", "bhp-purple-1"],
+            ["bhp-purple-2", "theme-color('bhp-purple-2')", "bhp-purple-2"],
+            ["bhp-purple-3", "theme-color('bhp-purple-3')", "bhp-purple-3"],
+            ["bhp-purple-4", "theme-color('bhp-purple-4')", "bhp-purple-4"],
+            ["bhp-blue-1", "theme-color('bhp-blue-1')", "bhp-blue-1"],
+            ["bhp-blue-2", "theme-color('bhp-blue-2')", "bhp-blue-2"],
+            ["bhp-blue-3", "theme-color('bhp-blue-3')", "bhp-blue-3"],
+            ["bhp-blue-4", "theme-color('bhp-blue-4')", "bhp-blue-4"],
+            ["bhp-turquoise-1", "theme-color('bhp-turquoise-1')", "bhp-turquoise-1"],
+            ["bhp-turquoise-2", "theme-color('bhp-turquoise-2')", "bhp-turquoise-2"],
+            ["bhp-turquoise-3", "theme-color('bhp-turquoise-3')", "bhp-turquoise-3"],
+            ["bhp-turquoise-4", "theme-color('bhp-turquoise-4')", "bhp-turquoise-4"],
+            ["bhp-green-1", "theme-color('bhp-green-1')", "bhp-green-1"],
+            ["bhp-green-2", "theme-color('bhp-green-2')", "bhp-green-2"],
+            ["bhp-green-3", "theme-color('bhp-green-3')", "bhp-green-3"],
+            ["bhp-green-4", "theme-color('bhp-green-4')", "bhp-green-4"],
+            ["bhp-grey-1", "theme-color('bhp-grey-1')", "bhp-grey-1"],
+            ["bhp-grey-2", "theme-color('bhp-grey-2')", "bhp-grey-2"],
+            ["bhp-grey-3", "theme-color('bhp-grey-3')", "bhp-grey-3"],
+            ["bhp-grey-4", "theme-color('bhp-grey-4')", "bhp-grey-4"],
+          ];
+          return (
+            <div className="row">
+              {colors.map((color, index) => {
+                return (
+                  <ColorBlock
+                    key={index}
+                    colorName={color[0]}
+                    cssCode={color[1]}
+                    color={color[2]}
+                  />
+                );
+              })}
+            </div>
+          );
+        }
+      }
+
+  - title: Colour combinations
+    introduction: |
+      If you use colour text on a full colour background then the background must be from group 1, and the text must be from either group 3 or 4 (of the same family), or white.
+      Example:
+
+    script: |
+      import React from "react";
+      export default class Example extends React.Component {
+        render() {
+          return (
+             <div className="container mb-3">
+              <div className="row">
+                <div className="col-md-6 pb-1 pr-1 pl-1">
+                  <div className="p-4 text-bhp-turquoise-3 bg-bhp-turquoise-1 text-center">Background colour is bhp-turquoise-1 and text is bhp-turquoise-3</div>
+                </div>
+                <div className="col-md-6 pb-1 pr-1 pl-1">
+                  <div className="p-4 text-bhp-purple-3 bg-bhp-purple-1 text-center">Background colour is bhp-purple-1 and text is bhp-purple-3</div>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-md-6 pt-1 pr-1 pl-1">
+                  <div className="p-4 text-bhp-blue-3 bg-bhp-blue-1 text-center">Background colour is bhp-blue-1 and text is bhp-blue-3</div>
+                </div>
+                <div className="col-md-6 pt-1 pr-1 pl-1">
+                  <div className="p-4 text-bhp-grey-3 bg-bhp-grey-1 text-center">Background colour is bhp-grey-1 and text is bhp-grey-3</div>
+                </div>
+              </div>
+            </div>
+          );
+        }
+      }
+
+  - title: Colours mix, charts and graphs
+    introduction: |
+      Do not mix the BHP Secondary colours together. Use Orange1 with all colour families to highlight key information in charts and graphs.
+
+    script: |
+      import React from "react";
+      import ColorBlock from "../components/ColorBlock";
+      export default class Example extends React.Component {
+        render() {
+          const rows = [
+            "main theme",
+            "purple theme",
+            "blue theme",
+            "turquoise theme",
+            "green theme",
+            "grey theme"
+          ];
+
+          const colorblocks = [
+            ["bhp-orange-3","bhp-orange-1","bhp-orange-4","bhp-orange-2"],
+            ["bhp-purple-2","bhp-orange-1","bhp-purple-1","bhp-purple-3"],
+            ["bhp-blue-2", "bhp-orange-1", "bhp-blue-1", "bhp-blue-3",],
+            ["bhp-turquoise-2","bhp-orange-1","bhp-turquoise-1","bhp-turquoise-3"],
+            ["bhp-green-2","bhp-orange-1","bhp-green-1","bhp-green-3"],
+            ["bhp-grey-2", "bhp-orange-1", "bhp-grey-1", "bhp-grey-3"]
+          ];
+
+          return (
+            <div>
+              {rows.map((row, rowIndex) => {
+                return (
+                  <div key={rowIndex} className="d-flex flex-row mb-3">
+                    <div className="d-flex flex-row">
+                      {colorblocks[rowIndex].map((colorblock, index) => {
+                        return (
+                          <div
+                            key={index}
+                            className={`colour-mix-box ${colorblock}`}
+                          >
+                            {colorblock.replace(/.*-/i,"")}
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <div className="colour-mix-text">{row}</div>
+                  </div>
+                );
+              })}
+            </div>
+          );
+        }
+      }
+
+  - title: EXAMPLE
+    script: |
+      import React from "react";
+      export default class Example extends React.Component {
+        render() {
+          return (
+            <div className="image-chart-example">
+            </div>
+          );
+        }
+      }
